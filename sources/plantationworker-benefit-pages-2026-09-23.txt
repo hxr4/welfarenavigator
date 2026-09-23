@@ -1,0 +1,49 @@
+Kerala Small Plantation Workers' Welfare Fund Board: benefit pages
+Read 2026-09-23 in a browser; text of each page's <article> element, verbatim.
+
+https://plantationworker.kerala.gov.in/index.php/benefits/pension/superannuation
+MINIMUM PENSION: The minimum pension is fixed as Rs.1100 p.m. vide G.O (MS) No.359/2017/Fin dated 04.08.2017. Application to be submitted in Form No.14.
+.
+ SUPERANNUATION PENSION: Those who have a continuous membership of 5 years are eligible for the pension on attaining the age of 60.
+
+https://plantationworker.kerala.gov.in/index.php/benefits/pension/family-pension
+The member should have remitted contribution for a minimum period of 3 years and should have been employed in a small plantation for not less than 15 years. A member of the family is eligible for the family pension on the demise of the member of the Fund @ 50% of the pension amount. Application to be submitted in Form No.16.  supported by Death Certificate, Family Membership Certificate, and Income Certificate.
+
+https://plantationworker.kerala.gov.in/index.php/benefits/pension/invalid-pension
+Those who have a continuously and permanently incapacitated and unable to do work beyond two years are eligible. Application to be submitted in Form No.15. supported by Medical Certificate issued by a Medical Board.
+
+https://plantationworker.kerala.gov.in/index.php/benefits/marriage-assistance
+This benefit is extended to the female workers who are members of the scheme and to the daughters of the members of the scheme.  The amount of benefit fixed is Rs.3000.  The workers should have been members of the scheme for at least 3 years.  Application to be submitted in Form No.18.  supported by Marriage Certificate.
+
+https://plantationworker.kerala.gov.in/index.php/benefits/maternity-benefit
+The benefit is fixed as Rs.15000 for two deliveries.  Rs.1000 for miscarriage. The worker should have been a member of the scheme for at least year.  Application to be submitted in Form No.17. supported by Birth Certificate and Medical Certificate.
+
+https://plantationworker.kerala.gov.in/index.php/benefits/death-assistance
+The dependants of the deceased member of the scheme are eligible to get the benefit of Rs.10000. Application to be submitted in Form No.20.
+
+https://plantationworker.kerala.gov.in/index.php/benefits/medical-benefit
+Those workers who have been a member of the scheme for at least 3 years are entitled to the benefit.  The worker and his or her family members are entitled to the benefit.  The benefit is limited to Rs.10000 for the entire period. Application to be submitted in Form No.19 supported by the original medical bills, Inpatient Card issued from a Government Hospital and Medical Certificate.
+
+https://plantationworker.kerala.gov.in/index.php/benefits/educational-benefit
+Those workers who have a continuous membership for at least 2 years can avail the benefit for their children for various courses from Class X onwards. Application Form
+
+https://plantationworker.kerala.gov.in/index.php/benefits/forms
+Application For Pension [Form-14]
+ Application For Invalid Pension [Form-15]
+ Application For Family Pension [Form-16]
+ Application For Maternity Benefit [Form-17]
+ Application For Marriage Benefit [Form-18]
+ Application For Medical Benefit [Form-19]
+ Application For Death Benefit [Form-20]
+ Application For Educational Scholarship
+
+AIIS check, same day
+https://aiis.lc.kerala.gov.in/index.php/public_membership_registration, select "board_name" options:
+കേരള ബില്‍ഡിംഗ് ആന്റ് അദര്‍ കണ്‍സ്ട്രക്ഷന്‍ തൊഴിലാളി ക്ഷേമനിധി ബോര്‍ഡ്
+കേരള അബ്കാരി തൊഴിലാളി ക്ഷേമനിധി ബോർഡ്
+കേരള ഈറ്റ കാട്ടുവള്ളി തഴ തൊഴിലാളി ക്ഷേമനിധി ബോര്‍ഡ്
+കേരള കശുവണ്ടി തൊഴിലാളി ആശ്വാസ ക്ഷേമനിധി ബോര്‍ഡ്
+കേരള ബീഡി ആന്റ് സിഗാര്‍ തൊഴിലാളി  ക്ഷേമനിധി ബോര്‍ഡ്
+കേരള കൈത്തറി തൊഴിലാളി ക്ഷേമനിധി ബോര്‍ഡ്
+കേരള കള്ള് വ്യവസായ തൊഴിലാളി ക്ഷേമനിധി ബോർഡ്
+കേരള ആഭരണ തൊഴിലാളി ക്ഷേമനിധി ബോര്‍ഡ്

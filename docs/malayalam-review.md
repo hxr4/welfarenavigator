@@ -173,16 +173,16 @@ Mark a UI string as checked by adding `mlReviewed: true` to it in `strings.ts`. 
 | scheme FISH-06 summary | Monthly pension of ₹1,600 for Board members who have retired from fishing after age 60. | 60 വയസ്സ് പൂർത്തിയാക്കി തൊഴിലിൽ നിന്ന് വിരമിച്ച ബോർഡ് അംഗങ്ങൾക്ക് പ്രതിമാസം 1,600 രൂപ പെൻഷൻ. |
 | scheme FISH-06 authority | Kerala Fishermen's Welfare Fund Board | കേരള മത്സ്യത്തൊഴിലാളി ക്ഷേമനിധി ബോർഡ് |
 | scheme PLNT-01 name | Small Plantation Workers' Old-Age Pension | ചെറുകിട തോട്ടം തൊഴിലാളികളുടെ വയോജന പെൻഷൻ |
-| scheme PLNT-01 summary | The 2008 Act provides for pension to a member who has completed 60 years; full scheme-level conditions are not all reproduced in the Act. | 2008-ലെ നിയമം 60 വയസ്സ് പൂർത്തിയാക്കിയ അംഗത്തിന് പെൻഷൻ നൽകുന്നതിനുള്ള വ്യവസ്ഥ ചെയ്യുന്നു; മുഴുവൻ സ്കീം നിബന്ധനകൾ നിയമത്തിൽ നൽകിയിട്ടില്ല. |
+| scheme PLNT-01 summary | Monthly pension for a member who has 5 years of continuous membership, on reaching 60. The minimum pension is ₹1,100 a month (G.O.(MS) No.359/2017/Fin). | 5 വർഷം തുടർച്ചയായ അംഗത്വമുള്ള അംഗത്തിന് 60 വയസ്സ് തികയുമ്പോൾ പ്രതിമാസ പെൻഷൻ. കുറഞ്ഞ പെൻഷൻ പ്രതിമാസം 1,100 രൂപ (G.O.(MS) No.359/2017/Fin). |
 | scheme PLNT-01 authority | Kerala Small Plantation Workers' Welfare Fund Board | കേരള ചെറുകിട തോട്ടം തൊഴിലാളി ക്ഷേമനിധി ബോർഡ് |
 | scheme PLNT-02 name | Small Plantation Workers' Invalid Pension | ചെറുകിട തോട്ടം തൊഴിലാളികളുടെ അസാധുവായ/അശക്തി പെൻഷൻ |
-| scheme PLNT-02 summary | The Act provides for pension to a member unable to work due to infirmity; detailed scheme conditions are not fully stated. | അശക്തി മൂലം ജോലി ചെയ്യാൻ കഴിയാത്ത അംഗത്തിന് പെൻഷൻ നൽകുന്നതിനുള്ള വ്യവസ്ഥ നിയമത്തിലുണ്ട്; മുഴുവൻ സ്കീം നിബന്ധനകൾ വ്യക്തമല്ല. |
+| scheme PLNT-02 summary | Pension for a member who has been continuously and permanently unable to work for more than two years. | രണ്ട് വർഷത്തിലധികമായി തുടർച്ചയായും സ്ഥിരമായും ജോലി ചെയ്യാൻ കഴിയാത്ത അംഗത്തിന് പെൻഷൻ. |
 | scheme PLNT-02 authority | Kerala Small Plantation Workers' Welfare Fund Board | കേരള ചെറുകിട തോട്ടം തൊഴിലാളി ക്ഷേമനിധി ബോർഡ് |
 | scheme PLNT-03 name | Permanent Disability Assistance for Small Plantation Workers | ചെറുകിട തോട്ടം തൊഴിലാളികൾക്കുള്ള സ്ഥിരവൈകല്യ ധനസഹായം |
 | scheme PLNT-03 summary | The Act provides for financial assistance to a member suffering from permanent disability; full scheme conditions require further verification. | സ്ഥിരവൈകല്യമുള്ള അംഗത്തിന് ധനസഹായം നൽകുന്നതിനുള്ള വ്യവസ്ഥ നിയമത്തിലുണ്ട്; മുഴുവൻ സ്കീം നിബന്ധനകൾക്ക് കൂടുതൽ പരിശോധന ആവശ്യമാണ്. |
 | scheme PLNT-03 authority | Kerala Small Plantation Workers' Welfare Fund Board | കേരള ചെറുകിട തോട്ടം തൊഴിലാളി ക്ഷേമനിധി ബോർഡ് |
-| scheme PLNT-04 name | Marriage Assistance for Daughters of Small Plantation Workers | ചെറുകിട തോട്ടം തൊഴിലാളികളുടെ പെൺമക്കളുടെ വിവാഹ ധനസഹായം |
-| scheme PLNT-04 summary | The Act allows loans or grants to a member for expenses connected with the marriage of daughters. | അംഗത്തിന്റെ പെൺമക്കളുടെ വിവാഹവുമായി ബന്ധപ്പെട്ട ചെലവുകൾക്കായി വായ്പയോ ധനസഹായമോ നൽകുന്നതിനുള്ള വ്യവസ്ഥ നിയമത്തിലുണ്ട്. |
+| scheme PLNT-04 name | Marriage Assistance (Small Plantation Workers' Welfare Fund) | വിവാഹ ധനസഹായം (ചെറുകിട തോട്ടം തൊഴിലാളി ക്ഷേമനിധി) |
+| scheme PLNT-04 summary | ₹3,000 for the marriage of a woman member, or of a member's daughter, after at least 3 years of membership. | കുറഞ്ഞത് 3 വർഷം അംഗത്വമുള്ള വനിതാ അംഗത്തിന്റെയോ അംഗത്തിന്റെ മകളുടെയോ വിവാഹത്തിന് 3,000 രൂപ. |
 | scheme PLNT-04 authority | Kerala Small Plantation Workers' Welfare Fund Board | കേരള ചെറുകിട തോട്ടം തൊഴിലാളി ക്ഷേമനിധി ബോർഡ് |
 | scheme PLNT-05 name | Maternity Benefit for Small Plantation Workers | ചെറുകിട തോട്ടം തൊഴിലാളികൾക്കുള്ള പ്രസവാനുകൂല്യം |
 | scheme PLNT-05 summary | A 2024 Gazette states maternity benefits are given to female members registered under 17 boards, including the Small Plantation Workers Welfare Fund Board. | 2024-ലെ ഗസറ്റ് 17 ബോർഡുകളിൽ രജിസ്റ്റർ ചെയ്ത വനിതാ അംഗങ്ങൾക്ക് പ്രസവാനുകൂല്യം നൽകുന്നതായി വ്യക്തമാക്കുന്നു; ഇതിൽ ചെറുകിട തോട്ടം തൊഴിലാളി ക്ഷേമനിധി ബോർഡും ഉൾപ്പെടുന്നു. |
@@ -223,12 +223,33 @@ Mark a UI string as checked by adding `mlReviewed: true` to it in `strings.ts`. 
 | scheme FISH-18 name | Compensation for Fishing Equipment Lost in a Calamity | പ്രകൃതിക്ഷോഭം മൂലം മത്സ്യബന്ധന ഉപകരണങ്ങൾ നഷ്ടപ്പെട്ടവർക്കുള്ള നഷ്ടപരിഹാരം |
 | scheme FISH-18 summary | Compensation when fishing equipment is lost or damaged in a sea calamity. We have the official application form, but not the rule that decides who qualifies. | കടൽക്ഷോഭം പോലുള്ള പ്രകൃതിക്ഷോഭത്തിൽ മത്സ്യബന്ധന ഉപകരണങ്ങൾ നഷ്ടപ്പെട്ടാൽ നഷ്ടപരിഹാരം. ഔദ്യോഗിക അപേക്ഷാ ഫോറം ലഭ്യമാണ്; അർഹത നിർണ്ണയിക്കുന്ന നിയമം ലഭ്യമല്ല. |
 | scheme FISH-18 authority | Fisheries Department, Government of Kerala | കേരള സർക്കാർ മത്സ്യബന്ധന വകുപ്പ് |
-| scheme PLNT-06 name | Assistance to Dependants after a Small Plantation Worker Member's Death | അംഗത്തിന്റെ മരണാനന്തരം ആശ്രിതർക്ക് ധനസഹായം |
-| scheme PLNT-06 summary | Financial assistance to dependants after a member's death, applied for with Form 20. The amount and eligibility are in Scheme clause 45, which we do not have yet. | അംഗം മരിച്ചാൽ ആശ്രിതർക്ക് ധനസഹായം; ഫാറം 20 വഴി അപേക്ഷിക്കണം. തുകയും അർഹതയും പദ്ധതി ഖണ്ഡിക 45-ൽ; അത് ഇതുവരെ ലഭ്യമല്ല. |
+| scheme PLNT-06 name | Death Assistance to a Member's Dependants (Small Plantation Workers) | മരണാനന്തര ധനസഹായം — ആശ്രിതർക്ക് (ചെറുകിട തോട്ടം തൊഴിലാളി) |
+| scheme PLNT-06 summary | ₹10,000 to the dependants of a member who has died. | മരിച്ച അംഗത്തിന്റെ ആശ്രിതർക്ക് 10,000 രൂപ. |
 | scheme PLNT-06 authority | Kerala Small Plantation Workers' Welfare Fund Board | കേരള ചെറുകിട തോട്ടം തൊഴിലാളി ക്ഷേമനിധി ബോർഡ് |
 | scheme PLNT-07 name | Family Pension (Small Plantation Workers' Welfare Fund) | കുടുംബ പെൻഷൻ (ചെറുകിട തോട്ടം തൊഴിലാളി ക്ഷേമനിധി) |
-| scheme PLNT-07 summary | The Act allows the Fund to pay a family pension. Who qualifies and how much is set in the Scheme, which we do not have yet. | കുടുംബ പെൻഷൻ നൽകാൻ നിയമം അനുവദിക്കുന്നു. അർഹതയും തുകയും പദ്ധതിയിലാണ്; അത് ഇതുവരെ ലഭ്യമല്ല. |
+| scheme PLNT-07 summary | Family pension at 50% of the member's pension, paid to a family member after the member's death, if the member paid contributions for at least 3 years and worked in a small plantation for at least 15 years. | അംഗം മരിച്ചാൽ കുടുംബാംഗത്തിന് അംഗത്തിന്റെ പെൻഷന്റെ 50% കുടുംബ പെൻഷൻ; അംഗം കുറഞ്ഞത് 3 വർഷം വിഹിതം അടയ്ക്കുകയും 15 വർഷം ചെറുകിട തോട്ടത്തിൽ ജോലി ചെയ്യുകയും ചെയ്തിരിക്കണം. |
 | scheme PLNT-07 authority | Kerala Small Plantation Workers' Welfare Fund Board | കേരള ചെറുകിട തോട്ടം തൊഴിലാളി ക്ഷേമനിധി ബോർഡ് |
+| scheme PLNT-08 name | Educational Benefit for Members' Children (Small Plantation Workers) | അംഗങ്ങളുടെ മക്കൾക്ക് വിദ്യാഭ്യാസ ആനുകൂല്യം (ചെറുകിട തോട്ടം തൊഴിലാളി) |
+| scheme PLNT-08 summary | Educational benefit for the children of members with at least 2 years of continuous membership, for courses from Class X onwards. The amount is not published. | കുറഞ്ഞത് 2 വർഷം തുടർച്ചയായ അംഗത്വമുള്ളവരുടെ മക്കൾക്ക് പത്താം ക്ലാസ് മുതലുള്ള കോഴ്സുകൾക്ക് വിദ്യാഭ്യാസ ആനുകൂല്യം. തുക പ്രസിദ്ധീകരിച്ചിട്ടില്ല. |
+| scheme PLNT-08 authority | Kerala Small Plantation Workers' Welfare Fund Board | കേരള ചെറുകിട തോട്ടം തൊഴിലാളി ക്ഷേമനിധി ബോർഡ് |
+| scheme PLNT-09 name | Medical Benefit (Small Plantation Workers' Welfare Fund) | ചികിൽസാ ആനുകൂല്യം (ചെറുകിട തോട്ടം തൊഴിലാളി ക്ഷേമനിധി) |
+| scheme PLNT-09 summary | Help with medical bills for the member and family, after at least 3 years of membership. Limited to ₹10,000 in total for the whole period. | കുറഞ്ഞത് 3 വർഷം അംഗത്വമുള്ള അംഗത്തിനും കുടുംബത്തിനും ചികിൽസാ ബില്ലുകൾക്ക് സഹായം. ആകെ കാലയളവിൽ പരമാവധി 10,000 രൂപ. |
+| scheme PLNT-09 authority | Kerala Small Plantation Workers' Welfare Fund Board | കേരള ചെറുകിട തോട്ടം തൊഴിലാളി ക്ഷേമനിധി ബോർഡ് |
+| scheme PLNT-10 name | Estate Workers (Distress Relief) Welfare Fund Scheme, 2007 | എസ്റ്റേറ്റ് തൊഴിലാളി (ദുരിതാശ്വാസ) ക്ഷേമനിധി പദ്ധതി, 2007 |
+| scheme PLNT-10 summary | Distress relief of ₹25,000 for each eligible estate worker. Who is eligible is not published in the sources we have. | അർഹരായ ഓരോ എസ്റ്റേറ്റ് തൊഴിലാളിക്കും 25,000 രൂപ ദുരിതാശ്വാസം. അർഹത ആർക്കെന്ന് ഞങ്ങളുടെ ഉറവിടങ്ങളിൽ ലഭ്യമല്ല. |
+| scheme PLNT-10 authority | Labour Commissionerate, Government of Kerala | തൊഴിൽ കമ്മീഷണറേറ്റ്, കേരള സർക്കാർ |
+| scheme FISH-19 name | Family Planning Assistance | കുടുംബ സംവിധാന പദ്ധതി |
+| scheme FISH-19 summary | ₹500 towards care expenses for a fisherwoman or fisherman who undergoes sterilisation surgery. Apply within 60 days of the surgery. | വന്ധ്യംകരണ ശസ്ത്രക്രിയക്ക് വിധേയരാകുന്ന മത്സ്യത്തൊഴിലാളികൾക്ക് ശുശ്രൂഷാ ചെലവിനായി 500 രൂപ. ശസ്ത്രക്രിയ കഴിഞ്ഞ് 60 ദിവസത്തിനകം അപേക്ഷിക്കണം. |
+| scheme FISH-19 authority | Kerala Fishermen's Welfare Fund Board | കേരള മത്സ്യത്തൊഴിലാളി ക്ഷേമനിധി ബോർഡ് |
+| scheme FISH-20 name | Chairman's Relief Fund | ചെയർമാൻസ് റിലീഫ് ഫണ്ട് |
+| scheme FISH-20 summary | Emergency help of up to ₹5,000 for fishermen in sudden distress: serious accident injury, accidental death, fire or damage to the house, relief camps, snake or dog bite, electric shock, or a family member missing at sea. The amount depends on how serious the case is. | അപ്രതീക്ഷിത ദുരിതത്തിലാകുന്ന മത്സ്യത്തൊഴിലാളികൾക്ക് പരമാവധി 5,000 രൂപ വരെ അടിയന്തിര ധനസഹായം: അപകടത്തിൽ ഗുരുതര പരിക്ക്, അപകട മരണം, തീപിടുത്തം/വീടിന് നാശം, അഭയാർത്ഥി ക്യാമ്പ്, പാമ്പ്/പേനായ കടി, ഷോക്ക്, കടലിൽ കാണാതാകൽ. |
+| scheme FISH-20 authority | Kerala Fishermen's Welfare Fund Board | കേരള മത്സ്യത്തൊഴിലാളി ക്ഷേമനിധി ബോർഡ് |
+| scheme FISH-21 name | Maternity Care Assistance (Fishermen's Welfare Fund) | പ്രസവ ശുശ്രൂഷക്കുള്ള ധനസഹായ പദ്ധതി |
+| scheme FISH-21 summary | ₹750 for maternity care, for an active fisherwoman member with no contribution arrears, or the wife of a member. The woman must be at least 19. | കുടിശ്ശികയില്ലാതെ വിഹിതം അടച്ച പ്രവർത്തിസജീവ മത്സ്യത്തൊഴിലാളി വനിതകൾക്കും മത്സ്യത്തൊഴിലാളികളുടെ ഭാര്യമാർക്കും പ്രസവ ശുശ്രൂഷയ്ക്ക് 750 രൂപ. 19 വയസ്സെങ്കിലും വേണം. |
+| scheme FISH-21 authority | Kerala Fishermen's Welfare Fund Board | കേരള മത്സ്യത്തൊഴിലാളി ക്ഷേമനിധി ബോർഡ് |
+| scheme FISH-22 name | Higher Education Incentive (+2 / VHSE Cash Award) | ഉന്നത വിദ്യാഭ്യാസ പ്രോത്സാഹന പദ്ധതി |
+| scheme FISH-22 summary | ₹5,000 cash award and a memento for children of active Board members who get A+ in all subjects in the Higher Secondary (+2) or VHSE exam, passing in the first attempt. | ഹയർ സെക്കന്ററി (+2) / വി.എച്ച്.എസ്.ഇ പരീക്ഷയിൽ ആദ്യ അവസരത്തിൽ എല്ലാ വിഷയങ്ങൾക്കും എ+ നേടുന്ന, മത്സ്യബോർഡിൽ സജീവ അംഗത്വമുള്ളവരുടെ മക്കൾക്ക് 5,000 രൂപ ക്യാഷ് അവാർഡും മെമെന്റോയും. |
+| scheme FISH-22 authority | Kerala Fishermen's Welfare Fund Board | കേരള മത്സ്യത്തൊഴിലാളി ക്ഷേമനിധി ബോർഡ് |
 | fact livelihood label | Livelihood | തൊഴിൽ മേഖല |
 | fact livelihood question | Which work does your household do? | നിങ്ങളുടെ കുടുംബം ഏത് തൊഴിലാണ് ചെയ്യുന്നത്? |
 | option livelihood.fishing | Fishing | മത്സ്യബന്ധനം |
@@ -259,8 +280,8 @@ Mark a UI string as checked by adding `mlReviewed: true` to it in `strings.ts`. 
 | fact unable_due_infirmity question | Is the member unable to work due to infirmity? | അശക്തി മൂലം അംഗത്തിന് ജോലി ചെയ്യാൻ കഴിയുന്നില്ലേ? |
 | fact permanent_disability label | Permanent disability | സ്ഥിരവൈകല്യം |
 | fact permanent_disability question | Does the member have a permanent disability? | അംഗത്തിന് സ്ഥിരവൈകല്യമുണ്ടോ? |
-| fact daughter_marriage label | Daughter's marriage expense | പെൺമകളുടെ വിവാഹച്ചെലവ് |
-| fact daughter_marriage question | Is the application connected with expenses for a daughter's marriage? | അപേക്ഷ പെൺമകളുടെ വിവാഹച്ചെലവുമായി ബന്ധപ്പെട്ടതാണോ? |
+| fact daughter_marriage label | Marriage of a woman member or a member's daughter | വനിതാ അംഗത്തിന്റെയോ അംഗത്തിന്റെ മകളുടെയോ വിവാഹം |
+| fact daughter_marriage question | Is there a marriage to apply for: a woman member's own marriage, or the marriage of a member's daughter? | അപേക്ഷിക്കാൻ ഒരു വിവാഹമുണ്ടോ: വനിതാ അംഗത്തിന്റെ സ്വന്തം വിവാഹം, അല്ലെങ്കിൽ അംഗത്തിന്റെ മകളുടെ വിവാഹം? |
 | fact female_member label | Woman applicant | അപേക്ഷക സ്ത്രീയാണോ |
 | fact female_member question | Is the person applying a woman? | അപേക്ഷിക്കുന്നത് ഒരു സ്ത്രീയാണോ? |
 | fact fishing_sector label | Fishing sector | മത്സ്യബന്ധന മേഖല |
@@ -315,7 +336,25 @@ Mark a UI string as checked by adding `mlReviewed: true` to it in `strings.ts`. 
 | option family_event.accident | A fisherman was hurt in an accident and could not work for 7 days or more | അപകടം മൂലം മത്സ്യത്തൊഴിലാളിക്ക് 7 ദിവസമോ അതിൽ കൂടുതലോ ജോലി ചെയ്യാൻ കഴിഞ്ഞില്ല |
 | option family_event.member_death | A fisherman in the family who was a Welfare Fund member has died | കുടുംബത്തിലെ ക്ഷേമനിധി അംഗമായ മത്സ്യത്തൊഴിലാളി മരിച്ചു |
 | option family_event.dependant_death | In the last 3 months, a fisherman's father, mother, wife or husband, minor son or unmarried daughter died | കഴിഞ്ഞ 3 മാസത്തിനുള്ളിൽ മത്സ്യത്തൊഴിലാളിയുടെ അച്ഛൻ, അമ്മ, ഭാര്യ/ഭർത്താവ്, മൈനറായ മകൻ, അവിവാഹിതയായ മകൾ എന്നിവരിൽ ആരെങ്കിലും മരിച്ചു |
+| option family_event.delivery | A woman in the family is expecting a baby or has just given birth | കുടുംബത്തിലെ ഒരു സ്ത്രീ ഗർഭിണിയാണ്, അല്ലെങ്കിൽ അടുത്തിടെ പ്രസവിച്ചു |
+| option family_event.plus_two_all_aplus | A child got A+ in all subjects in the Higher Secondary (+2) or VHSE final exam, passing in the first attempt | ഹയർ സെക്കന്ററി (+2) / വി.എച്ച്.എസ്.ഇ അവസാന വർഷ പരീക്ഷയിൽ ആദ്യ അവസരത്തിൽ തന്നെ കുട്ടിക്ക് എല്ലാ വിഷയങ്ങളിലും എ+ ലഭിച്ചു |
 | option family_event.none | None of these | ഇവയൊന്നുമല്ല |
+| fact plantation_membership_years label | Years of continuous Welfare Fund membership | തുടർച്ചയായ ക്ഷേമനിധി അംഗത്വ വർഷങ്ങൾ |
+| fact plantation_membership_years question | For how many years has the worker been a continuous member of the Small Plantation Workers Welfare Fund? | തൊഴിലാളി എത്ര വർഷമായി തുടർച്ചയായി ചെറുകിട തോട്ടം തൊഴിലാളി ക്ഷേമനിധി അംഗമാണ്? |
+| fact incapacitated_over_2_years label | Permanently unable to work for over two years | രണ്ട് വർഷത്തിലധികമായി സ്ഥിരമായി ജോലി ചെയ്യാനാകാത്തത് |
+| fact incapacitated_over_2_years question | Has the member been continuously and permanently unable to work for more than two years? | അംഗത്തിന് രണ്ട് വർഷത്തിലധികമായി തുടർച്ചയായും സ്ഥിരമായും ജോലി ചെയ്യാൻ കഴിയാത്ത അവസ്ഥയാണോ? |
+| fact plantation_member_death label | Death of a Small Plantation Welfare Fund member | ചെറുകിട തോട്ടം ക്ഷേമനിധി അംഗത്തിന്റെ മരണം |
+| fact plantation_member_death question | Has a member of the Small Plantation Workers Welfare Fund in your family died? | നിങ്ങളുടെ കുടുംബത്തിലെ ചെറുകിട തോട്ടം തൊഴിലാളി ക്ഷേമനിധി അംഗം മരിച്ചോ? |
+| fact plantation_deceased_contrib_3y label | Deceased member paid contributions for 3 years | മരിച്ച അംഗം 3 വർഷം വിഹിതം അടച്ചു |
+| fact plantation_deceased_contrib_3y question | Had the member who died paid contributions to the Fund for at least 3 years? | മരിച്ച അംഗം കുറഞ്ഞത് 3 വർഷമെങ്കിലും ക്ഷേമനിധിയിൽ വിഹിതം അടച്ചിരുന്നോ? |
+| fact plantation_deceased_worked_15y label | Deceased member worked 15 years in a small plantation | മരിച്ച അംഗം 15 വർഷം ചെറുകിട തോട്ടത്തിൽ ജോലി ചെയ്തു |
+| fact plantation_deceased_worked_15y question | Had the member who died worked in a small plantation for at least 15 years? | മരിച്ച അംഗം കുറഞ്ഞത് 15 വർഷമെങ്കിലും ചെറുകിട തോട്ടത്തിൽ ജോലി ചെയ്തിരുന്നോ? |
+| fact plantation_medical_treatment label | Medical treatment for the member or family | അംഗത്തിനോ കുടുംബത്തിനോ ചികിൽസ |
+| fact plantation_medical_treatment question | Has the member or a family member had medical treatment for which you want help with the bills? | അംഗത്തിനോ കുടുംബാംഗത്തിനോ ചികിൽസ വേണ്ടിവന്നിട്ട് അതിന്റെ ബില്ലുകൾക്ക് സഹായം വേണോ? |
+| fact plantation_child_class10 label | Member's child in Class X or higher | അംഗത്തിന്റെ കുട്ടി പത്താം ക്ലാസിലോ ഉപരിപഠനത്തിലോ |
+| fact plantation_child_class10 question | Is a child of the member studying in Class X or in a higher course? | അംഗത്തിന്റെ കുട്ടി പത്താം ക്ലാസിലോ അതിനു മുകളിലുള്ള കോഴ്സിലോ പഠിക്കുന്നുണ്ടോ? |
+| fact mother_age_19 label | Mother is at least 19 | അമ്മയ്ക്ക് 19 വയസ്സെങ്കിലും |
+| fact mother_age_19 question | Is the woman who is expecting or has given birth at least 19 years old? | ഗർഭിണിയായ / പ്രസവിച്ച സ്ത്രീക്ക് 19 വയസ്സെങ്കിലും പ്രായമുണ്ടോ? |
 | document saving_relief_application_inland | Application for Saving Cum Relief Scheme (Inland) | സമ്പാദ്യ സമാശ്വാസ പദ്ധതിക്കുള്ള അപേക്ഷ (ഉൾനാടൻ) |
 | document saving_relief_application_marine | Application for Saving Cum Relief Scheme (Marine) | സമ്പാദ്യ സമാശ്വാസ പദ്ധതിക്കുള്ള അപേക്ഷ (കടൽ) |
 | document fisher_educational_assistance_application | Application form for educational assistance (above matriculation) to fishermen children | മത്സ്യത്തൊഴിലാളികളുടെ കുട്ടികൾക്കുള്ള വിദ്യാഭ്യാസ സഹായത്തിനുള്ള അപേക്ഷ (മെട്രിക്കുലേഷൻ കഴിഞ്ഞ്) |
@@ -365,6 +404,24 @@ Mark a UI string as checked by adding `mlReviewed: true` to it in `strings.ts`. 
 | document spwwfb_form_18 | Form 18: marriage assistance application (Scheme 2009) | ഫാറം 18: വിവാഹ ധനസഹായത്തിനുള്ള അപേക്ഷ (പദ്ധതി 2009) |
 | document spwwfb_form_20 | Form 20: application for assistance to dependants after a member's death (Scheme 2009) | ഫാറം 20: അംഗത്തിന്റെ മരണാനന്തരം ആശ്രിതർക്ക് ധനസഹായത്തിനുള്ള അപേക്ഷ (പദ്ധതി 2009) |
 | document aadhaar_or_enrolment | Aadhaar; or, if not yet assigned, the Aadhaar enrolment slip with one other identity document (for example bank or post office passbook with photo, PAN card, passport, ration card, voter ID, MGNREGA card, Kisan photo passbook) | ആധാർ; ഇല്ലെങ്കിൽ ആധാർ എൻറോൾമെന്റ് സ്ലിപ്പും മറ്റൊരു തിരിച്ചറിയൽ രേഖയും (ഫോട്ടോയുള്ള ബാങ്ക്/പോസ്റ്റ് ഓഫീസ് പാസ്ബുക്ക്, പാൻ കാർഡ്, പാസ്പോർട്ട്, റേഷൻ കാർഡ്, വോട്ടർ ഐഡി, തൊഴിലുറപ്പ് കാർഡ്, കിസാൻ ഫോട്ടോ പാസ്ബുക്ക് തുടങ്ങിയവ) |
+| document spwwfb_form_15 | Form 15: invalid pension application | ഫാറം 15: അശക്തി പെൻഷനുള്ള അപേക്ഷ |
+| document spwwfb_form_16 | Form 16: family pension application | ഫാറം 16: കുടുംബ പെൻഷനുള്ള അപേക്ഷ |
+| document spwwfb_form_17 | Form 17: maternity benefit application | ഫാറം 17: പ്രസവാനുകൂല്യത്തിനുള്ള അപേക്ഷ |
+| document spwwfb_form_19 | Form 19: medical benefit application | ഫാറം 19: ചികിൽസാ ആനുകൂല്യത്തിനുള്ള അപേക്ഷ |
+| document spwwfb_education_form | Educational scholarship application form | വിദ്യാഭ്യാസ സ്കോളർഷിപ്പിനുള്ള അപേക്ഷാ ഫാറം |
+| document medical_board_certificate | Medical certificate issued by a Medical Board | മെഡിക്കൽ ബോർഡ് നൽകുന്ന മെഡിക്കൽ സർട്ടിഫിക്കറ്റ് |
+| document original_medical_bills | Original medical bills | ചികിൽസയുടെ അസ്സൽ ബില്ലുകൾ |
+| document govt_inpatient_card | Inpatient card issued by a Government hospital | സർക്കാർ ആശുപത്രി നൽകിയ ഇൻപേഷ്യന്റ് കാർഡ് |
+| document medical_certificate | Medical certificate | മെഡിക്കൽ സർട്ടിഫിക്കറ്റ് |
+| document birth_certificate | Birth certificate | ജനന സർട്ടിഫിക്കറ്റ് |
+| document family_membership_certificate | Family membership certificate | കുടുംബാംഗത്വ സർട്ടിഫിക്കറ്റ് |
+| document sterilisation_doctor_certificate | Certificate from the approved government doctor who performed the surgery | ശസ്ത്രക്രിയ നടത്തിയ അംഗീകൃത സർക്കാർ ഡോക്ടറുടെ സർട്ടിഫിക്കറ്റ് |
+| document mbbs_medical_certificate | Medical certificate from an MBBS-qualified doctor | എം.ബി.ബി.എസ് യോഗ്യതയുള്ള ഡോക്ടറിൽ നിന്നുള്ള മെഡിക്കൽ സർട്ടിഫിക്കറ്റ് |
+| document legal_age_proof | Legally valid proof of age | വയസ്സ് തെളിയിക്കുന്നതിനുള്ള നിയമാനുസൃത രേഖ |
+| document final_mark_list | True copy of the final-year exam mark list | അവസാന വർഷ പരീക്ഷയുടെ മാർക്ക് ലിസ്റ്റിന്റെ ശരിപ്പകർപ്പ് |
+| document sslc_book_age | True copy of the SSLC book as proof of age | വയസ്സ് തെളിയിക്കുന്ന എസ്.എസ്.എൽ.സി ബുക്കിന്റെ ശരി പകർപ്പ് |
+| document parent_fisher_certificate | True copy of a certificate that the parent is a fisherman | രക്ഷിതാവ് മത്സ്യത്തൊഴിലാളിയാണെന്ന് തെളിയിക്കുന്ന സർട്ടിഫിക്കറ്റിന്റെ ശരി പകർപ്പ് |
+| document contribution_no_arrears_certificate | Certificate that contributions are paid with no arrears, and a photocopy of the passbook page | വിഹിതം കുടിശ്ശികയില്ലാതെ അടച്ചതിന്റെ സർട്ടിഫിക്കറ്റും പാസ് ബുക്കിലെ ബന്ധപ്പെട്ട പേജിന്റെ ഫോട്ടോകോപ്പിയും |
 | office type fisheries_district_office | Fisheries Department district office | ഫിഷറീസ് വകുപ്പ് ജില്ലാ ഓഫീസ് |
 | office type matsyaboard_office | Matsyaboard / Fishermen Welfare Board office | മത്സ്യബോർഡ് / മത്സ്യത്തൊഴിലാളി ക്ഷേമനിധി ബോർഡ് ഓഫീസ് |
 | office type labour_commissionerate | Labour Commissionerate | തൊഴിൽ കമ്മീഷണറേറ്റ് |

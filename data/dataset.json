@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-09-23T16:28:49.461Z",
+    "generatedAt": "2026-09-23T18:09:19.930Z",
     "includesExamples": false,
     "version": "1"
   },
@@ -207,7 +207,7 @@
       "docType": "department_page",
       "language": "en+ml",
       "accessedOn": "2026-09-23",
-      "notes": "Online membership registration and scheme applications for the 16 Labour Department welfare boards; access via Akshaya centres. The portal does not list board names; that the Small Plantation Workers board is one of the 16 is inferred from SRC-PLNT-003 listing 16 boards. Confirm."
+      "notes": "Online membership registration and scheme applications for the 16 Labour Department welfare boards, with Akshaya access. NOT confirmed for the Small Plantation Workers Board: the portal and both help manuals (AIIS_USER_MANUAL_FOR_AKSHAYA.pdf, AIIS_Help_FIle_for_Board_Users.pdf) do not name it, and on 2026-09-23 the public membership registration board list showed 8 boards without it."
     },
     {
       "id": "SRC-KFWFB-001",
@@ -317,6 +317,126 @@
       "accessedOn": "2026-09-23",
       "localFile": "sources/matsyafed-contacts.pdf",
       "notes": "District offices for 10 districts only (no Pathanamthitta, Idukki, Palakkad or Wayanad). Thiruvananthapuram landline printed incomplete ('0471-'); mobile used."
+    },
+    {
+      "id": "SRC-PLNT-011",
+      "tier": 2,
+      "authority": "Kerala Small Plantation Workers' Welfare Fund Board",
+      "title": "Benefits: Marriage Assistance",
+      "url": "https://plantationworker.kerala.gov.in/index.php/benefits/marriage-assistance",
+      "docType": "board_page",
+      "language": "en",
+      "accessedOn": "2026-09-23",
+      "localFile": "sources/plantationworker-benefit-pages-2026-09-23.txt",
+      "notes": "Read in a browser on the team's computer; the site times out from outside India. Text copied verbatim from the page article."
+    },
+    {
+      "id": "SRC-PLNT-012",
+      "tier": 2,
+      "authority": "Kerala Small Plantation Workers' Welfare Fund Board",
+      "title": "Benefits: Medical Benefit",
+      "url": "https://plantationworker.kerala.gov.in/index.php/benefits/medical-benefit",
+      "docType": "board_page",
+      "language": "en",
+      "accessedOn": "2026-09-23",
+      "localFile": "sources/plantationworker-benefit-pages-2026-09-23.txt",
+      "notes": "Read in a browser on the team's computer; the site times out from outside India. Text copied verbatim from the page article."
+    },
+    {
+      "id": "SRC-PLNT-013",
+      "tier": 2,
+      "authority": "Kerala Small Plantation Workers' Welfare Fund Board",
+      "title": "Benefits: Death Assistance",
+      "url": "https://plantationworker.kerala.gov.in/index.php/benefits/death-assistance",
+      "docType": "board_page",
+      "language": "en",
+      "accessedOn": "2026-09-23",
+      "localFile": "sources/plantationworker-benefit-pages-2026-09-23.txt",
+      "notes": "Read in a browser on the team's computer; the site times out from outside India. Text copied verbatim from the page article."
+    },
+    {
+      "id": "SRC-PLNT-014",
+      "tier": 2,
+      "authority": "Kerala Small Plantation Workers' Welfare Fund Board",
+      "title": "Benefits: Superannuation",
+      "url": "https://plantationworker.kerala.gov.in/index.php/benefits/pension/superannuation",
+      "docType": "board_page",
+      "language": "en",
+      "accessedOn": "2026-09-23",
+      "localFile": "sources/plantationworker-benefit-pages-2026-09-23.txt",
+      "notes": "Read in a browser on the team's computer; the site times out from outside India. Text copied verbatim from the page article."
+    },
+    {
+      "id": "SRC-PLNT-015",
+      "tier": 2,
+      "authority": "Kerala Small Plantation Workers' Welfare Fund Board",
+      "title": "Benefits: Family Pension",
+      "url": "https://plantationworker.kerala.gov.in/index.php/benefits/pension/family-pension",
+      "docType": "board_page",
+      "language": "en",
+      "accessedOn": "2026-09-23",
+      "localFile": "sources/plantationworker-benefit-pages-2026-09-23.txt",
+      "notes": "Read in a browser on the team's computer; the site times out from outside India. Text copied verbatim from the page article."
+    },
+    {
+      "id": "SRC-PLNT-016",
+      "tier": 2,
+      "authority": "Kerala Small Plantation Workers' Welfare Fund Board",
+      "title": "Benefits: Invalid Pension",
+      "url": "https://plantationworker.kerala.gov.in/index.php/benefits/pension/invalid-pension",
+      "docType": "board_page",
+      "language": "en",
+      "accessedOn": "2026-09-23",
+      "localFile": "sources/plantationworker-benefit-pages-2026-09-23.txt",
+      "notes": "Read in a browser on the team's computer; the site times out from outside India. Text copied verbatim from the page article."
+    },
+    {
+      "id": "SRC-PLNT-017",
+      "tier": 2,
+      "authority": "Kerala Small Plantation Workers' Welfare Fund Board",
+      "title": "Benefits: Maternity Benefit",
+      "url": "https://plantationworker.kerala.gov.in/index.php/benefits/maternity-benefit",
+      "docType": "board_page",
+      "language": "en",
+      "accessedOn": "2026-09-23",
+      "localFile": "sources/plantationworker-benefit-pages-2026-09-23.txt",
+      "notes": "Read in a browser on the team's computer; the site times out from outside India. Text copied verbatim from the page article. The membership sentence is printed incomplete: 'at least year' (number missing). Older than, and possibly replaced by, the Labour Commissionerate scheme in G.O.(P) No.81/2024/LBR."
+    },
+    {
+      "id": "SRC-PLNT-018",
+      "tier": 2,
+      "authority": "Kerala Small Plantation Workers' Welfare Fund Board",
+      "title": "Benefits: Educational Benefit",
+      "url": "https://plantationworker.kerala.gov.in/index.php/benefits/educational-benefit",
+      "docType": "board_page",
+      "language": "en",
+      "accessedOn": "2026-09-23",
+      "localFile": "sources/plantationworker-benefit-pages-2026-09-23.txt",
+      "notes": "Read in a browser on the team's computer; the site times out from outside India. Text copied verbatim from the page article."
+    },
+    {
+      "id": "SRC-PLNT-019",
+      "tier": 2,
+      "authority": "Kerala Small Plantation Workers' Welfare Fund Board",
+      "title": "Benefits: Forms",
+      "url": "https://plantationworker.kerala.gov.in/index.php/benefits/forms",
+      "docType": "board_page",
+      "language": "en",
+      "accessedOn": "2026-09-23",
+      "localFile": "sources/plantationworker-benefit-pages-2026-09-23.txt",
+      "notes": "Read in a browser on the team's computer; the site times out from outside India. Text copied verbatim from the page article."
+    },
+    {
+      "id": "SRC-LAB-001",
+      "tier": 2,
+      "authority": "Labour Commissionerate, Government of Kerala",
+      "title": "Indian Labour Year Book 2016: Kerala contribution (hosted by the Labour Commissionerate)",
+      "url": "https://lc.kerala.gov.in/images/pdf/Report/Indian-Labour-Year-Book-2016.pdf",
+      "docType": "report",
+      "language": "en",
+      "dateIssued": "2016",
+      "accessedOn": "2026-09-23",
+      "notes": "Used only to name the Estate Workers (Distress Relief) Welfare Fund Scheme and its relief amount (page 6). Not a rule source; the scheme stays display only."
     }
   ],
   "facts": [
@@ -544,6 +664,10 @@
         "en": "Is the worker employed in a small plantation covered by the Small Plantation Workers Welfare Fund?",
         "ml": "തൊഴിലാളി ചെറുകിട തോട്ടം തൊഴിലാളി ക്ഷേമനിധിയുടെ പരിധിയിലെ തോട്ടത്തിൽ ജോലി ചെയ്യുന്നുണ്ടോ?"
       },
+      "help": {
+        "en": "Act 17 of 2008, s.2(m): a person engaged for doing any work in a small plantation for not less than ninety days in the preceding twelve months, including a self-employed person working in his own small plantation of not more than half a hectare. A small plantation is one of less than five hectares (s.2(l)).",
+        "ml": "2008-ലെ 17-ാം നിയമം, വകുപ്പ് 2(m): കഴിഞ്ഞ 12 മാസത്തിൽ കുറഞ്ഞത് 90 ദിവസം ചെറുകിട തോട്ടത്തിൽ ജോലി ചെയ്തവർ; അര ഹെക്ടറിൽ കൂടാത്ത സ്വന്തം ചെറുകിട തോട്ടത്തിൽ സ്വയം തൊഴിൽ ചെയ്യുന്നവരും ഉൾപ്പെടും. 5 ഹെക്ടറിൽ താഴെയുള്ളതാണ് ചെറുകിട തോട്ടം (വകുപ്പ് 2(l))."
+      },
       "unit": "",
       "sensitivity": "low",
       "order": 11,
@@ -621,12 +745,12 @@
       "id": "daughter_marriage",
       "type": "boolean",
       "label": {
-        "en": "Daughter's marriage expense",
-        "ml": "പെൺമകളുടെ വിവാഹച്ചെലവ്"
+        "en": "Marriage of a woman member or a member's daughter",
+        "ml": "വനിതാ അംഗത്തിന്റെയോ അംഗത്തിന്റെ മകളുടെയോ വിവാഹം"
       },
       "question": {
-        "en": "Is the application connected with expenses for a daughter's marriage?",
-        "ml": "അപേക്ഷ പെൺമകളുടെ വിവാഹച്ചെലവുമായി ബന്ധപ്പെട്ടതാണോ?"
+        "en": "Is there a marriage to apply for: a woman member's own marriage, or the marriage of a member's daughter?",
+        "ml": "അപേക്ഷിക്കാൻ ഒരു വിവാഹമുണ്ടോ: വനിതാ അംഗത്തിന്റെ സ്വന്തം വിവാഹം, അല്ലെങ്കിൽ അംഗത്തിന്റെ മകളുടെ വിവാഹം?"
       },
       "unit": "",
       "sensitivity": "medium",
@@ -1141,6 +1265,28 @@
           }
         },
         {
+          "value": "delivery",
+          "label": {
+            "en": "A woman in the family is expecting a baby or has just given birth",
+            "ml": "കുടുംബത്തിലെ ഒരു സ്ത്രീ ഗർഭിണിയാണ്, അല്ലെങ്കിൽ അടുത്തിടെ പ്രസവിച്ചു"
+          },
+          "synonyms": {
+            "en": [],
+            "ml": []
+          }
+        },
+        {
+          "value": "plus_two_all_aplus",
+          "label": {
+            "en": "A child got A+ in all subjects in the Higher Secondary (+2) or VHSE final exam, passing in the first attempt",
+            "ml": "ഹയർ സെക്കന്ററി (+2) / വി.എച്ച്.എസ്.ഇ അവസാന വർഷ പരീക്ഷയിൽ ആദ്യ അവസരത്തിൽ തന്നെ കുട്ടിക്ക് എല്ലാ വിഷയങ്ങളിലും എ+ ലഭിച്ചു"
+          },
+          "synonyms": {
+            "en": [],
+            "ml": []
+          }
+        },
+        {
           "value": "none",
           "label": {
             "en": "None of these",
@@ -1152,6 +1298,146 @@
           }
         }
       ]
+    },
+    {
+      "id": "plantation_membership_years",
+      "type": "number",
+      "label": {
+        "en": "Years of continuous Welfare Fund membership",
+        "ml": "തുടർച്ചയായ ക്ഷേമനിധി അംഗത്വ വർഷങ്ങൾ"
+      },
+      "question": {
+        "en": "For how many years has the worker been a continuous member of the Small Plantation Workers Welfare Fund?",
+        "ml": "തൊഴിലാളി എത്ര വർഷമായി തുടർച്ചയായി ചെറുകിട തോട്ടം തൊഴിലാളി ക്ഷേമനിധി അംഗമാണ്?"
+      },
+      "help": {
+        "en": "Count from the date of joining. A break in membership may restart the count.",
+        "ml": "അംഗമായ തീയതി മുതൽ കണക്കാക്കുക. അംഗത്വം മുടങ്ങിയാൽ കാലയളവ് വീണ്ടും തുടങ്ങിയേക്കാം."
+      },
+      "unit": "years",
+      "sensitivity": "low",
+      "order": 14,
+      "options": []
+    },
+    {
+      "id": "incapacitated_over_2_years",
+      "type": "boolean",
+      "label": {
+        "en": "Permanently unable to work for over two years",
+        "ml": "രണ്ട് വർഷത്തിലധികമായി സ്ഥിരമായി ജോലി ചെയ്യാനാകാത്തത്"
+      },
+      "question": {
+        "en": "Has the member been continuously and permanently unable to work for more than two years?",
+        "ml": "അംഗത്തിന് രണ്ട് വർഷത്തിലധികമായി തുടർച്ചയായും സ്ഥിരമായും ജോലി ചെയ്യാൻ കഴിയാത്ത അവസ്ഥയാണോ?"
+      },
+      "unit": "",
+      "sensitivity": "high",
+      "order": 16,
+      "options": []
+    },
+    {
+      "id": "plantation_member_death",
+      "type": "boolean",
+      "label": {
+        "en": "Death of a Small Plantation Welfare Fund member",
+        "ml": "ചെറുകിട തോട്ടം ക്ഷേമനിധി അംഗത്തിന്റെ മരണം"
+      },
+      "question": {
+        "en": "Has a member of the Small Plantation Workers Welfare Fund in your family died?",
+        "ml": "നിങ്ങളുടെ കുടുംബത്തിലെ ചെറുകിട തോട്ടം തൊഴിലാളി ക്ഷേമനിധി അംഗം മരിച്ചോ?"
+      },
+      "help": {
+        "en": "Under the Act, family means wife or husband, minor sons and unmarried daughters, and dependent parents and dependent disabled or widowed children.",
+        "ml": "നിയമപ്രകാരം കുടുംബം: ഭാര്യ/ഭർത്താവ്, മൈനറായ ആൺമക്കൾ, അവിവാഹിതരായ പെൺമക്കൾ, ആശ്രിതരായ മാതാപിതാക്കൾ, ആശ്രിതരായ ഭിന്നശേഷിയുള്ള അല്ലെങ്കിൽ വിധവയായ മക്കൾ."
+      },
+      "unit": "",
+      "sensitivity": "high",
+      "order": 40,
+      "options": []
+    },
+    {
+      "id": "plantation_deceased_contrib_3y",
+      "type": "boolean",
+      "label": {
+        "en": "Deceased member paid contributions for 3 years",
+        "ml": "മരിച്ച അംഗം 3 വർഷം വിഹിതം അടച്ചു"
+      },
+      "question": {
+        "en": "Had the member who died paid contributions to the Fund for at least 3 years?",
+        "ml": "മരിച്ച അംഗം കുറഞ്ഞത് 3 വർഷമെങ്കിലും ക്ഷേമനിധിയിൽ വിഹിതം അടച്ചിരുന്നോ?"
+      },
+      "unit": "",
+      "sensitivity": "medium",
+      "order": 41,
+      "options": []
+    },
+    {
+      "id": "plantation_deceased_worked_15y",
+      "type": "boolean",
+      "label": {
+        "en": "Deceased member worked 15 years in a small plantation",
+        "ml": "മരിച്ച അംഗം 15 വർഷം ചെറുകിട തോട്ടത്തിൽ ജോലി ചെയ്തു"
+      },
+      "question": {
+        "en": "Had the member who died worked in a small plantation for at least 15 years?",
+        "ml": "മരിച്ച അംഗം കുറഞ്ഞത് 15 വർഷമെങ്കിലും ചെറുകിട തോട്ടത്തിൽ ജോലി ചെയ്തിരുന്നോ?"
+      },
+      "unit": "",
+      "sensitivity": "medium",
+      "order": 42,
+      "options": []
+    },
+    {
+      "id": "plantation_medical_treatment",
+      "type": "boolean",
+      "label": {
+        "en": "Medical treatment for the member or family",
+        "ml": "അംഗത്തിനോ കുടുംബത്തിനോ ചികിൽസ"
+      },
+      "question": {
+        "en": "Has the member or a family member had medical treatment for which you want help with the bills?",
+        "ml": "അംഗത്തിനോ കുടുംബാംഗത്തിനോ ചികിൽസ വേണ്ടിവന്നിട്ട് അതിന്റെ ബില്ലുകൾക്ക് സഹായം വേണോ?"
+      },
+      "help": {
+        "en": "The Board asks for original bills, an inpatient card from a Government hospital, and a medical certificate.",
+        "ml": "അസ്സൽ ബില്ലുകൾ, സർക്കാർ ആശുപത്രിയിലെ ഇൻപേഷ്യന്റ് കാർഡ്, മെഡിക്കൽ സർട്ടിഫിക്കറ്റ് എന്നിവ ബോർഡ് ആവശ്യപ്പെടുന്നു."
+      },
+      "unit": "",
+      "sensitivity": "medium",
+      "order": 43,
+      "options": []
+    },
+    {
+      "id": "plantation_child_class10",
+      "type": "boolean",
+      "label": {
+        "en": "Member's child in Class X or higher",
+        "ml": "അംഗത്തിന്റെ കുട്ടി പത്താം ക്ലാസിലോ ഉപരിപഠനത്തിലോ"
+      },
+      "question": {
+        "en": "Is a child of the member studying in Class X or in a higher course?",
+        "ml": "അംഗത്തിന്റെ കുട്ടി പത്താം ക്ലാസിലോ അതിനു മുകളിലുള്ള കോഴ്സിലോ പഠിക്കുന്നുണ്ടോ?"
+      },
+      "unit": "",
+      "sensitivity": "low",
+      "order": 30,
+      "options": []
+    },
+    {
+      "id": "mother_age_19",
+      "type": "boolean",
+      "label": {
+        "en": "Mother is at least 19",
+        "ml": "അമ്മയ്ക്ക് 19 വയസ്സെങ്കിലും"
+      },
+      "question": {
+        "en": "Is the woman who is expecting or has given birth at least 19 years old?",
+        "ml": "ഗർഭിണിയായ / പ്രസവിച്ച സ്ത്രീക്ക് 19 വയസ്സെങ്കിലും പ്രായമുണ്ടോ?"
+      },
+      "unit": "",
+      "sensitivity": "medium",
+      "order": 31,
+      "options": []
     }
   ],
   "schemes": [
@@ -1851,13 +2137,13 @@
       },
       "category": "plantation",
       "summary": {
-        "en": "The 2008 Act provides for pension to a member who has completed 60 years; full scheme-level conditions are not all reproduced in the Act.",
-        "ml": "2008-ലെ നിയമം 60 വയസ്സ് പൂർത്തിയാക്കിയ അംഗത്തിന് പെൻഷൻ നൽകുന്നതിനുള്ള വ്യവസ്ഥ ചെയ്യുന്നു; മുഴുവൻ സ്കീം നിബന്ധനകൾ നിയമത്തിൽ നൽകിയിട്ടില്ല."
+        "en": "Monthly pension for a member who has 5 years of continuous membership, on reaching 60. The minimum pension is ₹1,100 a month (G.O.(MS) No.359/2017/Fin).",
+        "ml": "5 വർഷം തുടർച്ചയായ അംഗത്വമുള്ള അംഗത്തിന് 60 വയസ്സ് തികയുമ്പോൾ പ്രതിമാസ പെൻഷൻ. കുറഞ്ഞ പെൻഷൻ പ്രതിമാസം 1,100 രൂപ (G.O.(MS) No.359/2017/Fin)."
       },
       "verification": {
         "eligibility": "verified",
-        "documents": "partial",
-        "apply": "partial"
+        "documents": "verified",
+        "apply": "verified"
       },
       "rule": {
         "all": [
@@ -1868,8 +2154,8 @@
             "value": true,
             "changeable": true,
             "howTo": {
-              "en": "Register as a member of the Small Plantation Workers' Welfare Fund Board: use \"Membership Registration\" on the AIIS welfare boards portal, or ask at an Akshaya centre.",
-              "ml": "ചെറുകിട തോട്ടം തൊഴിലാളി ക്ഷേമനിധി ബോർഡിൽ അംഗമാകാൻ AIIS പോർട്ടലിലെ \"Membership Registration\" ഉപയോഗിക്കുക, അല്ലെങ്കിൽ അക്ഷയ കേന്ദ്രത്തിൽ അന്വേഷിക്കുക."
+              "en": "If you worked at least 90 days in the last 12 months in a small plantation (under 5 hectares), or run your own plantation of up to half a hectare, ask the District Executive Officer for your area about joining the Fund.",
+              "ml": "കഴിഞ്ഞ 12 മാസത്തിൽ കുറഞ്ഞത് 90 ദിവസം 5 ഹെക്ടറിൽ താഴെയുള്ള തോട്ടത്തിൽ ജോലി ചെയ്തെങ്കിൽ, അല്ലെങ്കിൽ അര ഹെക്ടർ വരെയുള്ള സ്വന്തം തോട്ടമുണ്ടെങ്കിൽ, ക്ഷേമനിധിയിൽ ചേരുന്നതിനെക്കുറിച്ച് നിങ്ങളുടെ പ്രദേശത്തെ ജില്ലാ എക്സിക്യൂട്ടീവ് ഓഫീസറോട് അന്വേഷിക്കുക."
             },
             "source": {
               "sourceId": "SRC-PLNT-001",
@@ -1905,6 +2191,19 @@
               "locator": "Section 3(5)"
             },
             "reviewedBy": "PENDING_SECOND_REVIEW"
+          },
+          {
+            "id": "c3",
+            "fact": "plantation_membership_years",
+            "op": "gte",
+            "value": 5,
+            "changeable": false,
+            "source": {
+              "sourceId": "SRC-PLNT-014",
+              "quote": "SUPERANNUATION PENSION: Those who have a continuous membership of 5 years are eligible for the pension on attaining the age of 60.",
+              "locator": "Superannuation page"
+            },
+            "reviewedBy": "PENDING_SECOND_REVIEW"
           }
         ]
       },
@@ -1912,18 +2211,30 @@
         {
           "docId": "spwwfb_form_14",
           "source": {
-            "sourceId": "SRC-PLNT-008",
-            "quote": ""
+            "sourceId": "SRC-PLNT-014",
+            "quote": "Application to be submitted in Form No.14."
           }
         }
       ],
       "apply": [
         {
+          "locationType": "plantation_district_office",
+          "mode": "in_person",
+          "note": {
+            "en": "Submit Form No.14 to the District Executive Officer for your area. The form's office section is filled by the District Executive Officer.",
+            "ml": "ഫാറം നമ്പർ 14 നിങ്ങളുടെ പ്രദേശത്തെ ജില്ലാ എക്സിക്യൂട്ടീവ് ഓഫീസർക്ക് സമർപ്പിക്കുക. ഫാറത്തിലെ ഓഫീസ് ഭാഗം ജില്ലാ എക്സിക്യൂട്ടീവ് ഓഫീസറാണ് പൂരിപ്പിക്കുന്നത്."
+          },
+          "source": {
+            "sourceId": "SRC-PLNT-008",
+            "quote": "ജില്ലാ എക്സിക്യൂട്ടീവ് ഓഫീസർ"
+          }
+        },
+        {
           "locationType": "spwwfb_office",
           "mode": "in_person",
           "note": {
-            "en": "Contact the Board. The application procedure is not published in our sources.",
-            "ml": "ബോർഡുമായി ബന്ധപ്പെടുക. അപേക്ഷാ നടപടിക്രമം ഞങ്ങളുടെ ഉറവിടങ്ങളിൽ ലഭ്യമല്ല."
+            "en": "The Chief Executive Officer's office in Kottayam administers the Fund.",
+            "ml": "കോട്ടയത്തെ ചീഫ് എക്സിക്യൂട്ടീവ് ഓഫീസറുടെ കാര്യാലയമാണ് ക്ഷേമനിധി ഭരിക്കുന്നത്."
           },
           "source": {
             "sourceId": "SRC-PLNT-007",
@@ -1934,30 +2245,18 @@
           "locationType": "akshaya",
           "mode": "online",
           "note": {
-            "en": "Labour Department welfare boards take membership registration and scheme applications online on the AIIS portal (aiis.lc.kerala.gov.in). An Akshaya centre can submit it for you.",
-            "ml": "തൊഴിൽ വകുപ്പിന്റെ ക്ഷേമനിധി ബോർഡുകളിലെ അംഗത്വ രജിസ്ട്രേഷനും പദ്ധതി അപേക്ഷകളും AIIS പോർട്ടലിൽ (aiis.lc.kerala.gov.in) ഓൺലൈനായി നൽകാം. അക്ഷയ കേന്ദ്രം വഴിയും സമർപ്പിക്കാം."
+            "en": "The Labour Department's AIIS portal (aiis.lc.kerala.gov.in) takes welfare board applications through Akshaya centres. We could not confirm that this Board is on it, so ask at the Akshaya centre before relying on it.",
+            "ml": "തൊഴിൽ വകുപ്പിന്റെ AIIS പോർട്ടൽ (aiis.lc.kerala.gov.in) അക്ഷയ കേന്ദ്രങ്ങൾ വഴി ക്ഷേമനിധി ബോർഡ് അപേക്ഷകൾ സ്വീകരിക്കുന്നു. ഈ ബോർഡ് അതിലുണ്ടെന്ന് ഉറപ്പാക്കാൻ കഴിഞ്ഞിട്ടില്ല; അക്ഷയ കേന്ദ്രത്തിൽ ചോദിച്ച് ഉറപ്പാക്കുക."
           },
           "source": {
             "sourceId": "SRC-PLNT-006",
-            "quote": "Akshaya and Trade Union Login / Sign-up Access via Akshaya centre"
-          }
-        },
-        {
-          "locationType": "plantation_district_office",
-          "mode": "in_person",
-          "note": {
-            "en": "The District Executive Officer for your area handles the Fund's members. The application procedure for this benefit is not published in our sources.",
-            "ml": "നിങ്ങളുടെ പ്രദേശത്തെ ജില്ലാ എക്സിക്യൂട്ടീവ് ഓഫീസറാണ് ക്ഷേമനിധി അംഗങ്ങളുടെ കാര്യങ്ങൾ കൈകാര്യം ചെയ്യുന്നത്. ഈ ആനുകൂല്യത്തിന്റെ അപേക്ഷാ നടപടിക്രമം ഞങ്ങളുടെ ഉറവിടങ്ങളിൽ ലഭ്യമല്ല."
-          },
-          "source": {
-            "sourceId": "SRC-PLNT-007",
-            "quote": "Office of the District Executive Officer"
+            "quote": "Akshaya and Trade Union Login / Sign-up"
           }
         }
       ],
       "lastVerified": "2026-09-23",
-      "verifiedBy": "HR",
-      "notes": "Act 17 of 2008 s.3(5)(a). Form 14 (Scheme 2009, clause 38(1)) is the application; clause 38 itself (contribution period, amount) is not collected, so documents and procedure stay partial."
+      "verifiedBy": "AI-review",
+      "notes": "Act 17 of 2008 s.3(5)(a) and the Board's Superannuation page (5 years continuous membership, age 60, Form 14). The Board page lists only Form 14; Form 14 itself lists no attachments. Form 14 office section: District Executive Officer. AIIS route not confirmed for this Board."
     },
     {
       "id": "PLNT-02",
@@ -1971,12 +2270,12 @@
       },
       "category": "plantation",
       "summary": {
-        "en": "The Act provides for pension to a member unable to work due to infirmity; detailed scheme conditions are not fully stated.",
-        "ml": "അശക്തി മൂലം ജോലി ചെയ്യാൻ കഴിയാത്ത അംഗത്തിന് പെൻഷൻ നൽകുന്നതിനുള്ള വ്യവസ്ഥ നിയമത്തിലുണ്ട്; മുഴുവൻ സ്കീം നിബന്ധനകൾ വ്യക്തമല്ല."
+        "en": "Pension for a member who has been continuously and permanently unable to work for more than two years.",
+        "ml": "രണ്ട് വർഷത്തിലധികമായി തുടർച്ചയായും സ്ഥിരമായും ജോലി ചെയ്യാൻ കഴിയാത്ത അംഗത്തിന് പെൻഷൻ."
       },
       "verification": {
         "eligibility": "verified",
-        "documents": "partial",
+        "documents": "verified",
         "apply": "partial"
       },
       "rule": {
@@ -1988,8 +2287,8 @@
             "value": true,
             "changeable": true,
             "howTo": {
-              "en": "Register as a member of the Small Plantation Workers' Welfare Fund Board: use \"Membership Registration\" on the AIIS welfare boards portal, or ask at an Akshaya centre.",
-              "ml": "ചെറുകിട തോട്ടം തൊഴിലാളി ക്ഷേമനിധി ബോർഡിൽ അംഗമാകാൻ AIIS പോർട്ടലിലെ \"Membership Registration\" ഉപയോഗിക്കുക, അല്ലെങ്കിൽ അക്ഷയ കേന്ദ്രത്തിൽ അന്വേഷിക്കുക."
+              "en": "If you worked at least 90 days in the last 12 months in a small plantation (under 5 hectares), or run your own plantation of up to half a hectare, ask the District Executive Officer for your area about joining the Fund.",
+              "ml": "കഴിഞ്ഞ 12 മാസത്തിൽ കുറഞ്ഞത് 90 ദിവസം 5 ഹെക്ടറിൽ താഴെയുള്ള തോട്ടത്തിൽ ജോലി ചെയ്തെങ്കിൽ, അല്ലെങ്കിൽ അര ഹെക്ടർ വരെയുള്ള സ്വന്തം തോട്ടമുണ്ടെങ്കിൽ, ക്ഷേമനിധിയിൽ ചേരുന്നതിനെക്കുറിച്ച് നിങ്ങളുടെ പ്രദേശത്തെ ജില്ലാ എക്സിക്യൂട്ടീവ് ഓഫീസറോട് അന്വേഷിക്കുക."
             },
             "source": {
               "sourceId": "SRC-PLNT-001",
@@ -2025,17 +2324,57 @@
               "locator": "Section 3(5)"
             },
             "reviewedBy": "PENDING_SECOND_REVIEW"
+          },
+          {
+            "id": "c3",
+            "fact": "incapacitated_over_2_years",
+            "op": "eq",
+            "value": true,
+            "changeable": false,
+            "source": {
+              "sourceId": "SRC-PLNT-016",
+              "quote": "Those who have a continuously and permanently incapacitated and unable to do work beyond two years are eligible.",
+              "locator": "Invalid Pension page"
+            },
+            "reviewedBy": "PENDING_SECOND_REVIEW"
           }
         ]
       },
-      "documents": [],
+      "documents": [
+        {
+          "docId": "spwwfb_form_15",
+          "source": {
+            "sourceId": "SRC-PLNT-016",
+            "quote": "Application to be submitted in Form No.15."
+          }
+        },
+        {
+          "docId": "medical_board_certificate",
+          "source": {
+            "sourceId": "SRC-PLNT-016",
+            "quote": "supported by Medical Certificate issued by a Medical Board."
+          }
+        }
+      ],
       "apply": [
+        {
+          "locationType": "plantation_district_office",
+          "mode": "in_person",
+          "note": {
+            "en": "Apply in Form No.15. The Board page does not say where to submit it; the District Executive Officer for your area handles the Fund's members.",
+            "ml": "ഫാറം നമ്പർ 15-ൽ അപേക്ഷിക്കുക. എവിടെ സമർപ്പിക്കണമെന്ന് ബോർഡ് പേജിൽ പറയുന്നില്ല; നിങ്ങളുടെ പ്രദേശത്തെ ജില്ലാ എക്സിക്യൂട്ടീവ് ഓഫീസറാണ് ക്ഷേമനിധി അംഗങ്ങളുടെ കാര്യങ്ങൾ കൈകാര്യം ചെയ്യുന്നത്."
+          },
+          "source": {
+            "sourceId": "SRC-PLNT-016",
+            "quote": "Application to be submitted in Form No.15."
+          }
+        },
         {
           "locationType": "spwwfb_office",
           "mode": "in_person",
           "note": {
-            "en": "Contact the Board. The application procedure is not published in our sources.",
-            "ml": "ബോർഡുമായി ബന്ധപ്പെടുക. അപേക്ഷാ നടപടിക്രമം ഞങ്ങളുടെ ഉറവിടങ്ങളിൽ ലഭ്യമല്ല."
+            "en": "The Chief Executive Officer's office in Kottayam administers the Fund.",
+            "ml": "കോട്ടയത്തെ ചീഫ് എക്സിക്യൂട്ടീവ് ഓഫീസറുടെ കാര്യാലയമാണ് ക്ഷേമനിധി ഭരിക്കുന്നത്."
           },
           "source": {
             "sourceId": "SRC-PLNT-007",
@@ -2046,30 +2385,18 @@
           "locationType": "akshaya",
           "mode": "online",
           "note": {
-            "en": "Labour Department welfare boards take membership registration and scheme applications online on the AIIS portal (aiis.lc.kerala.gov.in). An Akshaya centre can submit it for you.",
-            "ml": "തൊഴിൽ വകുപ്പിന്റെ ക്ഷേമനിധി ബോർഡുകളിലെ അംഗത്വ രജിസ്ട്രേഷനും പദ്ധതി അപേക്ഷകളും AIIS പോർട്ടലിൽ (aiis.lc.kerala.gov.in) ഓൺലൈനായി നൽകാം. അക്ഷയ കേന്ദ്രം വഴിയും സമർപ്പിക്കാം."
+            "en": "The Labour Department's AIIS portal (aiis.lc.kerala.gov.in) takes welfare board applications through Akshaya centres. We could not confirm that this Board is on it, so ask at the Akshaya centre before relying on it.",
+            "ml": "തൊഴിൽ വകുപ്പിന്റെ AIIS പോർട്ടൽ (aiis.lc.kerala.gov.in) അക്ഷയ കേന്ദ്രങ്ങൾ വഴി ക്ഷേമനിധി ബോർഡ് അപേക്ഷകൾ സ്വീകരിക്കുന്നു. ഈ ബോർഡ് അതിലുണ്ടെന്ന് ഉറപ്പാക്കാൻ കഴിഞ്ഞിട്ടില്ല; അക്ഷയ കേന്ദ്രത്തിൽ ചോദിച്ച് ഉറപ്പാക്കുക."
           },
           "source": {
             "sourceId": "SRC-PLNT-006",
-            "quote": "Akshaya and Trade Union Login / Sign-up Access via Akshaya centre"
-          }
-        },
-        {
-          "locationType": "plantation_district_office",
-          "mode": "in_person",
-          "note": {
-            "en": "The District Executive Officer for your area handles the Fund's members. The application procedure for this benefit is not published in our sources.",
-            "ml": "നിങ്ങളുടെ പ്രദേശത്തെ ജില്ലാ എക്സിക്യൂട്ടീവ് ഓഫീസറാണ് ക്ഷേമനിധി അംഗങ്ങളുടെ കാര്യങ്ങൾ കൈകാര്യം ചെയ്യുന്നത്. ഈ ആനുകൂല്യത്തിന്റെ അപേക്ഷാ നടപടിക്രമം ഞങ്ങളുടെ ഉറവിടങ്ങളിൽ ലഭ്യമല്ല."
-          },
-          "source": {
-            "sourceId": "SRC-PLNT-007",
-            "quote": "Office of the District Executive Officer"
+            "quote": "Akshaya and Trade Union Login / Sign-up"
           }
         }
       ],
       "lastVerified": "2026-09-23",
-      "verifiedBy": "HR",
-      "notes": "HR (primary curation); eligibility set to verified on the Act clause (quotes reported checked against the PDF)."
+      "verifiedBy": "AI-review",
+      "notes": "Act 17 of 2008 s.3(5)(a) and the Board's Invalid Pension page. The page sentence is printed as 'Those who have a continuously and permanently incapacitated and unable to do work beyond two years are eligible.' We do not have Form 15, so where to submit it is not confirmed."
     },
     {
       "id": "PLNT-03",
@@ -2100,8 +2427,8 @@
             "value": true,
             "changeable": true,
             "howTo": {
-              "en": "Register as a member of the Small Plantation Workers' Welfare Fund Board: use \"Membership Registration\" on the AIIS welfare boards portal, or ask at an Akshaya centre.",
-              "ml": "ചെറുകിട തോട്ടം തൊഴിലാളി ക്ഷേമനിധി ബോർഡിൽ അംഗമാകാൻ AIIS പോർട്ടലിലെ \"Membership Registration\" ഉപയോഗിക്കുക, അല്ലെങ്കിൽ അക്ഷയ കേന്ദ്രത്തിൽ അന്വേഷിക്കുക."
+              "en": "If you worked at least 90 days in the last 12 months in a small plantation (under 5 hectares), or run your own plantation of up to half a hectare, ask the District Executive Officer for your area about joining the Fund.",
+              "ml": "കഴിഞ്ഞ 12 മാസത്തിൽ കുറഞ്ഞത് 90 ദിവസം 5 ഹെക്ടറിൽ താഴെയുള്ള തോട്ടത്തിൽ ജോലി ചെയ്തെങ്കിൽ, അല്ലെങ്കിൽ അര ഹെക്ടർ വരെയുള്ള സ്വന്തം തോട്ടമുണ്ടെങ്കിൽ, ക്ഷേമനിധിയിൽ ചേരുന്നതിനെക്കുറിച്ച് നിങ്ങളുടെ പ്രദേശത്തെ ജില്ലാ എക്സിക്യൂട്ടീവ് ഓഫീസറോട് അന്വേഷിക്കുക."
             },
             "source": {
               "sourceId": "SRC-PLNT-001",
@@ -2143,11 +2470,23 @@
       "documents": [],
       "apply": [
         {
+          "locationType": "plantation_district_office",
+          "mode": "in_person",
+          "note": {
+            "en": "Ask the District Executive Officer for your area. The Board has not published the application procedure for this benefit.",
+            "ml": "നിങ്ങളുടെ പ്രദേശത്തെ ജില്ലാ എക്സിക്യൂട്ടീവ് ഓഫീസറോട് അന്വേഷിക്കുക. ഈ ആനുകൂല്യത്തിന്റെ അപേക്ഷാ നടപടിക്രമം ബോർഡ് പ്രസിദ്ധീകരിച്ചിട്ടില്ല."
+          },
+          "source": {
+            "sourceId": "SRC-PLNT-007",
+            "quote": "Office of the District Executive Officer"
+          }
+        },
+        {
           "locationType": "spwwfb_office",
           "mode": "in_person",
           "note": {
-            "en": "Contact the Board. The application procedure is not published in our sources.",
-            "ml": "ബോർഡുമായി ബന്ധപ്പെടുക. അപേക്ഷാ നടപടിക്രമം ഞങ്ങളുടെ ഉറവിടങ്ങളിൽ ലഭ്യമല്ല."
+            "en": "The Chief Executive Officer's office in Kottayam administers the Fund.",
+            "ml": "കോട്ടയത്തെ ചീഫ് എക്സിക്യൂട്ടീവ് ഓഫീസറുടെ കാര്യാലയമാണ് ക്ഷേമനിധി ഭരിക്കുന്നത്."
           },
           "source": {
             "sourceId": "SRC-PLNT-007",
@@ -2158,36 +2497,24 @@
           "locationType": "akshaya",
           "mode": "online",
           "note": {
-            "en": "Labour Department welfare boards take membership registration and scheme applications online on the AIIS portal (aiis.lc.kerala.gov.in). An Akshaya centre can submit it for you.",
-            "ml": "തൊഴിൽ വകുപ്പിന്റെ ക്ഷേമനിധി ബോർഡുകളിലെ അംഗത്വ രജിസ്ട്രേഷനും പദ്ധതി അപേക്ഷകളും AIIS പോർട്ടലിൽ (aiis.lc.kerala.gov.in) ഓൺലൈനായി നൽകാം. അക്ഷയ കേന്ദ്രം വഴിയും സമർപ്പിക്കാം."
+            "en": "The Labour Department's AIIS portal (aiis.lc.kerala.gov.in) takes welfare board applications through Akshaya centres. We could not confirm that this Board is on it, so ask at the Akshaya centre before relying on it.",
+            "ml": "തൊഴിൽ വകുപ്പിന്റെ AIIS പോർട്ടൽ (aiis.lc.kerala.gov.in) അക്ഷയ കേന്ദ്രങ്ങൾ വഴി ക്ഷേമനിധി ബോർഡ് അപേക്ഷകൾ സ്വീകരിക്കുന്നു. ഈ ബോർഡ് അതിലുണ്ടെന്ന് ഉറപ്പാക്കാൻ കഴിഞ്ഞിട്ടില്ല; അക്ഷയ കേന്ദ്രത്തിൽ ചോദിച്ച് ഉറപ്പാക്കുക."
           },
           "source": {
             "sourceId": "SRC-PLNT-006",
-            "quote": "Akshaya and Trade Union Login / Sign-up Access via Akshaya centre"
-          }
-        },
-        {
-          "locationType": "plantation_district_office",
-          "mode": "in_person",
-          "note": {
-            "en": "The District Executive Officer for your area handles the Fund's members. The application procedure for this benefit is not published in our sources.",
-            "ml": "നിങ്ങളുടെ പ്രദേശത്തെ ജില്ലാ എക്സിക്യൂട്ടീവ് ഓഫീസറാണ് ക്ഷേമനിധി അംഗങ്ങളുടെ കാര്യങ്ങൾ കൈകാര്യം ചെയ്യുന്നത്. ഈ ആനുകൂല്യത്തിന്റെ അപേക്ഷാ നടപടിക്രമം ഞങ്ങളുടെ ഉറവിടങ്ങളിൽ ലഭ്യമല്ല."
-          },
-          "source": {
-            "sourceId": "SRC-PLNT-007",
-            "quote": "Office of the District Executive Officer"
+            "quote": "Akshaya and Trade Union Login / Sign-up"
           }
         }
       ],
       "lastVerified": "2026-09-23",
       "verifiedBy": "HR",
-      "notes": "HR (primary curation); eligibility set to verified on the Act clause (quotes reported checked against the PDF)."
+      "notes": "Act 17 of 2008 s.3(5)(c) only. The Board website has no separate page for permanent-disability assistance (its pension pages cover superannuation, family and invalid pension), so the amount, documents and form are not published."
     },
     {
       "id": "PLNT-04",
       "name": {
-        "en": "Marriage Assistance for Daughters of Small Plantation Workers",
-        "ml": "ചെറുകിട തോട്ടം തൊഴിലാളികളുടെ പെൺമക്കളുടെ വിവാഹ ധനസഹായം"
+        "en": "Marriage Assistance (Small Plantation Workers' Welfare Fund)",
+        "ml": "വിവാഹ ധനസഹായം (ചെറുകിട തോട്ടം തൊഴിലാളി ക്ഷേമനിധി)"
       },
       "authority": {
         "en": "Kerala Small Plantation Workers' Welfare Fund Board",
@@ -2195,13 +2522,13 @@
       },
       "category": "plantation",
       "summary": {
-        "en": "The Act allows loans or grants to a member for expenses connected with the marriage of daughters.",
-        "ml": "അംഗത്തിന്റെ പെൺമക്കളുടെ വിവാഹവുമായി ബന്ധപ്പെട്ട ചെലവുകൾക്കായി വായ്പയോ ധനസഹായമോ നൽകുന്നതിനുള്ള വ്യവസ്ഥ നിയമത്തിലുണ്ട്."
+        "en": "₹3,000 for the marriage of a woman member, or of a member's daughter, after at least 3 years of membership.",
+        "ml": "കുറഞ്ഞത് 3 വർഷം അംഗത്വമുള്ള വനിതാ അംഗത്തിന്റെയോ അംഗത്തിന്റെ മകളുടെയോ വിവാഹത്തിന് 3,000 രൂപ."
       },
       "verification": {
         "eligibility": "verified",
-        "documents": "partial",
-        "apply": "partial"
+        "documents": "verified",
+        "apply": "verified"
       },
       "rule": {
         "all": [
@@ -2212,26 +2539,13 @@
             "value": true,
             "changeable": true,
             "howTo": {
-              "en": "Register as a member of the Small Plantation Workers' Welfare Fund Board: use \"Membership Registration\" on the AIIS welfare boards portal, or ask at an Akshaya centre.",
-              "ml": "ചെറുകിട തോട്ടം തൊഴിലാളി ക്ഷേമനിധി ബോർഡിൽ അംഗമാകാൻ AIIS പോർട്ടലിലെ \"Membership Registration\" ഉപയോഗിക്കുക, അല്ലെങ്കിൽ അക്ഷയ കേന്ദ്രത്തിൽ അന്വേഷിക്കുക."
+              "en": "If you worked at least 90 days in the last 12 months in a small plantation (under 5 hectares), or run your own plantation of up to half a hectare, ask the District Executive Officer for your area about joining the Fund.",
+              "ml": "കഴിഞ്ഞ 12 മാസത്തിൽ കുറഞ്ഞത് 90 ദിവസം 5 ഹെക്ടറിൽ താഴെയുള്ള തോട്ടത്തിൽ ജോലി ചെയ്തെങ്കിൽ, അല്ലെങ്കിൽ അര ഹെക്ടർ വരെയുള്ള സ്വന്തം തോട്ടമുണ്ടെങ്കിൽ, ക്ഷേമനിധിയിൽ ചേരുന്നതിനെക്കുറിച്ച് നിങ്ങളുടെ പ്രദേശത്തെ ജില്ലാ എക്സിക്യൂട്ടീവ് ഓഫീസറോട് അന്വേഷിക്കുക."
             },
             "source": {
               "sourceId": "SRC-PLNT-001",
               "quote": "\"member\" means a member of the Fund;",
               "locator": "Section 2(g)"
-            },
-            "reviewedBy": "PENDING_SECOND_REVIEW"
-          },
-          {
-            "id": "c2",
-            "fact": "daughter_marriage",
-            "op": "eq",
-            "value": true,
-            "changeable": false,
-            "source": {
-              "sourceId": "SRC-PLNT-001",
-              "quote": "for payment of loans or grants to a member to meet expenses in connection with the marriage of daughters or for expenses in connection with the death of member or dependant or for expenses for construction or maintenance of his house;",
-              "locator": "Section 3(5)(d)"
             },
             "reviewedBy": "PENDING_SECOND_REVIEW"
           },
@@ -2249,6 +2563,32 @@
               "locator": "Section 3(5)"
             },
             "reviewedBy": "PENDING_SECOND_REVIEW"
+          },
+          {
+            "id": "c2b",
+            "fact": "daughter_marriage",
+            "op": "eq",
+            "value": true,
+            "changeable": false,
+            "source": {
+              "sourceId": "SRC-PLNT-011",
+              "quote": "This benefit is extended to the female workers who are members of the scheme and to the daughters of the members of the scheme.",
+              "locator": "Marriage Assistance page"
+            },
+            "reviewedBy": "PENDING_SECOND_REVIEW"
+          },
+          {
+            "id": "c3",
+            "fact": "plantation_membership_years",
+            "op": "gte",
+            "value": 3,
+            "changeable": false,
+            "source": {
+              "sourceId": "SRC-PLNT-011",
+              "quote": "The workers should have been members of the scheme for at least 3 years.",
+              "locator": "Marriage Assistance page"
+            },
+            "reviewedBy": "PENDING_SECOND_REVIEW"
           }
         ]
       },
@@ -2256,18 +2596,37 @@
         {
           "docId": "spwwfb_form_18",
           "source": {
-            "sourceId": "SRC-PLNT-009",
-            "quote": ""
+            "sourceId": "SRC-PLNT-011",
+            "quote": "Application to be submitted in Form No.18."
+          }
+        },
+        {
+          "docId": "marriage_certificate",
+          "source": {
+            "sourceId": "SRC-PLNT-011",
+            "quote": "supported by Marriage Certificate."
           }
         }
       ],
       "apply": [
         {
+          "locationType": "plantation_district_office",
+          "mode": "in_person",
+          "note": {
+            "en": "Submit Form No.18 to the District Executive Officer for your area. The form's office section is filled by the District Executive Officer.",
+            "ml": "ഫാറം നമ്പർ 18 നിങ്ങളുടെ പ്രദേശത്തെ ജില്ലാ എക്സിക്യൂട്ടീവ് ഓഫീസർക്ക് സമർപ്പിക്കുക. ഫാറത്തിലെ ഓഫീസ് ഭാഗം ജില്ലാ എക്സിക്യൂട്ടീവ് ഓഫീസറാണ് പൂരിപ്പിക്കുന്നത്."
+          },
+          "source": {
+            "sourceId": "SRC-PLNT-009",
+            "quote": "ജില്ലാ എക്സിക്യൂട്ടീവ് ഓഫീസർ"
+          }
+        },
+        {
           "locationType": "spwwfb_office",
           "mode": "in_person",
           "note": {
-            "en": "Contact the Board. The application procedure is not published in our sources.",
-            "ml": "ബോർഡുമായി ബന്ധപ്പെടുക. അപേക്ഷാ നടപടിക്രമം ഞങ്ങളുടെ ഉറവിടങ്ങളിൽ ലഭ്യമല്ല."
+            "en": "The Chief Executive Officer's office in Kottayam administers the Fund.",
+            "ml": "കോട്ടയത്തെ ചീഫ് എക്സിക്യൂട്ടീവ് ഓഫീസറുടെ കാര്യാലയമാണ് ക്ഷേമനിധി ഭരിക്കുന്നത്."
           },
           "source": {
             "sourceId": "SRC-PLNT-007",
@@ -2278,30 +2637,18 @@
           "locationType": "akshaya",
           "mode": "online",
           "note": {
-            "en": "Labour Department welfare boards take membership registration and scheme applications online on the AIIS portal (aiis.lc.kerala.gov.in). An Akshaya centre can submit it for you.",
-            "ml": "തൊഴിൽ വകുപ്പിന്റെ ക്ഷേമനിധി ബോർഡുകളിലെ അംഗത്വ രജിസ്ട്രേഷനും പദ്ധതി അപേക്ഷകളും AIIS പോർട്ടലിൽ (aiis.lc.kerala.gov.in) ഓൺലൈനായി നൽകാം. അക്ഷയ കേന്ദ്രം വഴിയും സമർപ്പിക്കാം."
+            "en": "The Labour Department's AIIS portal (aiis.lc.kerala.gov.in) takes welfare board applications through Akshaya centres. We could not confirm that this Board is on it, so ask at the Akshaya centre before relying on it.",
+            "ml": "തൊഴിൽ വകുപ്പിന്റെ AIIS പോർട്ടൽ (aiis.lc.kerala.gov.in) അക്ഷയ കേന്ദ്രങ്ങൾ വഴി ക്ഷേമനിധി ബോർഡ് അപേക്ഷകൾ സ്വീകരിക്കുന്നു. ഈ ബോർഡ് അതിലുണ്ടെന്ന് ഉറപ്പാക്കാൻ കഴിഞ്ഞിട്ടില്ല; അക്ഷയ കേന്ദ്രത്തിൽ ചോദിച്ച് ഉറപ്പാക്കുക."
           },
           "source": {
             "sourceId": "SRC-PLNT-006",
-            "quote": "Akshaya and Trade Union Login / Sign-up Access via Akshaya centre"
-          }
-        },
-        {
-          "locationType": "plantation_district_office",
-          "mode": "in_person",
-          "note": {
-            "en": "The District Executive Officer for your area handles the Fund's members. The application procedure for this benefit is not published in our sources.",
-            "ml": "നിങ്ങളുടെ പ്രദേശത്തെ ജില്ലാ എക്സിക്യൂട്ടീവ് ഓഫീസറാണ് ക്ഷേമനിധി അംഗങ്ങളുടെ കാര്യങ്ങൾ കൈകാര്യം ചെയ്യുന്നത്. ഈ ആനുകൂല്യത്തിന്റെ അപേക്ഷാ നടപടിക്രമം ഞങ്ങളുടെ ഉറവിടങ്ങളിൽ ലഭ്യമല്ല."
-          },
-          "source": {
-            "sourceId": "SRC-PLNT-007",
-            "quote": "Office of the District Executive Officer"
+            "quote": "Akshaya and Trade Union Login / Sign-up"
           }
         }
       ],
       "lastVerified": "2026-09-23",
-      "verifiedBy": "HR",
-      "notes": "Act 17 of 2008 s.3(5)(d). Form 18 (Scheme 2009, clause 45(1)) is the application; clause 45 itself is not collected."
+      "verifiedBy": "AI-review",
+      "notes": "Act 17 of 2008 s.3(5)(d) and the Board's Marriage Assistance page (female members and members' daughters, Rs 3,000, 3 years, Form 18, marriage certificate). Form 18 office section: District Executive Officer. Form 18 also asks whether the benefit was received or applied for before; no limit on repeat claims is published, so it is not encoded."
     },
     {
       "id": "PLNT-05",
@@ -2360,8 +2707,8 @@
             "value": true,
             "changeable": true,
             "howTo": {
-              "en": "Register as a member of the Small Plantation Workers' Welfare Fund Board: use \"Membership Registration\" on the AIIS welfare boards portal, or ask at an Akshaya centre.",
-              "ml": "ചെറുകിട തോട്ടം തൊഴിലാളി ക്ഷേമനിധി ബോർഡിൽ അംഗമാകാൻ AIIS പോർട്ടലിലെ \"Membership Registration\" ഉപയോഗിക്കുക, അല്ലെങ്കിൽ അക്ഷയ കേന്ദ്രത്തിൽ അന്വേഷിക്കുക."
+              "en": "If you worked at least 90 days in the last 12 months in a small plantation (under 5 hectares), or run your own plantation of up to half a hectare, ask the District Executive Officer for your area about joining the Fund.",
+              "ml": "കഴിഞ്ഞ 12 മാസത്തിൽ കുറഞ്ഞത് 90 ദിവസം 5 ഹെക്ടറിൽ താഴെയുള്ള തോട്ടത്തിൽ ജോലി ചെയ്തെങ്കിൽ, അല്ലെങ്കിൽ അര ഹെക്ടർ വരെയുള്ള സ്വന്തം തോട്ടമുണ്ടെങ്കിൽ, ക്ഷേമനിധിയിൽ ചേരുന്നതിനെക്കുറിച്ച് നിങ്ങളുടെ പ്രദേശത്തെ ജില്ലാ എക്സിക്യൂട്ടീവ് ഓഫീസറോട് അന്വേഷിക്കുക."
             },
             "source": {
               "sourceId": "SRC-PLNT-002",
@@ -2378,6 +2725,20 @@
           "source": {
             "sourceId": "SRC-PLNT-002",
             "quote": "Any individual eligible for receiving the benefits under the above Scheme shall hereby be required to furnish proof of possession of the Aadhaar number or undergo Aadhaar authentication"
+          }
+        },
+        {
+          "docId": "birth_certificate",
+          "source": {
+            "sourceId": "SRC-PLNT-017",
+            "quote": "supported by Birth Certificate and Medical Certificate."
+          }
+        },
+        {
+          "docId": "medical_certificate",
+          "source": {
+            "sourceId": "SRC-PLNT-017",
+            "quote": "supported by Birth Certificate and Medical Certificate."
           }
         }
       ],
@@ -2409,7 +2770,7 @@
       ],
       "lastVerified": "2026-09-23",
       "verifiedBy": "HR",
-      "notes": "G.O.(P) No.81/2024/LBR lists the Kerala Small Plantation Workers' Welfare Fund Board (item 10) among the 17 boards whose female members get the Maternity Benefit Scheme. Amount, number of deliveries and other conditions are in the 'extant Scheme guidelines', not collected."
+      "notes": "G.O.(P) No.81/2024/LBR (23 Nov 2024) lists the Small Plantation Workers' Welfare Fund Board (item 10) among the boards whose female members get the Maternity Benefit Scheme, implemented through a web-based Labour Commissionerate application. The amount, number of deliveries and contribution period are in the 'extant Scheme guidelines', not collected. CONFLICT: the Board's own Maternity Benefit page (older) says Rs 15,000 for two deliveries, Rs 1,000 for miscarriage, membership 'at least year' (number missing), Form 17 with birth and medical certificates. The Gazette is newer, so its online route is used; the Board page figures are shown here only as notes, not as rules."
     },
     {
       "id": "FISH-07",
@@ -3915,8 +4276,8 @@
     {
       "id": "PLNT-06",
       "name": {
-        "en": "Assistance to Dependants after a Small Plantation Worker Member's Death",
-        "ml": "അംഗത്തിന്റെ മരണാനന്തരം ആശ്രിതർക്ക് ധനസഹായം"
+        "en": "Death Assistance to a Member's Dependants (Small Plantation Workers)",
+        "ml": "മരണാനന്തര ധനസഹായം — ആശ്രിതർക്ക് (ചെറുകിട തോട്ടം തൊഴിലാളി)"
       },
       "authority": {
         "en": "Kerala Small Plantation Workers' Welfare Fund Board",
@@ -3924,23 +4285,52 @@
       },
       "category": "plantation",
       "summary": {
-        "en": "Financial assistance to dependants after a member's death, applied for with Form 20. The amount and eligibility are in Scheme clause 45, which we do not have yet.",
-        "ml": "അംഗം മരിച്ചാൽ ആശ്രിതർക്ക് ധനസഹായം; ഫാറം 20 വഴി അപേക്ഷിക്കണം. തുകയും അർഹതയും പദ്ധതി ഖണ്ഡിക 45-ൽ; അത് ഇതുവരെ ലഭ്യമല്ല."
+        "en": "₹10,000 to the dependants of a member who has died.",
+        "ml": "മരിച്ച അംഗത്തിന്റെ ആശ്രിതർക്ക് 10,000 രൂപ."
       },
       "verification": {
-        "eligibility": "informational",
-        "documents": "partial",
-        "apply": "partial"
+        "eligibility": "verified",
+        "documents": "verified",
+        "apply": "verified"
       },
       "rule": {
-        "all": []
+        "all": [
+          {
+            "id": "g0",
+            "fact": "livelihood",
+            "op": "includes",
+            "value": [
+              "plantation_worker"
+            ],
+            "changeable": false,
+            "source": {
+              "sourceId": "SRC-PLNT-013",
+              "quote": "The dependants of the deceased member of the scheme are eligible to get the benefit of Rs.10000.",
+              "locator": "Death Assistance page"
+            },
+            "reviewedBy": "PENDING_SECOND_REVIEW"
+          },
+          {
+            "id": "c1",
+            "fact": "plantation_member_death",
+            "op": "eq",
+            "value": true,
+            "changeable": false,
+            "source": {
+              "sourceId": "SRC-PLNT-013",
+              "quote": "The dependants of the deceased member of the scheme are eligible to get the benefit of Rs.10000.",
+              "locator": "Death Assistance page"
+            },
+            "reviewedBy": "PENDING_SECOND_REVIEW"
+          }
+        ]
       },
       "documents": [
         {
           "docId": "spwwfb_form_20",
           "source": {
-            "sourceId": "SRC-PLNT-010",
-            "quote": ""
+            "sourceId": "SRC-PLNT-013",
+            "quote": "Application to be submitted in Form No.20."
           }
         }
       ],
@@ -3949,18 +4339,30 @@
           "locationType": "plantation_district_office",
           "mode": "in_person",
           "note": {
-            "en": "Ask the District Executive Officer for your area.",
-            "ml": "നിങ്ങളുടെ പ്രദേശത്തെ ജില്ലാ എക്സിക്യൂട്ടീവ് ഓഫീസറോട് അന്വേഷിക്കുക."
+            "en": "Submit Form No.20 to the District Executive Officer for your area. The form's office section is filled by the District Executive Officer.",
+            "ml": "ഫാറം നമ്പർ 20 നിങ്ങളുടെ പ്രദേശത്തെ ജില്ലാ എക്സിക്യൂട്ടീവ് ഓഫീസർക്ക് സമർപ്പിക്കുക. ഫാറത്തിലെ ഓഫീസ് ഭാഗം ജില്ലാ എക്സിക്യൂട്ടീവ് ഓഫീസറാണ് പൂരിപ്പിക്കുന്നത്."
+          },
+          "source": {
+            "sourceId": "SRC-PLNT-010",
+            "quote": "ജില്ലാ എക്സിക്യൂട്ടീവ് ഓഫീസർ"
+          }
+        },
+        {
+          "locationType": "spwwfb_office",
+          "mode": "in_person",
+          "note": {
+            "en": "The Chief Executive Officer's office in Kottayam administers the Fund.",
+            "ml": "കോട്ടയത്തെ ചീഫ് എക്സിക്യൂട്ടീവ് ഓഫീസറുടെ കാര്യാലയമാണ് ക്ഷേമനിധി ഭരിക്കുന്നത്."
           },
           "source": {
             "sourceId": "SRC-PLNT-007",
-            "quote": "Office of the District Executive Officer"
+            "quote": "Office of the Chief Executive Officer, Azad Lane, Kottayam - 686 001"
           }
         }
       ],
       "lastVerified": "2026-09-23",
       "verifiedBy": "AI-review",
-      "notes": "Form 20 only. Needs Scheme 2009 clause 45."
+      "notes": "Board's Death Assistance page and Form 20 (Scheme 2009). No contribution period and no order of priority among heirs is published, so none is encoded. Form 20 asks for the consent of other heirs when more than one is entitled, and has a blank line for certificates attached; the Board page names only Form 20. Form 20 office section: District Executive Officer."
     },
     {
       "id": "PLNT-07",
@@ -3974,8 +4376,421 @@
       },
       "category": "plantation",
       "summary": {
-        "en": "The Act allows the Fund to pay a family pension. Who qualifies and how much is set in the Scheme, which we do not have yet.",
-        "ml": "കുടുംബ പെൻഷൻ നൽകാൻ നിയമം അനുവദിക്കുന്നു. അർഹതയും തുകയും പദ്ധതിയിലാണ്; അത് ഇതുവരെ ലഭ്യമല്ല."
+        "en": "Family pension at 50% of the member's pension, paid to a family member after the member's death, if the member paid contributions for at least 3 years and worked in a small plantation for at least 15 years.",
+        "ml": "അംഗം മരിച്ചാൽ കുടുംബാംഗത്തിന് അംഗത്തിന്റെ പെൻഷന്റെ 50% കുടുംബ പെൻഷൻ; അംഗം കുറഞ്ഞത് 3 വർഷം വിഹിതം അടയ്ക്കുകയും 15 വർഷം ചെറുകിട തോട്ടത്തിൽ ജോലി ചെയ്യുകയും ചെയ്തിരിക്കണം."
+      },
+      "verification": {
+        "eligibility": "verified",
+        "documents": "verified",
+        "apply": "partial"
+      },
+      "rule": {
+        "all": [
+          {
+            "id": "g0",
+            "fact": "livelihood",
+            "op": "includes",
+            "value": [
+              "plantation_worker"
+            ],
+            "changeable": false,
+            "source": {
+              "sourceId": "SRC-PLNT-001",
+              "quote": "for payment of family pension;",
+              "locator": "Section 3(5)(b)"
+            },
+            "reviewedBy": "PENDING_SECOND_REVIEW"
+          },
+          {
+            "id": "c1",
+            "fact": "plantation_member_death",
+            "op": "eq",
+            "value": true,
+            "changeable": false,
+            "source": {
+              "sourceId": "SRC-PLNT-015",
+              "quote": "A member of the family is eligible for the family pension on the demise of the member of the Fund @ 50% of the pension amount.",
+              "locator": "Family Pension page"
+            },
+            "reviewedBy": "PENDING_SECOND_REVIEW"
+          },
+          {
+            "id": "c2",
+            "fact": "plantation_deceased_contrib_3y",
+            "op": "eq",
+            "value": true,
+            "changeable": false,
+            "source": {
+              "sourceId": "SRC-PLNT-015",
+              "quote": "The member should have remitted contribution for a minimum period of 3 years and should have been employed in a small plantation for not less than 15 years.",
+              "locator": "Family Pension page"
+            },
+            "reviewedBy": "PENDING_SECOND_REVIEW"
+          },
+          {
+            "id": "c3",
+            "fact": "plantation_deceased_worked_15y",
+            "op": "eq",
+            "value": true,
+            "changeable": false,
+            "source": {
+              "sourceId": "SRC-PLNT-015",
+              "quote": "The member should have remitted contribution for a minimum period of 3 years and should have been employed in a small plantation for not less than 15 years.",
+              "locator": "Family Pension page"
+            },
+            "reviewedBy": "PENDING_SECOND_REVIEW"
+          }
+        ]
+      },
+      "documents": [
+        {
+          "docId": "spwwfb_form_16",
+          "source": {
+            "sourceId": "SRC-PLNT-015",
+            "quote": "Application to be submitted in Form No.16."
+          }
+        },
+        {
+          "docId": "death_certificate",
+          "source": {
+            "sourceId": "SRC-PLNT-015",
+            "quote": "supported by Death Certificate, Family Membership Certificate, and Income Certificate."
+          }
+        },
+        {
+          "docId": "family_membership_certificate",
+          "source": {
+            "sourceId": "SRC-PLNT-015",
+            "quote": "supported by Death Certificate, Family Membership Certificate, and Income Certificate."
+          }
+        },
+        {
+          "docId": "income_certificate",
+          "source": {
+            "sourceId": "SRC-PLNT-015",
+            "quote": "supported by Death Certificate, Family Membership Certificate, and Income Certificate."
+          }
+        }
+      ],
+      "apply": [
+        {
+          "locationType": "plantation_district_office",
+          "mode": "in_person",
+          "note": {
+            "en": "Apply in Form No.16. The Board page does not say where to submit it; the District Executive Officer for your area handles the Fund's members.",
+            "ml": "ഫാറം നമ്പർ 16-ൽ അപേക്ഷിക്കുക. എവിടെ സമർപ്പിക്കണമെന്ന് ബോർഡ് പേജിൽ പറയുന്നില്ല; നിങ്ങളുടെ പ്രദേശത്തെ ജില്ലാ എക്സിക്യൂട്ടീവ് ഓഫീസറാണ് ക്ഷേമനിധി അംഗങ്ങളുടെ കാര്യങ്ങൾ കൈകാര്യം ചെയ്യുന്നത്."
+          },
+          "source": {
+            "sourceId": "SRC-PLNT-015",
+            "quote": "Application to be submitted in Form No.16."
+          }
+        },
+        {
+          "locationType": "spwwfb_office",
+          "mode": "in_person",
+          "note": {
+            "en": "The Chief Executive Officer's office in Kottayam administers the Fund.",
+            "ml": "കോട്ടയത്തെ ചീഫ് എക്സിക്യൂട്ടീവ് ഓഫീസറുടെ കാര്യാലയമാണ് ക്ഷേമനിധി ഭരിക്കുന്നത്."
+          },
+          "source": {
+            "sourceId": "SRC-PLNT-007",
+            "quote": "Office of the Chief Executive Officer, Azad Lane, Kottayam - 686 001"
+          }
+        }
+      ],
+      "lastVerified": "2026-09-23",
+      "verifiedBy": "AI-review",
+      "notes": "Act 17 of 2008 s.3(5)(b) and the Board's Family Pension page. The Board page asks for an income certificate but publishes no income limit, so none is encoded. We do not have Form 16, so where to submit it is not confirmed."
+    },
+    {
+      "id": "PLNT-08",
+      "name": {
+        "en": "Educational Benefit for Members' Children (Small Plantation Workers)",
+        "ml": "അംഗങ്ങളുടെ മക്കൾക്ക് വിദ്യാഭ്യാസ ആനുകൂല്യം (ചെറുകിട തോട്ടം തൊഴിലാളി)"
+      },
+      "authority": {
+        "en": "Kerala Small Plantation Workers' Welfare Fund Board",
+        "ml": "കേരള ചെറുകിട തോട്ടം തൊഴിലാളി ക്ഷേമനിധി ബോർഡ്"
+      },
+      "category": "plantation",
+      "summary": {
+        "en": "Educational benefit for the children of members with at least 2 years of continuous membership, for courses from Class X onwards. The amount is not published.",
+        "ml": "കുറഞ്ഞത് 2 വർഷം തുടർച്ചയായ അംഗത്വമുള്ളവരുടെ മക്കൾക്ക് പത്താം ക്ലാസ് മുതലുള്ള കോഴ്സുകൾക്ക് വിദ്യാഭ്യാസ ആനുകൂല്യം. തുക പ്രസിദ്ധീകരിച്ചിട്ടില്ല."
+      },
+      "verification": {
+        "eligibility": "verified",
+        "documents": "partial",
+        "apply": "partial"
+      },
+      "rule": {
+        "all": [
+          {
+            "id": "g0",
+            "fact": "livelihood",
+            "op": "includes",
+            "value": [
+              "plantation_worker"
+            ],
+            "changeable": false,
+            "source": {
+              "sourceId": "SRC-PLNT-001",
+              "quote": "to provide for the necessities in relation to the education of the Children of Plantation workers;",
+              "locator": "Section 3(5)(h)"
+            },
+            "reviewedBy": "PENDING_SECOND_REVIEW"
+          },
+          {
+            "id": "c1",
+            "fact": "plantation_member",
+            "op": "eq",
+            "value": true,
+            "changeable": true,
+            "howTo": {
+              "en": "If you worked at least 90 days in the last 12 months in a small plantation (under 5 hectares), or run your own plantation of up to half a hectare, ask the District Executive Officer for your area about joining the Fund.",
+              "ml": "കഴിഞ്ഞ 12 മാസത്തിൽ കുറഞ്ഞത് 90 ദിവസം 5 ഹെക്ടറിൽ താഴെയുള്ള തോട്ടത്തിൽ ജോലി ചെയ്തെങ്കിൽ, അല്ലെങ്കിൽ അര ഹെക്ടർ വരെയുള്ള സ്വന്തം തോട്ടമുണ്ടെങ്കിൽ, ക്ഷേമനിധിയിൽ ചേരുന്നതിനെക്കുറിച്ച് നിങ്ങളുടെ പ്രദേശത്തെ ജില്ലാ എക്സിക്യൂട്ടീവ് ഓഫീസറോട് അന്വേഷിക്കുക."
+            },
+            "source": {
+              "sourceId": "SRC-PLNT-001",
+              "quote": "\"member\" means a member of the Fund;",
+              "locator": "Section 2(g)"
+            },
+            "reviewedBy": "PENDING_SECOND_REVIEW"
+          },
+          {
+            "id": "c2",
+            "fact": "plantation_membership_years",
+            "op": "gte",
+            "value": 2,
+            "changeable": false,
+            "source": {
+              "sourceId": "SRC-PLNT-018",
+              "quote": "Those workers who have a continuous membership for at least 2 years can avail the benefit for their children for various courses from Class X onwards.",
+              "locator": "Educational Benefit page"
+            },
+            "reviewedBy": "PENDING_SECOND_REVIEW"
+          },
+          {
+            "id": "c3",
+            "fact": "plantation_child_class10",
+            "op": "eq",
+            "value": true,
+            "changeable": false,
+            "source": {
+              "sourceId": "SRC-PLNT-018",
+              "quote": "Those workers who have a continuous membership for at least 2 years can avail the benefit for their children for various courses from Class X onwards.",
+              "locator": "Educational Benefit page"
+            },
+            "reviewedBy": "PENDING_SECOND_REVIEW"
+          }
+        ]
+      },
+      "documents": [
+        {
+          "docId": "spwwfb_education_form",
+          "source": {
+            "sourceId": "SRC-PLNT-019",
+            "quote": "Application For Educational Scholarship"
+          }
+        }
+      ],
+      "apply": [
+        {
+          "locationType": "plantation_district_office",
+          "mode": "in_person",
+          "note": {
+            "en": "Ask the District Executive Officer for your area for the scholarship form. The Board page does not say where to submit it.",
+            "ml": "സ്കോളർഷിപ്പ് ഫാറത്തിനായി നിങ്ങളുടെ പ്രദേശത്തെ ജില്ലാ എക്സിക്യൂട്ടീവ് ഓഫീസറെ സമീപിക്കുക. എവിടെ സമർപ്പിക്കണമെന്ന് ബോർഡ് പേജിൽ പറയുന്നില്ല."
+          },
+          "source": {
+            "sourceId": "SRC-PLNT-007",
+            "quote": "Office of the District Executive Officer"
+          }
+        },
+        {
+          "locationType": "spwwfb_office",
+          "mode": "in_person",
+          "note": {
+            "en": "The Chief Executive Officer's office in Kottayam administers the Fund.",
+            "ml": "കോട്ടയത്തെ ചീഫ് എക്സിക്യൂട്ടീവ് ഓഫീസറുടെ കാര്യാലയമാണ് ക്ഷേമനിധി ഭരിക്കുന്നത്."
+          },
+          "source": {
+            "sourceId": "SRC-PLNT-007",
+            "quote": "Office of the Chief Executive Officer, Azad Lane, Kottayam - 686 001"
+          }
+        }
+      ],
+      "lastVerified": "2026-09-23",
+      "verifiedBy": "AI-review",
+      "notes": "Act 17 of 2008 s.3(5)(f) and (h), and the Board's Educational Benefit page. The page gives no amount, no course list and no supporting documents; only an unnumbered application form."
+    },
+    {
+      "id": "PLNT-09",
+      "name": {
+        "en": "Medical Benefit (Small Plantation Workers' Welfare Fund)",
+        "ml": "ചികിൽസാ ആനുകൂല്യം (ചെറുകിട തോട്ടം തൊഴിലാളി ക്ഷേമനിധി)"
+      },
+      "authority": {
+        "en": "Kerala Small Plantation Workers' Welfare Fund Board",
+        "ml": "കേരള ചെറുകിട തോട്ടം തൊഴിലാളി ക്ഷേമനിധി ബോർഡ്"
+      },
+      "category": "plantation",
+      "summary": {
+        "en": "Help with medical bills for the member and family, after at least 3 years of membership. Limited to ₹10,000 in total for the whole period.",
+        "ml": "കുറഞ്ഞത് 3 വർഷം അംഗത്വമുള്ള അംഗത്തിനും കുടുംബത്തിനും ചികിൽസാ ബില്ലുകൾക്ക് സഹായം. ആകെ കാലയളവിൽ പരമാവധി 10,000 രൂപ."
+      },
+      "verification": {
+        "eligibility": "verified",
+        "documents": "verified",
+        "apply": "partial"
+      },
+      "rule": {
+        "all": [
+          {
+            "id": "g0",
+            "fact": "livelihood",
+            "op": "includes",
+            "value": [
+              "plantation_worker"
+            ],
+            "changeable": false,
+            "source": {
+              "sourceId": "SRC-PLNT-001",
+              "quote": "for providing facilities for treatment and education to the member and his family members;",
+              "locator": "Section 3(5)(f)"
+            },
+            "reviewedBy": "PENDING_SECOND_REVIEW"
+          },
+          {
+            "id": "c1",
+            "fact": "plantation_member",
+            "op": "eq",
+            "value": true,
+            "changeable": true,
+            "howTo": {
+              "en": "If you worked at least 90 days in the last 12 months in a small plantation (under 5 hectares), or run your own plantation of up to half a hectare, ask the District Executive Officer for your area about joining the Fund.",
+              "ml": "കഴിഞ്ഞ 12 മാസത്തിൽ കുറഞ്ഞത് 90 ദിവസം 5 ഹെക്ടറിൽ താഴെയുള്ള തോട്ടത്തിൽ ജോലി ചെയ്തെങ്കിൽ, അല്ലെങ്കിൽ അര ഹെക്ടർ വരെയുള്ള സ്വന്തം തോട്ടമുണ്ടെങ്കിൽ, ക്ഷേമനിധിയിൽ ചേരുന്നതിനെക്കുറിച്ച് നിങ്ങളുടെ പ്രദേശത്തെ ജില്ലാ എക്സിക്യൂട്ടീവ് ഓഫീസറോട് അന്വേഷിക്കുക."
+            },
+            "source": {
+              "sourceId": "SRC-PLNT-001",
+              "quote": "\"member\" means a member of the Fund;",
+              "locator": "Section 2(g)"
+            },
+            "reviewedBy": "PENDING_SECOND_REVIEW"
+          },
+          {
+            "id": "c2",
+            "fact": "plantation_membership_years",
+            "op": "gte",
+            "value": 3,
+            "changeable": false,
+            "source": {
+              "sourceId": "SRC-PLNT-012",
+              "quote": "Those workers who have been a member of the scheme for at least 3 years are entitled to the benefit.",
+              "locator": "Medical Benefit page"
+            },
+            "reviewedBy": "PENDING_SECOND_REVIEW"
+          },
+          {
+            "id": "c3",
+            "fact": "plantation_medical_treatment",
+            "op": "eq",
+            "value": true,
+            "changeable": false,
+            "source": {
+              "sourceId": "SRC-PLNT-012",
+              "quote": "The worker and his or her family members are entitled to the benefit.",
+              "locator": "Medical Benefit page"
+            },
+            "reviewedBy": "PENDING_SECOND_REVIEW"
+          }
+        ]
+      },
+      "documents": [
+        {
+          "docId": "spwwfb_form_19",
+          "source": {
+            "sourceId": "SRC-PLNT-012",
+            "quote": "Application to be submitted in Form No.19 supported by the original medical bills, Inpatient Card issued from a Government Hospital and Medical Certificate."
+          }
+        },
+        {
+          "docId": "original_medical_bills",
+          "source": {
+            "sourceId": "SRC-PLNT-012",
+            "quote": "Application to be submitted in Form No.19 supported by the original medical bills, Inpatient Card issued from a Government Hospital and Medical Certificate."
+          }
+        },
+        {
+          "docId": "govt_inpatient_card",
+          "source": {
+            "sourceId": "SRC-PLNT-012",
+            "quote": "Application to be submitted in Form No.19 supported by the original medical bills, Inpatient Card issued from a Government Hospital and Medical Certificate."
+          }
+        },
+        {
+          "docId": "medical_certificate",
+          "source": {
+            "sourceId": "SRC-PLNT-012",
+            "quote": "Application to be submitted in Form No.19 supported by the original medical bills, Inpatient Card issued from a Government Hospital and Medical Certificate."
+          }
+        }
+      ],
+      "apply": [
+        {
+          "locationType": "plantation_district_office",
+          "mode": "in_person",
+          "note": {
+            "en": "Apply in Form No.19. The Board page does not say where to submit it; the District Executive Officer for your area handles the Fund's members.",
+            "ml": "ഫാറം നമ്പർ 19-ൽ അപേക്ഷിക്കുക. എവിടെ സമർപ്പിക്കണമെന്ന് ബോർഡ് പേജിൽ പറയുന്നില്ല; നിങ്ങളുടെ പ്രദേശത്തെ ജില്ലാ എക്സിക്യൂട്ടീവ് ഓഫീസറാണ് ക്ഷേമനിധി അംഗങ്ങളുടെ കാര്യങ്ങൾ കൈകാര്യം ചെയ്യുന്നത്."
+          },
+          "source": {
+            "sourceId": "SRC-PLNT-012",
+            "quote": "Application to be submitted in Form No.19"
+          }
+        },
+        {
+          "locationType": "spwwfb_office",
+          "mode": "in_person",
+          "note": {
+            "en": "The Chief Executive Officer's office in Kottayam administers the Fund.",
+            "ml": "കോട്ടയത്തെ ചീഫ് എക്സിക്യൂട്ടീവ് ഓഫീസറുടെ കാര്യാലയമാണ് ക്ഷേമനിധി ഭരിക്കുന്നത്."
+          },
+          "source": {
+            "sourceId": "SRC-PLNT-007",
+            "quote": "Office of the Chief Executive Officer, Azad Lane, Kottayam - 686 001"
+          }
+        },
+        {
+          "locationType": "akshaya",
+          "mode": "online",
+          "note": {
+            "en": "The Labour Department's AIIS portal (aiis.lc.kerala.gov.in) takes welfare board applications through Akshaya centres. We could not confirm that this Board is on it, so ask at the Akshaya centre before relying on it.",
+            "ml": "തൊഴിൽ വകുപ്പിന്റെ AIIS പോർട്ടൽ (aiis.lc.kerala.gov.in) അക്ഷയ കേന്ദ്രങ്ങൾ വഴി ക്ഷേമനിധി ബോർഡ് അപേക്ഷകൾ സ്വീകരിക്കുന്നു. ഈ ബോർഡ് അതിലുണ്ടെന്ന് ഉറപ്പാക്കാൻ കഴിഞ്ഞിട്ടില്ല; അക്ഷയ കേന്ദ്രത്തിൽ ചോദിച്ച് ഉറപ്പാക്കുക."
+          },
+          "source": {
+            "sourceId": "SRC-PLNT-006",
+            "quote": "Akshaya and Trade Union Login / Sign-up"
+          }
+        }
+      ],
+      "lastVerified": "2026-09-23",
+      "verifiedBy": "AI-review",
+      "notes": "Act 17 of 2008 s.3(5)(f) and the Board's Medical Benefit page. 'Family' follows the Act's definition in s.2(e). The Rs 10,000 lifetime limit is shown in the summary, not asked. We do not have Form 19, so where to submit it is not confirmed."
+    },
+    {
+      "id": "PLNT-10",
+      "name": {
+        "en": "Estate Workers (Distress Relief) Welfare Fund Scheme, 2007",
+        "ml": "എസ്റ്റേറ്റ് തൊഴിലാളി (ദുരിതാശ്വാസ) ക്ഷേമനിധി പദ്ധതി, 2007"
+      },
+      "authority": {
+        "en": "Labour Commissionerate, Government of Kerala",
+        "ml": "തൊഴിൽ കമ്മീഷണറേറ്റ്, കേരള സർക്കാർ"
+      },
+      "category": "plantation",
+      "summary": {
+        "en": "Distress relief of ₹25,000 for each eligible estate worker. Who is eligible is not published in the sources we have.",
+        "ml": "അർഹരായ ഓരോ എസ്റ്റേറ്റ് തൊഴിലാളിക്കും 25,000 രൂപ ദുരിതാശ്വാസം. അർഹത ആർക്കെന്ന് ഞങ്ങളുടെ ഉറവിടങ്ങളിൽ ലഭ്യമല്ല."
       },
       "verification": {
         "eligibility": "informational",
@@ -3988,21 +4803,398 @@
       "documents": [],
       "apply": [
         {
-          "locationType": "plantation_district_office",
+          "locationType": "labour_commissionerate",
           "mode": "in_person",
           "note": {
-            "en": "Ask the District Executive Officer for your area.",
-            "ml": "നിങ്ങളുടെ പ്രദേശത്തെ ജില്ലാ എക്സിക്യൂട്ടീവ് ഓഫീസറോട് അന്വേഷിക്കുക."
+            "en": "Ask the Labour Commissionerate or the District Labour Office.",
+            "ml": "തൊഴിൽ കമ്മീഷണറേറ്റിലോ ജില്ലാ ലേബർ ഓഫീസിലോ അന്വേഷിക്കുക."
           },
           "source": {
-            "sourceId": "SRC-PLNT-007",
-            "quote": "Office of the District Executive Officer"
+            "sourceId": "SRC-PLNT-004",
+            "quote": "A Scheme for giving distress relief to the estate workers"
           }
         }
       ],
       "lastVerified": "2026-09-23",
       "verifiedBy": "AI-review",
-      "notes": "Act 17 of 2008 s.3(5)(b) only."
+      "notes": "Named on the Labour Commissionerate Major Functions page ('A Scheme for giving distress relief to the estate workers') and in the Indian Labour Year Book 2016 contribution hosted by the Commissionerate, p.6. Display only until the scheme notification is found."
+    },
+    {
+      "id": "FISH-19",
+      "name": {
+        "en": "Family Planning Assistance",
+        "ml": "കുടുംബ സംവിധാന പദ്ധതി"
+      },
+      "authority": {
+        "en": "Kerala Fishermen's Welfare Fund Board",
+        "ml": "കേരള മത്സ്യത്തൊഴിലാളി ക്ഷേമനിധി ബോർഡ്"
+      },
+      "category": "fishing",
+      "summary": {
+        "en": "₹500 towards care expenses for a fisherwoman or fisherman who undergoes sterilisation surgery. Apply within 60 days of the surgery.",
+        "ml": "വന്ധ്യംകരണ ശസ്ത്രക്രിയക്ക് വിധേയരാകുന്ന മത്സ്യത്തൊഴിലാളികൾക്ക് ശുശ്രൂഷാ ചെലവിനായി 500 രൂപ. ശസ്ത്രക്രിയ കഴിഞ്ഞ് 60 ദിവസത്തിനകം അപേക്ഷിക്കണം."
+      },
+      "verification": {
+        "eligibility": "informational",
+        "documents": "verified",
+        "apply": "verified"
+      },
+      "rule": {
+        "all": []
+      },
+      "documents": [
+        {
+          "docId": "sterilisation_doctor_certificate",
+          "source": {
+            "sourceId": "SRC-KFWFB-001",
+            "quote": "ശസ്ത്രക്രിയ നടത്തിയ അംഗീകൃത സർക്കാർ ഡോക്ടറുടെ സർട്ടിഫിക്കറ്റ്"
+          }
+        },
+        {
+          "docId": "kfwfb_passbook",
+          "source": {
+            "sourceId": "SRC-KFWFB-001",
+            "quote": "മത്സ്യബോർഡ് പാസ്സ് ബുക്കിന്റെ ശരി പകർപ്പ് ഫിഷറീസ് ഓഫീസർ സാക്ഷ്യപ്പെടുത്തിയത്."
+          }
+        }
+      ],
+      "apply": [
+        {
+          "locationType": "fisheries_district_office",
+          "mode": "in_person",
+          "note": {
+            "en": "Submit 2 copies of the prescribed form to the Fisheries Officer within 60 days of the surgery.",
+            "ml": "ശസ്ത്രക്രിയ നടത്തിയ 60 ദിവസത്തിനകം നിശ്ചിത ഫോറത്തിൽ 2 പകർപ്പുകൾ ഫിഷറീസ് ഓഫീസർക്ക് സമർപ്പിക്കുക."
+          },
+          "source": {
+            "sourceId": "SRC-KFWFB-001",
+            "quote": "ശസ്ത്രക്രിയ നടത്തിയ 60 ദിവസത്തിനകം നിശ്ചിത ഫോറത്തിൽ അപേക്ഷയുടെ 2 പകർപ്പുകൾ തയ്യാറാക്കി ബന്ധപ്പെട്ട ഫിഷറീസ് ഓഫീസർക്ക് സമർപ്പിക്കേണ്ടതാണ്."
+          }
+        }
+      ],
+      "lastVerified": "2026-09-23",
+      "verifiedBy": "AI-review",
+      "notes": "2025 KFWFB guideline p.24 (scheme 9). Shown for information only, by design: screening it would mean asking about reproductive surgery, which the minimum-data rule avoids for a Rs 500 benefit."
+    },
+    {
+      "id": "FISH-20",
+      "name": {
+        "en": "Chairman's Relief Fund",
+        "ml": "ചെയർമാൻസ് റിലീഫ് ഫണ്ട്"
+      },
+      "authority": {
+        "en": "Kerala Fishermen's Welfare Fund Board",
+        "ml": "കേരള മത്സ്യത്തൊഴിലാളി ക്ഷേമനിധി ബോർഡ്"
+      },
+      "category": "fishing",
+      "summary": {
+        "en": "Emergency help of up to ₹5,000 for fishermen in sudden distress: serious accident injury, accidental death, fire or damage to the house, relief camps, snake or dog bite, electric shock, or a family member missing at sea. The amount depends on how serious the case is.",
+        "ml": "അപ്രതീക്ഷിത ദുരിതത്തിലാകുന്ന മത്സ്യത്തൊഴിലാളികൾക്ക് പരമാവധി 5,000 രൂപ വരെ അടിയന്തിര ധനസഹായം: അപകടത്തിൽ ഗുരുതര പരിക്ക്, അപകട മരണം, തീപിടുത്തം/വീടിന് നാശം, അഭയാർത്ഥി ക്യാമ്പ്, പാമ്പ്/പേനായ കടി, ഷോക്ക്, കടലിൽ കാണാതാകൽ."
+      },
+      "verification": {
+        "eligibility": "informational",
+        "documents": "partial",
+        "apply": "verified"
+      },
+      "rule": {
+        "all": []
+      },
+      "documents": [],
+      "apply": [
+        {
+          "locationType": "fisheries_district_office",
+          "mode": "in_person",
+          "note": {
+            "en": "Tell the Fisheries Officer as soon as possible. Board officials visit and sanction the help; an application can also be given to the Fisheries Officer.",
+            "ml": "എത്രയും വേഗം ഫിഷറീസ് ഓഫീസറെ അറിയിക്കുക. മത്സ്യബോർഡ് ഉദ്യോഗസ്ഥർ സ്ഥലം സന്ദർശിച്ച് ധനസഹായം അനുവദിക്കും; ഫിഷറീസ് ഓഫീസർക്ക് അപേക്ഷയും നൽകാം."
+          },
+          "source": {
+            "sourceId": "SRC-KFWFB-001",
+            "quote": "ധനസഹായത്തുക അടിയന്തിര സന്ദർഭങ്ങളോടനുബന്ധിച്ച് അപേക്ഷ തയ്യാറാക്കി ഫിഷറീസ് ഓഫീസർക്ക് സമർപ്പിക്കാവുന്നതാണ്."
+          }
+        }
+      ],
+      "lastVerified": "2026-09-23",
+      "verifiedBy": "AI-review",
+      "notes": "2025 KFWFB guideline p.27 (scheme 11). Discretionary: the amount is set case by case and Board officials visit the site, so it is shown for information, not screened. No document list is published."
+    },
+    {
+      "id": "FISH-21",
+      "name": {
+        "en": "Maternity Care Assistance (Fishermen's Welfare Fund)",
+        "ml": "പ്രസവ ശുശ്രൂഷക്കുള്ള ധനസഹായ പദ്ധതി"
+      },
+      "authority": {
+        "en": "Kerala Fishermen's Welfare Fund Board",
+        "ml": "കേരള മത്സ്യത്തൊഴിലാളി ക്ഷേമനിധി ബോർഡ്"
+      },
+      "category": "fishing",
+      "summary": {
+        "en": "₹750 for maternity care, for an active fisherwoman member with no contribution arrears, or the wife of a member. The woman must be at least 19.",
+        "ml": "കുടിശ്ശികയില്ലാതെ വിഹിതം അടച്ച പ്രവർത്തിസജീവ മത്സ്യത്തൊഴിലാളി വനിതകൾക്കും മത്സ്യത്തൊഴിലാളികളുടെ ഭാര്യമാർക്കും പ്രസവ ശുശ്രൂഷയ്ക്ക് 750 രൂപ. 19 വയസ്സെങ്കിലും വേണം."
+      },
+      "verification": {
+        "eligibility": "verified",
+        "documents": "verified",
+        "apply": "verified"
+      },
+      "rule": {
+        "all": [
+          {
+            "id": "g0",
+            "fact": "livelihood",
+            "op": "includes",
+            "value": [
+              "fishing"
+            ],
+            "changeable": false,
+            "source": {
+              "sourceId": "SRC-KFWFB-001",
+              "quote": "മത്സ്യത്തൊഴിലാളി കുടുംബങ്ങളിലെ വനിതകളുടെ ക്ഷേമം ലക്ഷ്യമിട്ടുകൊണ്ടുള്ള ഒരു പദ്ധതിയാണിത്.",
+              "locator": "p.28"
+            },
+            "reviewedBy": "PENDING_SECOND_REVIEW"
+          },
+          {
+            "id": "c1",
+            "fact": "family_event",
+            "op": "includes",
+            "value": [
+              "delivery"
+            ],
+            "changeable": false,
+            "source": {
+              "sourceId": "SRC-KFWFB-001",
+              "quote": "ക്ഷേമനിധിയിൽ കുടിശ്ശിക ഇല്ലാതെ വിഹിതം അടച്ചുതീർത്തിട്ടുള്ള പ്രവർത്തിസജീവ മത്സ്യത്തൊഴിലാളി വനിതകൾക്കും, മത്സ്യത്തൊഴിലാളികളുടെ ഭാര്യമാർക്കും പ്രസവ ശുശ്രൂഷാ ധനസഹായമായി 750/- രൂപ വീതം നൽകി വരുന്നു",
+              "locator": "p.28"
+            },
+            "reviewedBy": "PENDING_SECOND_REVIEW"
+          },
+          {
+            "id": "c2",
+            "fact": "kfwfb_member",
+            "op": "eq",
+            "value": true,
+            "changeable": true,
+            "howTo": {
+              "en": "Ask at your Fisheries Department district office about joining the Kerala Fishermen's Welfare Fund Board.",
+              "ml": "കേരള മത്സ്യത്തൊഴിലാളി ക്ഷേമനിധി ബോർഡിൽ അംഗമാകുന്നതിനെക്കുറിച്ച് ഫിഷറീസ് വകുപ്പ് ജില്ലാ ഓഫീസിൽ അന്വേഷിക്കുക."
+            },
+            "source": {
+              "sourceId": "SRC-KFWFB-001",
+              "quote": "മത്സ്യത്തൊഴിലാളികളായ വനിതകൾക്ക് നേരിട്ട് ധനസഹായ അപേക്ഷ സമർപ്പിക്കാം. ഭർത്താവിന് ക്ഷേമനിധി അംഗത്വം ഉണ്ടായിരിക്കുകയും ഭാര്യക്ക് അംഗത്വമില്ലാതിരിക്കുകയും ചെയ്യുന്ന സന്ദർഭങ്ങളിൽ ഭർത്താവാണ് ധനസഹായ അപേക്ഷ സമർപ്പിക്കേണ്ടത്.",
+              "locator": "p.28, conditions"
+            },
+            "reviewedBy": "PENDING_SECOND_REVIEW"
+          },
+          {
+            "id": "c3",
+            "fact": "kfwfb_contributions_paid",
+            "op": "eq",
+            "value": true,
+            "changeable": true,
+            "howTo": {
+              "en": "Clear any arrears of Welfare Fund contribution at the Fisheries Office.",
+              "ml": "ക്ഷേമനിധി വിഹിതത്തിലെ കുടിശ്ശിക ഫിഷറീസ് ഓഫീസിൽ അടച്ചുതീർക്കുക."
+            },
+            "source": {
+              "sourceId": "SRC-KFWFB-001",
+              "quote": "ക്ഷേമനിധിയിൽ കുടിശ്ശിക ഇല്ലാതെ വിഹിതം അടച്ചുതീർത്തിട്ടുള്ള പ്രവർത്തിസജീവ മത്സ്യത്തൊഴിലാളി വനിതകൾക്കും, മത്സ്യത്തൊഴിലാളികളുടെ ഭാര്യമാർക്കും പ്രസവ ശുശ്രൂഷാ ധനസഹായമായി 750/- രൂപ വീതം നൽകി വരുന്നു",
+              "locator": "p.28"
+            },
+            "reviewedBy": "PENDING_SECOND_REVIEW"
+          },
+          {
+            "id": "c4",
+            "fact": "mother_age_19",
+            "op": "eq",
+            "value": true,
+            "changeable": false,
+            "source": {
+              "sourceId": "SRC-KFWFB-001",
+              "quote": "പ്രസ്തുത വനിതയ്ക്ക് 19 വയസ്സെങ്കിലും പ്രായം ഉണ്ടായിരിക്കേണ്ടതാണ്.",
+              "locator": "p.28, conditions"
+            },
+            "reviewedBy": "PENDING_SECOND_REVIEW"
+          }
+        ]
+      },
+      "documents": [
+        {
+          "docId": "mbbs_medical_certificate",
+          "source": {
+            "sourceId": "SRC-KFWFB-001",
+            "quote": "എം.ബിബി എസ് യോഗ്യതയുള്ള ഡോക്ടറിൽ നിന്നും ലഭിച്ച മെഡിക്കൽ സർട്ടിഫിക്കററ്റ്"
+          }
+        },
+        {
+          "docId": "marriage_certificate",
+          "source": {
+            "sourceId": "SRC-KFWFB-001",
+            "quote": "അപേക്ഷയുടെ / അപേക്ഷകന്റെ വിവാഹ സർട്ടിഫിക്കറ്റ്"
+          }
+        },
+        {
+          "docId": "legal_age_proof",
+          "source": {
+            "sourceId": "SRC-KFWFB-001",
+            "quote": "വയസ്സ് തെളിയിക്കുന്നതിനുള്ള നിയമാനുസൃത രേഖ"
+          }
+        }
+      ],
+      "apply": [
+        {
+          "locationType": "fisheries_district_office",
+          "mode": "in_person",
+          "note": {
+            "en": "Submit 2 copies of the prescribed form with the documents to the Fisheries Officer, within 2 to 8 weeks of the delivery date.",
+            "ml": "നിർദ്ദിഷ്ട ഫോറത്തിൽ 2 പകർപ്പുകൾ രേഖകൾ സഹിതം പ്രസവ തിയ്യതിക്ക് 2 മുതൽ 8 ആഴ്ച്ചക്കുള്ളിലായി ഫിഷറീസ് ഓഫീസർക്ക് സമർപ്പിക്കുക."
+          },
+          "source": {
+            "sourceId": "SRC-KFWFB-001",
+            "quote": "നിർദ്ദിഷ്ട ഫോറത്തിൽ അപേക്ഷയുടെ 2 പകർപ്പുകൾ തയ്യാറാക്കി താഴെ കാണിച്ചിട്ടുള്ള രേഖകൾ സഹിതം പ്രസവ തിയ്യതിക്ക് 2 മുതൽ 8 ആഴ്ച്ചക്കുള്ളിലായി ഫിഷറീസ് ഓഫീസർക്ക് സമർപ്പിക്കേണ്ടതാണ്."
+          }
+        }
+      ],
+      "lastVerified": "2026-09-23",
+      "verifiedBy": "AI-review",
+      "notes": "2025 KFWFB guideline p.28 (scheme 12). The Board member may be the woman herself or her husband; if only the husband is a member, he applies. The application window ('2 to 8 weeks' of the delivery date) is shown in the apply note, not asked, because the page does not say whether it is before or after the delivery."
+    },
+    {
+      "id": "FISH-22",
+      "name": {
+        "en": "Higher Education Incentive (+2 / VHSE Cash Award)",
+        "ml": "ഉന്നത വിദ്യാഭ്യാസ പ്രോത്സാഹന പദ്ധതി"
+      },
+      "authority": {
+        "en": "Kerala Fishermen's Welfare Fund Board",
+        "ml": "കേരള മത്സ്യത്തൊഴിലാളി ക്ഷേമനിധി ബോർഡ്"
+      },
+      "category": "fishing",
+      "summary": {
+        "en": "₹5,000 cash award and a memento for children of active Board members who get A+ in all subjects in the Higher Secondary (+2) or VHSE exam, passing in the first attempt.",
+        "ml": "ഹയർ സെക്കന്ററി (+2) / വി.എച്ച്.എസ്.ഇ പരീക്ഷയിൽ ആദ്യ അവസരത്തിൽ എല്ലാ വിഷയങ്ങൾക്കും എ+ നേടുന്ന, മത്സ്യബോർഡിൽ സജീവ അംഗത്വമുള്ളവരുടെ മക്കൾക്ക് 5,000 രൂപ ക്യാഷ് അവാർഡും മെമെന്റോയും."
+      },
+      "verification": {
+        "eligibility": "verified",
+        "documents": "verified",
+        "apply": "partial"
+      },
+      "rule": {
+        "all": [
+          {
+            "id": "g0",
+            "fact": "livelihood",
+            "op": "includes",
+            "value": [
+              "fishing"
+            ],
+            "changeable": false,
+            "source": {
+              "sourceId": "SRC-KFWFB-001",
+              "quote": "മത്സ്യത്തൊഴിലാളി കുടുംബങ്ങളിലെ കുട്ടികളുടെ വിദ്യാഭ്യാസ നിലവാരം ഉയർത്തുന്നതിന് പ്രോത്സാഹനം നൽകുന്നതിനായി ലക്ഷ്യമിട്ടിട്ടുള്ളതാണ് ഈ പദ്ധതി.",
+              "locator": "p.29"
+            },
+            "reviewedBy": "PENDING_SECOND_REVIEW"
+          },
+          {
+            "id": "c1",
+            "fact": "family_event",
+            "op": "includes",
+            "value": [
+              "plus_two_all_aplus"
+            ],
+            "changeable": false,
+            "source": {
+              "sourceId": "SRC-KFWFB-001",
+              "quote": "ഹയർ സെക്കന്ററി (+2) വൊക്കേഷണൽ ഹയർ സെക്കന്ററി പരീക്ഷകളിൽ എല്ലാ വിഷയങ്ങൾക്കും A+ ലഭിക്കുന്ന വിദ്യാർത്ഥികൾക്ക് 5000/- രൂപ വീതം ഈ പദ്ധതി പ്രകാരം ക്യാഷ് അവാർഡും മെമൊന്റോയും നൽകുന്നു.",
+              "locator": "p.29"
+            },
+            "reviewedBy": "PENDING_SECOND_REVIEW"
+          },
+          {
+            "id": "c2",
+            "fact": "kfwfb_member",
+            "op": "eq",
+            "value": true,
+            "changeable": true,
+            "howTo": {
+              "en": "Ask at your Fisheries Department district office about joining the Kerala Fishermen's Welfare Fund Board.",
+              "ml": "കേരള മത്സ്യത്തൊഴിലാളി ക്ഷേമനിധി ബോർഡിൽ അംഗമാകുന്നതിനെക്കുറിച്ച് ഫിഷറീസ് വകുപ്പ് ജില്ലാ ഓഫീസിൽ അന്വേഷിക്കുക."
+            },
+            "source": {
+              "sourceId": "SRC-KFWFB-001",
+              "quote": "മത്സ്യബോർഡിൽ സജീവ അംഗത്വമുള്ളവരുടെ മക്കൾക്ക് മാത്രമെ ഈ പദ്ധതി പ്രകാരമുള്ള ധനസഹായത്തിന് അർഹതയുണ്ടായിരിക്കുകയുള്ളൂ.",
+              "locator": "p.29, eligibility"
+            },
+            "reviewedBy": "PENDING_SECOND_REVIEW"
+          },
+          {
+            "id": "c3",
+            "fact": "kfwfb_contributions_paid",
+            "op": "eq",
+            "value": true,
+            "changeable": true,
+            "howTo": {
+              "en": "Clear any arrears of Welfare Fund contribution at the Fisheries Office.",
+              "ml": "ക്ഷേമനിധി വിഹിതത്തിലെ കുടിശ്ശിക ഫിഷറീസ് ഓഫീസിൽ അടച്ചുതീർക്കുക."
+            },
+            "source": {
+              "sourceId": "SRC-KFWFB-001",
+              "quote": "മത്സ്യബോർഡിൽ സജീവ അംഗത്വമുള്ളവരുടെ മക്കൾക്ക് മാത്രമെ ഈ പദ്ധതി പ്രകാരമുള്ള ധനസഹായത്തിന് അർഹതയുണ്ടായിരിക്കുകയുള്ളൂ.",
+              "locator": "p.29, eligibility and document 4"
+            },
+            "reviewedBy": "PENDING_SECOND_REVIEW"
+          }
+        ]
+      },
+      "documents": [
+        {
+          "docId": "final_mark_list",
+          "source": {
+            "sourceId": "SRC-KFWFB-001",
+            "quote": "അവസാന വർഷ പരീക്ഷയുടെ മാർക്ക് ലിസ്റ്റിന്റെ ശരിപ്പകർപ്പ്"
+          }
+        },
+        {
+          "docId": "sslc_book_age",
+          "source": {
+            "sourceId": "SRC-KFWFB-001",
+            "quote": "വയസ്സ് തെളിയിക്കുന്ന എസ്.എസ്.എൽ.സി ബുക്കിന്റെ ശരി പകർപ്പ്"
+          }
+        },
+        {
+          "docId": "parent_fisher_certificate",
+          "source": {
+            "sourceId": "SRC-KFWFB-001",
+            "quote": "രക്ഷിതാവ് മത്സ്യത്തൊഴിലാളി ആണെന്ന് തെളിയിക്കുന്നതിനുള്ള സർട്ടിഫിക്കറ്റിന്റെ ശരി പകർപ്പ്"
+          }
+        },
+        {
+          "docId": "contribution_no_arrears_certificate",
+          "source": {
+            "sourceId": "SRC-KFWFB-001",
+            "quote": "വിഹിതം കുടിശ്ശികയില്ലാതെ അടച്ചിട്ടുണ്ടെന്നതിനുള്ള സർട്ടിഫിക്കറ്റും പാസ് ബുക്കിലെ ബന്ധപ്പെട്ട പേജിന്റെ ഫോട്ടോസ്റ്റാറ്റ് കോപ്പിയും."
+          }
+        }
+      ],
+      "apply": [
+        {
+          "locationType": "fisheries_district_office",
+          "mode": "in_person",
+          "note": {
+            "en": "Watch for the Commissioner's notification after the results. Apply to the Board's Regional Executive / Junior Executive as it says; the student and parent both sign. Ask at the Fisheries office for the Regional Executive's address.",
+            "ml": "ഫലത്തിന് ശേഷം കമ്മീഷണർ പുറപ്പെടുവിക്കുന്ന വിജ്ഞാപനം ശ്രദ്ധിക്കുക. അതനുസരിച്ച് റീജിയണൽ എക്സിക്യൂട്ടീവ് / ജൂനിയർ എക്സിക്യൂട്ടീവിന് അപേക്ഷിക്കുക; വിദ്യാർത്ഥിയും രക്ഷകർത്താവും ഒപ്പിടണം. റീജിയണൽ എക്സിക്യൂട്ടീവിന്റെ വിലാസം ഫിഷറീസ് ഓഫീസിൽ ചോദിക്കുക."
+          },
+          "source": {
+            "sourceId": "SRC-KFWFB-001",
+            "quote": "ഇത് സംബന്ധിച്ച് കമ്മീഷണർ പുറപ്പെടുവിക്കുന്ന വിജ്ഞാപന പ്രകാരം നിബന്ധനകൾക്ക് വിധേയമായി അപേക്ഷകൾ ബന്ധപ്പെട്ട റീജിയണൽ എക്സിക്യൂട്ടീവ്/ജൂനിയർ എക്സിക്യൂട്ടീവിന് സമർപ്പിക്കാവുന്നതാണ്."
+          }
+        }
+      ],
+      "lastVerified": "2026-09-23",
+      "verifiedBy": "AI-review",
+      "notes": "2025 KFWFB guideline p.29 (scheme 13). 'Active membership' (സജീവ അംഗത്വം) is encoded as membership with contributions paid, matching document 4 (certificate of no arrears). The first-attempt rule is part of the family-event option wording. Applications open only after the Commissioner's notification and go to the Board's Regional / Junior Executive."
     }
   ],
   "documents": [
@@ -4413,6 +5605,150 @@
         "ml": "ആധാർ; ഇല്ലെങ്കിൽ ആധാർ എൻറോൾമെന്റ് സ്ലിപ്പും മറ്റൊരു തിരിച്ചറിയൽ രേഖയും (ഫോട്ടോയുള്ള ബാങ്ക്/പോസ്റ്റ് ഓഫീസ് പാസ്ബുക്ക്, പാൻ കാർഡ്, പാസ്പോർട്ട്, റേഷൻ കാർഡ്, വോട്ടർ ഐഡി, തൊഴിലുറപ്പ് കാർഡ്, കിസാൻ ഫോട്ടോ പാസ്ബുക്ക് തുടങ്ങിയവ)"
       },
       "sourceId": "SRC-PLNT-002"
+    },
+    {
+      "id": "spwwfb_form_15",
+      "name": {
+        "en": "Form 15: invalid pension application",
+        "ml": "ഫാറം 15: അശക്തി പെൻഷനുള്ള അപേക്ഷ"
+      },
+      "sourceId": "SRC-PLNT-016"
+    },
+    {
+      "id": "spwwfb_form_16",
+      "name": {
+        "en": "Form 16: family pension application",
+        "ml": "ഫാറം 16: കുടുംബ പെൻഷനുള്ള അപേക്ഷ"
+      },
+      "sourceId": "SRC-PLNT-015"
+    },
+    {
+      "id": "spwwfb_form_17",
+      "name": {
+        "en": "Form 17: maternity benefit application",
+        "ml": "ഫാറം 17: പ്രസവാനുകൂല്യത്തിനുള്ള അപേക്ഷ"
+      },
+      "sourceId": "SRC-PLNT-017"
+    },
+    {
+      "id": "spwwfb_form_19",
+      "name": {
+        "en": "Form 19: medical benefit application",
+        "ml": "ഫാറം 19: ചികിൽസാ ആനുകൂല്യത്തിനുള്ള അപേക്ഷ"
+      },
+      "sourceId": "SRC-PLNT-012"
+    },
+    {
+      "id": "spwwfb_education_form",
+      "name": {
+        "en": "Educational scholarship application form",
+        "ml": "വിദ്യാഭ്യാസ സ്കോളർഷിപ്പിനുള്ള അപേക്ഷാ ഫാറം"
+      },
+      "sourceId": "SRC-PLNT-018"
+    },
+    {
+      "id": "medical_board_certificate",
+      "name": {
+        "en": "Medical certificate issued by a Medical Board",
+        "ml": "മെഡിക്കൽ ബോർഡ് നൽകുന്ന മെഡിക്കൽ സർട്ടിഫിക്കറ്റ്"
+      },
+      "sourceId": "SRC-PLNT-016"
+    },
+    {
+      "id": "original_medical_bills",
+      "name": {
+        "en": "Original medical bills",
+        "ml": "ചികിൽസയുടെ അസ്സൽ ബില്ലുകൾ"
+      },
+      "sourceId": "SRC-PLNT-012"
+    },
+    {
+      "id": "govt_inpatient_card",
+      "name": {
+        "en": "Inpatient card issued by a Government hospital",
+        "ml": "സർക്കാർ ആശുപത്രി നൽകിയ ഇൻപേഷ്യന്റ് കാർഡ്"
+      },
+      "sourceId": "SRC-PLNT-012"
+    },
+    {
+      "id": "medical_certificate",
+      "name": {
+        "en": "Medical certificate",
+        "ml": "മെഡിക്കൽ സർട്ടിഫിക്കറ്റ്"
+      },
+      "sourceId": "SRC-PLNT-012"
+    },
+    {
+      "id": "birth_certificate",
+      "name": {
+        "en": "Birth certificate",
+        "ml": "ജനന സർട്ടിഫിക്കറ്റ്"
+      },
+      "sourceId": "SRC-PLNT-017"
+    },
+    {
+      "id": "family_membership_certificate",
+      "name": {
+        "en": "Family membership certificate",
+        "ml": "കുടുംബാംഗത്വ സർട്ടിഫിക്കറ്റ്"
+      },
+      "sourceId": "SRC-PLNT-015"
+    },
+    {
+      "id": "sterilisation_doctor_certificate",
+      "name": {
+        "en": "Certificate from the approved government doctor who performed the surgery",
+        "ml": "ശസ്ത്രക്രിയ നടത്തിയ അംഗീകൃത സർക്കാർ ഡോക്ടറുടെ സർട്ടിഫിക്കറ്റ്"
+      },
+      "sourceId": "SRC-KFWFB-001"
+    },
+    {
+      "id": "mbbs_medical_certificate",
+      "name": {
+        "en": "Medical certificate from an MBBS-qualified doctor",
+        "ml": "എം.ബി.ബി.എസ് യോഗ്യതയുള്ള ഡോക്ടറിൽ നിന്നുള്ള മെഡിക്കൽ സർട്ടിഫിക്കറ്റ്"
+      },
+      "sourceId": "SRC-KFWFB-001"
+    },
+    {
+      "id": "legal_age_proof",
+      "name": {
+        "en": "Legally valid proof of age",
+        "ml": "വയസ്സ് തെളിയിക്കുന്നതിനുള്ള നിയമാനുസൃത രേഖ"
+      },
+      "sourceId": "SRC-KFWFB-001"
+    },
+    {
+      "id": "final_mark_list",
+      "name": {
+        "en": "True copy of the final-year exam mark list",
+        "ml": "അവസാന വർഷ പരീക്ഷയുടെ മാർക്ക് ലിസ്റ്റിന്റെ ശരിപ്പകർപ്പ്"
+      },
+      "sourceId": "SRC-KFWFB-001"
+    },
+    {
+      "id": "sslc_book_age",
+      "name": {
+        "en": "True copy of the SSLC book as proof of age",
+        "ml": "വയസ്സ് തെളിയിക്കുന്ന എസ്.എസ്.എൽ.സി ബുക്കിന്റെ ശരി പകർപ്പ്"
+      },
+      "sourceId": "SRC-KFWFB-001"
+    },
+    {
+      "id": "parent_fisher_certificate",
+      "name": {
+        "en": "True copy of a certificate that the parent is a fisherman",
+        "ml": "രക്ഷിതാവ് മത്സ്യത്തൊഴിലാളിയാണെന്ന് തെളിയിക്കുന്ന സർട്ടിഫിക്കറ്റിന്റെ ശരി പകർപ്പ്"
+      },
+      "sourceId": "SRC-KFWFB-001"
+    },
+    {
+      "id": "contribution_no_arrears_certificate",
+      "name": {
+        "en": "Certificate that contributions are paid with no arrears, and a photocopy of the passbook page",
+        "ml": "വിഹിതം കുടിശ്ശികയില്ലാതെ അടച്ചതിന്റെ സർട്ടിഫിക്കറ്റും പാസ് ബുക്കിലെ ബന്ധപ്പെട്ട പേജിന്റെ ഫോട്ടോകോപ്പിയും"
+      },
+      "sourceId": "SRC-KFWFB-001"
     }
   ],
   "locationTypes": [
@@ -5483,12 +6819,14 @@
         "FISH-14": "needs_information",
         "FISH-15": "needs_information",
         "FISH-16": "needs_information",
-        "FISH-17": "needs_information"
+        "FISH-17": "needs_information",
+        "FISH-21": "needs_information",
+        "FISH-22": "needs_information"
       },
       "expectedOthers": "not_matched",
       "expectedMissing": {},
       "writtenBy": "HR",
-      "notes": "All supplied facts satisfy the known conditions for the four listed fishing schemes. [2025 update] The new KFWFB schemes (widow pension, marriage, death, disability, SSLC award, treatment) need facts this household did not give, so they need information. FISH-06 is not matched at age 42."
+      "notes": "All supplied facts satisfy the known conditions for the four listed fishing schemes. [2025 update] The new KFWFB schemes (widow pension, marriage, death, disability, SSLC award, treatment) need facts this household did not give, so they need information. FISH-06 is not matched at age 42. [board pages] Maternity care (FISH-21) and the +2 award (FISH-22) need the family-events answer, which this household did not give."
     },
     {
       "id": "P-02",
@@ -5532,7 +6870,9 @@
         "FISH-14": "needs_information",
         "FISH-15": "needs_information",
         "FISH-16": "needs_information",
-        "FISH-17": "needs_information"
+        "FISH-17": "needs_information",
+        "FISH-21": "needs_information",
+        "FISH-22": "needs_information"
       },
       "expectedOthers": "not_matched",
       "expectedMissing": {
@@ -5541,7 +6881,7 @@
         ]
       },
       "writtenBy": "HR",
-      "notes": "The official saving-cum-relief page states a bank account is needed for enrolment. [review] Active status, BPL, traditional and Matsyafed answers are also unknown, so those schemes need information; they cannot be not_matched. [2025 update] Membership, age and the new KFWFB facts are unknown, so every fishing scheme needs information."
+      "notes": "The official saving-cum-relief page states a bank account is needed for enrolment. [review] Active status, BPL, traditional and Matsyafed answers are also unknown, so those schemes need information; they cannot be not_matched. [2025 update] Membership, age and the new KFWFB facts are unknown, so every fishing scheme needs information. [board pages] Maternity care (FISH-21) and the +2 award (FISH-22) need the family-events answer, which this household did not give."
     },
     {
       "id": "P-04",
@@ -5571,12 +6911,14 @@
         "FISH-14": "needs_information",
         "FISH-15": "needs_information",
         "FISH-16": "needs_information",
-        "FISH-17": "needs_information"
+        "FISH-17": "needs_information",
+        "FISH-21": "needs_information",
+        "FISH-22": "needs_information"
       },
       "expectedOthers": "not_matched",
       "expectedMissing": {},
       "writtenBy": "HR",
-      "notes": "Housing scheme is specifically described for active fishermen of BPL category; saving scheme says both BPL and APL are enrolled. [review] FISH-06 is partial (no age in source) so it is display-only. [2025 update] FISH-01 now requires Welfare Fund Board membership (2025 guideline p.11), which this profile does not state, so it needs information. FISH-06 is now verified and needs membership, age, 10 years of work, retirement and 5 years of membership."
+      "notes": "Housing scheme is specifically described for active fishermen of BPL category; saving scheme says both BPL and APL are enrolled. [review] FISH-06 is partial (no age in source) so it is display-only. [2025 update] FISH-01 now requires Welfare Fund Board membership (2025 guideline p.11), which this profile does not state, so it needs information. FISH-06 is now verified and needs membership, age, 10 years of work, retirement and 5 years of membership. [board pages] Maternity care (FISH-21) and the +2 award (FISH-22) need the family-events answer, which this household did not give."
     },
     {
       "id": "P-05",
@@ -5590,19 +6932,27 @@
         "unable_due_infirmity": "no",
         "permanent_disability": "no",
         "daughter_marriage": "no",
-        "female_member": "no"
+        "female_member": "no",
+        "plantation_membership_years": "5",
+        "plantation_member_death": "no",
+        "plantation_medical_treatment": "no",
+        "plantation_child_class10": "no"
       },
       "expected": {
         "PLNT-01": "potentially_eligible",
         "PLNT-02": "not_matched",
         "PLNT-03": "not_matched",
         "PLNT-04": "not_matched",
-        "PLNT-05": "not_matched"
+        "PLNT-05": "not_matched",
+        "PLNT-06": "not_matched",
+        "PLNT-07": "not_matched",
+        "PLNT-08": "not_matched",
+        "PLNT-09": "not_matched"
       },
       "expectedOthers": "not_matched",
       "expectedMissing": {},
       "writtenBy": "HR",
-      "notes": "Boundary case uses the statutory age threshold exactly as stated in the Act."
+      "notes": "Boundary case uses the statutory age threshold exactly as stated in the Act. [board pages] Superannuation now needs 5 years of continuous membership (Board page); 5 years sits on the limit."
     },
     {
       "id": "P-06",
@@ -5619,7 +6969,11 @@
         "PLNT-01": "needs_information",
         "PLNT-02": "needs_information",
         "PLNT-03": "needs_information",
-        "PLNT-04": "needs_information"
+        "PLNT-04": "needs_information",
+        "PLNT-06": "needs_information",
+        "PLNT-07": "needs_information",
+        "PLNT-08": "needs_information",
+        "PLNT-09": "needs_information"
       },
       "expectedOthers": "not_matched",
       "expectedMissing": {
@@ -5628,7 +6982,7 @@
         ]
       },
       "writtenBy": "HR",
-      "notes": "The 2024 Gazette states maternity benefits are given to female members registered under the listed boards, including the Small Plantation Workers Welfare Fund Board. [review] Age, infirmity, disability and marriage were not given."
+      "notes": "The 2024 Gazette states maternity benefits are given to female members registered under the listed boards, including the Small Plantation Workers Welfare Fund Board. [review] Age, infirmity, disability and marriage were not given. [board pages] Death assistance, family pension, education and medical benefit need facts this household did not give."
     },
     {
       "id": "P-07",
@@ -5646,7 +7000,11 @@
       },
       "expected": {
         "PLNT-02": "needs_information",
-        "PLNT-03": "needs_information"
+        "PLNT-03": "needs_information",
+        "PLNT-06": "needs_information",
+        "PLNT-07": "needs_information",
+        "PLNT-08": "needs_information",
+        "PLNT-09": "needs_information"
       },
       "expectedOthers": "not_matched",
       "expectedMissing": {
@@ -5658,7 +7016,7 @@
         ]
       },
       "writtenBy": "HR",
-      "notes": "The two partial schemes require the corresponding condition, but the household did not provide it."
+      "notes": "The two partial schemes require the corresponding condition, but the household did not provide it. [board pages] Death assistance, family pension, education and medical benefit need facts this household did not give."
     },
     {
       "id": "P-08",
@@ -5678,7 +7036,8 @@
         "daughter_marriage": "yes",
         "unable_due_infirmity": "no",
         "permanent_disability": "no",
-        "matsyafed_society_member": "no"
+        "matsyafed_society_member": "no",
+        "plantation_membership_years": "6"
       },
       "expected": {
         "FISH-01": "needs_information",
@@ -5694,12 +7053,18 @@
         "FISH-14": "needs_information",
         "FISH-15": "needs_information",
         "FISH-16": "needs_information",
-        "FISH-17": "not_matched"
+        "FISH-17": "not_matched",
+        "PLNT-06": "needs_information",
+        "PLNT-07": "needs_information",
+        "PLNT-08": "needs_information",
+        "PLNT-09": "needs_information",
+        "FISH-21": "needs_information",
+        "FISH-22": "needs_information"
       },
       "expectedOthers": "not_matched",
       "expectedMissing": {},
       "writtenBy": "HR",
-      "notes": "Mixed-sector case exercises simultaneous screening across fishing and plantation benefits. [2025 update] FISH-01 needs Board membership, not given. FISH-17 is not matched because the member is 61 and the treatment scheme is for ages 23 to 60."
+      "notes": "Mixed-sector case exercises simultaneous screening across fishing and plantation benefits. [2025 update] FISH-01 needs Board membership, not given. FISH-17 is not matched because the member is 61 and the treatment scheme is for ages 23 to 60. [board pages] 6 years of membership meets the 5-year pension and 3-year marriage rules."
     },
     {
       "id": "P-09",
@@ -5728,12 +7093,14 @@
         "FISH-14": "needs_information",
         "FISH-15": "needs_information",
         "FISH-16": "needs_information",
-        "FISH-17": "needs_information"
+        "FISH-17": "needs_information",
+        "FISH-21": "needs_information",
+        "FISH-22": "needs_information"
       },
       "expectedOthers": "not_matched",
       "expectedMissing": {},
       "writtenBy": "AI-review",
-      "notes": "FISH-08/09 should show one step away: join a Matsyafed society. [2025 update] FISH-01 needs Board membership, not given."
+      "notes": "FISH-08/09 should show one step away: join a Matsyafed society. [2025 update] FISH-01 needs Board membership, not given. [board pages] Maternity care (FISH-21) and the +2 award (FISH-22) need the family-events answer, which this household did not give."
     },
     {
       "id": "P-10",
@@ -5749,12 +7116,14 @@
         "PLNT-02": "not_matched",
         "PLNT-03": "not_matched",
         "PLNT-04": "not_matched",
-        "PLNT-05": "not_matched"
+        "PLNT-05": "not_matched",
+        "PLNT-06": "needs_information",
+        "PLNT-07": "needs_information"
       },
       "expectedOthers": "not_matched",
       "expectedMissing": {},
       "writtenBy": "AI-review",
-      "notes": "All plantation schemes need Board membership; one step away: membership."
+      "notes": "All plantation schemes need Board membership; one step away: membership. [board pages] Death assistance and family pension depend on whether a member in the family has died, not on the applicant's own membership, so they need information."
     },
     {
       "id": "P-11",
@@ -6015,6 +7384,189 @@
       },
       "writtenBy": "AI-review",
       "notes": "Every other marriage condition is met; only income is unknown, so the app must ask rather than guess."
+    },
+    {
+      "id": "P-23",
+      "title": "Plantation member, 3 years, daughter's marriage",
+      "kind": "boundary",
+      "answers": {
+        "livelihood": "plantation_worker",
+        "plantation_member": "yes",
+        "plantation_membership_years": "3",
+        "daughter_marriage": "yes"
+      },
+      "expected": {
+        "PLNT-04": "potentially_eligible"
+      },
+      "expectedMissing": {},
+      "writtenBy": "AI-review",
+      "notes": "Board Marriage Assistance page: at least 3 years of membership; 3 sits on the limit."
+    },
+    {
+      "id": "P-24",
+      "title": "Plantation member, 2 years, daughter's marriage",
+      "kind": "boundary",
+      "answers": {
+        "livelihood": "plantation_worker",
+        "plantation_member": "yes",
+        "plantation_membership_years": "2",
+        "daughter_marriage": "yes"
+      },
+      "expected": {
+        "PLNT-04": "not_matched"
+      },
+      "expectedMissing": {},
+      "writtenBy": "AI-review",
+      "notes": "One year short of the 3-year membership rule; one step away."
+    },
+    {
+      "id": "P-25",
+      "title": "Plantation member aged 60 with 4 years of membership",
+      "kind": "boundary",
+      "answers": {
+        "livelihood": "plantation_worker",
+        "plantation_member": "yes",
+        "age": "60",
+        "plantation_membership_years": "4"
+      },
+      "expected": {
+        "PLNT-01": "not_matched"
+      },
+      "expectedMissing": {},
+      "writtenBy": "AI-review",
+      "notes": "Superannuation needs 5 years of continuous membership."
+    },
+    {
+      "id": "P-26",
+      "title": "Family of a plantation member who died after 15 years of work",
+      "kind": "standard",
+      "answers": {
+        "livelihood": "plantation_worker",
+        "plantation_member_death": "yes",
+        "plantation_deceased_contrib_3y": "yes",
+        "plantation_deceased_worked_15y": "yes"
+      },
+      "expected": {
+        "PLNT-06": "potentially_eligible",
+        "PLNT-07": "potentially_eligible"
+      },
+      "expectedMissing": {},
+      "writtenBy": "AI-review",
+      "notes": "Board Death Assistance (Rs 10,000) and Family Pension (50% of pension) pages."
+    },
+    {
+      "id": "P-27",
+      "title": "Family of a plantation member who died after 10 years of work",
+      "kind": "standard",
+      "answers": {
+        "livelihood": "plantation_worker",
+        "plantation_member_death": "yes",
+        "plantation_deceased_contrib_3y": "yes",
+        "plantation_deceased_worked_15y": "no"
+      },
+      "expected": {
+        "PLNT-06": "potentially_eligible",
+        "PLNT-07": "not_matched"
+      },
+      "expectedMissing": {},
+      "writtenBy": "AI-review",
+      "notes": "Family pension needs 15 years of work in a small plantation; death assistance has no published duration rule."
+    },
+    {
+      "id": "P-28",
+      "title": "Plantation member, 3 years, family member treated in hospital",
+      "kind": "boundary",
+      "answers": {
+        "livelihood": "plantation_worker",
+        "plantation_member": "yes",
+        "plantation_membership_years": "3",
+        "plantation_medical_treatment": "yes"
+      },
+      "expected": {
+        "PLNT-09": "potentially_eligible",
+        "PLNT-08": "needs_information"
+      },
+      "expectedMissing": {
+        "PLNT-08": [
+          "plantation_child_class10"
+        ]
+      },
+      "writtenBy": "AI-review",
+      "notes": "Board Medical Benefit page: 3 years of membership, worker and family members."
+    },
+    {
+      "id": "P-29",
+      "title": "Plantation member unable to work, but for less than two years",
+      "kind": "standard",
+      "answers": {
+        "livelihood": "plantation_worker",
+        "plantation_member": "yes",
+        "unable_due_infirmity": "yes",
+        "incapacitated_over_2_years": "no"
+      },
+      "expected": {
+        "PLNT-02": "not_matched"
+      },
+      "expectedMissing": {},
+      "writtenBy": "AI-review",
+      "notes": "Board Invalid Pension page requires incapacity beyond two years."
+    },
+    {
+      "id": "P-30",
+      "title": "Fisher family expecting a baby, member with no arrears, mother 19+",
+      "kind": "standard",
+      "answers": {
+        "livelihood": "fishing",
+        "family_event": "delivery",
+        "kfwfb_member": "yes",
+        "kfwfb_contributions_paid": "yes",
+        "mother_age_19": "yes"
+      },
+      "expected": {
+        "FISH-21": "potentially_eligible",
+        "FISH-16": "not_matched",
+        "FISH-22": "not_matched"
+      },
+      "expectedMissing": {},
+      "writtenBy": "AI-review",
+      "notes": "2025 KFWFB guideline p.28."
+    },
+    {
+      "id": "P-31",
+      "title": "Fisher family expecting a baby, mother under 19",
+      "kind": "standard",
+      "answers": {
+        "livelihood": "fishing",
+        "family_event": "delivery",
+        "kfwfb_member": "yes",
+        "kfwfb_contributions_paid": "yes",
+        "mother_age_19": "no"
+      },
+      "expected": {
+        "FISH-21": "not_matched"
+      },
+      "expectedMissing": {},
+      "writtenBy": "AI-review",
+      "notes": "p.28: the woman must be at least 19."
+    },
+    {
+      "id": "P-32",
+      "title": "Active member's child with A+ in all +2 subjects",
+      "kind": "standard",
+      "answers": {
+        "livelihood": "fishing",
+        "family_event": "plus_two_all_aplus",
+        "kfwfb_member": "yes",
+        "kfwfb_contributions_paid": "yes"
+      },
+      "expected": {
+        "FISH-22": "potentially_eligible",
+        "FISH-16": "not_matched",
+        "FISH-21": "not_matched"
+      },
+      "expectedMissing": {},
+      "writtenBy": "AI-review",
+      "notes": "2025 KFWFB guideline p.29."
     }
   ],
   "disclaimer": {
