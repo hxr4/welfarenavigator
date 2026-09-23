@@ -1,12 +1,15 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
+import type { ReadSequence, ReadState, Segment } from "@/lib/a11y/read-sequence";
+import { easyOptions } from "@/lib/easy/options";
 import type { Answer, Fact, Lang } from "@/lib/engine/types";
 import { answerText, pick } from "@/lib/i18n/describe";
 import { t } from "@/lib/i18n/strings";
 import { matchSpeech } from "@/lib/voice/match";
-import { canRead, readAloud, stopSpeaking, useSpeechInput, useVoicesReady, type Utterance } from "./useSpeech";
-import { MicIcon, SpeakerIcon } from "./icons";
+import { newSequence, speechAvailable } from "./speech-player";
+import { useSpeechInput, useVoicesReady } from "./useSpeech";
+import { CheckIcon, MicIcon, SpeakerIcon } from "./icons";
 
 interface Props {
   fact: Fact;
@@ -33,63 +36,64 @@ export default function QuestionCard({ fact, choices, lang, current, number, rem
   const [heard, setHeard] = useState<{ text: string; answer: Answer } | null>(null);
   const [voiceMsg, setVoiceMsg] = useState("");
   const [tries, setTries] = useState(0);
-  const [reading, setReading] = useState(false);
+  const [read, setRead] = useState<ReadState>({ playing: false, speakingId: null, unavailable: false });
+  const [readable, setReadable] = useState(false);
   const heading = useRef<HTMLHeadingElement>(null);
+  const seqRef = useRef<ReadSequence | null>(null);
   const { supported, listening, listen, stop } = useSpeechInput(lang);
   const voicesTick = useVoicesReady();
-  const [readable, setReadable] = useState(false);
+
+  const options = useMemo(() => easyOptions(fact, choices, lang, { allowUnknown }), [fact, choices, lang, allowUnknown]);
+  const choiceOptions = options.filter((o) => o.kind === "choice");
+  const segments: Segment[] = useMemo(
+    () => [{ id: "question", text: pick(fact.question, lang), clip: `fact.${fact.id}` }, ...options.map((o) => ({ id: o.id, text: o.label, clip: o.clip }))],
+    [fact, lang, options],
+  );
 
   useEffect(() => {
     heading.current?.focus();
-    return () => stopSpeaking();
   }, []);
 
-  const labelFor = (c: Answer, i: number) => {
-    if (fact.type === "boolean") return t(i === 0 ? "yes" : "no", lang);
-    if (fact.type === "number") return answerText(fact, c, lang);
-    return pick(fact.options[i].label, lang);
-  };
-  const clipFor = (i: number) => {
-    if (fact.type === "boolean") return i === 0 ? "option.yes" : "option.no";
-    if (fact.type === "number") return undefined;
-    return `option.${fact.id}.${fact.options[i].value}`;
-  };
-  const parts: Utterance[] = [
-    { text: pick(fact.question, lang), clip: `fact.${fact.id}` },
-    ...choices.map((c, i) => ({ text: labelFor(c, i), clip: clipFor(i) })),
-    { text: t("dontKnow", lang), clip: "option.unknown" },
-  ];
   useEffect(() => {
-    setReadable(canRead(lang, parts));
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [lang, fact.id, voicesTick]);
+    const seq = newSequence(lang, setRead);
+    seqRef.current = seq;
+    return () => seq.stop();
+  }, [lang]);
+
+  useEffect(() => {
+    setReadable(speechAvailable(lang, segments));
+  }, [lang, segments, voicesTick]);
+
   const gaveUp = tries >= MAX_VOICE_TRIES;
 
   function toggleRead() {
-    if (reading) {
-      stopSpeaking();
-      setReading(false);
-      return;
-    }
-    setReading(true);
-    readAloud(lang, parts, () => setReading(false));
+    if (read.playing) return seqRef.current?.stop();
+    stop();
+    seqRef.current?.start(segments);
+  }
+
+  function pickAnswer(a: Answer) {
+    seqRef.current?.stop();
+    stop();
+    onAnswer(a);
+  }
+
+  function failTry(text: string) {
+    const n = tries + 1;
+    setTries(n);
+    setVoiceMsg(n >= MAX_VOICE_TRIES ? t("voiceGaveUp", lang) : `${text ? `“${text}” — ` : ""}${t("notUnderstood", lang)}`);
   }
 
   async function onSpeak() {
-    stopSpeaking();
-    setReading(false);
+    seqRef.current?.stop();
     setHeard(null);
     setVoiceMsg("");
     try {
-      const alts = await listen();
-      const m = matchSpeech(alts, fact, choices);
-      const text = alts[0] ?? "";
-      if (!m) {
-        const n = tries + 1;
-        setTries(n);
-        setVoiceMsg(n >= MAX_VOICE_TRIES ? t("voiceGaveUp", lang) : `${text ? `“${text}” — ` : ""}${t("notUnderstood", lang)}`);
-        return;
-      }
+      const { alternatives, stopped } = await listen();
+      if (stopped) return;
+      const text = alternatives[0] ?? "";
+      const m = matchSpeech(alternatives, fact, choices);
+      if (!m) return failTry(text);
       if (m.kind === "unknown") return setHeard({ text, answer: { kind: "unknown" } });
       if (fact.type === "multi") return setHeard({ text, answer: { kind: "value", value: m.indices.map((i) => fact.options[i].value) } });
       setHeard({ text, answer: choices[m.indices[0]] });
@@ -100,6 +104,10 @@ export default function QuestionCard({ fact, choices, lang, current, number, rem
     }
   }
 
+  const speaking = (id: string) => read.speakingId === id;
+  const unknownOpt = options.find((o) => o.kind === "unknown");
+  const declinedOpt = options.find((o) => o.kind === "declined");
+
   return (
     <section className="panel" aria-labelledby={`q-${fact.id}`}>
       {number !== undefined && (
@@ -108,26 +116,27 @@ export default function QuestionCard({ fact, choices, lang, current, number, rem
           {remaining !== undefined && remaining > 1 ? ` · ${t("atMost", lang, { n: remaining - 1 })}` : ""}
         </p>
       )}
-      <h1 id={`q-${fact.id}`} className="q-text" tabIndex={-1} ref={heading}>
+      <h1 id={`q-${fact.id}`} className={`q-text ${speaking("question") ? "is-speaking-text" : ""}`} tabIndex={-1} ref={heading}>
         {pick(fact.question, lang)}
       </h1>
       {fact.help && <p className="help">{pick(fact.help, lang)}</p>}
 
       <div className="tools">
         {readable ? (
-          <button type="button" className="btn btn-quiet" onClick={toggleRead} aria-pressed={reading}>
-            <SpeakerIcon /> {reading ? t("stop", lang) : t("listen", lang)}
+          <button type="button" className="btn btn-quiet" onClick={toggleRead}>
+            <SpeakerIcon /> {read.playing ? t("stop", lang) : t("listen", lang)}
           </button>
         ) : (
           <span className="note">{t("ttsUnavailable", lang)}</span>
         )}
         {supported && !gaveUp && (
-          <button type="button" className="btn btn-quiet" onClick={listening ? stop : onSpeak} aria-pressed={listening}>
+          <button type="button" className="btn btn-quiet" onClick={listening ? stop : onSpeak}>
             <MicIcon /> {listening ? t("stop", lang) : t("speak", lang)}
           </button>
         )}
         {!supported && <span className="note">{t("voiceUnavailable", lang)}</span>}
       </div>
+      {supported && !gaveUp && <p className="note">{t("voicePrivacy", lang)}</p>}
 
       <div aria-live="polite" className="live">
         {listening && <p className="status">{t("listening", lang)}</p>}
@@ -141,7 +150,7 @@ export default function QuestionCard({ fact, choices, lang, current, number, rem
               {t("weUnderstood", lang)}: <strong>{answerText(fact, heard.answer, lang)}</strong>
             </p>
             <div className="row">
-              <button type="button" className="btn btn-primary" onClick={() => onAnswer(heard.answer)}>
+              <button type="button" className="btn btn-primary" onClick={() => pickAnswer(heard.answer)}>
                 {t("confirm", lang)}
               </button>
               <button type="button" className="btn" onClick={() => setHeard(null)}>
@@ -154,54 +163,65 @@ export default function QuestionCard({ fact, choices, lang, current, number, rem
 
       {fact.type === "multi" && !fact.help && <p className="help">{t("chooseAll", lang)}</p>}
       <div className="choices" role={fact.type === "multi" ? "group" : undefined} aria-labelledby={`q-${fact.id}`}>
-        {choices.map((c, i) => {
+        {choiceOptions.map((o, i) => {
+          const c = choices[i];
           if (fact.type === "multi") {
-            const val = fact.options[i].value;
+            const val = o.value as string;
             const on = multi.includes(val);
             return (
               <button
                 type="button"
                 key={val}
-                className={`choice ${on ? "is-on" : ""}`}
+                className={`choice ${on ? "is-on" : ""} ${speaking(o.id) ? "is-speaking" : ""}`}
                 aria-pressed={on}
-                onClick={() => setMulti(on ? multi.filter((x) => x !== val) : [...multi, val])}
+                onClick={() => setMulti(on ? multi.filter((x) => x !== val) : val === "none" ? [val] : [...multi.filter((x) => x !== "none"), val])}
               >
-                <span className="box" aria-hidden>{on ? "✓" : ""}</span>
-                <span>{labelFor(c, i)}</span>
+                <span className="box" aria-hidden>
+                  {on ? "✓" : ""}
+                </span>
+                <span>{o.label}</span>
               </button>
             );
           }
           const on = same(current, c);
           return (
-            <button type="button" key={i} className={`choice ${on ? "is-on" : ""}`} aria-pressed={on} onClick={() => onAnswer(c)}>
-              <span>{labelFor(c, i)}</span>
+            <button type="button" key={o.id} className={`choice ${on ? "is-on" : ""} ${speaking(o.id) ? "is-speaking" : ""}`} aria-pressed={on} onClick={() => pickAnswer(c)}>
+              {on && <CheckIcon />}
+              <span>{o.label}</span>
             </button>
           );
         })}
       </div>
       {fact.type === "multi" && (
-        <button
-          type="button"
-          className="btn btn-primary btn-wide"
-          disabled={multi.length === 0}
-          onClick={() => onAnswer({ kind: "value", value: multi })}
-        >
+        <button type="button" className="btn btn-primary btn-wide" disabled={multi.length === 0} onClick={() => pickAnswer({ kind: "value", value: multi })}>
           {t("continue", lang)}
         </button>
       )}
       <div className="row">
-        {allowUnknown && (
-          <button type="button" className={`btn ${current?.kind === "unknown" ? "is-on" : ""}`} onClick={() => onAnswer({ kind: "unknown" })}>
+        {unknownOpt && (
+          <button
+            type="button"
+            className={`btn ${current?.kind === "unknown" ? "is-on" : ""} ${speaking(unknownOpt.id) ? "is-speaking" : ""}`}
+            aria-pressed={current?.kind === "unknown"}
+            onClick={() => pickAnswer({ kind: "unknown" })}
+          >
+            {current?.kind === "unknown" && <CheckIcon />}
             {t("dontKnow", lang)}
           </button>
         )}
-        {fact.sensitivity === "high" && (
-          <button type="button" className={`btn ${current?.kind === "declined" ? "is-on" : ""}`} onClick={() => onAnswer({ kind: "declined" })}>
+        {declinedOpt && (
+          <button
+            type="button"
+            className={`btn ${current?.kind === "declined" ? "is-on" : ""} ${speaking(declinedOpt.id) ? "is-speaking" : ""}`}
+            aria-pressed={current?.kind === "declined"}
+            onClick={() => pickAnswer({ kind: "declined" })}
+          >
+            {current?.kind === "declined" && <CheckIcon />}
             {t("preferNot", lang)}
           </button>
         )}
       </div>
-      <nav className="row row-split" aria-label="Question navigation">
+      <nav className="row row-split" aria-label={t("questionNav", lang)}>
         {canGoBack ? (
           <button type="button" className="btn btn-link" onClick={onBack}>
             ← {t("back", lang)}

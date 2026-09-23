@@ -168,6 +168,7 @@ export default function DocumentChecklist({ ds, results, lang, onBack, onFindOff
           </table>
         )}
         {c.withoutList.length > 0 && <p>{t("docListNotVerified", lang, { names: names(c.withoutList) })}</p>}
+        {c.partialList.length > 0 && <p>{t("docListPartialFor", lang, { names: names(c.partialList) })}</p>}
         <h2>{t("whereToApply", lang)}</h2>
         <ul className="ps-apply">
           {c.schemes.map((s) => (
@@ -183,6 +184,7 @@ export default function DocumentChecklist({ ds, results, lang, onBack, onFindOff
             </li>
           ))}
         </ul>
+        {c.schemes.some((s) => s.applyVerification !== "verified") && <p>{t("printApplyPartial", lang)}</p>}
         <p className="ps-foot">{t("finalDecision", lang)}</p>
         {ds.disclaimer.not_official && <p className="ps-foot">{pick(ds.disclaimer.not_official, lang)}</p>}
         <p className="ps-foot">{t("printNoPersonal", lang)}</p>

@@ -29,6 +29,7 @@ const force = args.includes("--force");
 
 type Row = Record<string, string> & { __row: string };
 const errors: string[] = [];
+const warnings: string[] = [];
 
 function text(v: ExcelJS.CellValue): string {
   if (v === null || v === undefined) return "";
@@ -64,6 +65,10 @@ async function readRows(wb: ExcelJS.Workbook, name: string): Promise<Row[]> {
     });
     if (!any) return;
     const first = obj[spec.columns[0].key] ?? "";
+    if (n === 2) {
+      const known = new Set(spec.columns.map((c) => c.key));
+      for (const h of headers) if (h && !known.has(h)) warnings.push(`Sheet "${name}": column "${h}" is not recognised and is ignored. Check the spelling.`);
+    }
     if (!includeExamples && first.startsWith("EXAMPLE")) return;
     for (const c of spec.columns) {
       const val = obj[c.key] ?? "";
@@ -82,6 +87,10 @@ const yes = (s?: string) => ["yes", "y", "true", "1"].includes((s ?? "").toLower
 
 function parseValue(fact: Fact | undefined, op: Op, raw: string, where: string): LeafValue {
   if (!fact) return raw;
+  if (!String(raw ?? "").trim()) {
+    errors.push(`${where}: value is empty`);
+    return raw;
+  }
   const t: FactType = fact.type;
   if (t === "boolean") {
     const l = raw.toLowerCase();
@@ -96,7 +105,11 @@ function parseValue(fact: Fact | undefined, op: Op, raw: string, where: string):
     return n;
   }
   const parts = list(raw.replace(/,/g, "|"));
-  if (op === "in" || op === "not_in" || op === "includes" || op === "excludes") return parts;
+  if (op === "in" || op === "not_in" || op === "includes" || op === "excludes") {
+    if (parts.length === 0) errors.push(`${where}: value needs at least one option`);
+    return parts;
+  }
+  if (parts.length > 1) errors.push(`${where}: "${op}" takes one value; use "in" or "includes" for several`);
   return parts[0] ?? raw;
 }
 
@@ -157,7 +170,7 @@ async function main() {
     help: opt(f.help_en, f.help_ml),
     unit: (f.unit || "") as Fact["unit"],
     sensitivity: (f.sensitivity || "low") as Fact["sensitivity"],
-    order: Number(f.ask_order) || 99,
+    order: f.ask_order === "" || f.ask_order === undefined || !Number.isFinite(Number(f.ask_order)) ? 99 : Number(f.ask_order),
     audioMl: f.audio_ml || undefined,
     options: r.options
       .filter((o: Row) => o.fact_id === f.fact_id)
@@ -299,8 +312,14 @@ async function main() {
     disclaimer: Object.fromEntries(r.disclaimer.map((d: Row) => [d.key, l10n(d.en, d.ml)])),
   };
 
-  const issues = errors.length ? [] : validateDataset(ds);
+  let issues: ReturnType<typeof validateDataset> = [];
+  try {
+    issues = validateDataset(ds);
+  } catch (e) {
+    errors.push(`Validation could not run: ${(e as Error).message}`);
+  }
   for (const e of errors) console.error(`ERROR    ${e}`);
+  for (const w of warnings) console.warn(`WARNING  ${w}`);
   for (const i of issues) console[i.level === "error" ? "error" : "warn"](`${i.level.toUpperCase().padEnd(9)}${i.where}: ${i.message}`);
   const bad = errors.length + issues.filter((i) => i.level === "error").length;
   console.log(`\n${ds.schemes.length} schemes (${ds.schemes.filter((s) => s.verification.eligibility === "verified").length} screenable), ${ds.facts.length} facts, ${ds.sources.length} sources, ${ds.profiles.length} profiles, ${ds.locations.length} locations`);
@@ -308,6 +327,7 @@ async function main() {
     console.error(`\n${bad} error(s). data/dataset.json was NOT updated. Fix them or pass --force.`);
     process.exit(1);
   }
+  if (bad) ds.meta.forcedWithErrors = bad;
   mkdirSync("data", { recursive: true });
   writeFileSync("data/dataset.json", JSON.stringify(ds, null, 2));
   console.log("Wrote data/dataset.json");

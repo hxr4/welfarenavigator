@@ -163,7 +163,7 @@ export interface Profile {
 }
 
 export interface Dataset {
-  meta: { generatedAt: string; includesExamples: boolean; version: string };
+  meta: { generatedAt: string; includesExamples: boolean; version: string; forcedWithErrors?: number };
   sources: Source[];
   facts: Fact[];
   schemes: Scheme[];

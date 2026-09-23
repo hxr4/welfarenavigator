@@ -1,14 +1,14 @@
 "use client";
 
 import { useEffect, useMemo, useReducer, useRef, useState } from "react";
-import { ReadSequence, type ReadState, type Segment } from "@/lib/a11y/read-sequence";
+import type { ReadSequence, ReadState, Segment } from "@/lib/a11y/read-sequence";
 import { answerFor, easyOptions, easyReducer, selectionFor, type EasyOption } from "@/lib/easy/options";
 import type { Answer, Fact, Lang } from "@/lib/engine/types";
 import { pick } from "@/lib/i18n/describe";
 import { t } from "@/lib/i18n/strings";
 import { matchSpeech } from "@/lib/voice/match";
-import { browserPlayer, speechAvailable } from "./speech-player";
-import { stopSpeaking, useSpeechInput, useVoicesReady } from "./useSpeech";
+import { newSequence, speechAvailable } from "./speech-player";
+import { useSpeechInput, useVoicesReady } from "./useSpeech";
 import { CheckIcon, MicIcon, SpeakerIcon } from "./icons";
 
 interface Props {
@@ -36,6 +36,8 @@ export default function EasyQuestion({ fact, choices, lang, current, number, aut
   const [flash, setFlash] = useState<string | null>(null);
   const [voiceMsg, setVoiceMsg] = useState("");
   const seqRef = useRef<ReadSequence | null>(null);
+  const autoTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
+  const flashTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
   const heading = useRef<HTMLHeadingElement>(null);
   const voices = useVoicesReady();
   const { supported: micOk, listening, listen, stop: stopListening } = useSpeechInput(lang);
@@ -51,42 +53,57 @@ export default function EasyQuestion({ fact, choices, lang, current, number, aut
   }, [lang, segments, voices]);
 
   useEffect(() => {
-    const seq = new ReadSequence(browserPlayer(lang), (s) => {
+    const seq = newSequence(lang, (s) => {
       setRead(s);
       dispatch({ type: "speaking", id: s.speakingId });
     });
     seqRef.current = seq;
     return () => {
       seq.stop();
-      stopSpeaking();
+      if (flashTimer.current) clearTimeout(flashTimer.current);
     };
   }, [lang]);
 
   useEffect(() => {
     heading.current?.focus();
     if (!autoRead) return;
-    const timer = setTimeout(() => {
+    autoTimer.current = setTimeout(() => {
+      autoTimer.current = null;
       if (speechAvailable(lang, segments)) seqRef.current?.start(segments);
     }, 350);
-    return () => clearTimeout(timer);
+    return () => cancelAuto();
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [fact.id, lang]);
 
+  function cancelAuto() {
+    if (autoTimer.current) clearTimeout(autoTimer.current);
+    autoTimer.current = null;
+  }
+
   function listenAgain() {
+    cancelAuto();
     stopListening();
     seqRef.current?.start(segments);
   }
 
   function stopReading() {
+    cancelAuto();
     seqRef.current?.stop();
   }
 
+  function flashOn(id: string) {
+    setFlash(id);
+    if (flashTimer.current) clearTimeout(flashTimer.current);
+    flashTimer.current = setTimeout(() => setFlash(null), 600);
+  }
+
   function choose(o: EasyOption) {
+    cancelAuto();
     seqRef.current?.stop();
+    stopListening();
     const wasOn = state.selected.includes(o.id);
     dispatch({ type: "select", id: o.id });
-    setFlash(o.id);
-    setTimeout(() => setFlash(null), 600);
+    flashOn(o.id);
     setAnnounce(multi && wasOn ? `${t("easyUnselected", lang)}: ${o.label}` : `${t("selected", lang)}: ${o.label}. ${t("easyPressContinue", lang)}`);
   }
 
@@ -94,32 +111,26 @@ export default function EasyQuestion({ fact, choices, lang, current, number, aut
 
   function submit() {
     if (!answer) return;
+    cancelAuto();
     seqRef.current?.stop();
+    stopListening();
     onAnswer(answer);
   }
 
   async function byVoice() {
+    cancelAuto();
     seqRef.current?.stop();
     setVoiceMsg("");
     try {
-      const alts = await listen();
-      const m = matchSpeech(alts, fact, choices);
-      if (!m) return setVoiceMsg(t("notUnderstood", lang));
-      if (m.kind === "unknown") {
-        const u = options.find((o) => o.kind === "unknown");
-        if (u) choose(u);
-        return;
-      }
-      if (multi) {
-        for (const i of m.indices) {
-          const o = options[i];
-          if (o && !state.selected.includes(o.id)) dispatch({ type: "select", id: o.id });
-        }
-        setAnnounce(`${t("selected", lang)}: ${m.indices.map((i) => options[i]?.label).filter(Boolean).join(", ")}. ${t("easyPressContinue", lang)}`);
-        return;
-      }
-      const o = options[m.indices[0]];
-      if (o) choose(o);
+      const { alternatives, stopped } = await listen();
+      if (stopped) return;
+      const m = matchSpeech(alternatives, fact, choices);
+      if (!m) return setVoiceMsg(`${alternatives[0] ? `“${alternatives[0]}” — ` : ""}${t("notUnderstood", lang)}`);
+      const picked = m.kind === "unknown" ? options.filter((o) => o.kind === "unknown") : m.indices.map((i) => options[i]).filter((o): o is EasyOption => !!o);
+      if (picked.length === 0) return setVoiceMsg(t("notUnderstood", lang));
+      for (const o of multi ? picked : picked.slice(0, 1)) dispatch({ type: multi ? "add" : "select", id: o.id });
+      flashOn(picked[0].id);
+      setAnnounce(`${t("selected", lang)}: ${picked.map((o) => o.label).join(", ")}. ${t("easyPressContinue", lang)}`);
     } catch (e) {
       const msg = (e as Error).message;
       setVoiceMsg(msg === "not-allowed" || msg === "service-not-allowed" ? t("micDenied", lang) : t("voiceGaveUp", lang));
@@ -171,10 +182,14 @@ export default function EasyQuestion({ fact, choices, lang, current, number, aut
                 {on ? <CheckIcon /> : speaking ? <SpeakerIcon /> : null}
               </span>
               <span className="easy-label">{o.label}</span>
-              {speaking && !on && (
-                <span className="easy-tag easy-tag-speaking">{t("easyNowReading", lang)}</span>
-              )}
-              {on && <span className="easy-tag easy-tag-selected">{t("selected", lang)}</span>}
+              <span className="easy-tags">
+                {speaking && (
+                  <span className="easy-tag easy-tag-speaking">
+                    <SpeakerIcon /> {t("easyNowReading", lang)}
+                  </span>
+                )}
+                {on && <span className="easy-tag easy-tag-selected">{t("selected", lang)}</span>}
+              </span>
             </button>
           );
         })}
@@ -183,15 +198,17 @@ export default function EasyQuestion({ fact, choices, lang, current, number, aut
       <p className="sr-only" aria-live="assertive">
         {announce}
       </p>
-      {voiceMsg && <p className="easy-status easy-status-warn">{voiceMsg}</p>}
-      {listening && <p className="easy-status">{t("listening", lang)}</p>}
+      <div aria-live="polite">
+        {voiceMsg && <p className="easy-status easy-status-warn">{voiceMsg}</p>}
+        {listening && <p className="easy-status">{t("listening", lang)}</p>}
+      </div>
 
       <div className="easy-controls">
         <button type="button" className="easy-btn" onClick={onBack} disabled={!canGoBack}>
           <span aria-hidden>←</span> {t("back", lang)}
         </button>
         {canSpeak && (
-          <button type="button" className="easy-btn" onClick={read.playing ? stopReading : listenAgain} aria-pressed={read.playing}>
+          <button type="button" className="easy-btn" onClick={read.playing ? stopReading : listenAgain}>
             <SpeakerIcon /> {read.playing ? t("stop", lang) : t("easyListenAgain", lang)}
           </button>
         )}
@@ -202,10 +219,11 @@ export default function EasyQuestion({ fact, choices, lang, current, number, aut
 
       <div className="easy-extra">
         {micOk && (
-          <button type="button" className="easy-btn easy-btn-quiet" onClick={listening ? stopListening : byVoice} aria-pressed={listening}>
+          <button type="button" className="easy-btn easy-btn-quiet" onClick={listening ? stopListening : byVoice}>
             <MicIcon /> {listening ? t("stop", lang) : t("speak", lang)}
           </button>
         )}
+        {micOk && <p className="note easy-voice-note">{t("voicePrivacy", lang)}</p>}
         {canSpeak && (
           <label className="easy-toggle">
             <input type="checkbox" checked={autoRead} onChange={(e) => onAutoRead(e.target.checked)} />

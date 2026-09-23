@@ -1,5 +1,5 @@
 import { choicesFor } from "./bands";
-import { evalNode, leavesOf } from "./evaluate";
+import { evalNode, leavesOf, openLeaves } from "./evaluate";
 import { isScreenable } from "./screen";
 import type { Answers, Dataset, Fact, NextQuestion } from "./types";
 
@@ -12,7 +12,7 @@ export function undecidedSchemes(dataset: Dataset, answers: Answers) {
 export function candidateFacts(dataset: Dataset, answers: Answers): Fact[] {
   const ids = new Set<string>();
   for (const s of undecidedSchemes(dataset, answers)) {
-    for (const leaf of leavesOf(s.rule)) {
+    for (const leaf of openLeaves(s.rule, answers)) {
       if (answers[leaf.fact] === undefined) ids.add(leaf.fact);
     }
   }
@@ -47,22 +47,12 @@ export function nextQuestion(dataset: Dataset, answers: Answers): NextQuestion |
   return best && { fact: best.fact, choices: best.choices, remainingUpperBound: candidates.length };
 }
 
-export function relevantFacts(dataset: Dataset): Set<string> {
-  const ids = new Set<string>();
-  for (const s of dataset.schemes) {
-    if (!isScreenable(s)) continue;
-    for (const leaf of leavesOf(s.rule)) ids.add(leaf.fact);
-    for (const d of s.documents) if (d.when) ids.add(d.when.fact);
-  }
-  return ids;
-}
-
-export function pruneAnswers(dataset: Dataset, answers: Answers): Answers {
+export function pruneAnswers(dataset: Dataset, answers: Answers, keep: string[] = []): Answers {
   const undecided = undecidedSchemes(dataset, answers);
   const neededByUndecided = new Set(undecided.flatMap((s) => leavesOf(s.rule).map((l) => l.fact)));
   const out: Answers = { ...answers };
   for (const factId of Object.keys(answers)) {
-    if (neededByUndecided.has(factId)) continue;
+    if (neededByUndecided.has(factId) || keep.includes(factId)) continue;
     const without = { ...out };
     delete without[factId];
     const changed = dataset.schemes.some(

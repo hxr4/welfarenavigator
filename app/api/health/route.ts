@@ -11,5 +11,6 @@ export async function GET() {
     languages: ["en", "ml"],
     datasetBuilt: dataset.meta.generatedAt,
     examples: dataset.meta.includesExamples,
+    forcedWithErrors: dataset.meta.forcedWithErrors ?? 0,
   });
 }

@@ -14,6 +14,8 @@ interface Props {
   lang: Lang;
   previous: Record<string, SchemeStatus> | null;
   easy?: boolean;
+  focusScheme?: string | null;
+  onFocused?: () => void;
   onOpen: (schemeId: string) => void;
   onChecklist: () => void;
   onWhere: () => void;
@@ -27,17 +29,23 @@ function Card({ ds, r, lang, onOpen }: { ds: Dataset; r: SchemeResult; lang: Lan
       <p>{pick(r.scheme.summary, lang)}</p>
       <p className="meta">{pick(r.scheme.authority, lang)}</p>
       {r.oneStep?.leaf.howTo && <p className="onestep-line">{pick(r.oneStep.leaf.howTo, lang)}</p>}
-      <button type="button" className="btn" onClick={() => onOpen(r.scheme.id)} aria-label={`${t("viewDetails", lang)}: ${pick(r.scheme.name, lang)}`}>
+      <button type="button" id={`open-${r.scheme.id}`} className="btn" onClick={() => onOpen(r.scheme.id)} aria-label={`${t("viewDetails", lang)}: ${pick(r.scheme.name, lang)}`}>
         {t("viewDetails", lang)} →
       </button>
     </li>
   );
 }
 
-export default function ResultsList({ ds, results, answeredCount, lang, previous, easy, onOpen, onChecklist, onWhere }: Props) {
+export default function ResultsList({ ds, results, answeredCount, lang, previous, easy, focusScheme, onFocused, onOpen, onChecklist, onWhere }: Props) {
   const heading = useRef<HTMLHeadingElement>(null);
   useEffect(() => {
-    heading.current?.focus();
+    const back = focusScheme ? document.getElementById(`open-${focusScheme}`) : null;
+    if (back) {
+      back.focus();
+      back.scrollIntoView({ block: "center" });
+      onFocused?.();
+    } else heading.current?.focus();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const eligible = results.filter((r) => r.status === "potentially_eligible");
@@ -47,7 +55,7 @@ export default function ResultsList({ ds, results, answeredCount, lang, previous
   const info = results.filter((r) => r.status === "informational");
   const list = buildChecklist(ds, results);
   const changes = previous ? results.filter((r) => previous[r.scheme.id] && previous[r.scheme.id] !== r.status) : [];
-  const title = eligible.length === 0 ? t("foundNone", lang) : eligible.length === 1 ? t("foundOne", lang) : t("foundN", lang, { n: eligible.length });
+  const title = eligible.length === 0 ? (needs.length > 0 ? t("foundNoneYet", lang) : t("foundNone", lang)) : eligible.length === 1 ? t("foundOne", lang) : t("foundN", lang, { n: eligible.length });
   const nextSteps = eligible.length > 0 && (
     <section className={`panel next-steps ${easy ? "next-steps-easy" : ""}`} aria-labelledby="next-title">
       <h2 id="next-title">{t("docChecklistTitle", lang)}</h2>

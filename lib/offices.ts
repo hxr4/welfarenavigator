@@ -82,9 +82,10 @@ export function channelFor(ds: Dataset, locationType: string, input: FinderInput
     return { ...base, offices: rank(all.map((l) => ({ location: l, match: "state" as const, distanceKm: distanceTo(input.origin, l) })), input.origin), status: "ok" };
   }
   if (!input.district) return { ...base, offices: [], status: "need_district" };
+  const areaApplies = !!input.area && all.some((l) => l.district === input.district && l.area === input.area && !l.jurisdiction);
   const inDistrict = all
     .filter((l) => servesDistrict(l, input.district))
-    .filter((l) => !input.area || l.area === input.area || l.district !== input.district)
+    .filter((l) => !areaApplies || l.area === input.area || l.district !== input.district)
     .map((l) => ({ location: l, match: (l.district === input.district ? "district" : "jurisdiction") as MatchKind, distanceKm: distanceTo(input.origin, l) }));
   if (inDistrict.length > 0) {
     return { ...base, offices: rank(inDistrict, input.origin), status: "ok", multipleForDistrict: inDistrict.length > 1 && inDistrict.some((o) => !!o.location.jurisdiction) };

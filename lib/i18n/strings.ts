@@ -230,6 +230,11 @@ export const STRINGS = {
     ml: "ഈ ജില്ലയ്ക്ക് ഒന്നിലധികം ഓഫീസുകളുണ്ട്. നിങ്ങളുടെ താലൂക്കിനുള്ളത് കണ്ടെത്താൻ ഓരോ ഓഫീസിന്റെയും 'പ്രവർത്തന പരിധി' നോക്കുക.",
   },
 
+  voicePrivacy: { en: "Voice answers are sent to Google's speech service to be turned into text. Tapping sends nothing.", ml: "ശബ്ദ ഉത്തരങ്ങൾ ടെക്സ്റ്റാക്കാൻ Google-ന്റെ സ്പീച്ച് സേവനത്തിലേക്ക് അയയ്ക്കും. തൊട്ട് തിരഞ്ഞെടുത്താൽ ഒന്നും അയയ്ക്കില്ല." },
+  questionNav: { en: "Question navigation", ml: "ചോദ്യങ്ങൾക്കിടയിലെ നീക്കം" },
+  foundNoneYet: { en: "No scheme matched yet. Some need more answers.", ml: "ഇതുവരെ ഒരു പദ്ധതിയും ചേർന്നില്ല. ചിലതിന് കൂടുതൽ മറുപടികൾ വേണം." },
+  easyModeLabel: { en: "Easy mode", ml: "എളുപ്പ രീതി" },
+  printApplyPartial: { en: "For some schemes the application steps are not fully published. Confirm at the office.", ml: "ചില പദ്ധതികളുടെ അപേക്ഷാ നടപടികൾ പൂർണ്ണമായി പ്രസിദ്ധീകരിച്ചിട്ടില്ല. ഓഫീസിൽ ഉറപ്പാക്കുക." },
   yourAnswers: { en: "Your answers", ml: "നിങ്ങളുടെ മറുപടികൾ" },
   yourAnswersHelp: { en: "Change any answer. Results update straight away.", ml: "ഏത് മറുപടിയും മാറ്റാം. ഫലം ഉടൻ പുതുക്കും." },
   clear: { en: "Clear my information", ml: "എന്റെ വിവരങ്ങൾ മായ്ക്കുക" },

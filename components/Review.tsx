@@ -1,6 +1,6 @@
 "use client";
 
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import Link from "next/link";
 import { DISTRICTS } from "@/lib/data/districts";
 import { validateDataset } from "@/lib/data/validate";
@@ -49,6 +49,9 @@ export default function Review({ ds }: { ds: Dataset }) {
   const districtTypes = ds.locationTypes.filter((t) => t.scope !== "state");
   const stateTypes = ds.locationTypes.filter((t) => t.scope === "state");
   const commit = process.env.NEXT_PUBLIC_BUILD_COMMIT ?? "unknown";
+  useEffect(() => {
+    document.documentElement.lang = "en";
+  }, []);
   const builtAt = process.env.NEXT_PUBLIC_BUILD_TIME ?? "";
 
   function runAll() {
@@ -85,6 +88,7 @@ export default function Review({ ds }: { ds: Dataset }) {
           Everything here is computed live in this browser, from the same engine and dataset the citizen screen uses. Failures are shown, not hidden.
         </p>
         {ds.meta.includesExamples && <p className="notice">Built with EXAMPLE rows. Not the real dataset.</p>}
+        {!!ds.meta.forcedWithErrors && <p className="notice">This dataset was written with --force despite {ds.meta.forcedWithErrors} error(s). Rebuild it without --force.</p>}
 
         <section className="panel" aria-labelledby="v-title">
           <h1 id="v-title">Verification</h1>

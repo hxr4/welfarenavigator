@@ -55,7 +55,7 @@ export interface EasyState {
   speakingId: string | null;
 }
 
-export type EasyAction = { type: "speaking"; id: string | null } | { type: "select"; id: string } | { type: "reset"; selected: string[] };
+export type EasyAction = { type: "speaking"; id: string | null } | { type: "select"; id: string } | { type: "add"; id: string } | { type: "reset"; selected: string[] };
 
 export function easyReducer(multi: boolean, options: EasyOption[]) {
   const byId = new Map(options.map((o) => [o.id, o]));
@@ -63,19 +63,24 @@ export function easyReducer(multi: boolean, options: EasyOption[]) {
     const o = byId.get(id);
     return !!o && (o.kind !== "choice" || (o.value !== undefined && EXCLUSIVE_VALUES.has(o.value)));
   };
+  const reduceSelect = (state: EasyState, id: string): EasyState => {
+    if (!byId.has(id)) return state;
+    if (!multi) return { selected: [id], speakingId: null };
+    if (state.selected.includes(id)) return { selected: state.selected.filter((x) => x !== id), speakingId: null };
+    if (exclusive(id)) return { selected: [id], speakingId: null };
+    return { selected: [...state.selected.filter((x) => !exclusive(x)), id], speakingId: null };
+  };
   return (state: EasyState, action: EasyAction): EasyState => {
     switch (action.type) {
       case "speaking":
         return { ...state, speakingId: action.id };
       case "reset":
         return { selected: action.selected, speakingId: null };
-      case "select": {
-        if (!byId.has(action.id)) return state;
-        if (!multi) return { selected: [action.id], speakingId: null };
-        if (state.selected.includes(action.id)) return { selected: state.selected.filter((x) => x !== action.id), speakingId: null };
-        if (exclusive(action.id)) return { selected: [action.id], speakingId: null };
-        return { selected: [...state.selected.filter((x) => !exclusive(x)), action.id], speakingId: null };
-      }
+      case "add":
+        if (state.selected.includes(action.id)) return { ...state, speakingId: null };
+        return reduceSelect(state, action.id);
+      case "select":
+        return reduceSelect(state, action.id);
     }
   };
 }

@@ -18,32 +18,34 @@ function asArray(v: unknown): string[] {
   return [String(v)];
 }
 
-function normalizeNumeric(op: string, v: number): { op: "lte" | "gte" | "eq" | "neq"; v: number } {
-  if (op === "lt") return { op: "lte", v: v - 1 };
-  if (op === "gt") return { op: "gte", v: v + 1 };
-  if (op === "lte" || op === "gte" || op === "eq" || op === "neq") return { op, v };
-  throw new Error(`Operator ${op} is not valid for numbers`);
-}
-
-function evalRange(op: string, value: number, lo: number, hi: number): Tri {
-  const n = normalizeNumeric(op, value);
-  switch (n.op) {
+function evalRange(op: string, v: number, lo: number, hi: number): Tri {
+  switch (op) {
+    case "lt":
+      if (hi < v) return "T";
+      if (lo >= v) return "F";
+      return "U";
     case "lte":
-      if (hi <= n.v) return "T";
-      if (lo > n.v) return "F";
+      if (hi <= v) return "T";
+      if (lo > v) return "F";
+      return "U";
+    case "gt":
+      if (lo > v) return "T";
+      if (hi <= v) return "F";
       return "U";
     case "gte":
-      if (lo >= n.v) return "T";
-      if (hi < n.v) return "F";
+      if (lo >= v) return "T";
+      if (hi < v) return "F";
       return "U";
     case "eq":
-      if (lo === n.v && hi === n.v) return "T";
-      if (n.v < lo || n.v > hi) return "F";
+      if (lo === v && hi === v) return "T";
+      if (v < lo || v > hi) return "F";
       return "U";
     case "neq":
-      if (lo === n.v && hi === n.v) return "F";
-      if (n.v < lo || n.v > hi) return "T";
+      if (lo === v && hi === v) return "F";
+      if (v < lo || v > hi) return "T";
       return "U";
+    default:
+      throw new Error(`Operator ${op} is not valid for numbers`);
   }
 }
 
@@ -108,10 +110,10 @@ export function evalLeaves(node: RuleNode, answers: Answers): LeafResult[] {
   return leavesOf(node).map((leaf) => ({ leaf, result: evalCondition(leaf, answers[leaf.fact]) }));
 }
 
-export function isAnswered(answer: Answer | undefined): boolean {
-  return answer !== undefined;
-}
-
-export function isKnown(answer: Answer | undefined): boolean {
-  return answer !== undefined && answer.kind !== "unknown" && answer.kind !== "declined";
+export function openLeaves(node: RuleNode, answers: Answers): Leaf[] {
+  if (isLeaf(node)) return evalCondition(node, answers[node.fact]) === "U" ? [node] : [];
+  if (evalNode(node, answers) !== "U") return [];
+  if ("all" in node) return node.all.flatMap((c) => openLeaves(c, answers));
+  if ("any" in node) return node.any.flatMap((c) => openLeaves(c, answers));
+  return openLeaves(node.not, answers);
 }

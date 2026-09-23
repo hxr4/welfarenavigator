@@ -33,6 +33,11 @@ function checkValue(fact: Fact, op: Op, value: unknown, where: string, issues: I
   }
   if (fact.type === "number" && !Number.isFinite(Number(value))) {
     issues.push({ level: "error", where, message: `Value for number fact "${fact.id}" must be a number` });
+  } else if (fact.type === "number" && !Number.isInteger(Number(value))) {
+    issues.push({ level: "error", where, message: `Value for number fact "${fact.id}" must be a whole number (answers are asked as whole-number ranges)` });
+  }
+  if (Array.isArray(value) && value.length === 0) {
+    issues.push({ level: "error", where, message: `Condition on "${fact.id}" lists no values` });
   }
   if (fact.type === "enum" || fact.type === "multi") {
     const vals = Array.isArray(value) ? value : [String(value)];
@@ -79,6 +84,7 @@ export function validateDataset(ds: Dataset): Issue[] {
   for (const s of ds.schemes) {
     const where = `schemes ${s.id}`;
     const leaves = leavesOf(s.rule);
+    for (const d of dupes(leaves.map((l) => l.id))) add("error", where, `Duplicate condition_id "${d}"`);
     if (s.verification.eligibility === "verified" && leaves.length === 0) {
       add("error", where, "Marked verified but has no conditions");
     }
@@ -130,6 +136,9 @@ export function validateDataset(ds: Dataset): Issue[] {
     if (!DISTRICTS.some((d) => d.id === l.district)) add("error", `locations ${l.id}`, `"${l.district}" is not one of the 14 Kerala districts`);
     for (const d of l.serves ?? []) if (!DISTRICTS.some((x) => x.id === d)) add("error", `locations ${l.id}`, `serves "${d}" is not one of the 14 Kerala districts`);
     if ((l.lat === undefined) !== (l.lng === undefined)) add("error", `locations ${l.id}`, "Give both lat and lng, or neither");
+    if (l.lat !== undefined && l.lng !== undefined && !(Number.isFinite(l.lat) && Number.isFinite(l.lng) && l.lat >= 8 && l.lat <= 13 && l.lng >= 74.5 && l.lng <= 77.6)) {
+      add("error", `locations ${l.id}`, "lat/lng must be decimal degrees inside Kerala (for example 9.93, 76.26)");
+    }
     if (!l.sourceId) add("warning", `locations ${l.id}`, "No source for this address");
   }
 

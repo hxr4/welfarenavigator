@@ -186,6 +186,11 @@ Mark a UI string as checked by adding `mlReviewed: true` to it in `strings.ts`. 
 | noOfficeData | No office of this type is listed in the official sources we used. | ഞങ്ങൾ ഉപയോഗിച്ച ഔദ്യോഗിക ഉറവിടങ്ങളിൽ ഈ തരം ഓഫീസ് ഇല്ല. | NOT REVIEWED |  |
 | noOfficeInDistrict | No {type} is listed in the official source for {d} district. | {d} ജില്ലയിൽ {type} ഔദ്യോഗിക ഉറവിടത്തിൽ നൽകിയിട്ടില്ല. | NOT REVIEWED |  |
 | pickByJurisdiction | More than one office serves this district. Check "Serves" on each office to find the one for your taluk. | ഈ ജില്ലയ്ക്ക് ഒന്നിലധികം ഓഫീസുകളുണ്ട്. നിങ്ങളുടെ താലൂക്കിനുള്ളത് കണ്ടെത്താൻ ഓരോ ഓഫീസിന്റെയും 'പ്രവർത്തന പരിധി' നോക്കുക. | NOT REVIEWED |  |
+| voicePrivacy | Voice answers are sent to Google's speech service to be turned into text. Tapping sends nothing. | ശബ്ദ ഉത്തരങ്ങൾ ടെക്സ്റ്റാക്കാൻ Google-ന്റെ സ്പീച്ച് സേവനത്തിലേക്ക് അയയ്ക്കും. തൊട്ട് തിരഞ്ഞെടുത്താൽ ഒന്നും അയയ്ക്കില്ല. | NOT REVIEWED |  |
+| questionNav | Question navigation | ചോദ്യങ്ങൾക്കിടയിലെ നീക്കം | NOT REVIEWED |  |
+| foundNoneYet | No scheme matched yet. Some need more answers. | ഇതുവരെ ഒരു പദ്ധതിയും ചേർന്നില്ല. ചിലതിന് കൂടുതൽ മറുപടികൾ വേണം. | NOT REVIEWED |  |
+| easyModeLabel | Easy mode | എളുപ്പ രീതി | NOT REVIEWED |  |
+| printApplyPartial | For some schemes the application steps are not fully published. Confirm at the office. | ചില പദ്ധതികളുടെ അപേക്ഷാ നടപടികൾ പൂർണ്ണമായി പ്രസിദ്ധീകരിച്ചിട്ടില്ല. ഓഫീസിൽ ഉറപ്പാക്കുക. | NOT REVIEWED |  |
 | yourAnswers | Your answers | നിങ്ങളുടെ മറുപടികൾ | NOT REVIEWED |  |
 | yourAnswersHelp | Change any answer. Results update straight away. | ഏത് മറുപടിയും മാറ്റാം. ഫലം ഉടൻ പുതുക്കും. | NOT REVIEWED |  |
 | clear | Clear my information | എന്റെ വിവരങ്ങൾ മായ്ക്കുക | NOT REVIEWED |  |
@@ -300,21 +305,21 @@ Mark a UI string as checked by adding `mlReviewed: true` to it in `strings.ts`. 
 | scheme FISH-22 summary | ₹5,000 cash award and a memento for children of active Board members who get A+ in all subjects in the Higher Secondary (+2) or VHSE exam, passing in the first attempt. | ഹയർ സെക്കന്ററി (+2) / വി.എച്ച്.എസ്.ഇ പരീക്ഷയിൽ ആദ്യ അവസരത്തിൽ എല്ലാ വിഷയങ്ങൾക്കും എ+ നേടുന്ന, മത്സ്യബോർഡിൽ സജീവ അംഗത്വമുള്ളവരുടെ മക്കൾക്ക് 5,000 രൂപ ക്യാഷ് അവാർഡും മെമെന്റോയും. |
 | scheme FISH-22 authority | Kerala Fishermen's Welfare Fund Board | കേരള മത്സ്യത്തൊഴിലാളി ക്ഷേമനിധി ബോർഡ് |
 | fact livelihood label | Livelihood | തൊഴിൽ മേഖല |
-| fact livelihood question | Which work does your household do? | നിങ്ങളുടെ കുടുംബം ഏത് തൊഴിലാണ് ചെയ്യുന്നത്? |
+| fact livelihood question | What work does your family do? | നിങ്ങളുടെ കുടുംബം ഏത് തൊഴിലാണ് ചെയ്യുന്നത്? |
 | option livelihood.fishing | Fishing | മത്സ്യബന്ധനം |
 | option livelihood.plantation_worker | Plantation or estate work | തോട്ടം / എസ്റ്റേറ്റ് ജോലി |
 | option livelihood.allied_fish_worker | Allied fishery work | മത്സ്യബന്ധന അനുബന്ധ ജോലി |
 | option livelihood.other | Other work | മറ്റ് ജോലി |
 | fact registered_fisher label | Registered fisherman | രജിസ്റ്റർ ചെയ്ത മത്സ്യത്തൊഴിലാളിയാണോ |
-| fact registered_fisher question | Is the beneficiary a registered fisherman? | ആനുകൂല്യത്തിനായി അപേക്ഷിക്കുന്ന വ്യക്തി രജിസ്റ്റർ ചെയ്ത മത്സ്യത്തൊഴിലാളിയാണോ? |
+| fact registered_fisher question | Is the person applying a registered fisher? | ആനുകൂല്യത്തിനായി അപേക്ഷിക്കുന്ന വ്യക്തി രജിസ്റ്റർ ചെയ്ത മത്സ്യത്തൊഴിലാളിയാണോ? |
 | fact active_fisher label | Active fisherman | സജീവ മത്സ്യത്തൊഴിലാളിയാണോ |
-| fact active_fisher question | Is the beneficiary an active fisherman? | ആനുകൂല്യത്തിനായി അപേക്ഷിക്കുന്ന വ്യക്തി സജീവ മത്സ്യത്തൊഴിലാളിയാണോ? |
+| fact active_fisher question | Does the person applying still work as a fisher (an active fisher)? | ആനുകൂല്യത്തിനായി അപേക്ഷിക്കുന്ന വ്യക്തി സജീവ മത്സ്യത്തൊഴിലാളിയാണോ? |
 | fact bpl label | BPL household | ബി.പി.എൽ കുടുംബമാണോ |
-| fact bpl question | Is the household in the BPL category? | കുടുംബം ബി.പി.എൽ വിഭാഗത്തിലാണോ? |
+| fact bpl question | Is your family in the BPL (below poverty line) category? | കുടുംബം ബി.പി.എൽ വിഭാഗത്തിലാണോ? |
 | fact bank_account label | Bank account | ബാങ്ക് അക്കൗണ്ട് |
-| fact bank_account question | Does the beneficiary have a bank account? | ആനുകൂല്യത്തിനായി അപേക്ഷിക്കുന്ന വ്യക്തിക്ക് ബാങ്ക് അക്കൗണ്ട് ഉണ്ടോ? |
+| fact bank_account question | Does the person applying have a bank account? | ആനുകൂല്യത്തിനായി അപേക്ഷിക്കുന്ന വ്യക്തിക്ക് ബാങ്ക് അക്കൗണ്ട് ഉണ്ടോ? |
 | fact traditional_fisher label | Traditional fisherman | പരമ്പരാഗത മത്സ്യത്തൊഴിലാളി |
-| fact traditional_fisher question | Is the beneficiary a registered traditional fisherman? | ആനുകൂല്യത്തിനായി അപേക്ഷിക്കുന്ന വ്യക്തി രജിസ്റ്റർ ചെയ്ത പരമ്പരാഗത മത്സ്യത്തൊഴിലാളിയാണോ? |
+| fact traditional_fisher question | Is the person applying a registered traditional fisher? | ആനുകൂല്യത്തിനായി അപേക്ഷിക്കുന്ന വ്യക്തി രജിസ്റ്റർ ചെയ്ത പരമ്പരാഗത മത്സ്യത്തൊഴിലാളിയാണോ? |
 | fact kfwfb_member label | KFWFB member | മത്സ്യത്തൊഴിലാളി ക്ഷേമനിധി അംഗത്വം |
 | fact kfwfb_member question | Is the person a member of the Kerala Fishermen's Welfare Fund Board (Matsyaboard)? | കേരള മത്സ്യത്തൊഴിലാളി ക്ഷേമനിധി ബോർഡിൽ (മത്സ്യബോർഡ്) അംഗമാണോ? |
 | fact age label | Age | പ്രായം |
@@ -346,9 +351,9 @@ Mark a UI string as checked by adding `mlReviewed: true` to it in `strings.ts`. 
 | fact fisher_work_10_years label | Worked 10 years as a fisherman in Kerala | കേരളത്തിൽ 10 വർഷം മത്സ്യത്തൊഴിലാളി |
 | fact fisher_work_10_years question | Has the person worked and earned a living as a fisherman in Kerala for at least 10 years? | കേരളത്തിൽ കുറഞ്ഞത് 10 വർഷമെങ്കിലും മത്സ്യത്തൊഴിലാളിയായി ജോലി ചെയ്ത് ഉപജീവനം കഴിച്ചിട്ടുണ്ടോ? |
 | fact retired_from_fishing label | Retired from fishing work | തൊഴിലിൽ നിന്ന് വിരമിച്ചു |
-| fact retired_from_fishing question | Has the person stopped (retired from) fishing work? | മത്സ്യബന്ധന തൊഴിലിൽ നിന്ന് വിരമിച്ചോ? |
+| fact retired_from_fishing question | Has the person stopped fishing work (retired)? | മത്സ്യബന്ധന തൊഴിലിൽ നിന്ന് വിരമിച്ചോ? |
 | fact annual_family_income label | Yearly family income | കുടുംബ വാർഷിക വരുമാനം |
-| fact annual_family_income question | What is the family's total income in a year? | കുടുംബത്തിന്റെ ഒരു വർഷത്തെ ആകെ വരുമാനം എത്ര? |
+| fact annual_family_income question | What is your family's total income in a year? | കുടുംബത്തിന്റെ ഒരു വർഷത്തെ ആകെ വരുമാനം എത്ര? |
 | fact kfwfb_family_status label | Fisherman in the family | കുടുംബത്തിലെ മത്സ്യത്തൊഴിലാളി |
 | fact kfwfb_family_status question | Which of these describe your family? Choose all that apply. | ഇവയിൽ ഏതെല്ലാമാണ് നിങ്ങളുടെ കുടുംബത്തിന് ബാധകം? ബാധകമായതെല്ലാം തിരഞ്ഞെടുക്കുക. |
 | option kfwfb_family_status.member_under_60 | Board member fisherman, under 60 | 60 വയസ്സിൽ താഴെയുള്ള ബോർഡ് അംഗമായ മത്സ്യത്തൊഴിലാളി |

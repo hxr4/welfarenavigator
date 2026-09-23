@@ -5,32 +5,43 @@ import type { Answer, Answers, Dataset, Fact, Profile, SchemeResult, SchemeStatu
 const TRUE = new Set(["yes", "y", "true", "1", "അതെ", "ഉണ്ട്"]);
 const FALSE = new Set(["no", "n", "false", "0", "അല്ല", "ഇല്ല"]);
 
+export class AnswerError extends Error {}
+
 export function parseAnswer(fact: Fact, raw: string): Answer {
-  const v = raw.trim();
+  const v = String(raw ?? "").trim();
   const lower = v.toLowerCase();
   if (lower === "unknown" || lower === "?" || lower === "dont_know") return { kind: "unknown" };
   if (lower === "declined" || lower === "prefer_not") return { kind: "declined" };
+  if (!v) throw new AnswerError(`Answer for ${fact.id} is empty; use "unknown" if it is not known`);
   switch (fact.type) {
     case "boolean":
       if (TRUE.has(lower)) return { kind: "value", value: true };
       if (FALSE.has(lower)) return { kind: "value", value: false };
-      throw new Error(`"${raw}" is not yes/no for ${fact.id}`);
+      throw new AnswerError(`Answer for ${fact.id} must be yes or no`);
     case "number": {
       const range = v.match(/^(\d+)\s*-\s*(\d+)$/);
-      if (range) return { kind: "range", lo: Number(range[1]), hi: Number(range[2]) };
-      const n = Number(v.replace(/[,_\s]/g, ""));
-      if (!Number.isFinite(n)) throw new Error(`"${raw}" is not a number for ${fact.id}`);
+      if (range) {
+        const lo = Number(range[1]);
+        const hi = Number(range[2]);
+        if (lo > hi) throw new AnswerError(`Range for ${fact.id} must be low-high`);
+        return { kind: "range", lo, hi };
+      }
+      const cleaned = v.replace(/[,_\s]/g, "");
+      if (!/^\d+(\.\d+)?$/.test(cleaned)) throw new AnswerError(`Answer for ${fact.id} must be a number of 0 or more`);
+      const n = Number(cleaned);
+      if (!Number.isFinite(n) || n > Number.MAX_SAFE_INTEGER) throw new AnswerError(`Answer for ${fact.id} is out of range`);
       return { kind: "range", lo: n, hi: n };
     }
     case "multi": {
-      const parts = v.split(/[,|]/).map((p) => p.trim()).filter(Boolean);
+      const parts = [...new Set(v.split(/[,|]/).map((p) => p.trim()).filter(Boolean))];
+      if (parts.length === 0) throw new AnswerError(`Answer for ${fact.id} must name at least one option`);
       for (const p of parts) {
-        if (!fact.options.some((o) => o.value === p)) throw new Error(`"${p}" is not an option of ${fact.id}`);
+        if (!fact.options.some((o) => o.value === p)) throw new AnswerError(`An answer for ${fact.id} is not one of its options`);
       }
       return { kind: "value", value: parts };
     }
     case "enum":
-      if (!fact.options.some((o) => o.value === v)) throw new Error(`"${v}" is not an option of ${fact.id}`);
+      if (!fact.options.some((o) => o.value === v)) throw new AnswerError(`Answer for ${fact.id} is not one of its options`);
       return { kind: "value", value: v };
   }
 }
@@ -39,7 +50,7 @@ export function parseAnswerMap(dataset: Dataset, raw: Record<string, string>): A
   const out: Answers = {};
   for (const [factId, value] of Object.entries(raw)) {
     const fact = dataset.facts.find((f) => f.id === factId);
-    if (!fact) throw new Error(`Unknown fact "${factId}"`);
+    if (!fact) throw new AnswerError(`Unknown fact "${factId.slice(0, 60)}"`);
     out[factId] = parseAnswer(fact, value);
   }
   return out;

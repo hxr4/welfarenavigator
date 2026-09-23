@@ -1,4 +1,4 @@
-import { evalCondition, evalLeaves, evalNode } from "./evaluate";
+import { evalCondition, evalLeaves, evalNode, openLeaves } from "./evaluate";
 import type {
   Answer,
   Answers,
@@ -73,10 +73,7 @@ export function screenScheme(dataset: Dataset, scheme: Scheme, answers: Answers)
     return { scheme, status: "informational", leaves, missingFacts: [], failingLeaves: [], documents };
   }
   const status = statusFromTri(evalNode(scheme.rule, answers));
-  const missingFacts =
-    status === "needs_information"
-      ? [...new Set(leaves.filter((l) => l.result === "U").map((l) => l.leaf.fact))]
-      : [];
+  const missingFacts = status === "needs_information" ? [...new Set(openLeaves(scheme.rule, answers).map((l) => l.fact))] : [];
   const failingLeaves = status === "not_matched" ? leaves.filter((l) => l.result === "F").map((l) => l.leaf) : [];
   const oneStep = status === "not_matched" ? findOneStep(scheme, answers, failingLeaves) : undefined;
   return { scheme, status, leaves, missingFacts, failingLeaves, oneStep, documents };
@@ -88,20 +85,6 @@ export function screenAll(dataset: Dataset, answers: Answers): SchemeResult[] {
   return dataset.schemes
     .map((s) => screenScheme(dataset, s, answers))
     .sort((a, b) => ORDER.indexOf(a.status) - ORDER.indexOf(b.status));
-}
-
-export function checklist(results: SchemeResult[]): { docId: string; name: SchemeResult["documents"][number]["doc"]; schemes: string[]; conditional: boolean }[] {
-  const map = new Map<string, { docId: string; name: ResolvedDocument["doc"]; schemes: string[]; conditional: boolean }>();
-  for (const r of results) {
-    if (r.status !== "potentially_eligible") continue;
-    for (const d of r.documents) {
-      const e = map.get(d.doc.id) ?? { docId: d.doc.id, name: d.doc, schemes: [], conditional: true };
-      e.schemes.push(r.scheme.id);
-      e.conditional = e.conditional && d.conditional;
-      map.set(d.doc.id, e);
-    }
-  }
-  return [...map.values()];
 }
 
 export function statusMap(results: SchemeResult[]): Record<string, SchemeStatus> {

@@ -100,10 +100,14 @@ export default function OfficeFinder({ ds, schemes, lang, district, onDistrict, 
   const [origin, setOrigin] = useState<{ lat: number; lng: number } | null>(null);
   const [area, setArea] = useState("");
   const heading = useRef<HTMLHeadingElement>(null);
+  const mounted = useRef(true);
 
   useEffect(() => {
+    mounted.current = true;
     heading.current?.focus();
-    return () => setOrigin(null);
+    return () => {
+      mounted.current = false;
+    };
   }, []);
 
   function locate() {
@@ -111,6 +115,7 @@ export default function OfficeFinder({ ds, schemes, lang, district, onDistrict, 
     setLoc("asking");
     navigator.geolocation.getCurrentPosition(
       (p) => {
+        if (!mounted.current) return;
         const here = { lat: p.coords.latitude, lng: p.coords.longitude };
         const est = estimateDistrict(here);
         if (!est) {
@@ -123,6 +128,7 @@ export default function OfficeFinder({ ds, schemes, lang, district, onDistrict, 
         setLoc("estimated");
       },
       () => {
+        if (!mounted.current) return;
         setOrigin(null);
         setLoc("denied");
       },

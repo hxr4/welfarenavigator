@@ -1,10 +1,14 @@
 import { z } from "zod";
 import { dataset } from "@/lib/data/load";
 import { nextQuestion } from "@/lib/engine/next-question";
-import { parseAnswerMap } from "@/lib/engine/profile";
+import { AnswerError, parseAnswerMap } from "@/lib/engine/profile";
 import { screenAll } from "@/lib/engine/screen";
 
-const Body = z.object({ answers: z.record(z.string(), z.string()) });
+const Body = z.object({
+  answers: z
+    .record(z.string().max(64), z.string().max(200))
+    .refine((a) => Object.keys(a).length <= 100, { message: "Too many answers" }),
+});
 
 export async function POST(request: Request) {
   let body: unknown;
@@ -35,6 +39,7 @@ export async function POST(request: Request) {
       { headers: { "cache-control": "no-store" } },
     );
   } catch (e) {
-    return Response.json({ error: (e as Error).message }, { status: 400, headers: { "cache-control": "no-store" } });
+    const message = e instanceof AnswerError ? e.message : "Could not screen these answers";
+    return Response.json({ error: message }, { status: 400, headers: { "cache-control": "no-store" } });
   }
 }

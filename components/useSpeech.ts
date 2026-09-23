@@ -1,8 +1,11 @@
 "use client";
 
 import { useCallback, useEffect, useRef, useState } from "react";
-import manifest from "@/data/audio-manifest.json";
+import type { Segment } from "@/lib/a11y/read-sequence";
 import type { Lang } from "@/lib/engine/types";
+import { hasClip, newSequence, speechAvailable, stopAllAudio } from "./speech-player";
+
+export { hasClip };
 
 type Recognition = {
   lang: string;
@@ -22,10 +25,18 @@ function getCtor(): (new () => Recognition) | null {
   return w.SpeechRecognition ?? w.webkitSpeechRecognition ?? null;
 }
 
+export interface Heard {
+  alternatives: string[];
+  stopped: boolean;
+}
+
+const SOFT_ERRORS = new Set(["no-speech", "aborted", "audio-capture"]);
+
 export function useSpeechInput(lang: Lang) {
   const [supported, setSupported] = useState(false);
   const [listening, setListening] = useState(false);
   const ref = useRef<Recognition | null>(null);
+  const stoppedRef = useRef(false);
 
   useEffect(() => {
     const update = () => setSupported(!!getCtor() && navigator.onLine);
@@ -35,35 +46,40 @@ export function useSpeechInput(lang: Lang) {
     return () => {
       window.removeEventListener("online", update);
       window.removeEventListener("offline", update);
+      stoppedRef.current = true;
       ref.current?.abort();
     };
   }, []);
 
   const listen = useCallback(
     () =>
-      new Promise<string[]>((resolve, reject) => {
+      new Promise<Heard>((resolve, reject) => {
         const Ctor = getCtor();
         if (!Ctor) return reject(new Error("unsupported"));
         ref.current?.abort();
+        stoppedRef.current = false;
         const rec = new Ctor();
         rec.lang = lang === "ml" ? "ml-IN" : "en-IN";
         rec.interimResults = false;
         rec.maxAlternatives = 5;
         rec.continuous = false;
         let done = false;
-        const timer = setTimeout(() => rec.abort(), 8000);
-        rec.onresult = (e) => {
+        const finish = (alts: string[]) => {
+          if (done) return;
           done = true;
-          resolve(Array.from(e.results[0] ?? []).map((a) => a.transcript));
+          resolve({ alternatives: alts, stopped: stoppedRef.current });
         };
+        const timer = setTimeout(() => rec.abort(), 8000);
+        rec.onresult = (e) => finish(Array.from(e.results[0] ?? []).map((a) => a.transcript));
         rec.onerror = (e) => {
+          if (SOFT_ERRORS.has(e.error)) return finish([]);
           done = true;
           reject(new Error(e.error));
         };
         rec.onend = () => {
           clearTimeout(timer);
           setListening(false);
-          if (!done) resolve([]);
+          finish([]);
         };
         ref.current = rec;
         setListening(true);
@@ -71,6 +87,7 @@ export function useSpeechInput(lang: Lang) {
           rec.start();
         } catch (err) {
           setListening(false);
+          done = true;
           reject(err as Error);
         }
       }),
@@ -78,6 +95,7 @@ export function useSpeechInput(lang: Lang) {
   );
 
   const stop = useCallback(() => {
+    stoppedRef.current = true;
     ref.current?.abort();
     setListening(false);
   }, []);
@@ -85,60 +103,32 @@ export function useSpeechInput(lang: Lang) {
   return { supported, listening, listen, stop };
 }
 
-const clips = new Set<string>((manifest as { ml: string[] }).ml);
-
-export function hasClip(key: string): boolean {
-  return clips.has(key);
-}
-
-function browserVoice(lang: Lang): SpeechSynthesisVoice | undefined {
-  if (typeof window === "undefined" || !("speechSynthesis" in window)) return undefined;
-  return window.speechSynthesis.getVoices().find((v) => v.lang.toLowerCase().startsWith(lang === "ml" ? "ml" : "en"));
-}
-
 export interface Utterance {
   text: string;
   clip?: string;
 }
 
-let current: HTMLAudioElement | null = null;
-
 export function stopSpeaking() {
-  current?.pause();
-  current = null;
-  if (typeof window !== "undefined" && "speechSynthesis" in window) window.speechSynthesis.cancel();
+  stopAllAudio();
 }
 
 export function canRead(lang: Lang, parts: Utterance[]): boolean {
-  if (typeof window === "undefined") return false;
-  if (lang === "ml" && parts.length > 0 && parts.every((p) => p.clip && hasClip(p.clip))) return true;
-  return !!browserVoice(lang);
+  return speechAvailable(lang, parts.map((p, i) => ({ id: `u${i}`, text: p.text, clip: p.clip })));
 }
 
 export function readAloud(lang: Lang, parts: Utterance[], onEnd?: () => void) {
   stopSpeaking();
-  if (lang === "ml" && parts.every((p) => p.clip && hasClip(p.clip))) {
-    const queue = [...parts];
-    const next = () => {
-      const p = queue.shift();
-      if (!p) return onEnd?.();
-      current = new Audio(`/audio/ml/${p.clip}.mp3`);
-      current.onended = next;
-      current.onerror = next;
-      current.play().catch(() => onEnd?.());
-    };
-    next();
-    return;
-  }
-  const voice = browserVoice(lang);
-  if (!voice) return onEnd?.();
-  const u = new SpeechSynthesisUtterance(parts.map((p) => p.text).join(". "));
-  u.lang = voice.lang;
-  u.voice = voice;
-  u.rate = 0.9;
-  u.onend = () => onEnd?.();
-  u.onerror = () => onEnd?.();
-  window.speechSynthesis.speak(u);
+  const segments: Segment[] = parts.map((p, i) => ({ id: `u${i}`, text: p.text, clip: p.clip }));
+  let began = false;
+  let ended = false;
+  const seq = newSequence(lang, (s) => {
+    if (s.playing) began = true;
+    if (!ended && !s.playing && (began || s.unavailable)) {
+      ended = true;
+      onEnd?.();
+    }
+  });
+  seq.start(segments);
 }
 
 export function useVoicesReady() {

@@ -51,6 +51,7 @@ export default function Navigator({ ds }: { ds: Dataset }) {
   const [online, setOnline] = useState(true);
   const [mode, setMode] = useState<Mode>("standard");
   const [autoRead, setAutoRead] = useState(true);
+  const [returnFocus, setReturnFocus] = useState<string | null>(null);
   const introHeading = useRef<HTMLHeadingElement>(null);
   const checkingHeading = useRef<HTMLHeadingElement>(null);
   const answersHeading = useRef<HTMLHeadingElement>(null);
@@ -69,6 +70,7 @@ export default function Navigator({ ds }: { ds: Dataset }) {
     setEditing(null);
     setPrevious(null);
     setOpenScheme(null);
+    setReturnFocus(null);
     setDistrict("");
     setConfirmClear(false);
     setStage("intro");
@@ -120,15 +122,14 @@ export default function Navigator({ ds }: { ds: Dataset }) {
   useEffect(() => {
     if (stage === "intro") introHeading.current?.focus();
     if (stage === "answers") answersHeading.current?.focus();
-    if (stage !== "detail") window.scrollTo({ top: 0 });
+    if (stage !== "detail" && !(stage === "results" && returnFocus)) window.scrollTo({ top: 0 });
   }, [stage, editing, adaptive?.fact.id]);
 
   function answer(factId: string, a: Answer) {
     setNotice("");
     if (editing) {
       const merged = { ...answers, [factId]: a };
-      const updated = pruneAnswers(ds, merged);
-      if (merged[ENTRY_FACT]) updated[ENTRY_FACT] = merged[ENTRY_FACT];
+      const updated = pruneAnswers(ds, merged, [factId, ENTRY_FACT]);
       setAnswers(updated);
       setHistory((h) => h.filter((id) => id in updated));
       setEditing(null);
@@ -224,7 +225,10 @@ export default function Navigator({ ds }: { ds: Dataset }) {
           {stage !== "language" && (
             <div className="head-tools">
             <button type="button" className="mode-switch" aria-pressed={easy} onClick={() => setMode(easy ? "standard" : "easy")}>
-              {easy ? t("easyOn", lang) : t("easyOff", lang)}
+              <span className="mode-switch-box" aria-hidden>
+                {easy ? "✓" : ""}
+              </span>
+              {t("easyModeLabel", lang)}
             </button>
             <div className="lang-switch" role="group" aria-label="Language / ഭാഷ">
               <button type="button" lang="ml" aria-pressed={lang === "ml"} onClick={() => setLang("ml")}>
@@ -335,6 +339,7 @@ export default function Navigator({ ds }: { ds: Dataset }) {
               </fieldset>
             )}
             {ds.disclaimer.privacy && <p className="meta">{pick(ds.disclaimer.privacy, lang)}</p>}
+            <p className="meta">{t("voicePrivacy", lang)}</p>
             {ds.disclaimer.not_official && <p className="meta">{pick(ds.disclaimer.not_official, lang)}</p>}
           </section>
         )}
@@ -348,8 +353,10 @@ export default function Navigator({ ds }: { ds: Dataset }) {
             current: answers[editFact.id],
             onBack: () => {
               setEditing(null);
+              setPrevious(null);
               setStage(openScheme ? "detail" : "answers");
             },
+            allowUnknown: editFact.id !== ENTRY_FACT,
             onAnswer: (a) => answer(editFact.id, a),
           })}
 
@@ -401,12 +408,21 @@ export default function Navigator({ ds }: { ds: Dataset }) {
               lang={lang}
               previous={previous}
               easy={easy}
+              focusScheme={returnFocus}
+              onFocused={() => setReturnFocus(null)}
               onOpen={(id) => {
+                setPrevious(null);
                 setOpenScheme(id);
                 setStage("detail");
               }}
-              onChecklist={() => setStage("checklist")}
-              onWhere={() => setStage("where")}
+              onChecklist={() => {
+                setPrevious(null);
+                setStage("checklist");
+              }}
+              onWhere={() => {
+                setPrevious(null);
+                setStage("where");
+              }}
             />
             <div className="row actions no-print">
               {(adaptive || askEntry) && (
@@ -436,6 +452,7 @@ export default function Navigator({ ds }: { ds: Dataset }) {
             district={district}
             onDistrict={setDistrict}
             onBack={() => {
+              setReturnFocus(openScheme);
               setOpenScheme(null);
               setStage("results");
             }}
