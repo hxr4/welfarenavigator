@@ -1,5 +1,6 @@
 import ExcelJS from "exceljs";
-import { mkdirSync, writeFileSync } from "node:fs";
+import JSZip from "jszip";
+import { mkdirSync, readFileSync, writeFileSync } from "node:fs";
 import { SHEETS } from "../lib/data/sheets";
 import { validateDataset } from "../lib/data/validate";
 import type {
@@ -123,9 +124,28 @@ const STATUS_ALIASES: Record<string, SchemeStatus> = {
   informational: "informational",
 };
 
+async function stripComments(buf: Buffer): Promise<Buffer> {
+  const zip = await JSZip.loadAsync(buf);
+  for (const name of Object.keys(zip.files)) {
+    if (/^xl\/worksheets\/_rels\/.*\.rels$/.test(name)) {
+      const xml = await zip.file(name)!.async("string");
+      zip.file(name, xml.replace(/<Relationship[^>]*\/(comments|vmlDrawing)"[^>]*\/>/g, ""));
+    } else if (/^xl\/worksheets\/[^/]+\.xml$/.test(name)) {
+      const xml = await zip.file(name)!.async("string");
+      zip.file(name, xml.replace(/<legacyDrawing[^>]*\/>/g, ""));
+    } else if (/^xl\/(comments|drawings\/commentsDrawing)/.test(name) || /^xl\/comments\d*\.xml$/.test(name)) {
+      zip.remove(name);
+    }
+  }
+  const types = await zip.file("[Content_Types].xml")!.async("string");
+  zip.file("[Content_Types].xml", types.replace(/<Override[^>]*comments[^>]*\/>/g, ""));
+  return zip.generateAsync({ type: "nodebuffer" });
+}
+
 async function main() {
   const wb = new ExcelJS.Workbook();
-  await wb.xlsx.readFile(input);
+  const clean = await stripComments(readFileSync(input));
+  await wb.xlsx.load(clean as unknown as ArrayBuffer);
   const r = Object.fromEntries(await Promise.all(SHEETS.map(async (s) => [s.name, await readRows(wb, s.name)] as const)));
 
   const facts: Fact[] = r.facts.map((f: Row) => ({

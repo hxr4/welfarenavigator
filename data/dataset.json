@@ -1,19 +1,143 @@
 {
   "meta": {
-    "generatedAt": "2026-09-23T13:31:01.549Z",
-    "includesExamples": true,
-    "version": "fixture"
+    "generatedAt": "2026-09-23T13:52:25.635Z",
+    "includesExamples": false,
+    "version": "1"
   },
   "sources": [
     {
-      "id": "S1",
-      "tier": 1,
-      "authority": "Fixture",
-      "title": "Fixture order",
-      "url": "https://example.org/x",
-      "docType": "government_order",
+      "id": "SRC-FISH-001",
+      "tier": 2,
+      "authority": "Fisheries Department, Government of Kerala",
+      "title": "Scheme Highlights",
+      "url": "https://fisheries.kerala.gov.in/en/scheme-highlights",
+      "docType": "department_page",
       "language": "en",
-      "accessedOn": "2026-09-23"
+      "accessedOn": "2026-09-23",
+      "notes": "Official scheme highlights page; used for current beneficiary descriptions for multiple fisheries schemes."
+    },
+    {
+      "id": "SRC-FISH-002",
+      "tier": 2,
+      "authority": "Fisheries Department, Government of Kerala",
+      "title": "Saving Cum Relief Scheme to Fishermen",
+      "url": "https://fisheries.kerala.gov.in/index.php/en/saving-cum-relief-scheme-fishermen",
+      "docType": "department_page",
+      "language": "en",
+      "accessedOn": "2026-09-23",
+      "notes": "Official scheme page; includes registration, marine/inland scope, bank-account requirement, BPL/APL treatment."
+    },
+    {
+      "id": "SRC-FISH-003",
+      "tier": 2,
+      "authority": "Fisheries Department, Government of Kerala",
+      "title": "Group Insurance Scheme for Fishermen",
+      "url": "https://fisheries.kerala.gov.in/en/group-insurance-scheme-fishermen",
+      "docType": "department_page",
+      "language": "en",
+      "accessedOn": "2026-09-23",
+      "notes": "Official scheme page; active-fisher coverage and implementing agency."
+    },
+    {
+      "id": "SRC-FISH-004",
+      "tier": 2,
+      "authority": "Fisheries Department, Government of Kerala",
+      "title": "Group Insurance Scheme for Allied Workers in Fishery Sector",
+      "url": "https://fisheries.kerala.gov.in/en/group-insurance-scheme-allied-workers-fishery-sector",
+      "docType": "department_page",
+      "language": "en",
+      "accessedOn": "2026-09-23",
+      "notes": "Official scheme page; KFWFB membership condition and implementing agency."
+    },
+    {
+      "id": "SRC-FISH-005",
+      "tier": 2,
+      "authority": "Fisheries Department, Government of Kerala",
+      "title": "Forms of Department of fisheries",
+      "url": "https://fisheries.kerala.gov.in/en/forms-department-fisheries",
+      "docType": "department_page",
+      "language": "en",
+      "accessedOn": "2026-09-23",
+      "notes": "Official forms directory; confirms application forms exist for savings-cum-relief and educational assistance, among others."
+    },
+    {
+      "id": "SRC-FISH-006",
+      "tier": 2,
+      "authority": "Fisheries Department, Government of Kerala",
+      "title": "Kerala Fishermen's Welfare Fund Board (KFWFB)",
+      "url": "https://fisheries.kerala.gov.in/en/kfwfb",
+      "docType": "department_page",
+      "language": "en",
+      "accessedOn": "2026-09-23",
+      "notes": "Official KFWFB overview; confirms board membership and dependent-benefit framework."
+    },
+    {
+      "id": "SRC-FISH-007",
+      "tier": 2,
+      "authority": "Fisheries Department, Government of Kerala",
+      "title": "Insurance to fishing implements / Scheme Highlights",
+      "url": "https://fisheries.kerala.gov.in/en/scheme-highlights",
+      "docType": "department_page",
+      "language": "en",
+      "accessedOn": "2026-09-23",
+      "notes": "Official scheme highlights; registered traditional fishermen are beneficiaries."
+    },
+    {
+      "id": "SRC-PLNT-001",
+      "tier": 1,
+      "authority": "Government of Kerala (published on India Code, Government of India)",
+      "title": "The Kerala Small Plantation Workers' Welfare Fund Act, 2008",
+      "url": "https://www.indiacode.nic.in/bitstream/123456789/20377/1/17-2008-eng.pdf",
+      "docType": "act",
+      "language": "en",
+      "dateIssued": "2008-04-01",
+      "accessedOn": "2026-09-23",
+      "notes": "Tier 1 statutory source. Defines small plantation worker and statutory purposes of the fund. Local copy not yet saved in sources/."
+    },
+    {
+      "id": "SRC-PLNT-002",
+      "tier": 1,
+      "authority": "Government of Kerala, Labour and Skills Department",
+      "title": "Maternity Benefit Scheme Gazette Notification",
+      "url": "https://document.kerala.gov.in/documents/notifications/notification3011202417%3A32%3A32.pdf",
+      "docType": "gazette",
+      "language": "en",
+      "dateIssued": "2024-11-30",
+      "accessedOn": "2026-09-23",
+      "notes": "Tier 1 Gazette. States maternity benefits are given to female members registered under 17 boards, including Kerala Small Plantation Workers Welfare Fund Board. Local copy not yet saved in sources/."
+    },
+    {
+      "id": "SRC-PLNT-003",
+      "tier": 2,
+      "authority": "Labour Commissionerate, Government of Kerala",
+      "title": "Welfare Fund Boards",
+      "url": "https://lc.kerala.gov.in/index.php/en/node/232",
+      "docType": "department_page",
+      "language": "en",
+      "accessedOn": "2026-09-23",
+      "notes": "Official board directory; confirms Kerala Small Plantation Workers' Welfare Fund Board."
+    },
+    {
+      "id": "SRC-PLNT-004",
+      "tier": 2,
+      "authority": "Labour Commissionerate, Government of Kerala",
+      "title": "Major Functions - Welfare Schemes and Programmes",
+      "url": "https://lc.kerala.gov.in/en/major-functions",
+      "docType": "department_page",
+      "language": "en",
+      "accessedOn": "2026-09-23",
+      "notes": "Official welfare page; confirms Estate Workers (Distress Relief) Welfare Fund Scheme and board existence."
+    },
+    {
+      "id": "SRC-PLNT-005",
+      "tier": 2,
+      "authority": "Akshaya Web Portal, Government of Kerala",
+      "title": "List of Akshaya Centers",
+      "url": "https://www.akshaya.kerala.gov.in/centers",
+      "docType": "department_page",
+      "language": "en",
+      "accessedOn": "2026-09-23",
+      "notes": "Official directory used only for centre records, not as evidence that a welfare scheme is applied through Akshaya."
     }
   ],
   "facts": [
@@ -21,158 +145,796 @@
       "id": "livelihood",
       "type": "multi",
       "label": {
-        "en": "livelihood",
-        "ml": "livelihood"
+        "en": "Livelihood",
+        "ml": "തൊഴിൽ മേഖല"
       },
       "question": {
-        "en": "livelihood?",
-        "ml": "livelihood?"
+        "en": "Which work does your household do?",
+        "ml": "നിങ്ങളുടെ കുടുംബം ഏത് തൊഴിലാണ് ചെയ്യുന്നത്?"
       },
+      "help": {
+        "en": "Choose all that apply.",
+        "ml": "ബാധകമായവ തിരഞ്ഞെടുക്കുക."
+      },
+      "unit": "",
       "sensitivity": "low",
       "order": 1,
-      "unit": "",
       "options": [
         {
           "value": "fishing",
           "label": {
-            "en": "fishing",
-            "ml": "fishing"
+            "en": "Fishing",
+            "ml": "മത്സ്യബന്ധനം"
           },
           "synonyms": {
             "en": [
-              "fishing"
+              "fishing",
+              "fisherman",
+              "fish worker"
             ],
-            "ml": []
-          }
+            "ml": [
+              "മത്സ്യബന്ധനം",
+              "മീൻപിടിത്തം",
+              "മത്സ്യത്തൊഴിലാളി"
+            ]
+          },
+          "icon": "🐟"
         },
         {
-          "value": "allied",
+          "value": "plantation_worker",
           "label": {
-            "en": "allied",
-            "ml": "allied"
+            "en": "Plantation work",
+            "ml": "തോട്ടം ജോലി"
           },
           "synonyms": {
             "en": [
-              "allied"
+              "plantation",
+              "estate worker",
+              "tea worker",
+              "rubber worker"
             ],
-            "ml": []
-          }
+            "ml": [
+              "തോട്ടം",
+              "എസ്റ്റേറ്റ്",
+              "തോട്ടം തൊഴിലാളി",
+              "റബ്ബർ തൊഴിലാളി"
+            ]
+          },
+          "icon": "🌿"
         },
         {
-          "value": "plantation",
+          "value": "allied_fish_worker",
           "label": {
-            "en": "plantation",
-            "ml": "plantation"
+            "en": "Allied fishery work",
+            "ml": "മത്സ്യബന്ധന അനുബന്ധ ജോലി"
           },
           "synonyms": {
             "en": [
-              "plantation"
+              "allied fishery",
+              "fish worker",
+              "fish vending"
             ],
-            "ml": []
-          }
+            "ml": [
+              "അനുബന്ധ മത്സ്യബന്ധനം",
+              "മത്സ്യവിൽപ്പന"
+            ]
+          },
+          "icon": "🛶"
         }
       ]
     },
     {
-      "id": "fwf_member",
+      "id": "registered_fisher",
       "type": "boolean",
       "label": {
-        "en": "fwf_member",
-        "ml": "fwf_member"
+        "en": "Registered fisherman",
+        "ml": "രജിസ്റ്റർ ചെയ്ത മത്സ്യത്തൊഴിലാളിയാണോ"
       },
       "question": {
-        "en": "fwf_member?",
-        "ml": "fwf_member?"
+        "en": "Is the beneficiary a registered fisherman?",
+        "ml": "ആനുകൂല്യത്തിനായി അപേക്ഷിക്കുന്ന വ്യക്തി രജിസ്റ്റർ ചെയ്ത മത്സ്യത്തൊഴിലാളിയാണോ?"
       },
+      "help": {
+        "en": "Registration is with the relevant fisheries/welfare system.",
+        "ml": "രജിസ്ട്രേഷൻ ബന്ധപ്പെട്ട മത്സ്യബന്ധന/ക്ഷേമ സംവിധാനത്തിലായിരിക്കണം."
+      },
+      "unit": "",
       "sensitivity": "low",
       "order": 2,
-      "unit": "",
       "options": []
     },
     {
-      "id": "spwf_member",
+      "id": "active_fisher",
       "type": "boolean",
       "label": {
-        "en": "spwf_member",
-        "ml": "spwf_member"
+        "en": "Active fisherman",
+        "ml": "സജീവ മത്സ്യത്തൊഴിലാളിയാണോ"
       },
       "question": {
-        "en": "spwf_member?",
-        "ml": "spwf_member?"
+        "en": "Is the beneficiary an active fisherman?",
+        "ml": "ആനുകൂല്യത്തിനായി അപേക്ഷിക്കുന്ന വ്യക്തി സജീവ മത്സ്യത്തൊഴിലാളിയാണോ?"
       },
+      "unit": "",
       "sensitivity": "low",
       "order": 3,
-      "unit": "",
       "options": []
     },
     {
-      "id": "annual_income",
-      "type": "number",
+      "id": "bpl",
+      "type": "boolean",
       "label": {
-        "en": "annual_income",
-        "ml": "annual_income"
+        "en": "BPL household",
+        "ml": "ബി.പി.എൽ കുടുംബമാണോ"
       },
       "question": {
-        "en": "annual_income?",
-        "ml": "annual_income?"
+        "en": "Is the household in the BPL category?",
+        "ml": "കുടുംബം ബി.പി.എൽ വിഭാഗത്തിലാണോ?"
       },
-      "sensitivity": "low",
+      "unit": "",
+      "sensitivity": "medium",
       "order": 4,
-      "unit": "INR",
       "options": []
+    },
+    {
+      "id": "bank_account",
+      "type": "boolean",
+      "label": {
+        "en": "Bank account",
+        "ml": "ബാങ്ക് അക്കൗണ്ട്"
+      },
+      "question": {
+        "en": "Does the beneficiary have a bank account?",
+        "ml": "ആനുകൂല്യത്തിനായി അപേക്ഷിക്കുന്ന വ്യക്തിക്ക് ബാങ്ക് അക്കൗണ്ട് ഉണ്ടോ?"
+      },
+      "unit": "",
+      "sensitivity": "medium",
+      "order": 5,
+      "options": []
+    },
+    {
+      "id": "traditional_fisher",
+      "type": "boolean",
+      "label": {
+        "en": "Traditional fisherman",
+        "ml": "പരമ്പരാഗത മത്സ്യത്തൊഴിലാളി"
+      },
+      "question": {
+        "en": "Is the beneficiary a registered traditional fisherman?",
+        "ml": "ആനുകൂല്യത്തിനായി അപേക്ഷിക്കുന്ന വ്യക്തി രജിസ്റ്റർ ചെയ്ത പരമ്പരാഗത മത്സ്യത്തൊഴിലാളിയാണോ?"
+      },
+      "unit": "",
+      "sensitivity": "low",
+      "order": 6,
+      "options": []
+    },
+    {
+      "id": "kfwfb_member",
+      "type": "boolean",
+      "label": {
+        "en": "KFWFB member",
+        "ml": "മത്സ്യത്തൊഴിലാളി ക്ഷേമനിധി അംഗത്വം"
+      },
+      "question": {
+        "en": "Is the beneficiary a member of the Kerala Fishermen Welfare Fund Board?",
+        "ml": "ആനുകൂല്യത്തിനായി അപേക്ഷിക്കുന്ന വ്യക്തി കേരള മത്സ്യത്തൊഴിലാളി ക്ഷേമനിധി ബോർഡ് അംഗമാണോ?"
+      },
+      "unit": "",
+      "sensitivity": "medium",
+      "order": 8,
+      "options": []
+    },
+    {
+      "id": "fisher_beneficiary_status",
+      "type": "enum",
+      "label": {
+        "en": "Fisher pension status",
+        "ml": "മത്സ്യത്തൊഴിലാളി പെൻഷൻ നില"
+      },
+      "question": {
+        "en": "Which applies to the pension beneficiary?",
+        "ml": "പെൻഷൻ അപേക്ഷകനോട് ഏത് ബാധകമാണ്?"
+      },
+      "unit": "",
+      "sensitivity": "medium",
+      "order": 9,
+      "options": [
+        {
+          "value": "registered_fisher",
+          "label": {
+            "en": "Registered fisherman",
+            "ml": "രജിസ്റ്റർ ചെയ്ത മത്സ്യത്തൊഴിലാളി"
+          },
+          "synonyms": {
+            "en": [
+              "registered fisher"
+            ],
+            "ml": [
+              "രജിസ്റ്റർ ചെയ്ത മത്സ്യത്തൊഴിലാളി"
+            ]
+          },
+          "icon": "🎣"
+        },
+        {
+          "value": "fisher_widow",
+          "label": {
+            "en": "Widow of fisherman",
+            "ml": "മത്സ്യത്തൊഴിലാളിയുടെ വിധവ"
+          },
+          "synonyms": {
+            "en": [
+              "fisherman's widow",
+              "widow"
+            ],
+            "ml": [
+              "മത്സ്യത്തൊഴിലാളിയുടെ വിധവ"
+            ]
+          },
+          "icon": "👩"
+        }
+      ]
     },
     {
       "id": "age",
       "type": "number",
       "label": {
-        "en": "age",
-        "ml": "age"
+        "en": "Age",
+        "ml": "പ്രായം"
       },
       "question": {
-        "en": "age?",
-        "ml": "age?"
+        "en": "How old is the beneficiary?",
+        "ml": "ആനുകൂല്യത്തിനായി അപേക്ഷിക്കുന്ന വ്യക്തിയുടെ പ്രായം എത്രയാണ്?"
       },
+      "unit": "years",
       "sensitivity": "low",
-      "order": 5,
-      "unit": "INR",
+      "order": 10,
       "options": []
     },
     {
-      "id": "disability",
+      "id": "small_plantation_worker",
       "type": "boolean",
       "label": {
-        "en": "disability",
-        "ml": "disability"
+        "en": "Small plantation worker",
+        "ml": "ചെറുകിട തോട്ടം തൊഴിലാളിയാണോ"
       },
       "question": {
-        "en": "disability?",
-        "ml": "disability?"
+        "en": "Is the worker employed in a small plantation covered by the Small Plantation Workers Welfare Fund?",
+        "ml": "തൊഴിലാളി ചെറുകിട തോട്ടം തൊഴിലാളി ക്ഷേമനിധിയുടെ പരിധിയിലെ തോട്ടത്തിൽ ജോലി ചെയ്യുന്നുണ്ടോ?"
       },
-      "sensitivity": "high",
-      "order": 6,
       "unit": "",
+      "sensitivity": "low",
+      "order": 11,
+      "options": []
+    },
+    {
+      "id": "plantation_90_days",
+      "type": "boolean",
+      "label": {
+        "en": "90 days of plantation work",
+        "ml": "90 ദിവസത്തെ തോട്ടം ജോലി"
+      },
+      "question": {
+        "en": "Has the worker done plantation work for at least 90 days in the preceding 12 months?",
+        "ml": "കഴിഞ്ഞ 12 മാസത്തിൽ കുറഞ്ഞത് 90 ദിവസം തോട്ടത്തിൽ ജോലി ചെയ്തിട്ടുണ്ടോ?"
+      },
+      "unit": "",
+      "sensitivity": "low",
+      "order": 12,
+      "options": []
+    },
+    {
+      "id": "plantation_member",
+      "type": "boolean",
+      "label": {
+        "en": "Small Plantation Welfare Fund member",
+        "ml": "ചെറുകിട തോട്ടം തൊഴിലാളി ക്ഷേമനിധി അംഗത്വം"
+      },
+      "question": {
+        "en": "Is the worker a member of the Small Plantation Workers Welfare Fund?",
+        "ml": "തൊഴിലാളി ചെറുകിട തോട്ടം തൊഴിലാളി ക്ഷേമനിധി അംഗമാണോ?"
+      },
+      "unit": "",
+      "sensitivity": "medium",
+      "order": 13,
+      "options": []
+    },
+    {
+      "id": "unable_due_infirmity",
+      "type": "boolean",
+      "label": {
+        "en": "Unable to work due to infirmity",
+        "ml": "അശക്തി മൂലം ജോലി ചെയ്യാനാകാത്തത്"
+      },
+      "question": {
+        "en": "Is the member unable to work due to infirmity?",
+        "ml": "അശക്തി മൂലം അംഗത്തിന് ജോലി ചെയ്യാൻ കഴിയുന്നില്ലേ?"
+      },
+      "unit": "",
+      "sensitivity": "high",
+      "order": 14,
+      "options": []
+    },
+    {
+      "id": "permanent_disability",
+      "type": "boolean",
+      "label": {
+        "en": "Permanent disability",
+        "ml": "സ്ഥിരവൈകല്യം"
+      },
+      "question": {
+        "en": "Does the member have a permanent disability?",
+        "ml": "അംഗത്തിന് സ്ഥിരവൈകല്യമുണ്ടോ?"
+      },
+      "unit": "",
+      "sensitivity": "high",
+      "order": 15,
+      "options": []
+    },
+    {
+      "id": "daughter_marriage",
+      "type": "boolean",
+      "label": {
+        "en": "Daughter's marriage expense",
+        "ml": "പെൺമകളുടെ വിവാഹച്ചെലവ്"
+      },
+      "question": {
+        "en": "Is the application connected with expenses for a daughter's marriage?",
+        "ml": "അപേക്ഷ പെൺമകളുടെ വിവാഹച്ചെലവുമായി ബന്ധപ്പെട്ടതാണോ?"
+      },
+      "unit": "",
+      "sensitivity": "medium",
+      "order": 16,
+      "options": []
+    },
+    {
+      "id": "female_member",
+      "type": "boolean",
+      "label": {
+        "en": "Woman applicant",
+        "ml": "അപേക്ഷക സ്ത്രീയാണോ"
+      },
+      "question": {
+        "en": "Is the person applying a woman?",
+        "ml": "അപേക്ഷിക്കുന്നത് ഒരു സ്ത്രീയാണോ?"
+      },
+      "unit": "",
+      "sensitivity": "low",
+      "order": 17,
+      "options": []
+    },
+    {
+      "id": "fishing_sector",
+      "type": "enum",
+      "label": {
+        "en": "Fishing sector",
+        "ml": "മത്സ്യബന്ധന മേഖല"
+      },
+      "question": {
+        "en": "Is the fishing activity marine or inland?",
+        "ml": "മത്സ്യബന്ധനം കടലിലാണോ ഉൾനാടൻ മേഖലയിലാണോ?"
+      },
+      "help": {
+        "en": "Used only to show the correct Saving Cum Relief application form.",
+        "ml": "ശരിയായ സമ്പാദ്യ സമാശ്വാസ അപേക്ഷ കാണിക്കാൻ മാത്രം ഉപയോഗിക്കുന്നു."
+      },
+      "unit": "",
+      "sensitivity": "low",
+      "order": 18,
+      "options": [
+        {
+          "value": "marine",
+          "label": {
+            "en": "Marine",
+            "ml": "കടൽ"
+          },
+          "synonyms": {
+            "en": [
+              "marine",
+              "sea fishing"
+            ],
+            "ml": [
+              "കടൽ",
+              "കടൽ മത്സ്യബന്ധനം"
+            ]
+          },
+          "icon": "🌊"
+        },
+        {
+          "value": "inland",
+          "label": {
+            "en": "Inland",
+            "ml": "ഉൾനാടൻ"
+          },
+          "synonyms": {
+            "en": [
+              "inland",
+              "backwater",
+              "river fishing"
+            ],
+            "ml": [
+              "ഉൾനാടൻ",
+              "കായൽ",
+              "നദി മത്സ്യബന്ധനം"
+            ]
+          },
+          "icon": "🏞️"
+        }
+      ]
+    },
+    {
+      "id": "matsyafed_society_member",
+      "type": "boolean",
+      "label": {
+        "en": "Matsyafed society member",
+        "ml": "മത്സ്യഫെഡ് സംഘാംഗം"
+      },
+      "question": {
+        "en": "Is the person a member of a fishermen cooperative society affiliated to Matsyafed?",
+        "ml": "മത്സ്യഫെഡുമായി അഫിലിയേറ്റ് ചെയ്ത മത്സ്യത്തൊഴിലാളി സഹകരണ സംഘത്തിൽ അംഗമാണോ?"
+      },
+      "unit": "",
+      "sensitivity": "low",
+      "order": 19,
       "options": []
     }
   ],
   "schemes": [
     {
-      "id": "FX-01",
+      "id": "FISH-01",
       "name": {
-        "en": "FX-01",
-        "ml": "FX-01"
+        "en": "Group Insurance Scheme for Fishermen",
+        "ml": "മത്സ്യത്തൊഴിലാളികൾക്കുള്ള ഗ്രൂപ്പ് ഇൻഷുറൻസ് സ്കീം"
       },
       "authority": {
-        "en": "Fixture Board",
-        "ml": "Fixture Board"
+        "en": "Fisheries Department / Kerala Fishermen Welfare Fund Board",
+        "ml": "മത്സ്യബന്ധന വകുപ്പ് / കേരള മത്സ്യത്തൊഴിലാളി ക്ഷേമനിധി ബോർഡ്"
       },
       "category": "fishing",
       "summary": {
-        "en": "fixture",
-        "ml": "fixture"
+        "en": "Insurance coverage for active fishermen under the KFWFB.",
+        "ml": "KFWFB-യുടെ കീഴിലുള്ള സജീവ മത്സ്യത്തൊഴിലാളികൾക്കുള്ള ഇൻഷുറൻസ് പരിരക്ഷ."
       },
       "verification": {
         "eligibility": "verified",
-        "documents": "verified",
+        "documents": "partial",
+        "apply": "verified"
+      },
+      "rule": {
+        "all": [
+          {
+            "id": "c1",
+            "fact": "active_fisher",
+            "op": "eq",
+            "value": true,
+            "changeable": false,
+            "source": {
+              "sourceId": "SRC-FISH-003",
+              "quote": "Active Fishermen in the State are insured",
+              "locator": "Scheme page, opening paragraph"
+            },
+            "reviewedBy": "HR"
+          },
+          {
+            "id": "g0",
+            "fact": "livelihood",
+            "op": "includes",
+            "value": [
+              "fishing"
+            ],
+            "changeable": false,
+            "source": {
+              "sourceId": "SRC-FISH-003",
+              "quote": "Active Fishermen in the State are insured",
+              "locator": "Beneficiary description"
+            }
+          }
+        ]
+      },
+      "documents": [],
+      "apply": [
+        {
+          "locationType": "fisheries_district_office",
+          "mode": "in_person",
+          "note": {
+            "en": "The scheme is implemented through district offices and Matsyaboard.",
+            "ml": "പദ്ധതി ജില്ലാ ഓഫീസുകളും മത്സ്യബോർഡും വഴി നടപ്പാക്കുന്നു."
+          },
+          "source": {
+            "sourceId": "SRC-FISH-001",
+            "quote": "implementing through district offices& Matsyaboard"
+          }
+        }
+      ],
+      "lastVerified": "2026-09-23",
+      "verifiedBy": "HR",
+      "notes": "Current official page states active fishermen are insured and names Matsyaboard as implementing agency; detailed document checklist is not published on the page."
+    },
+    {
+      "id": "FISH-02",
+      "name": {
+        "en": "Saving Cum Relief Scheme to Fishermen",
+        "ml": "മത്സ്യത്തൊഴിലാളികൾക്കുള്ള സമ്പാദ്യ സമാശ്വാസ പദ്ധതി"
+      },
+      "authority": {
+        "en": "Fisheries Department, Government of Kerala",
+        "ml": "കേരള സർക്കാർ മത്സ്യബന്ധന വകുപ്പ്"
+      },
+      "category": "fishing",
+      "summary": {
+        "en": "Off-season relief for registered marine and inland fishermen; a bank account is required for enrolment.",
+        "ml": "രജിസ്റ്റർ ചെയ്ത കടൽ-ഉൾനാടൻ മത്സ്യത്തൊഴിലാളികൾക്ക് ഓഫ്-സീസൺ ആശ്വാസധനം; എൻറോൾമെന്റിന് ബാങ്ക് അക്കൗണ്ട് ആവശ്യമാണ്."
+      },
+      "verification": {
+        "eligibility": "verified",
+        "documents": "partial",
+        "apply": "verified"
+      },
+      "rule": {
+        "all": [
+          {
+            "id": "c1",
+            "fact": "registered_fisher",
+            "op": "eq",
+            "value": true,
+            "changeable": true,
+            "howTo": {
+              "en": "Register through the relevant fisheries process.",
+              "ml": "ബന്ധപ്പെട്ട മത്സ്യബന്ധന സംവിധാനത്തിലൂടെ രജിസ്റ്റർ ചെയ്യുക."
+            },
+            "source": {
+              "sourceId": "SRC-FISH-002",
+              "quote": "beneficiaries are registered fishermen",
+              "locator": "Scheme page, beneficiary paragraph"
+            },
+            "reviewedBy": "HR"
+          },
+          {
+            "id": "c2",
+            "fact": "bank_account",
+            "op": "eq",
+            "value": true,
+            "changeable": true,
+            "howTo": {
+              "en": "Maintain a bank account for benefit credit.",
+              "ml": "ആനുകൂല്യം ലഭിക്കുന്നതിനായി ബാങ്ക് അക്കൗണ്ട് നിലനിർത്തുക."
+            },
+            "source": {
+              "sourceId": "SRC-FISH-002",
+              "quote": "Beneficiaries should have bank account for enrolling",
+              "locator": "Scheme page, bank-account paragraph"
+            },
+            "reviewedBy": "HR"
+          },
+          {
+            "id": "g0",
+            "fact": "livelihood",
+            "op": "includes",
+            "value": [
+              "fishing"
+            ],
+            "changeable": false,
+            "source": {
+              "sourceId": "SRC-FISH-002",
+              "quote": "the beneficiaries are registered fishermen",
+              "locator": "Beneficiary description"
+            }
+          }
+        ]
+      },
+      "documents": [
+        {
+          "docId": "saving_relief_application_inland",
+          "when": {
+            "fact": "fishing_sector",
+            "op": "eq",
+            "value": "inland"
+          },
+          "source": {
+            "sourceId": "SRC-FISH-005",
+            "quote": "Application for savings cum relief scheme(inland)"
+          }
+        },
+        {
+          "docId": "saving_relief_application_marine",
+          "when": {
+            "fact": "fishing_sector",
+            "op": "eq",
+            "value": "marine"
+          },
+          "source": {
+            "sourceId": "SRC-FISH-005",
+            "quote": "Application for savings cum relief scheme(Marine)"
+          }
+        }
+      ],
+      "apply": [
+        {
+          "locationType": "fisheries_district_office",
+          "mode": "in_person",
+          "note": {
+            "en": "The scheme is implemented through district offices.",
+            "ml": "പദ്ധതി ജില്ലാ ഓഫീസുകൾ വഴി നടപ്പാക്കുന്നു."
+          },
+          "source": {
+            "sourceId": "SRC-FISH-002",
+            "quote": "The implementing agency is Department of Fisheries"
+          }
+        }
+      ],
+      "lastVerified": "2026-09-23",
+      "verifiedBy": "HR",
+      "notes": "Official page says both BPL and APL fishermen are enrolled and beneficiaries are registered fishermen; central-share treatment differs by BPL status."
+    },
+    {
+      "id": "FISH-03",
+      "name": {
+        "en": "Housing Scheme for Fisher Families",
+        "ml": "മത്സ്യത്തൊഴിലാളി ഭവന പദ്ധതി"
+      },
+      "authority": {
+        "en": "Fisheries Department, Government of Kerala",
+        "ml": "കേരള സർക്കാർ മത്സ്യബന്ധന വകുപ്പ്"
+      },
+      "category": "fishing",
+      "summary": {
+        "en": "Housing assistance for poor fisher families; active fishermen of BPL category are considered.",
+        "ml": "ദരിദ്ര മത്സ്യത്തൊഴിലാളി കുടുംബങ്ങൾക്ക് ഭവന സഹായം; ബി.പി.എൽ വിഭാഗത്തിലെ സജീവ മത്സ്യത്തൊഴിലാളികളെയാണ് പരിഗണിക്കുന്നത്."
+      },
+      "verification": {
+        "eligibility": "verified",
+        "documents": "partial",
+        "apply": "verified"
+      },
+      "rule": {
+        "all": [
+          {
+            "id": "c1",
+            "fact": "active_fisher",
+            "op": "eq",
+            "value": true,
+            "changeable": false,
+            "source": {
+              "sourceId": "SRC-FISH-001",
+              "quote": "Active fishermen of BPL category is considered",
+              "locator": "Scheme Highlights, Housing Scheme"
+            },
+            "reviewedBy": "HR"
+          },
+          {
+            "id": "c2",
+            "fact": "bpl",
+            "op": "eq",
+            "value": true,
+            "changeable": false,
+            "source": {
+              "sourceId": "SRC-FISH-001",
+              "quote": "Active fishermen of BPL category is considered",
+              "locator": "Scheme Highlights, Housing Scheme"
+            },
+            "reviewedBy": "HR"
+          },
+          {
+            "id": "g0",
+            "fact": "livelihood",
+            "op": "includes",
+            "value": [
+              "fishing"
+            ],
+            "changeable": false,
+            "source": {
+              "sourceId": "SRC-FISH-001",
+              "quote": "Active fishermen of BPL category",
+              "locator": "Beneficiary description"
+            }
+          }
+        ]
+      },
+      "documents": [],
+      "apply": [
+        {
+          "locationType": "fisheries_district_office",
+          "mode": "in_person",
+          "note": {
+            "en": "The housing programme is implemented through district offices.",
+            "ml": "ഭവന പദ്ധതി ജില്ലാ ഓഫീസുകൾ വഴി നടപ്പാക്കുന്നു."
+          },
+          "source": {
+            "sourceId": "SRC-FISH-001",
+            "quote": "implementing through district offices"
+          }
+        }
+      ],
+      "lastVerified": "2026-09-23",
+      "verifiedBy": "HR",
+      "notes": "Official scheme highlights provide the screening description but not a full document checklist."
+    },
+    {
+      "id": "FISH-04",
+      "name": {
+        "en": "Insurance Coverage of Fishing Implements",
+        "ml": "മത്സ്യബന്ധന ഉപകരണങ്ങളുടെ ഇൻഷുറൻസ്"
+      },
+      "authority": {
+        "en": "Fisheries Department, Government of Kerala",
+        "ml": "കേരള സർക്കാർ മത്സ്യബന്ധന വകുപ്പ്"
+      },
+      "category": "fishing",
+      "summary": {
+        "en": "Insurance coverage for traditional fishing implements of registered traditional fishermen.",
+        "ml": "രജിസ്റ്റർ ചെയ്ത പരമ്പരാഗത മത്സ്യത്തൊഴിലാളികളുടെ പരമ്പരാഗത മത്സ്യബന്ധന ഉപകരണങ്ങൾക്ക് ഇൻഷുറൻസ് പരിരക്ഷ."
+      },
+      "verification": {
+        "eligibility": "verified",
+        "documents": "partial",
+        "apply": "verified"
+      },
+      "rule": {
+        "all": [
+          {
+            "id": "c1",
+            "fact": "traditional_fisher",
+            "op": "eq",
+            "value": true,
+            "changeable": false,
+            "source": {
+              "sourceId": "SRC-FISH-007",
+              "quote": "Registered traditional fishermen are the beneficiaries",
+              "locator": "Scheme Highlights, Insurance to fishing implements"
+            },
+            "reviewedBy": "HR"
+          },
+          {
+            "id": "g0",
+            "fact": "livelihood",
+            "op": "includes",
+            "value": [
+              "fishing"
+            ],
+            "changeable": false,
+            "source": {
+              "sourceId": "SRC-FISH-007",
+              "quote": "Registered traditional fishermen",
+              "locator": "Beneficiary description"
+            }
+          }
+        ]
+      },
+      "documents": [],
+      "apply": [
+        {
+          "locationType": "fisheries_district_office",
+          "mode": "in_person",
+          "note": {
+            "en": "The scheme is implemented through district offices and Matsyaboard.",
+            "ml": "പദ്ധതി ജില്ലാ ഓഫീസുകളും മത്സ്യബോർഡും വഴി നടപ്പാക്കുന്നു."
+          },
+          "source": {
+            "sourceId": "SRC-FISH-001",
+            "quote": "implementing through district offices& Matsyaboard"
+          }
+        }
+      ],
+      "lastVerified": "2026-09-23",
+      "verifiedBy": "HR",
+      "notes": "Official scheme highlights identify registered traditional fishermen as beneficiaries; detailed asset/document rules are not published on the page."
+    },
+    {
+      "id": "FISH-05",
+      "name": {
+        "en": "Group Insurance Scheme for Allied Workers in Fishery Sector",
+        "ml": "മത്സ്യബന്ധന അനുബന്ധ തൊഴിലാളികൾക്കുള്ള ഗ്രൂപ്പ് ഇൻഷുറൻസ് സ്കീം"
+      },
+      "authority": {
+        "en": "Fisheries Department / Kerala Fishermen Welfare Fund Board",
+        "ml": "മത്സ്യബന്ധന വകുപ്പ് / കേരള മത്സ്യത്തൊഴിലാളി ക്ഷേമനിധി ബോർഡ്"
+      },
+      "category": "fishing",
+      "summary": {
+        "en": "Insurance for allied fishery workers who are members of the KFWFB.",
+        "ml": "കേരള മത്സ്യത്തൊഴിലാളി ക്ഷേമനിധി ബോർഡ് അംഗങ്ങളായ അനുബന്ധ മത്സ്യത്തൊഴിലാളികൾക്കുള്ള ഇൻഷുറൻസ്."
+      },
+      "verification": {
+        "eligibility": "verified",
+        "documents": "partial",
         "apply": "verified"
       },
       "rule": {
@@ -182,103 +944,179 @@
             "fact": "livelihood",
             "op": "includes",
             "value": [
-              "fishing",
-              "allied"
+              "allied_fish_worker"
             ],
             "changeable": false,
             "source": {
-              "sourceId": "S1",
-              "quote": "fixture quote"
+              "sourceId": "SRC-FISH-004",
+              "quote": "Allied fishery workers who are members of the Kerala Fishermen Welfare Fund Board",
+              "locator": "Scheme page, opening sentence"
             },
-            "reviewedBy": "T"
+            "reviewedBy": "HR"
           },
           {
             "id": "c2",
-            "fact": "fwf_member",
+            "fact": "kfwfb_member",
             "op": "eq",
             "value": true,
             "changeable": true,
             "howTo": {
-              "en": "do fwf_member",
-              "ml": "do fwf_member"
+              "en": "Complete/maintain KFWFB membership through the Board.",
+              "ml": "ബോർഡ് മുഖേന KFWFB അംഗത്വം നേടുക/നിലനിർത്തുക."
             },
             "source": {
-              "sourceId": "S1",
-              "quote": "fixture quote"
+              "sourceId": "SRC-FISH-004",
+              "quote": "are members of the Kerala Fishermen Welfare Fund Board (KFWFB)",
+              "locator": "Scheme page, opening sentence"
             },
-            "reviewedBy": "T"
-          },
-          {
-            "id": "c3",
-            "fact": "annual_income",
-            "op": "lte",
-            "value": 200000,
-            "changeable": false,
-            "source": {
-              "sourceId": "S1",
-              "quote": "fixture quote"
-            },
-            "reviewedBy": "T"
+            "reviewedBy": "HR"
           }
         ]
       },
-      "documents": [
+      "documents": [],
+      "apply": [
         {
-          "docId": "id_proof",
+          "locationType": "fisheries_district_office",
+          "mode": "in_person",
+          "note": {
+            "en": "The scheme is implemented through district offices and Matsyaboard.",
+            "ml": "പദ്ധതി ജില്ലാ ഓഫീസുകളും മത്സ്യബോർഡും വഴി നടപ്പാക്കുന്നു."
+          },
           "source": {
-            "sourceId": "S1",
-            "quote": "fixture quote"
+            "sourceId": "SRC-FISH-001",
+            "quote": "implementing through district offices & Matsyaboard"
           }
         }
       ],
-      "apply": [
-        {
-          "locationType": "office",
-          "mode": "in_person",
-          "source": {
-            "sourceId": "S1",
-            "quote": "fixture quote"
-          }
-        }
-      ]
+      "lastVerified": "2026-09-23",
+      "verifiedBy": "HR",
+      "notes": "Official page confirms KFWFB membership and implementing agency; detailed claims/document rules are not published there."
     },
     {
-      "id": "FX-02",
+      "id": "FISH-06",
       "name": {
-        "en": "FX-02",
-        "ml": "FX-02"
+        "en": "Pension to Fishermen",
+        "ml": "മത്സ്യത്തൊഴിലാളി പെൻഷൻ"
       },
       "authority": {
-        "en": "Fixture Board",
-        "ml": "Fixture Board"
+        "en": "Fisheries Department / Kerala Fishermen Welfare Fund Board",
+        "ml": "മത്സ്യബന്ധന വകുപ്പ് / കേരള മത്സ്യത്തൊഴിലാളി ക്ഷേമനിധി ബോർഡ്"
       },
       "category": "fishing",
       "summary": {
-        "en": "fixture",
-        "ml": "fixture"
+        "en": "Old-age and widow pension for registered fishermen or widows of fishermen.",
+        "ml": "രജിസ്റ്റർ ചെയ്ത മത്സ്യത്തൊഴിലാളികൾക്കും മത്സ്യത്തൊഴിലാളികളുടെ വിധവകൾക്കും വയോജന/വിധവ പെൻഷൻ."
       },
       "verification": {
-        "eligibility": "verified",
-        "documents": "verified",
+        "eligibility": "partial",
+        "documents": "partial",
         "apply": "verified"
       },
       "rule": {
         "all": [
           {
+            "any": [
+              {
+                "id": "c1",
+                "fact": "fisher_beneficiary_status",
+                "op": "eq",
+                "value": "registered_fisher",
+                "changeable": false,
+                "source": {
+                  "sourceId": "SRC-FISH-001",
+                  "quote": "Registered fishermen/widows of fishermen are the benefiaries",
+                  "locator": "Scheme Highlights, Pension to Fishermen"
+                },
+                "reviewedBy": "HR"
+              },
+              {
+                "id": "c1",
+                "fact": "fisher_beneficiary_status",
+                "op": "eq",
+                "value": "fisher_widow",
+                "changeable": false,
+                "source": {
+                  "sourceId": "SRC-FISH-001",
+                  "quote": "Registered fishermen/widows of fishermen are the benefiaries",
+                  "locator": "Scheme Highlights, Pension to Fishermen"
+                },
+                "reviewedBy": "HR"
+              }
+            ]
+          },
+          {
+            "id": "g0",
+            "fact": "livelihood",
+            "op": "includes",
+            "value": [
+              "fishing"
+            ],
+            "changeable": false,
+            "source": {
+              "sourceId": "SRC-FISH-001",
+              "quote": "Registered fishermen/widows of fishermen",
+              "locator": "Beneficiary description"
+            }
+          }
+        ]
+      },
+      "documents": [],
+      "apply": [
+        {
+          "locationType": "fisheries_district_office",
+          "mode": "in_person",
+          "note": {
+            "en": "The scheme is implemented through district offices and Matsyaboard.",
+            "ml": "പദ്ധതി ജില്ലാ ഓഫീസുകളും മത്സ്യബോർഡും വഴി നടപ്പാക്കുന്നു."
+          },
+          "source": {
+            "sourceId": "SRC-FISH-001",
+            "quote": "implementing through district offices& Matsyaboard"
+          }
+        }
+      ],
+      "lastVerified": "2026-09-23",
+      "verifiedBy": "HR",
+      "notes": "The current scheme-highlights page confirms beneficiary categories, but the age and full current pension conditions are not stated there, so automated screening must remain conservative."
+    },
+    {
+      "id": "PLNT-01",
+      "name": {
+        "en": "Small Plantation Workers' Old-Age Pension",
+        "ml": "ചെറുകിട തോട്ടം തൊഴിലാളികളുടെ വയോജന പെൻഷൻ"
+      },
+      "authority": {
+        "en": "Kerala Small Plantation Workers' Welfare Fund Board",
+        "ml": "കേരള ചെറുകിട തോട്ടം തൊഴിലാളി ക്ഷേമനിധി ബോർഡ്"
+      },
+      "category": "plantation",
+      "summary": {
+        "en": "The 2008 Act provides for pension to a member who has completed 60 years; full scheme-level conditions are not all reproduced in the Act.",
+        "ml": "2008-ലെ നിയമം 60 വയസ്സ് പൂർത്തിയാക്കിയ അംഗത്തിന് പെൻഷൻ നൽകുന്നതിനുള്ള വ്യവസ്ഥ ചെയ്യുന്നു; മുഴുവൻ സ്കീം നിബന്ധനകൾ നിയമത്തിൽ നൽകിയിട്ടില്ല."
+      },
+      "verification": {
+        "eligibility": "verified",
+        "documents": "partial",
+        "apply": "partial"
+      },
+      "rule": {
+        "all": [
+          {
             "id": "c1",
-            "fact": "fwf_member",
+            "fact": "plantation_member",
             "op": "eq",
             "value": true,
             "changeable": true,
             "howTo": {
-              "en": "do fwf_member",
-              "ml": "do fwf_member"
+              "en": "Confirm/maintain membership with the Small Plantation Workers Welfare Fund Board.",
+              "ml": "ചെറുകിട തോട്ടം തൊഴിലാളി ക്ഷേമനിധി ബോർഡിലെ അംഗത്വം ഉറപ്പാക്കുക/നിലനിർത്തുക."
             },
             "source": {
-              "sourceId": "S1",
-              "quote": "fixture quote"
+              "sourceId": "SRC-PLNT-001",
+              "quote": "for payment of pension to a member who ... has completed the age of sixty years",
+              "locator": "Section 3(5)(a)"
             },
-            "reviewedBy": "T"
+            "reviewedBy": "HR"
           },
           {
             "id": "c2",
@@ -287,222 +1125,64 @@
             "value": 60,
             "changeable": false,
             "source": {
-              "sourceId": "S1",
-              "quote": "fixture quote"
+              "sourceId": "SRC-PLNT-001",
+              "quote": "completed the age of sixty years",
+              "locator": "Section 3(5)(a)"
             },
-            "reviewedBy": "T"
-          }
-        ]
-      },
-      "documents": [
-        {
-          "docId": "id_proof",
-          "source": {
-            "sourceId": "S1",
-            "quote": "fixture quote"
-          }
-        }
-      ],
-      "apply": [
-        {
-          "locationType": "office",
-          "mode": "in_person",
-          "source": {
-            "sourceId": "S1",
-            "quote": "fixture quote"
-          }
-        }
-      ]
-    },
-    {
-      "id": "FX-03",
-      "name": {
-        "en": "FX-03",
-        "ml": "FX-03"
-      },
-      "authority": {
-        "en": "Fixture Board",
-        "ml": "Fixture Board"
-      },
-      "category": "plantation",
-      "summary": {
-        "en": "fixture",
-        "ml": "fixture"
-      },
-      "verification": {
-        "eligibility": "verified",
-        "documents": "verified",
-        "apply": "verified"
-      },
-      "rule": {
-        "all": [
+            "reviewedBy": "HR"
+          },
           {
-            "id": "c1",
+            "id": "g0",
             "fact": "livelihood",
             "op": "includes",
             "value": [
-              "plantation"
+              "plantation_worker"
             ],
             "changeable": false,
             "source": {
-              "sourceId": "S1",
-              "quote": "fixture quote"
-            },
-            "reviewedBy": "T"
-          },
-          {
-            "id": "c2",
-            "fact": "spwf_member",
-            "op": "eq",
-            "value": true,
-            "changeable": true,
-            "howTo": {
-              "en": "do spwf_member",
-              "ml": "do spwf_member"
-            },
-            "source": {
-              "sourceId": "S1",
-              "quote": "fixture quote"
-            },
-            "reviewedBy": "T"
+              "sourceId": "SRC-PLNT-001",
+              "quote": "for payment of pension to a member who ... has completed the age of sixty years",
+              "locator": "Section 3(5)"
+            }
           }
         ]
       },
-      "documents": [
+      "documents": [],
+      "apply": [
         {
-          "docId": "id_proof",
+          "locationType": "spwwfb_office",
+          "mode": "in_person",
+          "note": {
+            "en": "Contact the Board. The application procedure is not published in our sources.",
+            "ml": "ബോർഡുമായി ബന്ധപ്പെടുക. അപേക്ഷാ നടപടിക്രമം ഞങ്ങളുടെ ഉറവിടങ്ങളിൽ ലഭ്യമല്ല."
+          },
           "source": {
-            "sourceId": "S1",
-            "quote": "fixture quote"
+            "sourceId": "SRC-PLNT-003",
+            "quote": "Kerala Small Plantation Workers' Welfare Fund Board, Kottayam"
           }
         }
       ],
-      "apply": [
-        {
-          "locationType": "office",
-          "mode": "in_person",
-          "source": {
-            "sourceId": "S1",
-            "quote": "fixture quote"
-          }
-        }
-      ]
+      "lastVerified": "2026-09-23",
+      "verifiedBy": "HR",
+      "notes": "Tier 1 Act establishes the statutory purpose and age threshold, but the current 2009 scheme rules and application procedure were not located in an authoritative current source. Eligibility set to verified on the Act clause only; confirm the quote against the Act PDF before demo."
     },
     {
-      "id": "FX-04",
+      "id": "PLNT-02",
       "name": {
-        "en": "FX-04",
-        "ml": "FX-04"
+        "en": "Small Plantation Workers' Invalid Pension",
+        "ml": "ചെറുകിട തോട്ടം തൊഴിലാളികളുടെ അസാധുവായ/അശക്തി പെൻഷൻ"
       },
       "authority": {
-        "en": "Fixture Board",
-        "ml": "Fixture Board"
+        "en": "Kerala Small Plantation Workers' Welfare Fund Board",
+        "ml": "കേരള ചെറുകിട തോട്ടം തൊഴിലാളി ക്ഷേമനിധി ബോർഡ്"
       },
       "category": "plantation",
       "summary": {
-        "en": "fixture",
-        "ml": "fixture"
+        "en": "The Act provides for pension to a member unable to work due to infirmity; detailed scheme conditions are not fully stated.",
+        "ml": "അശക്തി മൂലം ജോലി ചെയ്യാൻ കഴിയാത്ത അംഗത്തിന് പെൻഷൻ നൽകുന്നതിനുള്ള വ്യവസ്ഥ നിയമത്തിലുണ്ട്; മുഴുവൻ സ്കീം നിബന്ധനകൾ വ്യക്തമല്ല."
       },
       "verification": {
         "eligibility": "verified",
-        "documents": "verified",
-        "apply": "verified"
-      },
-      "rule": {
-        "all": [
-          {
-            "id": "c1",
-            "fact": "livelihood",
-            "op": "includes",
-            "value": [
-              "plantation"
-            ],
-            "changeable": false,
-            "source": {
-              "sourceId": "S1",
-              "quote": "fixture quote"
-            },
-            "reviewedBy": "T"
-          },
-          {
-            "any": [
-              {
-                "id": "c2",
-                "fact": "age",
-                "op": "gte",
-                "value": 60,
-                "changeable": false,
-                "source": {
-                  "sourceId": "S1",
-                  "quote": "fixture quote"
-                },
-                "reviewedBy": "T"
-              },
-              {
-                "id": "c3",
-                "fact": "disability",
-                "op": "eq",
-                "value": true,
-                "changeable": false,
-                "source": {
-                  "sourceId": "S1",
-                  "quote": "fixture quote"
-                },
-                "reviewedBy": "T"
-              }
-            ]
-          }
-        ]
-      },
-      "documents": [
-        {
-          "docId": "id_proof",
-          "source": {
-            "sourceId": "S1",
-            "quote": "fixture quote"
-          }
-        },
-        {
-          "docId": "disability_cert",
-          "when": {
-            "fact": "disability",
-            "op": "eq",
-            "value": true
-          },
-          "source": {
-            "sourceId": "S1",
-            "quote": "fixture quote"
-          }
-        }
-      ],
-      "apply": [
-        {
-          "locationType": "office",
-          "mode": "in_person",
-          "source": {
-            "sourceId": "S1",
-            "quote": "fixture quote"
-          }
-        }
-      ]
-    },
-    {
-      "id": "FX-05",
-      "name": {
-        "en": "FX-05",
-        "ml": "FX-05"
-      },
-      "authority": {
-        "en": "Fixture Board",
-        "ml": "Fixture Board"
-      },
-      "category": "fishing",
-      "summary": {
-        "en": "fixture",
-        "ml": "fixture"
-      },
-      "verification": {
-        "eligibility": "partial",
         "documents": "partial",
         "apply": "partial"
       },
@@ -510,6 +1190,353 @@
         "all": [
           {
             "id": "c1",
+            "fact": "plantation_member",
+            "op": "eq",
+            "value": true,
+            "changeable": true,
+            "howTo": {
+              "en": "Confirm/maintain membership with the Small Plantation Workers Welfare Fund Board.",
+              "ml": "ചെറുകിട തോട്ടം തൊഴിലാളി ക്ഷേമനിധി ബോർഡിലെ അംഗത്വം ഉറപ്പാക്കുക/നിലനിർത്തുക."
+            },
+            "source": {
+              "sourceId": "SRC-PLNT-001",
+              "quote": "for payment of pension to a member who is unable to work due to infirmity",
+              "locator": "Section 3(5)(a)"
+            },
+            "reviewedBy": "HR"
+          },
+          {
+            "id": "c2",
+            "fact": "unable_due_infirmity",
+            "op": "eq",
+            "value": true,
+            "changeable": false,
+            "source": {
+              "sourceId": "SRC-PLNT-001",
+              "quote": "unable to work due to infirmity",
+              "locator": "Section 3(5)(a)"
+            },
+            "reviewedBy": "HR"
+          },
+          {
+            "id": "g0",
+            "fact": "livelihood",
+            "op": "includes",
+            "value": [
+              "plantation_worker"
+            ],
+            "changeable": false,
+            "source": {
+              "sourceId": "SRC-PLNT-001",
+              "quote": "for payment of pension to a member who is unable to work due to infirmity",
+              "locator": "Section 3(5)"
+            }
+          }
+        ]
+      },
+      "documents": [],
+      "apply": [
+        {
+          "locationType": "spwwfb_office",
+          "mode": "in_person",
+          "note": {
+            "en": "Contact the Board. The application procedure is not published in our sources.",
+            "ml": "ബോർഡുമായി ബന്ധപ്പെടുക. അപേക്ഷാ നടപടിക്രമം ഞങ്ങളുടെ ഉറവിടങ്ങളിൽ ലഭ്യമല്ല."
+          },
+          "source": {
+            "sourceId": "SRC-PLNT-003",
+            "quote": "Kerala Small Plantation Workers' Welfare Fund Board, Kottayam"
+          }
+        }
+      ],
+      "lastVerified": "2026-09-23",
+      "verifiedBy": "HR",
+      "notes": "Tier 1 Act supports the core condition only; do not treat this as a final eligibility determination. Eligibility set to verified on the Act clause only; confirm the quote against the Act PDF before demo."
+    },
+    {
+      "id": "PLNT-03",
+      "name": {
+        "en": "Permanent Disability Assistance for Small Plantation Workers",
+        "ml": "ചെറുകിട തോട്ടം തൊഴിലാളികൾക്കുള്ള സ്ഥിരവൈകല്യ ധനസഹായം"
+      },
+      "authority": {
+        "en": "Kerala Small Plantation Workers' Welfare Fund Board",
+        "ml": "കേരള ചെറുകിട തോട്ടം തൊഴിലാളി ക്ഷേമനിധി ബോർഡ്"
+      },
+      "category": "plantation",
+      "summary": {
+        "en": "The Act provides for financial assistance to a member suffering from permanent disability; full scheme conditions require further verification.",
+        "ml": "സ്ഥിരവൈകല്യമുള്ള അംഗത്തിന് ധനസഹായം നൽകുന്നതിനുള്ള വ്യവസ്ഥ നിയമത്തിലുണ്ട്; മുഴുവൻ സ്കീം നിബന്ധനകൾക്ക് കൂടുതൽ പരിശോധന ആവശ്യമാണ്."
+      },
+      "verification": {
+        "eligibility": "verified",
+        "documents": "partial",
+        "apply": "partial"
+      },
+      "rule": {
+        "all": [
+          {
+            "id": "c1",
+            "fact": "plantation_member",
+            "op": "eq",
+            "value": true,
+            "changeable": true,
+            "howTo": {
+              "en": "Confirm/maintain membership with the Small Plantation Workers Welfare Fund Board.",
+              "ml": "ചെറുകിട തോട്ടം തൊഴിലാളി ക്ഷേമനിധി ബോർഡിലെ അംഗത്വം ഉറപ്പാക്കുക/നിലനിർത്തുക."
+            },
+            "source": {
+              "sourceId": "SRC-PLNT-001",
+              "quote": "for payment of financial assistance to a member who is suffering from permanent disability",
+              "locator": "Section 3(5)(c)"
+            },
+            "reviewedBy": "HR"
+          },
+          {
+            "id": "c2",
+            "fact": "permanent_disability",
+            "op": "eq",
+            "value": true,
+            "changeable": false,
+            "source": {
+              "sourceId": "SRC-PLNT-001",
+              "quote": "suffering from permanent disability",
+              "locator": "Section 3(5)(c)"
+            },
+            "reviewedBy": "HR"
+          },
+          {
+            "id": "g0",
+            "fact": "livelihood",
+            "op": "includes",
+            "value": [
+              "plantation_worker"
+            ],
+            "changeable": false,
+            "source": {
+              "sourceId": "SRC-PLNT-001",
+              "quote": "for payment of financial assistance to a member who is suffering from permanent disability",
+              "locator": "Section 3(5)"
+            }
+          }
+        ]
+      },
+      "documents": [],
+      "apply": [
+        {
+          "locationType": "spwwfb_office",
+          "mode": "in_person",
+          "note": {
+            "en": "Contact the Board. The application procedure is not published in our sources.",
+            "ml": "ബോർഡുമായി ബന്ധപ്പെടുക. അപേക്ഷാ നടപടിക്രമം ഞങ്ങളുടെ ഉറവിടങ്ങളിൽ ലഭ്യമല്ല."
+          },
+          "source": {
+            "sourceId": "SRC-PLNT-003",
+            "quote": "Kerala Small Plantation Workers' Welfare Fund Board, Kottayam"
+          }
+        }
+      ],
+      "lastVerified": "2026-09-23",
+      "verifiedBy": "HR",
+      "notes": "Statutory purpose only; exact amount, document list and procedure not encoded. Eligibility set to verified on the Act clause only; confirm the quote against the Act PDF before demo."
+    },
+    {
+      "id": "PLNT-04",
+      "name": {
+        "en": "Marriage Assistance for Daughters of Small Plantation Workers",
+        "ml": "ചെറുകിട തോട്ടം തൊഴിലാളികളുടെ പെൺമക്കളുടെ വിവാഹ ധനസഹായം"
+      },
+      "authority": {
+        "en": "Kerala Small Plantation Workers' Welfare Fund Board",
+        "ml": "കേരള ചെറുകിട തോട്ടം തൊഴിലാളി ക്ഷേമനിധി ബോർഡ്"
+      },
+      "category": "plantation",
+      "summary": {
+        "en": "The Act allows loans or grants to a member for expenses connected with the marriage of daughters.",
+        "ml": "അംഗത്തിന്റെ പെൺമക്കളുടെ വിവാഹവുമായി ബന്ധപ്പെട്ട ചെലവുകൾക്കായി വായ്പയോ ധനസഹായമോ നൽകുന്നതിനുള്ള വ്യവസ്ഥ നിയമത്തിലുണ്ട്."
+      },
+      "verification": {
+        "eligibility": "verified",
+        "documents": "partial",
+        "apply": "partial"
+      },
+      "rule": {
+        "all": [
+          {
+            "id": "c1",
+            "fact": "plantation_member",
+            "op": "eq",
+            "value": true,
+            "changeable": true,
+            "howTo": {
+              "en": "Confirm/maintain membership with the Small Plantation Workers Welfare Fund Board.",
+              "ml": "ചെറുകിട തോട്ടം തൊഴിലാളി ക്ഷേമനിധി ബോർഡിലെ അംഗത്വം ഉറപ്പാക്കുക/നിലനിർത്തുക."
+            },
+            "source": {
+              "sourceId": "SRC-PLNT-001",
+              "quote": "for expenses in connection with the marriage of daughters",
+              "locator": "Section 3(5)(d)"
+            },
+            "reviewedBy": "HR"
+          },
+          {
+            "id": "c2",
+            "fact": "daughter_marriage",
+            "op": "eq",
+            "value": true,
+            "changeable": false,
+            "source": {
+              "sourceId": "SRC-PLNT-001",
+              "quote": "marriage of daughters",
+              "locator": "Section 3(5)(d)"
+            },
+            "reviewedBy": "HR"
+          },
+          {
+            "id": "g0",
+            "fact": "livelihood",
+            "op": "includes",
+            "value": [
+              "plantation_worker"
+            ],
+            "changeable": false,
+            "source": {
+              "sourceId": "SRC-PLNT-001",
+              "quote": "for expenses in connection with the marriage of daughters",
+              "locator": "Section 3(5)"
+            }
+          }
+        ]
+      },
+      "documents": [],
+      "apply": [
+        {
+          "locationType": "spwwfb_office",
+          "mode": "in_person",
+          "note": {
+            "en": "Contact the Board. The application procedure is not published in our sources.",
+            "ml": "ബോർഡുമായി ബന്ധപ്പെടുക. അപേക്ഷാ നടപടിക്രമം ഞങ്ങളുടെ ഉറവിടങ്ങളിൽ ലഭ്യമല്ല."
+          },
+          "source": {
+            "sourceId": "SRC-PLNT-003",
+            "quote": "Kerala Small Plantation Workers' Welfare Fund Board, Kottayam"
+          }
+        }
+      ],
+      "lastVerified": "2026-09-23",
+      "verifiedBy": "HR",
+      "notes": "Statutory purpose only; current scheme-level conditions and document requirements need stronger source verification. Eligibility set to verified on the Act clause only; confirm the quote against the Act PDF before demo."
+    },
+    {
+      "id": "PLNT-05",
+      "name": {
+        "en": "Maternity Benefit for Small Plantation Workers",
+        "ml": "ചെറുകിട തോട്ടം തൊഴിലാളികൾക്കുള്ള പ്രസവാനുകൂല്യം"
+      },
+      "authority": {
+        "en": "Labour and Skills Department / Kerala Small Plantation Workers' Welfare Fund Board",
+        "ml": "തൊഴിലും നൈപുണ്യവും വകുപ്പ് / കേരള ചെറുകിട തോട്ടം തൊഴിലാളി ക്ഷേമനിധി ബോർഡ്"
+      },
+      "category": "plantation",
+      "summary": {
+        "en": "A 2024 Gazette states maternity benefits are given to female members registered under 17 boards, including the Small Plantation Workers Welfare Fund Board.",
+        "ml": "2024-ലെ ഗസറ്റ് 17 ബോർഡുകളിൽ രജിസ്റ്റർ ചെയ്ത വനിതാ അംഗങ്ങൾക്ക് പ്രസവാനുകൂല്യം നൽകുന്നതായി വ്യക്തമാക്കുന്നു; ഇതിൽ ചെറുകിട തോട്ടം തൊഴിലാളി ക്ഷേമനിധി ബോർഡും ഉൾപ്പെടുന്നു."
+      },
+      "verification": {
+        "eligibility": "verified",
+        "documents": "partial",
+        "apply": "verified"
+      },
+      "rule": {
+        "all": [
+          {
+            "id": "c1",
+            "fact": "female_member",
+            "op": "eq",
+            "value": true,
+            "changeable": false,
+            "source": {
+              "sourceId": "SRC-PLNT-002",
+              "quote": "maternity benefits ... is given to all female members registered under seventeen Boards",
+              "locator": "Gazette notification, paragraph 2"
+            },
+            "reviewedBy": "HR"
+          },
+          {
+            "id": "g0",
+            "fact": "livelihood",
+            "op": "includes",
+            "value": [
+              "plantation_worker"
+            ],
+            "changeable": false,
+            "source": {
+              "sourceId": "SRC-PLNT-002",
+              "quote": "all female members registered under seventeen Boards",
+              "locator": "Gazette notification, paragraph 2"
+            }
+          },
+          {
+            "id": "c2",
+            "fact": "plantation_member",
+            "op": "eq",
+            "value": true,
+            "changeable": true,
+            "howTo": {
+              "en": "Confirm/maintain membership with the Small Plantation Workers Welfare Fund Board.",
+              "ml": "ചെറുകിട തോട്ടം തൊഴിലാളി ക്ഷേമനിധി ബോർഡിലെ അംഗത്വം ഉറപ്പാക്കുക/നിലനിർത്തുക."
+            },
+            "source": {
+              "sourceId": "SRC-PLNT-002",
+              "quote": "all female members registered under seventeen Boards",
+              "locator": "Gazette notification, paragraph 2"
+            }
+          }
+        ]
+      },
+      "documents": [],
+      "apply": [
+        {
+          "locationType": "labour_commissionerate",
+          "mode": "online",
+          "note": {
+            "en": "The Gazette states the maternity scheme is implemented through a web based application through the Labour Commissionerate.",
+            "ml": "ഗസറ്റ് പ്രകാരം പ്രസവാനുകൂല്യ പദ്ധതി തൊഴിൽ കമ്മീഷണറേറ്റ് നടപ്പാക്കുന്ന വെബ് ആപ്ലിക്കേഷൻ വഴി നടപ്പാക്കുന്നു."
+          },
+          "source": {
+            "sourceId": "SRC-PLNT-002",
+            "quote": "through any web based application which is being implemented through the Labour Commissionerate"
+          }
+        }
+      ],
+      "lastVerified": "2026-09-23",
+      "verifiedBy": "HR",
+      "notes": "Tier 1 Gazette confirms the beneficiary class and web-based implementation through Labour Commissionerate; detailed current amount/documents are not included in the notification excerpt."
+    },
+    {
+      "id": "FISH-07",
+      "name": {
+        "en": "Modernisation of Country Crafts",
+        "ml": "നാടൻ യാനങ്ങളുടെ ആധുനികവൽക്കരണം"
+      },
+      "authority": {
+        "en": "Fisheries Department / Matsyafed",
+        "ml": "മത്സ്യബന്ധന വകുപ്പ് / മത്സ്യഫെഡ്"
+      },
+      "category": "fishing",
+      "summary": {
+        "en": "Assistance to modernise traditional fishing craft, for members of fishermen cooperative societies affiliated to Matsyafed.",
+        "ml": "മത്സ്യഫെഡുമായി അഫിലിയേറ്റ് ചെയ്ത സഹകരണ സംഘങ്ങളിലെ അംഗങ്ങൾക്ക് പരമ്പരാഗത യാനങ്ങൾ ആധുനികവൽക്കരിക്കാനുള്ള സഹായം."
+      },
+      "verification": {
+        "eligibility": "verified",
+        "documents": "partial",
+        "apply": "verified"
+      },
+      "rule": {
+        "all": [
+          {
+            "id": "g0",
             "fact": "livelihood",
             "op": "includes",
             "value": [
@@ -517,112 +1544,677 @@
             ],
             "changeable": false,
             "source": {
-              "sourceId": "S1",
-              "quote": "fixture quote"
+              "sourceId": "SRC-FISH-001",
+              "quote": "Members of cooperative societies affliated to Matysafed",
+              "locator": "Beneficiary description"
+            }
+          },
+          {
+            "id": "c1",
+            "fact": "matsyafed_society_member",
+            "op": "eq",
+            "value": true,
+            "changeable": true,
+            "howTo": {
+              "en": "Ask at your local fishermen cooperative society (Matsyafed) about membership.",
+              "ml": "അംഗത്വത്തെക്കുറിച്ച് പ്രാദേശിക മത്സ്യത്തൊഴിലാളി സഹകരണ സംഘത്തിൽ (മത്സ്യഫെഡ്) അന്വേഷിക്കുക."
             },
-            "reviewedBy": "T"
+            "source": {
+              "sourceId": "SRC-FISH-001",
+              "quote": "Members of cooperative societies affliated to Matysafed",
+              "locator": "Scheme Highlights"
+            }
           }
         ]
       },
-      "documents": [
+      "documents": [],
+      "apply": [
         {
-          "docId": "id_proof",
+          "locationType": "matsyafed_office",
+          "mode": "in_person",
+          "note": {
+            "en": "Implemented through Matsyafed offices.",
+            "ml": "മത്സ്യഫെഡ് ഓഫീസുകൾ വഴി നടപ്പാക്കുന്നു."
+          },
           "source": {
-            "sourceId": "S1",
-            "quote": "fixture quote"
+            "sourceId": "SRC-FISH-001",
+            "quote": "through Matysafed offices"
           }
         }
       ],
+      "lastVerified": "2026-09-23",
+      "verifiedBy": "AI-review",
+      "notes": "Added in review from Scheme Highlights: beneficiaries \"Members of cooperative societies affliated to Matysafed\", implemented \"through Matysafed offices\". Name in Malayalam is our translation; check."
+    },
+    {
+      "id": "FISH-08",
+      "name": {
+        "en": "Purchasing of Fishing Nets",
+        "ml": "മത്സ്യബന്ധന വല വാങ്ങൽ സഹായം"
+      },
+      "authority": {
+        "en": "Fisheries Department / Matsyafed",
+        "ml": "മത്സ്യബന്ധന വകുപ്പ് / മത്സ്യഫെഡ്"
+      },
+      "category": "fishing",
+      "summary": {
+        "en": "Assistance to buy fishing nets, for members of fishermen cooperative societies affiliated to Matsyafed.",
+        "ml": "മത്സ്യഫെഡുമായി അഫിലിയേറ്റ് ചെയ്ത സഹകരണ സംഘങ്ങളിലെ അംഗങ്ങൾക്ക് മത്സ്യബന്ധന വല വാങ്ങാനുള്ള സഹായം."
+      },
+      "verification": {
+        "eligibility": "verified",
+        "documents": "partial",
+        "apply": "verified"
+      },
+      "rule": {
+        "all": [
+          {
+            "id": "g0",
+            "fact": "livelihood",
+            "op": "includes",
+            "value": [
+              "fishing"
+            ],
+            "changeable": false,
+            "source": {
+              "sourceId": "SRC-FISH-001",
+              "quote": "Members of cooperative societies affliated to Matysafed",
+              "locator": "Beneficiary description"
+            }
+          },
+          {
+            "id": "c1",
+            "fact": "matsyafed_society_member",
+            "op": "eq",
+            "value": true,
+            "changeable": true,
+            "howTo": {
+              "en": "Ask at your local fishermen cooperative society (Matsyafed) about membership.",
+              "ml": "അംഗത്വത്തെക്കുറിച്ച് പ്രാദേശിക മത്സ്യത്തൊഴിലാളി സഹകരണ സംഘത്തിൽ (മത്സ്യഫെഡ്) അന്വേഷിക്കുക."
+            },
+            "source": {
+              "sourceId": "SRC-FISH-001",
+              "quote": "Members of cooperative societies affliated to Matysafed",
+              "locator": "Scheme Highlights"
+            }
+          }
+        ]
+      },
+      "documents": [],
       "apply": [
         {
-          "locationType": "office",
+          "locationType": "matsyafed_office",
           "mode": "in_person",
+          "note": {
+            "en": "Implemented through Matsyafed offices.",
+            "ml": "മത്സ്യഫെഡ് ഓഫീസുകൾ വഴി നടപ്പാക്കുന്നു."
+          },
           "source": {
-            "sourceId": "S1",
-            "quote": "fixture quote"
+            "sourceId": "SRC-FISH-001",
+            "quote": "through Matysafed offices"
           }
         }
-      ]
+      ],
+      "lastVerified": "2026-09-23",
+      "verifiedBy": "AI-review",
+      "notes": "Added in review from Scheme Highlights: beneficiaries \"Members of cooperative societies affliated to Matysafed\", implemented \"through Matysafed offices\". Name in Malayalam is our translation; check."
     }
   ],
   "documents": [
     {
-      "id": "id_proof",
+      "id": "saving_relief_application_inland",
       "name": {
-        "en": "ID proof",
-        "ml": "ID proof"
-      }
+        "en": "Application for Saving Cum Relief Scheme (Inland)",
+        "ml": "സമ്പാദ്യ സമാശ്വാസ പദ്ധതിക്കുള്ള അപേക്ഷ (ഉൾനാടൻ)"
+      },
+      "issuedBy": {
+        "en": "Fisheries Department",
+        "ml": "മത്സ്യബന്ധന വകുപ്പ്"
+      },
+      "sourceId": "SRC-FISH-005"
     },
     {
-      "id": "disability_cert",
+      "id": "saving_relief_application_marine",
       "name": {
-        "en": "Disability certificate",
-        "ml": "Disability certificate"
-      }
+        "en": "Application for Saving Cum Relief Scheme (Marine)",
+        "ml": "സമ്പാദ്യ സമാശ്വാസ പദ്ധതിക്കുള്ള അപേക്ഷ (കടൽ)"
+      },
+      "issuedBy": {
+        "en": "Fisheries Department",
+        "ml": "മത്സ്യബന്ധന വകുപ്പ്"
+      },
+      "sourceId": "SRC-FISH-005"
     }
   ],
   "locationTypes": [
     {
-      "id": "office",
+      "id": "fisheries_district_office",
       "label": {
-        "en": "Office",
-        "ml": "Office"
+        "en": "Fisheries district office",
+        "ml": "ജില്ലാ മത്സ്യബന്ധന ഓഫീസ്"
+      }
+    },
+    {
+      "id": "matsyaboard_office",
+      "label": {
+        "en": "Matsyaboard / Fishermen Welfare Board office",
+        "ml": "മത്സ്യബോർഡ് / മത്സ്യത്തൊഴിലാളി ക്ഷേമനിധി ബോർഡ് ഓഫീസ്"
+      }
+    },
+    {
+      "id": "labour_commissionerate",
+      "label": {
+        "en": "Labour Commissionerate",
+        "ml": "തൊഴിൽ കമ്മീഷണറേറ്റ്"
+      }
+    },
+    {
+      "id": "akshaya",
+      "label": {
+        "en": "Akshaya Centre",
+        "ml": "അക്ഷയ കേന്ദ്രം"
+      }
+    },
+    {
+      "id": "spwwfb_office",
+      "label": {
+        "en": "Small Plantation Workers' Welfare Fund Board office",
+        "ml": "ചെറുകിട തോട്ടം തൊഴിലാളി ക്ഷേമനിധി ബോർഡ് ഓഫീസ്"
+      }
+    },
+    {
+      "id": "matsyafed_office",
+      "label": {
+        "en": "Matsyafed office",
+        "ml": "മത്സ്യഫെഡ് ഓഫീസ്"
       }
     }
   ],
   "locations": [
     {
-      "id": "L1",
-      "type": "office",
+      "id": "LOC-FISH-001",
+      "type": "fisheries_district_office",
       "name": {
-        "en": "Office 1",
-        "ml": "Office 1"
+        "en": "Directorate of Fisheries",
+        "ml": "ഫിഷറീസ് ഡയറക്ടറേറ്റ്"
+      },
+      "district": "Thiruvananthapuram",
+      "area": "Vikas Bhavan",
+      "address": "4th Floor, Vikas Bhavan, Thiruvananthapuram-33",
+      "phone": "0471-2305042",
+      "sourceId": "SRC-FISH-005"
+    },
+    {
+      "id": "LOC-LAB-001",
+      "type": "labour_commissionerate",
+      "name": {
+        "en": "Labour Commissionerate",
+        "ml": "തൊഴിൽ കമ്മീഷണറേറ്റ്"
+      },
+      "district": "Thiruvananthapuram",
+      "address": "Thozhil Bhavan (Labour Complex), Thiruvananthapuram, Kerala",
+      "phone": "0471-2783900",
+      "hours": "Monday-Friday 10:00-17:00",
+      "sourceId": "SRC-PLNT-003"
+    },
+    {
+      "id": "LOC-AK-001",
+      "type": "akshaya",
+      "name": {
+        "en": "EKM108 Thiruvankulam Jn",
+        "ml": "EKM108 തിരുവാങ്കുളം ജംഗ്ഷൻ"
       },
       "district": "Ernakulam",
-      "sourceId": "S1"
+      "area": "Thiruvankulam",
+      "address": "Thiruvankulam Jn, Ernakulam",
+      "phone": "9539735181",
+      "sourceId": "SRC-PLNT-005"
+    },
+    {
+      "id": "LOC-AK-002",
+      "type": "akshaya",
+      "name": {
+        "en": "TSR179 Thali Jn.",
+        "ml": "TSR179 തളി ജംഗ്ഷൻ"
+      },
+      "district": "Thrissur",
+      "area": "Thali",
+      "address": "Thali Jn., Thrissur",
+      "phone": "9846722604",
+      "sourceId": "SRC-PLNT-005"
+    },
+    {
+      "id": "LOC-AK-003",
+      "type": "akshaya",
+      "name": {
+        "en": "TSR018 Muringoor Jn",
+        "ml": "TSR018 മുരിങ്ങൂർ ജംഗ്ഷൻ"
+      },
+      "district": "Thrissur",
+      "area": "Muringoor",
+      "address": "Muringoor Jn, Thrissur",
+      "phone": "9544253833",
+      "sourceId": "SRC-PLNT-005"
+    },
+    {
+      "id": "LOC-AK-004",
+      "type": "akshaya",
+      "name": {
+        "en": "PKD146 Vaniyamkulam",
+        "ml": "PKD146 വാണിയംകുളം"
+      },
+      "district": "Palakkad",
+      "area": "Vaniyamkulam",
+      "address": "Vaniyamkulam, Palakkad",
+      "phone": "9847741600",
+      "sourceId": "SRC-PLNT-005"
+    },
+    {
+      "id": "LOC-AK-005",
+      "type": "akshaya",
+      "name": {
+        "en": "PKD177 Pengottiri",
+        "ml": "PKD177 പെങ്ങോട്ടിരി"
+      },
+      "district": "Palakkad",
+      "area": "Pengottiri",
+      "address": "Pengottiri, Palakkad",
+      "phone": "9961887997",
+      "sourceId": "SRC-PLNT-005"
+    },
+    {
+      "id": "LOC-AK-006",
+      "type": "akshaya",
+      "name": {
+        "en": "EKM277 Kolencherry",
+        "ml": "EKM277 കോലഞ്ചേരി"
+      },
+      "district": "Ernakulam",
+      "area": "Kolencherry",
+      "address": "Kolencherry, Ernakulam",
+      "phone": "9495389399",
+      "sourceId": "SRC-PLNT-005"
+    },
+    {
+      "id": "LOC-AK-007",
+      "type": "akshaya",
+      "name": {
+        "en": "TSR238 Ayyanthole Ground",
+        "ml": "TSR238 അയ്യന്തോൾ ഗ്രൗണ്ട്"
+      },
+      "district": "Thrissur",
+      "area": "Ayyanthole",
+      "address": "Ayyanthole Ground, Thrissur",
+      "phone": "7025189401",
+      "sourceId": "SRC-PLNT-005"
+    },
+    {
+      "id": "LOC-AK-008",
+      "type": "akshaya",
+      "name": {
+        "en": "PKD085 Kalleppulli",
+        "ml": "PKD085 കല്ലേപ്പുള്ളി"
+      },
+      "district": "Palakkad",
+      "area": "Kalleppulli",
+      "address": "Kalleppulli, Palakkad",
+      "phone": "9446734195 / 8075714554",
+      "sourceId": "SRC-PLNT-005"
+    },
+    {
+      "id": "LOC-PLNT-001",
+      "type": "spwwfb_office",
+      "name": {
+        "en": "Kerala Small Plantation Workers' Welfare Fund Board",
+        "ml": "കേരള ചെറുകിട തോട്ടം തൊഴിലാളി ക്ഷേമനിധി ബോർഡ്"
+      },
+      "district": "Kottayam",
+      "sourceId": "SRC-PLNT-003"
     }
   ],
-  "terms": [],
+  "terms": [
+    {
+      "id": "potentially_eligible",
+      "en": "Potentially eligible",
+      "ml": "സാധ്യതയുള്ള അർഹത",
+      "context": "Result status"
+    },
+    {
+      "id": "needs_information",
+      "en": "More information needed",
+      "ml": "കൂടുതൽ വിവരങ്ങൾ ആവശ്യമാണ്",
+      "context": "Result status"
+    },
+    {
+      "id": "not_matched",
+      "en": "Not matched from the supplied answers",
+      "ml": "നൽകിയ വിവരങ്ങൾ പ്രകാരം പൊരുത്തപ്പെട്ടില്ല",
+      "context": "Result status"
+    },
+    {
+      "id": "welfare_fund_board",
+      "en": "Welfare Fund Board",
+      "ml": "ക്ഷേമനിധി ബോർഡ്",
+      "context": "General welfare terminology"
+    },
+    {
+      "id": "income_certificate",
+      "en": "Income Certificate",
+      "ml": "വരുമാന സർട്ടിഫിക്കറ്റ്",
+      "context": "Document term; not tied to a scheme in this dataset"
+    },
+    {
+      "id": "registration",
+      "en": "Registration",
+      "ml": "രജിസ്ട്രേഷൻ",
+      "context": "General service terminology"
+    },
+    {
+      "id": "application_office",
+      "en": "Application office",
+      "ml": "അപേക്ഷ നൽകേണ്ട ഓഫീസ്",
+      "context": "General service terminology"
+    },
+    {
+      "id": "fishermen_welfare_fund_board",
+      "en": "Kerala Fishermen Welfare Fund Board",
+      "ml": "കേരള മത്സ്യത്തൊഴിലാളി ക്ഷേമനിധി ബോർഡ്",
+      "context": "Fishing welfare",
+      "sourceId": "SRC-FISH-006"
+    },
+    {
+      "id": "small_plantation_workers_welfare_fund_board",
+      "en": "Kerala Small Plantation Workers' Welfare Fund Board",
+      "ml": "കേരള ചെറുകിട തോട്ടം തൊഴിലാളി ക്ഷേമനിധി ബോർഡ്",
+      "context": "Plantation welfare",
+      "sourceId": "SRC-PLNT-003"
+    },
+    {
+      "id": "maternity_benefit",
+      "en": "Maternity benefit",
+      "ml": "പ്രസവാനുകൂല്യം",
+      "context": "Plantation welfare",
+      "sourceId": "SRC-PLNT-002"
+    }
+  ],
   "profiles": [
     {
-      "id": "P1",
-      "title": "fisher member low income",
+      "id": "P-01",
+      "title": "Registered active BPL fisher with bank account",
       "kind": "standard",
       "answers": {
         "livelihood": "fishing",
-        "fwf_member": "yes",
-        "annual_income": "150000",
-        "age": "45"
+        "registered_fisher": "yes",
+        "active_fisher": "yes",
+        "bpl": "yes",
+        "bank_account": "yes",
+        "traditional_fisher": "yes",
+        "kfwfb_member": "yes",
+        "fisher_beneficiary_status": "registered_fisher",
+        "age": "42",
+        "female_member": "no",
+        "matsyafed_society_member": "no"
       },
       "expected": {
-        "FX-01": "potentially_eligible",
-        "FX-02": "not_matched"
+        "FISH-01": "potentially_eligible",
+        "FISH-02": "potentially_eligible",
+        "FISH-03": "potentially_eligible",
+        "FISH-04": "potentially_eligible"
       },
       "expectedOthers": "not_matched",
-      "expectedMissing": {}
+      "expectedMissing": {},
+      "writtenBy": "HR",
+      "notes": "All supplied facts satisfy the known conditions for the four listed fishing schemes. [review] Matsyafed membership added so FISH-07/08 are decided."
     },
     {
-      "id": "P2",
-      "title": "fisher member income unknown",
+      "id": "P-02",
+      "title": "Allied fishery worker and KFWFB member",
+      "kind": "standard",
+      "answers": {
+        "livelihood": "allied_fish_worker",
+        "registered_fisher": "no",
+        "active_fisher": "no",
+        "kfwfb_member": "yes"
+      },
+      "expected": {
+        "FISH-05": "potentially_eligible"
+      },
+      "expectedOthers": "not_matched",
+      "expectedMissing": {},
+      "writtenBy": "HR",
+      "notes": "Matches the current official allied-worker insurance description."
+    },
+    {
+      "id": "P-03",
+      "title": "Registered fisher with unknown bank account",
       "kind": "incomplete",
       "answers": {
         "livelihood": "fishing",
-        "fwf_member": "yes",
-        "annual_income": "unknown",
-        "age": "30"
+        "registered_fisher": "yes",
+        "bank_account": "unknown"
       },
-      "expected": {},
+      "expected": {
+        "FISH-02": "needs_information",
+        "FISH-01": "needs_information",
+        "FISH-03": "needs_information",
+        "FISH-04": "needs_information",
+        "FISH-07": "needs_information",
+        "FISH-08": "needs_information"
+      },
+      "expectedOthers": "not_matched",
       "expectedMissing": {
-        "FX-01": [
-          "annual_income"
+        "FISH-02": [
+          "bank_account"
         ]
-      }
+      },
+      "writtenBy": "HR",
+      "notes": "The official saving-cum-relief page states a bank account is needed for enrolment. [review] Active status, BPL, traditional and Matsyafed answers are also unknown, so those schemes need information too; they cannot be not_matched."
+    },
+    {
+      "id": "P-04",
+      "title": "Active APL fisher",
+      "kind": "standard",
+      "answers": {
+        "livelihood": "fishing",
+        "active_fisher": "yes",
+        "bpl": "no",
+        "registered_fisher": "yes",
+        "traditional_fisher": "yes",
+        "bank_account": "yes",
+        "fisher_beneficiary_status": "registered_fisher",
+        "matsyafed_society_member": "yes"
+      },
+      "expected": {
+        "FISH-01": "potentially_eligible",
+        "FISH-02": "potentially_eligible",
+        "FISH-03": "not_matched",
+        "FISH-04": "potentially_eligible",
+        "FISH-07": "potentially_eligible",
+        "FISH-08": "potentially_eligible",
+        "FISH-06": "informational"
+      },
+      "expectedOthers": "not_matched",
+      "expectedMissing": {},
+      "writtenBy": "HR",
+      "notes": "Housing scheme is specifically described for active fishermen of BPL category; saving scheme says both BPL and APL are enrolled. [review] FISH-06 is partial (no age condition in source) so it is display-only."
+    },
+    {
+      "id": "P-05",
+      "title": "Small plantation member aged exactly 60",
+      "kind": "boundary",
+      "answers": {
+        "livelihood": "plantation_worker",
+        "plantation_member": "yes",
+        "small_plantation_worker": "yes",
+        "age": "60",
+        "unable_due_infirmity": "no",
+        "permanent_disability": "no",
+        "daughter_marriage": "no",
+        "female_member": "no"
+      },
+      "expected": {
+        "PLNT-01": "potentially_eligible",
+        "PLNT-02": "not_matched",
+        "PLNT-03": "not_matched",
+        "PLNT-04": "not_matched",
+        "PLNT-05": "not_matched"
+      },
+      "expectedOthers": "not_matched",
+      "expectedMissing": {},
+      "writtenBy": "HR",
+      "notes": "Boundary case uses the statutory age threshold exactly as stated in the Act."
+    },
+    {
+      "id": "P-06",
+      "title": "Female small plantation welfare-board member",
+      "kind": "standard",
+      "answers": {
+        "livelihood": "plantation_worker",
+        "plantation_member": "yes",
+        "small_plantation_worker": "yes",
+        "female_member": "yes"
+      },
+      "expected": {
+        "PLNT-05": "potentially_eligible",
+        "PLNT-01": "needs_information",
+        "PLNT-02": "needs_information",
+        "PLNT-03": "needs_information",
+        "PLNT-04": "needs_information"
+      },
+      "expectedOthers": "not_matched",
+      "expectedMissing": {
+        "PLNT-01": [
+          "age"
+        ]
+      },
+      "writtenBy": "HR",
+      "notes": "The 2024 Gazette states maternity benefits are given to female members registered under the listed boards, including the Small Plantation Workers Welfare Fund Board. [review] Age, infirmity, disability and marriage were not given, so those schemes need information."
+    },
+    {
+      "id": "P-07",
+      "title": "Plantation member with incomplete disability information",
+      "kind": "incomplete",
+      "answers": {
+        "livelihood": "plantation_worker",
+        "plantation_member": "yes",
+        "small_plantation_worker": "yes",
+        "age": "58",
+        "unable_due_infirmity": "unknown",
+        "permanent_disability": "unknown",
+        "daughter_marriage": "no",
+        "female_member": "no"
+      },
+      "expected": {
+        "PLNT-02": "needs_information",
+        "PLNT-03": "needs_information"
+      },
+      "expectedOthers": "not_matched",
+      "expectedMissing": {
+        "PLNT-02": [
+          "unable_due_infirmity"
+        ],
+        "PLNT-03": [
+          "permanent_disability"
+        ]
+      },
+      "writtenBy": "HR",
+      "notes": "The two partial schemes require the corresponding condition, but the household did not provide it."
+    },
+    {
+      "id": "P-08",
+      "title": "Mixed fishing and plantation household",
+      "kind": "mixed",
+      "answers": {
+        "livelihood": "fishing,plantation_worker",
+        "registered_fisher": "yes",
+        "active_fisher": "yes",
+        "bpl": "yes",
+        "bank_account": "yes",
+        "traditional_fisher": "no",
+        "plantation_member": "yes",
+        "small_plantation_worker": "yes",
+        "age": "61",
+        "female_member": "no",
+        "daughter_marriage": "yes",
+        "unable_due_infirmity": "no",
+        "permanent_disability": "no",
+        "matsyafed_society_member": "no"
+      },
+      "expected": {
+        "FISH-01": "potentially_eligible",
+        "FISH-02": "potentially_eligible",
+        "FISH-03": "potentially_eligible",
+        "PLNT-01": "potentially_eligible",
+        "PLNT-04": "potentially_eligible"
+      },
+      "expectedOthers": "not_matched",
+      "expectedMissing": {},
+      "writtenBy": "HR",
+      "notes": "Mixed-sector case exercises simultaneous screening across fishing and plantation benefits."
+    },
+    {
+      "id": "P-09",
+      "title": "Fisher who is not in a Matsyafed society",
+      "kind": "standard",
+      "answers": {
+        "livelihood": "fishing",
+        "active_fisher": "yes",
+        "registered_fisher": "yes",
+        "traditional_fisher": "yes",
+        "bpl": "no",
+        "bank_account": "yes",
+        "matsyafed_society_member": "no"
+      },
+      "expected": {
+        "FISH-07": "not_matched",
+        "FISH-08": "not_matched",
+        "FISH-01": "potentially_eligible",
+        "FISH-02": "potentially_eligible",
+        "FISH-04": "potentially_eligible"
+      },
+      "expectedOthers": "not_matched",
+      "expectedMissing": {},
+      "writtenBy": "AI-review",
+      "notes": "FISH-07/08 should show the one-step-away hint (join a Matsyafed society)."
+    },
+    {
+      "id": "P-10",
+      "title": "Plantation worker, not a Welfare Fund member, aged 65",
+      "kind": "standard",
+      "answers": {
+        "livelihood": "plantation_worker",
+        "plantation_member": "no",
+        "age": "65"
+      },
+      "expected": {
+        "PLNT-01": "not_matched",
+        "PLNT-02": "not_matched",
+        "PLNT-03": "not_matched",
+        "PLNT-04": "not_matched",
+        "PLNT-05": "not_matched"
+      },
+      "expectedOthers": "not_matched",
+      "expectedMissing": {},
+      "writtenBy": "AI-review",
+      "notes": "All plantation schemes require Board membership; results should say one step away: membership."
     }
   ],
   "disclaimer": {
     "main": {
-      "en": "Potentially eligible only.",
-      "ml": "Potentially eligible only."
+      "en": "This screening shows schemes you may be potentially eligible for, based only on your answers. It is not a decision. The responsible office decides eligibility after checking your documents.",
+      "ml": "നിങ്ങളുടെ മറുപടികളെ മാത്രം അടിസ്ഥാനമാക്കി, നിങ്ങൾക്ക് സാധ്യതയുള്ള പദ്ധതികളാണ് ഇവിടെ കാണിക്കുന്നത്. ഇതൊരു തീരുമാനമല്ല. രേഖകൾ പരിശോധിച്ച ശേഷം ബന്ധപ്പെട്ട ഓഫീസാണ് അർഹത തീരുമാനിക്കുന്നത്."
+    },
+    "not_official": {
+      "en": "This is not an official Government of Kerala service. Scheme rules were collected by our team from the official sources listed, as of the date shown.",
+      "ml": "ഇത് കേരള സർക്കാരിന്റെ ഔദ്യോഗിക സേവനമല്ല. കാണിച്ചിരിക്കുന്ന തീയതി വരെയുള്ള ഔദ്യോഗിക രേഖകളിൽ നിന്ന് ഞങ്ങളുടെ ടീം ശേഖരിച്ചതാണ് പദ്ധതി നിയമങ്ങൾ."
+    },
+    "privacy": {
+      "en": "We do not ask for your name, phone number or ID numbers. Your answers stay in this browser tab and are erased when you press Clear or close the tab.",
+      "ml": "നിങ്ങളുടെ പേര്, ഫോൺ നമ്പർ, തിരിച്ചറിയൽ നമ്പറുകൾ എന്നിവ ഞങ്ങൾ ചോദിക്കുന്നില്ല. നിങ്ങളുടെ മറുപടികൾ ഈ ബ്രൗസർ ടാബിൽ മാത്രം നിൽക്കും; മായ്ക്കുക അമർത്തുമ്പോഴോ ടാബ് അടയ്ക്കുമ്പോഴോ അവ ഇല്ലാതാകും."
+    },
+    "voice": {
+      "en": "Voice input uses your browser's speech service, which sends the audio to Google to convert it to text.",
+      "ml": "ശബ്ദ ഇൻപുട്ട് ബ്രൗസറിന്റെ സ്പീച്ച് സേവനം ഉപയോഗിക്കുന്നു; ശബ്ദം ടെക്സ്റ്റാക്കാൻ അത് Google-ലേക്ക് അയയ്ക്കും."
     }
   }
 }

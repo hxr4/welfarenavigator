@@ -122,7 +122,7 @@ export default function SchemeCard({ ds, result, answers, lang, district, origin
         <>
           <div className="block">
             <h4>{t("documents", lang)}</h4>
-            <ul className="docs">
+            {result.documents.length > 0 && <ul className="docs">
               {result.documents.map((d) => (
                 <li key={d.doc.id}>
                   {pick(d.doc.name, lang)}
@@ -135,7 +135,7 @@ export default function SchemeCard({ ds, result, answers, lang, district, origin
                   )}
                 </li>
               ))}
-            </ul>
+            </ul>}
             {scheme.verification.documents !== "verified" && <p className="small notice">{t("docsPartial", lang)}</p>}
           </div>
           <div className="block">
