@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-09-23T13:52:25.635Z",
+    "generatedAt": "2026-09-23T14:05:00.022Z",
     "includesExamples": false,
     "version": "1"
   },
@@ -92,7 +92,7 @@
       "language": "en",
       "dateIssued": "2008-04-01",
       "accessedOn": "2026-09-23",
-      "notes": "Tier 1 statutory source. Defines small plantation worker and statutory purposes of the fund. Local copy not yet saved in sources/."
+      "notes": "Tier 1 official India Code PDF. Exact quotes for PLNT-01 to PLNT-04 were checked against the PDF text. India Code's metadata page separately displays Act Number 18 while the PDF itself is titled Act 17 of 2008; this discrepancy is recorded for team review."
     },
     {
       "id": "SRC-PLNT-002",
@@ -138,6 +138,50 @@
       "language": "en",
       "accessedOn": "2026-09-23",
       "notes": "Official directory used only for centre records, not as evidence that a welfare scheme is applied through Akshaya."
+    },
+    {
+      "id": "SRC-FISH-008",
+      "tier": 2,
+      "authority": "Fisheries Department, Government of Kerala",
+      "title": "District officers - Fisheries Department",
+      "url": "https://fisheries.kerala.gov.in/en/node/628",
+      "docType": "department_page",
+      "language": "en",
+      "accessedOn": "2026-09-23",
+      "notes": "Official current directory of Fisheries Department district officers; lists district-level contacts across Kerala."
+    },
+    {
+      "id": "SRC-FISH-009",
+      "tier": 2,
+      "authority": "Fisheries Department, Government of Kerala",
+      "title": "Application form for Saving Cum Relief Scheme (Inland)",
+      "url": "https://fisheries.kerala.gov.in/sites/default/files/inline-files/appforms/fisheriesdept/Application%20form%20for%20saving%20cum%20relief%20scheme(inland).pdf",
+      "docType": "other",
+      "language": "ml",
+      "accessedOn": "2026-09-23",
+      "notes": "Official one-page application form linked from the Department forms directory. PDF was inspected online; local copy not yet saved in sources/."
+    },
+    {
+      "id": "SRC-FISH-010",
+      "tier": 2,
+      "authority": "Fisheries Department, Government of Kerala",
+      "title": "Application form for Saving Cum Relief Scheme (Marine)",
+      "url": "https://fisheries.kerala.gov.in/sites/default/files/inline-files/appforms/fisheriesdept/Application%20form%20for%20saving%20cum%20relief%20scheme%20(Marine).pdf",
+      "docType": "other",
+      "language": "ml",
+      "accessedOn": "2026-09-23",
+      "notes": "Official two-page application form linked from the Department forms directory. PDF was inspected online; local copy not yet saved in sources/."
+    },
+    {
+      "id": "SRC-FISH-011",
+      "tier": 2,
+      "authority": "Fisheries Department, Government of Kerala",
+      "title": "Application form for educational assistance (above matriculation) to fishermen children",
+      "url": "https://fisheries.kerala.gov.in/sites/default/files/inline-files/appforms/fisheriesdept/Application%20form%20for%20educational%20assistance(above%20matriculation)%20to%20fishermen%20children.pdf",
+      "docType": "other",
+      "language": "ml",
+      "accessedOn": "2026-09-23",
+      "notes": "Official five-page application form linked from the Department forms directory. Used for the informational educational-concession record; local copy not yet saved in sources/."
     }
   ],
   "facts": [
@@ -611,7 +655,7 @@
               "quote": "Active Fishermen in the State are insured",
               "locator": "Scheme page, opening paragraph"
             },
-            "reviewedBy": "HR"
+            "reviewedBy": "PENDING_SECOND_REVIEW"
           },
           {
             "id": "g0",
@@ -625,7 +669,8 @@
               "sourceId": "SRC-FISH-003",
               "quote": "Active Fishermen in the State are insured",
               "locator": "Beneficiary description"
-            }
+            },
+            "reviewedBy": "PENDING_SECOND_REVIEW"
           }
         ]
       },
@@ -646,7 +691,7 @@
       ],
       "lastVerified": "2026-09-23",
       "verifiedBy": "HR",
-      "notes": "Current official page states active fishermen are insured and names Matsyaboard as implementing agency; detailed document checklist is not published on the page."
+      "notes": "HR (primary curation)"
     },
     {
       "id": "FISH-02",
@@ -685,7 +730,7 @@
               "quote": "beneficiaries are registered fishermen",
               "locator": "Scheme page, beneficiary paragraph"
             },
-            "reviewedBy": "HR"
+            "reviewedBy": "PENDING_SECOND_REVIEW"
           },
           {
             "id": "c2",
@@ -702,7 +747,7 @@
               "quote": "Beneficiaries should have bank account for enrolling",
               "locator": "Scheme page, bank-account paragraph"
             },
-            "reviewedBy": "HR"
+            "reviewedBy": "PENDING_SECOND_REVIEW"
           },
           {
             "id": "g0",
@@ -716,7 +761,8 @@
               "sourceId": "SRC-FISH-002",
               "quote": "the beneficiaries are registered fishermen",
               "locator": "Beneficiary description"
-            }
+            },
+            "reviewedBy": "PENDING_SECOND_REVIEW"
           }
         ]
       },
@@ -729,7 +775,7 @@
             "value": "inland"
           },
           "source": {
-            "sourceId": "SRC-FISH-005",
+            "sourceId": "SRC-FISH-009",
             "quote": "Application for savings cum relief scheme(inland)"
           }
         },
@@ -741,7 +787,7 @@
             "value": "marine"
           },
           "source": {
-            "sourceId": "SRC-FISH-005",
+            "sourceId": "SRC-FISH-010",
             "quote": "Application for savings cum relief scheme(Marine)"
           }
         }
@@ -762,7 +808,7 @@
       ],
       "lastVerified": "2026-09-23",
       "verifiedBy": "HR",
-      "notes": "Official page says both BPL and APL fishermen are enrolled and beneficiaries are registered fishermen; central-share treatment differs by BPL status."
+      "notes": "HR (primary curation)"
     },
     {
       "id": "FISH-03",
@@ -797,7 +843,7 @@
               "quote": "Active fishermen of BPL category is considered",
               "locator": "Scheme Highlights, Housing Scheme"
             },
-            "reviewedBy": "HR"
+            "reviewedBy": "PENDING_SECOND_REVIEW"
           },
           {
             "id": "c2",
@@ -810,7 +856,7 @@
               "quote": "Active fishermen of BPL category is considered",
               "locator": "Scheme Highlights, Housing Scheme"
             },
-            "reviewedBy": "HR"
+            "reviewedBy": "PENDING_SECOND_REVIEW"
           },
           {
             "id": "g0",
@@ -824,7 +870,8 @@
               "sourceId": "SRC-FISH-001",
               "quote": "Active fishermen of BPL category",
               "locator": "Beneficiary description"
-            }
+            },
+            "reviewedBy": "PENDING_SECOND_REVIEW"
           }
         ]
       },
@@ -845,7 +892,7 @@
       ],
       "lastVerified": "2026-09-23",
       "verifiedBy": "HR",
-      "notes": "Official scheme highlights provide the screening description but not a full document checklist."
+      "notes": "HR (primary curation)"
     },
     {
       "id": "FISH-04",
@@ -880,7 +927,7 @@
               "quote": "Registered traditional fishermen are the beneficiaries",
               "locator": "Scheme Highlights, Insurance to fishing implements"
             },
-            "reviewedBy": "HR"
+            "reviewedBy": "PENDING_SECOND_REVIEW"
           },
           {
             "id": "g0",
@@ -894,7 +941,8 @@
               "sourceId": "SRC-FISH-007",
               "quote": "Registered traditional fishermen",
               "locator": "Beneficiary description"
-            }
+            },
+            "reviewedBy": "PENDING_SECOND_REVIEW"
           }
         ]
       },
@@ -915,7 +963,7 @@
       ],
       "lastVerified": "2026-09-23",
       "verifiedBy": "HR",
-      "notes": "Official scheme highlights identify registered traditional fishermen as beneficiaries; detailed asset/document rules are not published on the page."
+      "notes": "HR (primary curation)"
     },
     {
       "id": "FISH-05",
@@ -952,7 +1000,7 @@
               "quote": "Allied fishery workers who are members of the Kerala Fishermen Welfare Fund Board",
               "locator": "Scheme page, opening sentence"
             },
-            "reviewedBy": "HR"
+            "reviewedBy": "PENDING_SECOND_REVIEW"
           },
           {
             "id": "c2",
@@ -969,7 +1017,7 @@
               "quote": "are members of the Kerala Fishermen Welfare Fund Board (KFWFB)",
               "locator": "Scheme page, opening sentence"
             },
-            "reviewedBy": "HR"
+            "reviewedBy": "PENDING_SECOND_REVIEW"
           }
         ]
       },
@@ -990,7 +1038,7 @@
       ],
       "lastVerified": "2026-09-23",
       "verifiedBy": "HR",
-      "notes": "Official page confirms KFWFB membership and implementing agency; detailed claims/document rules are not published there."
+      "notes": "HR (primary curation)"
     },
     {
       "id": "FISH-06",
@@ -1027,7 +1075,7 @@
                   "quote": "Registered fishermen/widows of fishermen are the benefiaries",
                   "locator": "Scheme Highlights, Pension to Fishermen"
                 },
-                "reviewedBy": "HR"
+                "reviewedBy": "PENDING_SECOND_REVIEW"
               },
               {
                 "id": "c1",
@@ -1040,7 +1088,7 @@
                   "quote": "Registered fishermen/widows of fishermen are the benefiaries",
                   "locator": "Scheme Highlights, Pension to Fishermen"
                 },
-                "reviewedBy": "HR"
+                "reviewedBy": "PENDING_SECOND_REVIEW"
               }
             ]
           },
@@ -1056,7 +1104,8 @@
               "sourceId": "SRC-FISH-001",
               "quote": "Registered fishermen/widows of fishermen",
               "locator": "Beneficiary description"
-            }
+            },
+            "reviewedBy": "PENDING_SECOND_REVIEW"
           }
         ]
       },
@@ -1077,7 +1126,7 @@
       ],
       "lastVerified": "2026-09-23",
       "verifiedBy": "HR",
-      "notes": "The current scheme-highlights page confirms beneficiary categories, but the age and full current pension conditions are not stated there, so automated screening must remain conservative."
+      "notes": "HR (primary curation)"
     },
     {
       "id": "PLNT-01",
@@ -1113,10 +1162,10 @@
             },
             "source": {
               "sourceId": "SRC-PLNT-001",
-              "quote": "for payment of pension to a member who ... has completed the age of sixty years",
-              "locator": "Section 3(5)(a)"
+              "quote": "\"member\" means a member of the Fund;",
+              "locator": "Section 2(g)"
             },
-            "reviewedBy": "HR"
+            "reviewedBy": "PENDING_SECOND_REVIEW"
           },
           {
             "id": "c2",
@@ -1126,10 +1175,10 @@
             "changeable": false,
             "source": {
               "sourceId": "SRC-PLNT-001",
-              "quote": "completed the age of sixty years",
+              "quote": "for payment of pension to a member who is unable to work due to infirmity or has completed the age of sixty years;",
               "locator": "Section 3(5)(a)"
             },
-            "reviewedBy": "HR"
+            "reviewedBy": "PENDING_SECOND_REVIEW"
           },
           {
             "id": "g0",
@@ -1141,9 +1190,10 @@
             "changeable": false,
             "source": {
               "sourceId": "SRC-PLNT-001",
-              "quote": "for payment of pension to a member who ... has completed the age of sixty years",
+              "quote": "for payment of pension to a member who is unable to work due to infirmity or has completed the age of sixty years;",
               "locator": "Section 3(5)"
-            }
+            },
+            "reviewedBy": "PENDING_SECOND_REVIEW"
           }
         ]
       },
@@ -1164,7 +1214,7 @@
       ],
       "lastVerified": "2026-09-23",
       "verifiedBy": "HR",
-      "notes": "Tier 1 Act establishes the statutory purpose and age threshold, but the current 2009 scheme rules and application procedure were not located in an authoritative current source. Eligibility set to verified on the Act clause only; confirm the quote against the Act PDF before demo."
+      "notes": "HR (primary curation); eligibility set to verified on the Act clause (quotes reported checked against the PDF)."
     },
     {
       "id": "PLNT-02",
@@ -1200,10 +1250,10 @@
             },
             "source": {
               "sourceId": "SRC-PLNT-001",
-              "quote": "for payment of pension to a member who is unable to work due to infirmity",
-              "locator": "Section 3(5)(a)"
+              "quote": "\"member\" means a member of the Fund;",
+              "locator": "Section 2(g)"
             },
-            "reviewedBy": "HR"
+            "reviewedBy": "PENDING_SECOND_REVIEW"
           },
           {
             "id": "c2",
@@ -1213,10 +1263,10 @@
             "changeable": false,
             "source": {
               "sourceId": "SRC-PLNT-001",
-              "quote": "unable to work due to infirmity",
+              "quote": "for payment of pension to a member who is unable to work due to infirmity or has completed the age of sixty years;",
               "locator": "Section 3(5)(a)"
             },
-            "reviewedBy": "HR"
+            "reviewedBy": "PENDING_SECOND_REVIEW"
           },
           {
             "id": "g0",
@@ -1228,9 +1278,10 @@
             "changeable": false,
             "source": {
               "sourceId": "SRC-PLNT-001",
-              "quote": "for payment of pension to a member who is unable to work due to infirmity",
+              "quote": "for payment of pension to a member who is unable to work due to infirmity or has completed the age of sixty years;",
               "locator": "Section 3(5)"
-            }
+            },
+            "reviewedBy": "PENDING_SECOND_REVIEW"
           }
         ]
       },
@@ -1251,7 +1302,7 @@
       ],
       "lastVerified": "2026-09-23",
       "verifiedBy": "HR",
-      "notes": "Tier 1 Act supports the core condition only; do not treat this as a final eligibility determination. Eligibility set to verified on the Act clause only; confirm the quote against the Act PDF before demo."
+      "notes": "HR (primary curation); eligibility set to verified on the Act clause (quotes reported checked against the PDF)."
     },
     {
       "id": "PLNT-03",
@@ -1287,10 +1338,10 @@
             },
             "source": {
               "sourceId": "SRC-PLNT-001",
-              "quote": "for payment of financial assistance to a member who is suffering from permanent disability",
-              "locator": "Section 3(5)(c)"
+              "quote": "\"member\" means a member of the Fund;",
+              "locator": "Section 2(g)"
             },
-            "reviewedBy": "HR"
+            "reviewedBy": "PENDING_SECOND_REVIEW"
           },
           {
             "id": "c2",
@@ -1300,10 +1351,10 @@
             "changeable": false,
             "source": {
               "sourceId": "SRC-PLNT-001",
-              "quote": "suffering from permanent disability",
+              "quote": "for payment of financial assistance to a member who is suffering from permanent disability;",
               "locator": "Section 3(5)(c)"
             },
-            "reviewedBy": "HR"
+            "reviewedBy": "PENDING_SECOND_REVIEW"
           },
           {
             "id": "g0",
@@ -1315,9 +1366,10 @@
             "changeable": false,
             "source": {
               "sourceId": "SRC-PLNT-001",
-              "quote": "for payment of financial assistance to a member who is suffering from permanent disability",
+              "quote": "for payment of financial assistance to a member who is suffering from permanent disability;",
               "locator": "Section 3(5)"
-            }
+            },
+            "reviewedBy": "PENDING_SECOND_REVIEW"
           }
         ]
       },
@@ -1338,7 +1390,7 @@
       ],
       "lastVerified": "2026-09-23",
       "verifiedBy": "HR",
-      "notes": "Statutory purpose only; exact amount, document list and procedure not encoded. Eligibility set to verified on the Act clause only; confirm the quote against the Act PDF before demo."
+      "notes": "HR (primary curation); eligibility set to verified on the Act clause (quotes reported checked against the PDF)."
     },
     {
       "id": "PLNT-04",
@@ -1374,10 +1426,10 @@
             },
             "source": {
               "sourceId": "SRC-PLNT-001",
-              "quote": "for expenses in connection with the marriage of daughters",
-              "locator": "Section 3(5)(d)"
+              "quote": "\"member\" means a member of the Fund;",
+              "locator": "Section 2(g)"
             },
-            "reviewedBy": "HR"
+            "reviewedBy": "PENDING_SECOND_REVIEW"
           },
           {
             "id": "c2",
@@ -1387,10 +1439,10 @@
             "changeable": false,
             "source": {
               "sourceId": "SRC-PLNT-001",
-              "quote": "marriage of daughters",
+              "quote": "for payment of loans or grants to a member to meet expenses in connection with the marriage of daughters or for expenses in connection with the death of member or dependant or for expenses for construction or maintenance of his house;",
               "locator": "Section 3(5)(d)"
             },
-            "reviewedBy": "HR"
+            "reviewedBy": "PENDING_SECOND_REVIEW"
           },
           {
             "id": "g0",
@@ -1402,9 +1454,10 @@
             "changeable": false,
             "source": {
               "sourceId": "SRC-PLNT-001",
-              "quote": "for expenses in connection with the marriage of daughters",
+              "quote": "for payment of loans or grants to a member to meet expenses in connection with the marriage of daughters or for expenses in connection with the death of member or dependant or for expenses for construction or maintenance of his house;",
               "locator": "Section 3(5)"
-            }
+            },
+            "reviewedBy": "PENDING_SECOND_REVIEW"
           }
         ]
       },
@@ -1425,7 +1478,7 @@
       ],
       "lastVerified": "2026-09-23",
       "verifiedBy": "HR",
-      "notes": "Statutory purpose only; current scheme-level conditions and document requirements need stronger source verification. Eligibility set to verified on the Act clause only; confirm the quote against the Act PDF before demo."
+      "notes": "HR (primary curation); eligibility set to verified on the Act clause (quotes reported checked against the PDF)."
     },
     {
       "id": "PLNT-05",
@@ -1460,7 +1513,7 @@
               "quote": "maternity benefits ... is given to all female members registered under seventeen Boards",
               "locator": "Gazette notification, paragraph 2"
             },
-            "reviewedBy": "HR"
+            "reviewedBy": "PENDING_SECOND_REVIEW"
           },
           {
             "id": "g0",
@@ -1474,7 +1527,8 @@
               "sourceId": "SRC-PLNT-002",
               "quote": "all female members registered under seventeen Boards",
               "locator": "Gazette notification, paragraph 2"
-            }
+            },
+            "reviewedBy": "PENDING_SECOND_REVIEW"
           },
           {
             "id": "c2",
@@ -1490,7 +1544,8 @@
               "sourceId": "SRC-PLNT-002",
               "quote": "all female members registered under seventeen Boards",
               "locator": "Gazette notification, paragraph 2"
-            }
+            },
+            "reviewedBy": "PENDING_SECOND_REVIEW"
           }
         ]
       },
@@ -1511,10 +1566,47 @@
       ],
       "lastVerified": "2026-09-23",
       "verifiedBy": "HR",
-      "notes": "Tier 1 Gazette confirms the beneficiary class and web-based implementation through Labour Commissionerate; detailed current amount/documents are not included in the notification excerpt."
+      "notes": "HR (primary curation)"
     },
     {
       "id": "FISH-07",
+      "name": {
+        "en": "Educational concession",
+        "ml": "വിദ്യാഭ്യാസ ആനുകൂല്യം"
+      },
+      "authority": {
+        "en": "Fisheries Department, Government of Kerala",
+        "ml": "കേരള സർക്കാർ മത്സ്യബന്ധന വകുപ്പ്"
+      },
+      "category": "fishing",
+      "summary": {
+        "en": "Educational concession for children of registered non-Hindu fishermen, as described on the current Fisheries Department scheme page.",
+        "ml": "രജിസ്റ്റർ ചെയ്ത ഹിന്ദുമതേതര മത്സ്യത്തൊഴിലാളികളുടെ കുട്ടികൾക്കുള്ള വിദ്യാഭ്യാസ ആനുകൂല്യം."
+      },
+      "verification": {
+        "eligibility": "informational",
+        "documents": "verified",
+        "apply": "verified"
+      },
+      "rule": {
+        "all": []
+      },
+      "documents": [
+        {
+          "docId": "fisher_educational_assistance_application",
+          "source": {
+            "sourceId": "SRC-FISH-011",
+            "quote": "Application form for educational assistance(above matriculation) to fishermen children"
+          }
+        }
+      ],
+      "apply": [],
+      "lastVerified": "2026-09-23",
+      "verifiedBy": "HR",
+      "notes": "HR (primary curation)"
+    },
+    {
+      "id": "FISH-08",
       "name": {
         "en": "Modernisation of Country Crafts",
         "ml": "നാടൻ യാനങ്ങളുടെ ആധുനികവൽക്കരണം"
@@ -1547,7 +1639,8 @@
               "sourceId": "SRC-FISH-001",
               "quote": "Members of cooperative societies affliated to Matysafed",
               "locator": "Beneficiary description"
-            }
+            },
+            "reviewedBy": "PENDING_SECOND_REVIEW"
           },
           {
             "id": "c1",
@@ -1563,7 +1656,8 @@
               "sourceId": "SRC-FISH-001",
               "quote": "Members of cooperative societies affliated to Matysafed",
               "locator": "Scheme Highlights"
-            }
+            },
+            "reviewedBy": "PENDING_SECOND_REVIEW"
           }
         ]
       },
@@ -1584,10 +1678,10 @@
       ],
       "lastVerified": "2026-09-23",
       "verifiedBy": "AI-review",
-      "notes": "Added in review from Scheme Highlights: beneficiaries \"Members of cooperative societies affliated to Matysafed\", implemented \"through Matysafed offices\". Name in Malayalam is our translation; check."
+      "notes": "Scheme Highlights: beneficiaries \"Members of cooperative societies affliated to Matysafed\", implemented \"through Matysafed offices\". Malayalam name is our translation."
     },
     {
-      "id": "FISH-08",
+      "id": "FISH-09",
       "name": {
         "en": "Purchasing of Fishing Nets",
         "ml": "മത്സ്യബന്ധന വല വാങ്ങൽ സഹായം"
@@ -1620,7 +1714,8 @@
               "sourceId": "SRC-FISH-001",
               "quote": "Members of cooperative societies affliated to Matysafed",
               "locator": "Beneficiary description"
-            }
+            },
+            "reviewedBy": "PENDING_SECOND_REVIEW"
           },
           {
             "id": "c1",
@@ -1636,7 +1731,8 @@
               "sourceId": "SRC-FISH-001",
               "quote": "Members of cooperative societies affliated to Matysafed",
               "locator": "Scheme Highlights"
-            }
+            },
+            "reviewedBy": "PENDING_SECOND_REVIEW"
           }
         ]
       },
@@ -1657,7 +1753,7 @@
       ],
       "lastVerified": "2026-09-23",
       "verifiedBy": "AI-review",
-      "notes": "Added in review from Scheme Highlights: beneficiaries \"Members of cooperative societies affliated to Matysafed\", implemented \"through Matysafed offices\". Name in Malayalam is our translation; check."
+      "notes": "Scheme Highlights: beneficiaries \"Members of cooperative societies affliated to Matysafed\", implemented \"through Matysafed offices\". Malayalam name is our translation."
     }
   ],
   "documents": [
@@ -1684,6 +1780,18 @@
         "ml": "മത്സ്യബന്ധന വകുപ്പ്"
       },
       "sourceId": "SRC-FISH-005"
+    },
+    {
+      "id": "fisher_educational_assistance_application",
+      "name": {
+        "en": "Application form for educational assistance (above matriculation) to fishermen children",
+        "ml": "മത്സ്യത്തൊഴിലാളികളുടെ കുട്ടികൾക്കുള്ള വിദ്യാഭ്യാസ സഹായത്തിനുള്ള അപേക്ഷ (മെട്രിക്കുലേഷൻ കഴിഞ്ഞ്)"
+      },
+      "issuedBy": {
+        "en": "Fisheries Department",
+        "ml": "മത്സ്യബന്ധന വകുപ്പ്"
+      },
+      "sourceId": "SRC-FISH-011"
     }
   ],
   "locationTypes": [
@@ -1713,6 +1821,13 @@
       "label": {
         "en": "Akshaya Centre",
         "ml": "അക്ഷയ കേന്ദ്രം"
+      }
+    },
+    {
+      "id": "akshaya_assistance",
+      "label": {
+        "en": "Akshaya assistance centre",
+        "ml": "അക്ഷയ സഹായ കേന്ദ്രം"
       }
     },
     {
@@ -1759,7 +1874,7 @@
     },
     {
       "id": "LOC-AK-001",
-      "type": "akshaya",
+      "type": "akshaya_assistance",
       "name": {
         "en": "EKM108 Thiruvankulam Jn",
         "ml": "EKM108 തിരുവാങ്കുളം ജംഗ്ഷൻ"
@@ -1772,7 +1887,7 @@
     },
     {
       "id": "LOC-AK-002",
-      "type": "akshaya",
+      "type": "akshaya_assistance",
       "name": {
         "en": "TSR179 Thali Jn.",
         "ml": "TSR179 തളി ജംഗ്ഷൻ"
@@ -1785,7 +1900,7 @@
     },
     {
       "id": "LOC-AK-003",
-      "type": "akshaya",
+      "type": "akshaya_assistance",
       "name": {
         "en": "TSR018 Muringoor Jn",
         "ml": "TSR018 മുരിങ്ങൂർ ജംഗ്ഷൻ"
@@ -1798,7 +1913,7 @@
     },
     {
       "id": "LOC-AK-004",
-      "type": "akshaya",
+      "type": "akshaya_assistance",
       "name": {
         "en": "PKD146 Vaniyamkulam",
         "ml": "PKD146 വാണിയംകുളം"
@@ -1811,7 +1926,7 @@
     },
     {
       "id": "LOC-AK-005",
-      "type": "akshaya",
+      "type": "akshaya_assistance",
       "name": {
         "en": "PKD177 Pengottiri",
         "ml": "PKD177 പെങ്ങോട്ടിരി"
@@ -1824,7 +1939,7 @@
     },
     {
       "id": "LOC-AK-006",
-      "type": "akshaya",
+      "type": "akshaya_assistance",
       "name": {
         "en": "EKM277 Kolencherry",
         "ml": "EKM277 കോലഞ്ചേരി"
@@ -1837,7 +1952,7 @@
     },
     {
       "id": "LOC-AK-007",
-      "type": "akshaya",
+      "type": "akshaya_assistance",
       "name": {
         "en": "TSR238 Ayyanthole Ground",
         "ml": "TSR238 അയ്യന്തോൾ ഗ്രൗണ്ട്"
@@ -1850,7 +1965,7 @@
     },
     {
       "id": "LOC-AK-008",
-      "type": "akshaya",
+      "type": "akshaya_assistance",
       "name": {
         "en": "PKD085 Kalleppulli",
         "ml": "PKD085 കല്ലേപ്പുള്ളി"
@@ -1860,6 +1975,162 @@
       "address": "Kalleppulli, Palakkad",
       "phone": "9446734195 / 8075714554",
       "sourceId": "SRC-PLNT-005"
+    },
+    {
+      "id": "LOC-FISH-002",
+      "type": "fisheries_district_office",
+      "name": {
+        "en": "Fisheries Department - Kollam District Office",
+        "ml": "ഫിഷറീസ് വകുപ്പ് - Kollam ജില്ലാ ഓഫീസ്"
+      },
+      "district": "Kollam",
+      "area": "Fisheries district office",
+      "phone": "0474-2792850",
+      "sourceId": "SRC-FISH-008"
+    },
+    {
+      "id": "LOC-FISH-003",
+      "type": "fisheries_district_office",
+      "name": {
+        "en": "Fisheries Department - Alappuzha District Office",
+        "ml": "ഫിഷറീസ് വകുപ്പ് - Alappuzha ജില്ലാ ഓഫീസ്"
+      },
+      "district": "Alappuzha",
+      "area": "Fisheries district office",
+      "phone": "0477-2251103",
+      "sourceId": "SRC-FISH-008"
+    },
+    {
+      "id": "LOC-FISH-004",
+      "type": "fisheries_district_office",
+      "name": {
+        "en": "Fisheries Department - Pathanamthitta District Office",
+        "ml": "ഫിഷറീസ് വകുപ്പ് - Pathanamthitta ജില്ലാ ഓഫീസ്"
+      },
+      "district": "Pathanamthitta",
+      "area": "Fisheries district office",
+      "phone": "0468-2223134",
+      "sourceId": "SRC-FISH-008"
+    },
+    {
+      "id": "LOC-FISH-005",
+      "type": "fisheries_district_office",
+      "name": {
+        "en": "Fisheries Department - Kottayam District Office",
+        "ml": "ഫിഷറീസ് വകുപ്പ് - Kottayam ജില്ലാ ഓഫീസ്"
+      },
+      "district": "Kottayam",
+      "area": "Fisheries district office",
+      "phone": "0481-2566823",
+      "sourceId": "SRC-FISH-008"
+    },
+    {
+      "id": "LOC-FISH-006",
+      "type": "fisheries_district_office",
+      "name": {
+        "en": "Fisheries Department - Idukki District Office",
+        "ml": "ഫിഷറീസ് വകുപ്പ് - Idukki ജില്ലാ ഓഫീസ്"
+      },
+      "district": "Idukki",
+      "area": "Fisheries district office",
+      "phone": "04862-233226",
+      "sourceId": "SRC-FISH-008"
+    },
+    {
+      "id": "LOC-FISH-007",
+      "type": "fisheries_district_office",
+      "name": {
+        "en": "Fisheries Department - Ernakulam District Office",
+        "ml": "ഫിഷറീസ് വകുപ്പ് - Ernakulam ജില്ലാ ഓഫീസ്"
+      },
+      "district": "Ernakulam",
+      "area": "Fisheries district office",
+      "phone": "0484-2394476",
+      "sourceId": "SRC-FISH-008"
+    },
+    {
+      "id": "LOC-FISH-008",
+      "type": "fisheries_district_office",
+      "name": {
+        "en": "Fisheries Department - Thrissur District Office",
+        "ml": "ഫിഷറീസ് വകുപ്പ് - Thrissur ജില്ലാ ഓഫീസ്"
+      },
+      "district": "Thrissur",
+      "area": "Fisheries district office",
+      "phone": "0487-2441132",
+      "sourceId": "SRC-FISH-008"
+    },
+    {
+      "id": "LOC-FISH-009",
+      "type": "fisheries_district_office",
+      "name": {
+        "en": "Fisheries Department - Palakkad District Office",
+        "ml": "ഫിഷറീസ് വകുപ്പ് - Palakkad ജില്ലാ ഓഫീസ്"
+      },
+      "district": "Palakkad",
+      "area": "Fisheries district office",
+      "phone": "0491-2815245",
+      "sourceId": "SRC-FISH-008"
+    },
+    {
+      "id": "LOC-FISH-010",
+      "type": "fisheries_district_office",
+      "name": {
+        "en": "Fisheries Department - Malappuram District Office",
+        "ml": "ഫിഷറീസ് വകുപ്പ് - Malappuram ജില്ലാ ഓഫീസ്"
+      },
+      "district": "Malappuram",
+      "area": "Fisheries district office",
+      "phone": "0494-2666428",
+      "sourceId": "SRC-FISH-008"
+    },
+    {
+      "id": "LOC-FISH-011",
+      "type": "fisheries_district_office",
+      "name": {
+        "en": "Fisheries Department - Kozhikode District Office",
+        "ml": "ഫിഷറീസ് വകുപ്പ് - Kozhikode ജില്ലാ ഓഫീസ്"
+      },
+      "district": "Kozhikode",
+      "area": "Fisheries district office",
+      "phone": "0495-2383780",
+      "sourceId": "SRC-FISH-008"
+    },
+    {
+      "id": "LOC-FISH-012",
+      "type": "fisheries_district_office",
+      "name": {
+        "en": "Fisheries Department - Wayanad District Office",
+        "ml": "ഫിഷറീസ് വകുപ്പ് - Wayanad ജില്ലാ ഓഫീസ്"
+      },
+      "district": "Wayanad",
+      "area": "Fisheries district office",
+      "phone": "0493-60293214",
+      "sourceId": "SRC-FISH-008"
+    },
+    {
+      "id": "LOC-FISH-013",
+      "type": "fisheries_district_office",
+      "name": {
+        "en": "Fisheries Department - Kannur District Office",
+        "ml": "ഫിഷറീസ് വകുപ്പ് - Kannur ജില്ലാ ഓഫീസ്"
+      },
+      "district": "Kannur",
+      "area": "Fisheries district office",
+      "phone": "0497-2731081",
+      "sourceId": "SRC-FISH-008"
+    },
+    {
+      "id": "LOC-FISH-014",
+      "type": "fisheries_district_office",
+      "name": {
+        "en": "Fisheries Department - Kasaragod District Office",
+        "ml": "ഫിഷറീസ് വകുപ്പ് - Kasaragod ജില്ലാ ഓഫീസ്"
+      },
+      "district": "Kasaragod",
+      "area": "Fisheries district office",
+      "phone": "0467-2202537",
+      "sourceId": "SRC-FISH-008"
     },
     {
       "id": "LOC-PLNT-001",
@@ -1964,7 +2235,7 @@
       "expectedOthers": "not_matched",
       "expectedMissing": {},
       "writtenBy": "HR",
-      "notes": "All supplied facts satisfy the known conditions for the four listed fishing schemes. [review] Matsyafed membership added so FISH-07/08 are decided."
+      "notes": "All supplied facts satisfy the known conditions for the four listed fishing schemes."
     },
     {
       "id": "P-02",
@@ -1998,8 +2269,8 @@
         "FISH-01": "needs_information",
         "FISH-03": "needs_information",
         "FISH-04": "needs_information",
-        "FISH-07": "needs_information",
-        "FISH-08": "needs_information"
+        "FISH-08": "needs_information",
+        "FISH-09": "needs_information"
       },
       "expectedOthers": "not_matched",
       "expectedMissing": {
@@ -2008,7 +2279,7 @@
         ]
       },
       "writtenBy": "HR",
-      "notes": "The official saving-cum-relief page states a bank account is needed for enrolment. [review] Active status, BPL, traditional and Matsyafed answers are also unknown, so those schemes need information too; they cannot be not_matched."
+      "notes": "The official saving-cum-relief page states a bank account is needed for enrolment. [review] Active status, BPL, traditional and Matsyafed answers are also unknown, so those schemes need information; they cannot be not_matched."
     },
     {
       "id": "P-04",
@@ -2029,14 +2300,14 @@
         "FISH-02": "potentially_eligible",
         "FISH-03": "not_matched",
         "FISH-04": "potentially_eligible",
-        "FISH-07": "potentially_eligible",
         "FISH-08": "potentially_eligible",
+        "FISH-09": "potentially_eligible",
         "FISH-06": "informational"
       },
       "expectedOthers": "not_matched",
       "expectedMissing": {},
       "writtenBy": "HR",
-      "notes": "Housing scheme is specifically described for active fishermen of BPL category; saving scheme says both BPL and APL are enrolled. [review] FISH-06 is partial (no age condition in source) so it is display-only."
+      "notes": "Housing scheme is specifically described for active fishermen of BPL category; saving scheme says both BPL and APL are enrolled. [review] FISH-06 is partial (no age in source) so it is display-only."
     },
     {
       "id": "P-05",
@@ -2088,7 +2359,7 @@
         ]
       },
       "writtenBy": "HR",
-      "notes": "The 2024 Gazette states maternity benefits are given to female members registered under the listed boards, including the Small Plantation Workers Welfare Fund Board. [review] Age, infirmity, disability and marriage were not given, so those schemes need information."
+      "notes": "The 2024 Gazette states maternity benefits are given to female members registered under the listed boards, including the Small Plantation Workers Welfare Fund Board. [review] Age, infirmity, disability and marriage were not given."
     },
     {
       "id": "P-07",
@@ -2166,8 +2437,8 @@
         "matsyafed_society_member": "no"
       },
       "expected": {
-        "FISH-07": "not_matched",
         "FISH-08": "not_matched",
+        "FISH-09": "not_matched",
         "FISH-01": "potentially_eligible",
         "FISH-02": "potentially_eligible",
         "FISH-04": "potentially_eligible"
@@ -2175,7 +2446,7 @@
       "expectedOthers": "not_matched",
       "expectedMissing": {},
       "writtenBy": "AI-review",
-      "notes": "FISH-07/08 should show the one-step-away hint (join a Matsyafed society)."
+      "notes": "FISH-08/09 should show one step away: join a Matsyafed society."
     },
     {
       "id": "P-10",
@@ -2196,7 +2467,7 @@
       "expectedOthers": "not_matched",
       "expectedMissing": {},
       "writtenBy": "AI-review",
-      "notes": "All plantation schemes require Board membership; results should say one step away: membership."
+      "notes": "All plantation schemes need Board membership; one step away: membership."
     }
   ],
   "disclaimer": {
