@@ -10,7 +10,9 @@
     "data": "tsx scripts/build-data.ts",
     "data:template": "tsx scripts/make-template.ts",
     "data:examples": "tsx scripts/build-data.ts --examples",
-    "data:fixture": "tsx scripts/fixture-data.ts"
+    "data:fixture": "tsx scripts/fixture-data.ts",
+    "audio": "tsx scripts/audio.ts",
+    "i18n:review": "tsx scripts/ml-review.ts"
   },
   "dependencies": {
     "jszip": "^3.10.2",

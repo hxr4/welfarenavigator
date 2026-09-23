@@ -1,4 +1,5 @@
 import { leavesOf } from "../engine/evaluate";
+import { DISTRICTS } from "./districts";
 import { parseAnswerMap } from "../engine/profile";
 import type { Dataset, Fact, FactType, Op } from "../engine/types";
 
@@ -114,10 +115,18 @@ export function validateDataset(ds: Dataset): Issue[] {
       if (s.verification.apply === "verified" && !source(a.source?.sourceId)) add("error", `scheme_apply ${s.id}`, "Apply marked verified needs a source_id");
     }
     if (!s.name.ml.trim()) add("error", where, "Malayalam name is missing");
+    if (s.verification.eligibility === "verified") {
+      if (s.documents.length === 0) add("warning", where, "No document in scheme_documents; the app will say the list is not published");
+      for (const a of s.apply) {
+        if (!ds.locations.some((l) => l.type === a.locationType)) add("warning", `scheme_apply ${s.id}`, `No office listed for type "${a.locationType}"`);
+      }
+    }
   }
 
   for (const l of ds.locations) {
     if (!ds.locationTypes.some((t) => t.id === l.type)) add("error", `locations ${l.id}`, `Unknown type "${l.type}"`);
+    if (!DISTRICTS.some((d) => d.id === l.district)) add("error", `locations ${l.id}`, `"${l.district}" is not one of the 14 Kerala districts`);
+    if ((l.lat === undefined) !== (l.lng === undefined)) add("error", `locations ${l.id}`, "Give both lat and lng, or neither");
     if (!l.sourceId) add("warning", `locations ${l.id}`, "No source for this address");
   }
 

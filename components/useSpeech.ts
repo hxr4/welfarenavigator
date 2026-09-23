@@ -1,6 +1,7 @@
 "use client";
 
 import { useCallback, useEffect, useRef, useState } from "react";
+import manifest from "@/data/audio-manifest.json";
 import type { Lang } from "@/lib/engine/types";
 
 type Recognition = {
@@ -21,7 +22,7 @@ function getCtor(): (new () => Recognition) | null {
   return w.SpeechRecognition ?? w.webkitSpeechRecognition ?? null;
 }
 
-export function useSpeech(lang: Lang) {
+export function useSpeechInput(lang: Lang) {
   const [supported, setSupported] = useState(false);
   const [listening, setListening] = useState(false);
   const ref = useRef<Recognition | null>(null);
@@ -50,22 +51,28 @@ export function useSpeech(lang: Lang) {
         rec.maxAlternatives = 5;
         rec.continuous = false;
         let done = false;
+        const timer = setTimeout(() => rec.abort(), 8000);
         rec.onresult = (e) => {
           done = true;
-          const alts = Array.from(e.results[0] ?? []).map((a) => a.transcript);
-          resolve(alts);
+          resolve(Array.from(e.results[0] ?? []).map((a) => a.transcript));
         };
         rec.onerror = (e) => {
           done = true;
           reject(new Error(e.error));
         };
         rec.onend = () => {
+          clearTimeout(timer);
           setListening(false);
           if (!done) resolve([]);
         };
         ref.current = rec;
         setListening(true);
-        rec.start();
+        try {
+          rec.start();
+        } catch (err) {
+          setListening(false);
+          reject(err as Error);
+        }
       }),
     [lang],
   );
@@ -78,23 +85,70 @@ export function useSpeech(lang: Lang) {
   return { supported, listening, listen, stop };
 }
 
-export function speak(text: string, lang: Lang, audioFile?: string) {
-  if (typeof window === "undefined") return;
-  if (audioFile) {
-    new Audio(`/audio/${audioFile}`).play().catch(() => undefined);
+const clips = new Set<string>((manifest as { ml: string[] }).ml);
+
+export function hasClip(key: string): boolean {
+  return clips.has(key);
+}
+
+function browserVoice(lang: Lang): SpeechSynthesisVoice | undefined {
+  if (typeof window === "undefined" || !("speechSynthesis" in window)) return undefined;
+  return window.speechSynthesis.getVoices().find((v) => v.lang.toLowerCase().startsWith(lang === "ml" ? "ml" : "en"));
+}
+
+export interface Utterance {
+  text: string;
+  clip?: string;
+}
+
+let current: HTMLAudioElement | null = null;
+
+export function stopSpeaking() {
+  current?.pause();
+  current = null;
+  if (typeof window !== "undefined" && "speechSynthesis" in window) window.speechSynthesis.cancel();
+}
+
+export function canRead(lang: Lang, parts: Utterance[]): boolean {
+  if (typeof window === "undefined") return false;
+  if (lang === "ml" && parts.length > 0 && parts.every((p) => p.clip && hasClip(p.clip))) return true;
+  return !!browserVoice(lang);
+}
+
+export function readAloud(lang: Lang, parts: Utterance[], onEnd?: () => void) {
+  stopSpeaking();
+  if (lang === "ml" && parts.every((p) => p.clip && hasClip(p.clip))) {
+    const queue = [...parts];
+    const next = () => {
+      const p = queue.shift();
+      if (!p) return onEnd?.();
+      current = new Audio(`/audio/ml/${p.clip}.mp3`);
+      current.onended = next;
+      current.onerror = next;
+      current.play().catch(() => onEnd?.());
+    };
+    next();
     return;
   }
-  if (!("speechSynthesis" in window)) return;
-  window.speechSynthesis.cancel();
-  const u = new SpeechSynthesisUtterance(text);
-  u.lang = lang === "ml" ? "ml-IN" : "en-IN";
-  const voice = window.speechSynthesis.getVoices().find((v) => v.lang.toLowerCase().startsWith(lang));
-  if (voice) u.voice = voice;
+  const voice = browserVoice(lang);
+  if (!voice) return onEnd?.();
+  const u = new SpeechSynthesisUtterance(parts.map((p) => p.text).join(". "));
+  u.lang = voice.lang;
+  u.voice = voice;
+  u.rate = 0.9;
+  u.onend = () => onEnd?.();
+  u.onerror = () => onEnd?.();
   window.speechSynthesis.speak(u);
 }
 
-export function canSpeak(lang: Lang, audioFile?: string): boolean {
-  if (audioFile) return true;
-  if (typeof window === "undefined" || !("speechSynthesis" in window)) return false;
-  return window.speechSynthesis.getVoices().some((v) => v.lang.toLowerCase().startsWith(lang));
+export function useVoicesReady() {
+  const [n, setN] = useState(0);
+  useEffect(() => {
+    if (typeof window === "undefined" || !("speechSynthesis" in window)) return;
+    const bump = () => setN((x) => x + 1);
+    bump();
+    window.speechSynthesis.addEventListener("voiceschanged", bump);
+    return () => window.speechSynthesis.removeEventListener("voiceschanged", bump);
+  }, []);
+  return n;
 }

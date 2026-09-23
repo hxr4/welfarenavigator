@@ -77,7 +77,7 @@ export function fixture(): Dataset {
       { id: "id_proof", name: l("ID proof") },
       { id: "disability_cert", name: l("Disability certificate") },
     ],
-    locationTypes: [{ id: "office", label: l("Office") }],
+    locationTypes: [{ id: "office", label: l("Office"), scope: "district" }],
     locations: [{ id: "L1", type: "office", name: l("Office 1"), district: "Ernakulam", sourceId: "S1" }],
     terms: [],
     profiles: [

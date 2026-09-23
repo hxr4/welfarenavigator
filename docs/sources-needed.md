@@ -1,0 +1,18 @@
+# Official sources we could not use yet
+
+Each item blocks something specific. Download the document yourself (browser), save it in `sources/`, and attach it; scanned or legacy-font Malayalam PDFs can be read page by page as images.
+
+| # | Document | Authority | URL | Why we could not use it | What we need from it |
+|---|---|---|---|---|---|
+| 1 | Scheme approved 2025 KFWFB | Kerala Fishermen's Welfare Fund Board (via Fisheries Department) | https://fisheries.kerala.gov.in/sites/default/files/inline-files/Scheme%20approved%202025%20KFWFB_0.pdf | Malayalam text in a legacy font; extracted text is garbled | Every KFWFB benefit: eligibility wording, age limits (pension), membership conditions, amounts, documents, where to apply. This is the biggest single source of additional fishing schemes. |
+| 2 | Kerala Small Plantation Workers' Welfare Fund Act, 2008 | Government of Kerala (India Code copy) | https://www.indiacode.nic.in/bitstream/123456789/20377/1/17-2008-eng.pdf | India Code blocks automated access | Second person to confirm the quotes and section numbers used for PLNT-01 to PLNT-04, and the Act number (the PDF says 17, the India Code page says 18). |
+| 3 | Kerala Small Plantation Workers' Welfare Fund Scheme (2009) and Board office details | Kerala Small Plantation Workers' Welfare Fund Board, Kottayam | not found online | Not located on any official site | Scheme-level conditions (membership period, contribution), documents, how to apply, Board address and phone. |
+| 4 | Maternity benefit scheme guidelines for welfare board members | Labour and Skills Department / Labour Commissionerate | referred to as "extant Scheme guidelines" in the Nov 2024 Gazette | Not found online | Amount, number of deliveries, membership period, documents, application steps. |
+| 5 | Saving cum Relief application forms (inland and marine) | Fisheries Department | forms page: https://fisheries.kerala.gov.in/en/forms-department-fisheries | Malayalam PDFs with legacy font; garbled | The list of attachments the form asks for (the verified document list for FISH-02). |
+| 6 | Application for compensation to fishermen losing fishing equipment due to calamities | Fisheries Department | same forms page, item 25 | Garbled | Who may apply, conditions and attachments (could become a new screened scheme). |
+| 7 | Educational assistance (above matriculation) form | Fisheries Department | same forms page, item 21 | Garbled | Eligibility and attachments. |
+| 8 | Estate Workers (Distress Relief) Welfare Fund Scheme notification | Labour Commissionerate | https://lc.kerala.gov.in/en/major-functions mentions it only in one line | No detail published | Eligibility, benefit, application route (could become a new screened plantation scheme). |
+| 9 | Confirmation that the Small Plantation Workers' board is on AIIS | Labour Commissionerate | https://aiis.lc.kerala.gov.in/index.php/launch | The portal lists 16 boards but not their names | Board list, so the online/Akshaya route for PLNT schemes can move from partial to verified. |
+| 10 | Matsyafed office list | Matsyafed | not found | No official directory located | District or regional Matsyafed offices for FISH-08 and FISH-09. |
+| 11 | Fisheries district office addresses | Fisheries Department | https://fisheries.kerala.gov.in/en/node/628 lists phones only | Addresses not published there | Street addresses (and map positions if published) for the 14 district offices. The Wayanad landline on that page is malformed (0493-60293214). |
+| 12 | Full Akshaya centre list | Kerala State IT Mission | https://akshaya.kerala.gov.in/centers | Page shows a few centres at a time | Centre list per district/panchayat, if the team wants individual centres beyond the 14 district project offices. |

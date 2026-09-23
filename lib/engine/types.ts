@@ -121,6 +121,7 @@ export interface DocumentDef {
 export interface LocationType {
   id: string;
   label: L10n;
+  scope: "district" | "state";
 }
 
 export interface Location {

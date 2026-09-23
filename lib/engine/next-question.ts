@@ -3,7 +3,7 @@ import { evalNode, leavesOf } from "./evaluate";
 import { isScreenable } from "./screen";
 import type { Answers, Dataset, Fact, NextQuestion } from "./types";
 
-const PENALTY = { low: 0, medium: 0.5, high: 1.5 } as const;
+const PENALTY = { low: 0, medium: 0.2, high: 1.5 } as const;
 
 export function undecidedSchemes(dataset: Dataset, answers: Answers) {
   return dataset.schemes.filter((s) => isScreenable(s) && evalNode(s.rule, answers) === "U");
@@ -27,7 +27,7 @@ export function scoreFact(dataset: Dataset, answers: Answers, fact: Fact) {
   );
   const min = resolved.length ? Math.min(...resolved) : 0;
   const mean = resolved.length ? resolved.reduce((a, b) => a + b, 0) / resolved.length : 0;
-  return { score: min + 0.1 * mean - PENALTY[fact.sensitivity], choices };
+  return { score: min + 0.5 * mean - PENALTY[fact.sensitivity], choices };
 }
 
 export function nextQuestion(dataset: Dataset, answers: Answers): NextQuestion | null {

@@ -1,6 +1,7 @@
 import ExcelJS from "exceljs";
 import JSZip from "jszip";
 import { mkdirSync, readFileSync, writeFileSync } from "node:fs";
+import { canonicalDistrict } from "../lib/data/districts";
 import { SHEETS } from "../lib/data/sheets";
 import { validateDataset } from "../lib/data/validate";
 import type {
@@ -267,12 +268,16 @@ async function main() {
     facts,
     schemes,
     documents: r.documents.map((d: Row) => ({ id: d.doc_id, name: l10n(d.name_en, d.name_ml), issuedBy: opt(d.issued_by_en, d.issued_by_ml), sourceId: d.source_id || undefined })),
-    locationTypes: r.location_types.map((t: Row) => ({ id: t.type_id, label: l10n(t.label_en, t.label_ml) })),
+    locationTypes: r.location_types.map((t: Row) => ({ id: t.type_id, label: l10n(t.label_en, t.label_ml), scope: (t.scope === "state" ? "state" : "district") as "state" | "district" })),
     locations: r.locations.map((l: Row) => ({
       id: l.location_id,
       type: l.type_id,
       name: l10n(l.name_en, l.name_ml),
-      district: l.district,
+      district: (() => {
+        const d = canonicalDistrict(l.district);
+        if (!d) errors.push(`${l.__row}: "${l.district}" is not one of the 14 Kerala districts`);
+        return d ?? l.district;
+      })(),
       area: l.area || undefined,
       address: l.address || undefined,
       phone: l.phone || undefined,

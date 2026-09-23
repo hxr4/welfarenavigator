@@ -1,41 +1,62 @@
 # Welfare Navigator — ANAVANDI FutureBuild 2026, PS-07
 
-A Malayalam and English screening assistant for fishing and plantation families in Kerala. It asks only the questions needed to decide the curated scheme rules. It shows the schemes a household is **potentially eligible** for, explains every result with the official clause behind it, lists the documents to take and says where to apply.
+A Malayalam and English screening service for fishing and plantation families in Kerala. It asks only the questions that change the result, shows which schemes a household is **potentially eligible** for with the official clause behind each one, lists the documents that are officially published, and finds the right office in any of the 14 districts.
 
-Rules decide eligibility. No AI model is involved in screening.
+Eligibility is decided by a deterministic rules engine. No AI model runs in the app.
 
 ## Run
 
 ```bash
 npm install
-npm run data          # convert dataset/anavandi-dataset.xlsx -> data/dataset.json (validates everything)
-npm test              # engine tests + dataset tests + wording checks
-npm run dev           # http://localhost:3000
-npm run build && npm start   # production build, works offline except voice
+npm run data            # dataset/anavandi-dataset.xlsx -> data/dataset.json, with validation
+npm test                # engine, dataset, adaptive-flow, location and wording tests
+npm run dev             # http://localhost:3000   (reviewer page: /review)
+npm run build && npm start   # production build; works offline except voice and maps links
+npm run i18n:review     # regenerate docs/malayalam-review.md
+npm run audio           # list Malayalam clips to record; index recorded clips in public/audio/ml
 ```
 
-Reviewer page: `/review` — dataset audit, profile tests, generated rule checks and a box to screen any household.
-API: `POST /api/screen` with `{"answers": {"fact": "value"}}`, `GET /api/health`.
+## Architecture
 
-## How it works
+```
+dataset/anavandi-dataset.xlsx   curated by the team from official sources (every rule: source, exact quote, locator)
+        │  scripts/build-data.ts  (validates: facts, operators, quotes, tiers, districts, tracking URLs)
+        ▼
+data/dataset.json
+        │
+lib/engine        three-valued rules engine (all / any / not; eq neq lt lte gt gte in not_in includes excludes)
+  evaluate.ts     TRUE / FALSE / UNKNOWN per condition and per scheme
+  bands.ts        number questions asked as ranges cut at the rule limits (threshold privacy)
+  next-question   picks the unanswered fact that settles the most undecided schemes; sensitive facts last
+  screen.ts       status, reasons, missing facts, one-step-away, documents
+        │
+components        step-by-step UI (language → work → questions → results → scheme → office)
+app/api/screen    same engine as a stateless endpoint for reviewers
+```
 
-1. **Dataset** (`dataset/anavandi-dataset.xlsx`): curated by our team from official Kerala Government sources. Every condition stores the source, the exact quote and who cross-checked it. A scheme is screened only if its eligibility is `verified`; `partial` and `informational` schemes are listed as "ask at the office".
-2. **Converter** (`scripts/build-data.ts`): turns the workbook into `data/dataset.json`. It refuses missing quotes, tier-3 sources used as rules, tracking URLs, unknown facts or options, and invalid operators.
-3. **Engine** (`lib/engine`): three-valued logic (true / false / unknown). Missing information never rejects a scheme on its own. Number questions are asked as ranges built from the rule limits, so no one is asked for an exact income.
-4. **Adaptive questions** (`lib/engine/next-question.ts`): the next question is the one that is guaranteed to settle the most undecided schemes. Sensitive questions come last. It stops when every scheme is decided or only unknowns remain.
-5. **One step away**: for schemes that fail only on something the family can change (for example, board registration), the result says what to do.
+UI answers are turned into normalised features before the engine sees them (for example the button "Fishing" becomes `livelihood includes "fishing"`; an income range becomes an interval). The engine never sees raw text.
 
 ## Privacy
 
-- No name, phone number, ID number, account or database.
-- Answers live in the browser tab's memory. They are cleared on "Clear my information" or after 10 minutes idle.
-- Screening runs in the browser. The API is stateless and logs nothing.
-- Voice input uses the browser's speech service, which sends audio to Google. This is disclosed in the app.
+- No name, phone, Aadhaar number, email or address is asked. There is no free-text input.
+- Screening runs in the browser. Answers live in memory only, never in the URL or browser storage, and are erased by "Clear my information", by closing the tab, or after 10 minutes idle (3 minutes in assisted mode).
+- The API is stateless, logs nothing and sends `Cache-Control: no-store`. No analytics or error-reporting services.
+- Location is used only in the browser to guess the district from the 14 district headquarters; it is never sent anywhere. The "Directions" link carries only the office name and address.
+- Limitation: voice input uses the browser's speech service (Chrome sends the audio to Google). This is disclosed; tap input always works.
+
+## Accessibility
+
+- Every question can be answered by tap; voice and read-aloud are extras.
+- Voice: speech is matched only against the current question's options, shown back ("You said… We understood…"), and committed only after Confirm. After two failed attempts the voice button is withdrawn for that question.
+- Read-aloud: English uses the browser voice. Malayalam uses recorded clips from `public/audio/ml` when present, otherwise a Malayalam browser voice if the device has one; otherwise the button is replaced by a note. `docs/malayalam-audio-clips.csv` lists every clip to record.
+- Screen readers: headings receive focus on every step, status changes are announced, conditions carry text labels (met / not met / not known), large targets, high contrast, visible focus.
+
+## Dataset status
+
+See `/review` for live numbers and `docs/sources-needed.md` for the official documents the team still needs to collect. Malayalam strings still to be reviewed are in `docs/malayalam-review.md`.
 
 ## AI use (declared)
 
-- The code was written with an AI coding assistant (Claude) during the event, after coding started.
-- The engine, rules and dataset contain no AI at runtime. The dataset was curated by hand from official sources.
-- Voice input uses the browser's built-in speech recognition.
-
-See `FEEDBACK.md` for how each evaluation round's feedback was addressed.
+- Code written with an AI coding assistant (Claude) during the event.
+- Parts of the dataset were drafted with AI assistance and checked by the team against the cited official pages. Rows added during AI review are marked `AI-review` and `PENDING_SECOND_REVIEW` until a team member cross-checks them.
+- No AI at runtime. See `docs/llm-rag.md` for why RAG was not added.

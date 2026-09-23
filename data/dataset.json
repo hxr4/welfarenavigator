@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-09-23T14:05:00.022Z",
+    "generatedAt": "2026-09-23T14:30:17.922Z",
     "includesExamples": false,
     "version": "1"
   },
@@ -129,7 +129,7 @@
       "notes": "Official welfare page; confirms Estate Workers (Distress Relief) Welfare Fund Scheme and board existence."
     },
     {
-      "id": "SRC-PLNT-005",
+      "id": "SRC-AKS-002",
       "tier": 2,
       "authority": "Akshaya Web Portal, Government of Kerala",
       "title": "List of Akshaya Centers",
@@ -148,7 +148,7 @@
       "docType": "department_page",
       "language": "en",
       "accessedOn": "2026-09-23",
-      "notes": "Official current directory of Fisheries Department district officers; lists district-level contacts across Kerala."
+      "notes": "Official directory of Fisheries Department district officers with landline and mobile numbers for all 14 districts. Addresses are not published on this page. Wayanad landline is printed as 0493-60293214 (malformed); only the mobile is used."
     },
     {
       "id": "SRC-FISH-009",
@@ -182,6 +182,28 @@
       "language": "ml",
       "accessedOn": "2026-09-23",
       "notes": "Official five-page application form linked from the Department forms directory. Used for the informational educational-concession record; local copy not yet saved in sources/."
+    },
+    {
+      "id": "SRC-AKS-001",
+      "tier": 2,
+      "authority": "Akshaya, Kerala State IT Mission, Government of Kerala",
+      "title": "Akshaya Web Portal — Contact (District Project Offices)",
+      "url": "https://akshaya.kerala.gov.in/contact",
+      "docType": "department_page",
+      "language": "en",
+      "accessedOn": "2026-09-23",
+      "notes": "Addresses and phone numbers of the 14 Akshaya District Project Offices."
+    },
+    {
+      "id": "SRC-PLNT-006",
+      "tier": 2,
+      "authority": "Labour Commissionerate, Government of Kerala",
+      "title": "AIIS — Welfare Boards Portal",
+      "url": "https://aiis.lc.kerala.gov.in/index.php/launch",
+      "docType": "department_page",
+      "language": "en+ml",
+      "accessedOn": "2026-09-23",
+      "notes": "Online membership registration and scheme applications for the 16 Labour Department welfare boards; access via Akshaya centres. The portal does not list board names; that the Small Plantation Workers board is one of the 16 is inferred from SRC-PLNT-003 listing 16 boards. Confirm."
     }
   ],
   "facts": [
@@ -221,14 +243,13 @@
               "മീൻപിടിത്തം",
               "മത്സ്യത്തൊഴിലാളി"
             ]
-          },
-          "icon": "🐟"
+          }
         },
         {
           "value": "plantation_worker",
           "label": {
-            "en": "Plantation work",
-            "ml": "തോട്ടം ജോലി"
+            "en": "Plantation or estate work",
+            "ml": "തോട്ടം / എസ്റ്റേറ്റ് ജോലി"
           },
           "synonyms": {
             "en": [
@@ -243,8 +264,7 @@
               "തോട്ടം തൊഴിലാളി",
               "റബ്ബർ തൊഴിലാളി"
             ]
-          },
-          "icon": "🌿"
+          }
         },
         {
           "value": "allied_fish_worker",
@@ -262,8 +282,25 @@
               "അനുബന്ധ മത്സ്യബന്ധനം",
               "മത്സ്യവിൽപ്പന"
             ]
+          }
+        },
+        {
+          "value": "other",
+          "label": {
+            "en": "Other work",
+            "ml": "മറ്റ് ജോലി"
           },
-          "icon": "🛶"
+          "synonyms": {
+            "en": [
+              "other",
+              "none",
+              "something else"
+            ],
+            "ml": [
+              "മറ്റ്",
+              "വേറെ"
+            ]
+          }
         }
       ]
     },
@@ -395,8 +432,7 @@
             "ml": [
               "രജിസ്റ്റർ ചെയ്ത മത്സ്യത്തൊഴിലാളി"
             ]
-          },
-          "icon": "🎣"
+          }
         },
         {
           "value": "fisher_widow",
@@ -412,8 +448,7 @@
             "ml": [
               "മത്സ്യത്തൊഴിലാളിയുടെ വിധവ"
             ]
-          },
-          "icon": "👩"
+          }
         }
       ]
     },
@@ -579,8 +614,7 @@
               "കടൽ",
               "കടൽ മത്സ്യബന്ധനം"
             ]
-          },
-          "icon": "🌊"
+          }
         },
         {
           "value": "inland",
@@ -599,8 +633,7 @@
               "കായൽ",
               "നദി മത്സ്യബന്ധനം"
             ]
-          },
-          "icon": "🏞️"
+          }
         }
       ]
     },
@@ -1009,8 +1042,8 @@
             "value": true,
             "changeable": true,
             "howTo": {
-              "en": "Complete/maintain KFWFB membership through the Board.",
-              "ml": "ബോർഡ് മുഖേന KFWFB അംഗത്വം നേടുക/നിലനിർത്തുക."
+              "en": "Ask at your Fisheries Department district office about joining the Kerala Fishermen's Welfare Fund Board.",
+              "ml": "കേരള മത്സ്യത്തൊഴിലാളി ക്ഷേമനിധി ബോർഡിൽ അംഗമാകുന്നതിനെക്കുറിച്ച് ഫിഷറീസ് വകുപ്പ് ജില്ലാ ഓഫീസിൽ അന്വേഷിക്കുക."
             },
             "source": {
               "sourceId": "SRC-FISH-004",
@@ -1157,8 +1190,8 @@
             "value": true,
             "changeable": true,
             "howTo": {
-              "en": "Confirm/maintain membership with the Small Plantation Workers Welfare Fund Board.",
-              "ml": "ചെറുകിട തോട്ടം തൊഴിലാളി ക്ഷേമനിധി ബോർഡിലെ അംഗത്വം ഉറപ്പാക്കുക/നിലനിർത്തുക."
+              "en": "Register as a member of the Small Plantation Workers' Welfare Fund Board: use \"Membership Registration\" on the AIIS welfare boards portal, or ask at an Akshaya centre.",
+              "ml": "ചെറുകിട തോട്ടം തൊഴിലാളി ക്ഷേമനിധി ബോർഡിൽ അംഗമാകാൻ AIIS പോർട്ടലിലെ \"Membership Registration\" ഉപയോഗിക്കുക, അല്ലെങ്കിൽ അക്ഷയ കേന്ദ്രത്തിൽ അന്വേഷിക്കുക."
             },
             "source": {
               "sourceId": "SRC-PLNT-001",
@@ -1210,6 +1243,18 @@
             "sourceId": "SRC-PLNT-003",
             "quote": "Kerala Small Plantation Workers' Welfare Fund Board, Kottayam"
           }
+        },
+        {
+          "locationType": "akshaya",
+          "mode": "online",
+          "note": {
+            "en": "Labour Department welfare boards take membership registration and scheme applications online on the AIIS portal (aiis.lc.kerala.gov.in). An Akshaya centre can submit it for you.",
+            "ml": "തൊഴിൽ വകുപ്പിന്റെ ക്ഷേമനിധി ബോർഡുകളിലെ അംഗത്വ രജിസ്ട്രേഷനും പദ്ധതി അപേക്ഷകളും AIIS പോർട്ടലിൽ (aiis.lc.kerala.gov.in) ഓൺലൈനായി നൽകാം. അക്ഷയ കേന്ദ്രം വഴിയും സമർപ്പിക്കാം."
+          },
+          "source": {
+            "sourceId": "SRC-PLNT-006",
+            "quote": "Akshaya and Trade Union Login / Sign-up Access via Akshaya centre"
+          }
         }
       ],
       "lastVerified": "2026-09-23",
@@ -1245,8 +1290,8 @@
             "value": true,
             "changeable": true,
             "howTo": {
-              "en": "Confirm/maintain membership with the Small Plantation Workers Welfare Fund Board.",
-              "ml": "ചെറുകിട തോട്ടം തൊഴിലാളി ക്ഷേമനിധി ബോർഡിലെ അംഗത്വം ഉറപ്പാക്കുക/നിലനിർത്തുക."
+              "en": "Register as a member of the Small Plantation Workers' Welfare Fund Board: use \"Membership Registration\" on the AIIS welfare boards portal, or ask at an Akshaya centre.",
+              "ml": "ചെറുകിട തോട്ടം തൊഴിലാളി ക്ഷേമനിധി ബോർഡിൽ അംഗമാകാൻ AIIS പോർട്ടലിലെ \"Membership Registration\" ഉപയോഗിക്കുക, അല്ലെങ്കിൽ അക്ഷയ കേന്ദ്രത്തിൽ അന്വേഷിക്കുക."
             },
             "source": {
               "sourceId": "SRC-PLNT-001",
@@ -1298,6 +1343,18 @@
             "sourceId": "SRC-PLNT-003",
             "quote": "Kerala Small Plantation Workers' Welfare Fund Board, Kottayam"
           }
+        },
+        {
+          "locationType": "akshaya",
+          "mode": "online",
+          "note": {
+            "en": "Labour Department welfare boards take membership registration and scheme applications online on the AIIS portal (aiis.lc.kerala.gov.in). An Akshaya centre can submit it for you.",
+            "ml": "തൊഴിൽ വകുപ്പിന്റെ ക്ഷേമനിധി ബോർഡുകളിലെ അംഗത്വ രജിസ്ട്രേഷനും പദ്ധതി അപേക്ഷകളും AIIS പോർട്ടലിൽ (aiis.lc.kerala.gov.in) ഓൺലൈനായി നൽകാം. അക്ഷയ കേന്ദ്രം വഴിയും സമർപ്പിക്കാം."
+          },
+          "source": {
+            "sourceId": "SRC-PLNT-006",
+            "quote": "Akshaya and Trade Union Login / Sign-up Access via Akshaya centre"
+          }
         }
       ],
       "lastVerified": "2026-09-23",
@@ -1333,8 +1390,8 @@
             "value": true,
             "changeable": true,
             "howTo": {
-              "en": "Confirm/maintain membership with the Small Plantation Workers Welfare Fund Board.",
-              "ml": "ചെറുകിട തോട്ടം തൊഴിലാളി ക്ഷേമനിധി ബോർഡിലെ അംഗത്വം ഉറപ്പാക്കുക/നിലനിർത്തുക."
+              "en": "Register as a member of the Small Plantation Workers' Welfare Fund Board: use \"Membership Registration\" on the AIIS welfare boards portal, or ask at an Akshaya centre.",
+              "ml": "ചെറുകിട തോട്ടം തൊഴിലാളി ക്ഷേമനിധി ബോർഡിൽ അംഗമാകാൻ AIIS പോർട്ടലിലെ \"Membership Registration\" ഉപയോഗിക്കുക, അല്ലെങ്കിൽ അക്ഷയ കേന്ദ്രത്തിൽ അന്വേഷിക്കുക."
             },
             "source": {
               "sourceId": "SRC-PLNT-001",
@@ -1386,6 +1443,18 @@
             "sourceId": "SRC-PLNT-003",
             "quote": "Kerala Small Plantation Workers' Welfare Fund Board, Kottayam"
           }
+        },
+        {
+          "locationType": "akshaya",
+          "mode": "online",
+          "note": {
+            "en": "Labour Department welfare boards take membership registration and scheme applications online on the AIIS portal (aiis.lc.kerala.gov.in). An Akshaya centre can submit it for you.",
+            "ml": "തൊഴിൽ വകുപ്പിന്റെ ക്ഷേമനിധി ബോർഡുകളിലെ അംഗത്വ രജിസ്ട്രേഷനും പദ്ധതി അപേക്ഷകളും AIIS പോർട്ടലിൽ (aiis.lc.kerala.gov.in) ഓൺലൈനായി നൽകാം. അക്ഷയ കേന്ദ്രം വഴിയും സമർപ്പിക്കാം."
+          },
+          "source": {
+            "sourceId": "SRC-PLNT-006",
+            "quote": "Akshaya and Trade Union Login / Sign-up Access via Akshaya centre"
+          }
         }
       ],
       "lastVerified": "2026-09-23",
@@ -1421,8 +1490,8 @@
             "value": true,
             "changeable": true,
             "howTo": {
-              "en": "Confirm/maintain membership with the Small Plantation Workers Welfare Fund Board.",
-              "ml": "ചെറുകിട തോട്ടം തൊഴിലാളി ക്ഷേമനിധി ബോർഡിലെ അംഗത്വം ഉറപ്പാക്കുക/നിലനിർത്തുക."
+              "en": "Register as a member of the Small Plantation Workers' Welfare Fund Board: use \"Membership Registration\" on the AIIS welfare boards portal, or ask at an Akshaya centre.",
+              "ml": "ചെറുകിട തോട്ടം തൊഴിലാളി ക്ഷേമനിധി ബോർഡിൽ അംഗമാകാൻ AIIS പോർട്ടലിലെ \"Membership Registration\" ഉപയോഗിക്കുക, അല്ലെങ്കിൽ അക്ഷയ കേന്ദ്രത്തിൽ അന്വേഷിക്കുക."
             },
             "source": {
               "sourceId": "SRC-PLNT-001",
@@ -1473,6 +1542,18 @@
           "source": {
             "sourceId": "SRC-PLNT-003",
             "quote": "Kerala Small Plantation Workers' Welfare Fund Board, Kottayam"
+          }
+        },
+        {
+          "locationType": "akshaya",
+          "mode": "online",
+          "note": {
+            "en": "Labour Department welfare boards take membership registration and scheme applications online on the AIIS portal (aiis.lc.kerala.gov.in). An Akshaya centre can submit it for you.",
+            "ml": "തൊഴിൽ വകുപ്പിന്റെ ക്ഷേമനിധി ബോർഡുകളിലെ അംഗത്വ രജിസ്ട്രേഷനും പദ്ധതി അപേക്ഷകളും AIIS പോർട്ടലിൽ (aiis.lc.kerala.gov.in) ഓൺലൈനായി നൽകാം. അക്ഷയ കേന്ദ്രം വഴിയും സമർപ്പിക്കാം."
+          },
+          "source": {
+            "sourceId": "SRC-PLNT-006",
+            "quote": "Akshaya and Trade Union Login / Sign-up Access via Akshaya centre"
           }
         }
       ],
@@ -1537,8 +1618,8 @@
             "value": true,
             "changeable": true,
             "howTo": {
-              "en": "Confirm/maintain membership with the Small Plantation Workers Welfare Fund Board.",
-              "ml": "ചെറുകിട തോട്ടം തൊഴിലാളി ക്ഷേമനിധി ബോർഡിലെ അംഗത്വം ഉറപ്പാക്കുക/നിലനിർത്തുക."
+              "en": "Register as a member of the Small Plantation Workers' Welfare Fund Board: use \"Membership Registration\" on the AIIS welfare boards portal, or ask at an Akshaya centre.",
+              "ml": "ചെറുകിട തോട്ടം തൊഴിലാളി ക്ഷേമനിധി ബോർഡിൽ അംഗമാകാൻ AIIS പോർട്ടലിലെ \"Membership Registration\" ഉപയോഗിക്കുക, അല്ലെങ്കിൽ അക്ഷയ കേന്ദ്രത്തിൽ അന്വേഷിക്കുക."
             },
             "source": {
               "sourceId": "SRC-PLNT-002",
@@ -1549,7 +1630,15 @@
           }
         ]
       },
-      "documents": [],
+      "documents": [
+        {
+          "docId": "aadhaar",
+          "source": {
+            "sourceId": "SRC-PLNT-002",
+            "quote": "Any individual eligible for receiving the benefits under the above Scheme shall hereby be required to furnish proof of possession of the Aadhaar number or undergo Aadhaar authentication"
+          }
+        }
+      ],
       "apply": [
         {
           "locationType": "labour_commissionerate",
@@ -1561,6 +1650,18 @@
           "source": {
             "sourceId": "SRC-PLNT-002",
             "quote": "through any web based application which is being implemented through the Labour Commissionerate"
+          }
+        },
+        {
+          "locationType": "akshaya",
+          "mode": "online",
+          "note": {
+            "en": "Labour Department welfare boards take membership registration and scheme applications online on the AIIS portal (aiis.lc.kerala.gov.in). An Akshaya centre can submit it for you.",
+            "ml": "തൊഴിൽ വകുപ്പിന്റെ ക്ഷേമനിധി ബോർഡുകളിലെ അംഗത്വ രജിസ്ട്രേഷനും പദ്ധതി അപേക്ഷകളും AIIS പോർട്ടലിൽ (aiis.lc.kerala.gov.in) ഓൺലൈനായി നൽകാം. അക്ഷയ കേന്ദ്രം വഴിയും സമർപ്പിക്കാം."
+          },
+          "source": {
+            "sourceId": "SRC-PLNT-006",
+            "quote": "Akshaya and Trade Union Login / Sign-up Access via Akshaya centre"
           }
         }
       ],
@@ -1792,63 +1893,82 @@
         "ml": "മത്സ്യബന്ധന വകുപ്പ്"
       },
       "sourceId": "SRC-FISH-011"
+    },
+    {
+      "id": "aadhaar",
+      "name": {
+        "en": "Aadhaar (or proof of Aadhaar possession)",
+        "ml": "ആധാർ (അല്ലെങ്കിൽ ആധാർ ഉണ്ടെന്നതിന്റെ തെളിവ്)"
+      },
+      "issuedBy": {
+        "en": "UIDAI (Aadhaar enrolment centre)",
+        "ml": "UIDAI (ആധാർ എൻറോൾമെന്റ് കേന്ദ്രം)"
+      },
+      "sourceId": "SRC-PLNT-002"
     }
   ],
   "locationTypes": [
     {
       "id": "fisheries_district_office",
       "label": {
-        "en": "Fisheries district office",
-        "ml": "ജില്ലാ മത്സ്യബന്ധന ഓഫീസ്"
-      }
+        "en": "Fisheries Department district office",
+        "ml": "ഫിഷറീസ് വകുപ്പ് ജില്ലാ ഓഫീസ്"
+      },
+      "scope": "district"
     },
     {
       "id": "matsyaboard_office",
       "label": {
         "en": "Matsyaboard / Fishermen Welfare Board office",
         "ml": "മത്സ്യബോർഡ് / മത്സ്യത്തൊഴിലാളി ക്ഷേമനിധി ബോർഡ് ഓഫീസ്"
-      }
+      },
+      "scope": "state"
     },
     {
       "id": "labour_commissionerate",
       "label": {
         "en": "Labour Commissionerate",
         "ml": "തൊഴിൽ കമ്മീഷണറേറ്റ്"
-      }
+      },
+      "scope": "state"
     },
     {
       "id": "akshaya",
       "label": {
-        "en": "Akshaya Centre",
+        "en": "Akshaya centre",
         "ml": "അക്ഷയ കേന്ദ്രം"
-      }
-    },
-    {
-      "id": "akshaya_assistance",
-      "label": {
-        "en": "Akshaya assistance centre",
-        "ml": "അക്ഷയ സഹായ കേന്ദ്രം"
-      }
+      },
+      "scope": "district"
     },
     {
       "id": "spwwfb_office",
       "label": {
         "en": "Small Plantation Workers' Welfare Fund Board office",
         "ml": "ചെറുകിട തോട്ടം തൊഴിലാളി ക്ഷേമനിധി ബോർഡ് ഓഫീസ്"
-      }
+      },
+      "scope": "state"
     },
     {
       "id": "matsyafed_office",
       "label": {
         "en": "Matsyafed office",
         "ml": "മത്സ്യഫെഡ് ഓഫീസ്"
-      }
+      },
+      "scope": "district"
+    },
+    {
+      "id": "fisheries_directorate",
+      "label": {
+        "en": "Directorate of Fisheries",
+        "ml": "ഫിഷറീസ് ഡയറക്ടറേറ്റ്"
+      },
+      "scope": "state"
     }
   ],
   "locations": [
     {
       "id": "LOC-FISH-001",
-      "type": "fisheries_district_office",
+      "type": "fisheries_directorate",
       "name": {
         "en": "Directorate of Fisheries",
         "ml": "ഫിഷറീസ് ഡയറക്ടറേറ്റ്"
@@ -1857,7 +1977,7 @@
       "area": "Vikas Bhavan",
       "address": "4th Floor, Vikas Bhavan, Thiruvananthapuram-33",
       "phone": "0471-2305042",
-      "sourceId": "SRC-FISH-005"
+      "sourceId": "SRC-FISH-006"
     },
     {
       "id": "LOC-LAB-001",
@@ -1874,262 +1994,249 @@
     },
     {
       "id": "LOC-AK-001",
-      "type": "akshaya_assistance",
+      "type": "akshaya",
       "name": {
-        "en": "EKM108 Thiruvankulam Jn",
-        "ml": "EKM108 തിരുവാങ്കുളം ജംഗ്ഷൻ"
+        "en": "Akshaya Centre EKM108, Thiruvankulam Jn",
+        "ml": "അക്ഷയ കേന്ദ്രം EKM108, തിരുവാങ്കുളം ജംഗ്ഷൻ"
       },
       "district": "Ernakulam",
       "area": "Thiruvankulam",
       "address": "Thiruvankulam Jn, Ernakulam",
       "phone": "9539735181",
-      "sourceId": "SRC-PLNT-005"
+      "sourceId": "SRC-AKS-002"
     },
     {
       "id": "LOC-AK-002",
-      "type": "akshaya_assistance",
+      "type": "akshaya",
       "name": {
-        "en": "TSR179 Thali Jn.",
-        "ml": "TSR179 തളി ജംഗ്ഷൻ"
+        "en": "Akshaya Centre TSR179, Thali Jn.",
+        "ml": "അക്ഷയ കേന്ദ്രം TSR179, തളി ജംഗ്ഷൻ"
       },
       "district": "Thrissur",
       "area": "Thali",
       "address": "Thali Jn., Thrissur",
       "phone": "9846722604",
-      "sourceId": "SRC-PLNT-005"
+      "sourceId": "SRC-AKS-002"
     },
     {
       "id": "LOC-AK-003",
-      "type": "akshaya_assistance",
+      "type": "akshaya",
       "name": {
-        "en": "TSR018 Muringoor Jn",
-        "ml": "TSR018 മുരിങ്ങൂർ ജംഗ്ഷൻ"
+        "en": "Akshaya Centre TSR018, Muringoor Jn",
+        "ml": "അക്ഷയ കേന്ദ്രം TSR018, മുരിങ്ങൂർ ജംഗ്ഷൻ"
       },
       "district": "Thrissur",
       "area": "Muringoor",
       "address": "Muringoor Jn, Thrissur",
       "phone": "9544253833",
-      "sourceId": "SRC-PLNT-005"
+      "sourceId": "SRC-AKS-002"
     },
     {
       "id": "LOC-AK-004",
-      "type": "akshaya_assistance",
+      "type": "akshaya",
       "name": {
-        "en": "PKD146 Vaniyamkulam",
-        "ml": "PKD146 വാണിയംകുളം"
+        "en": "Akshaya Centre PKD146, Vaniyamkulam",
+        "ml": "അക്ഷയ കേന്ദ്രം PKD146, വാണിയംകുളം"
       },
       "district": "Palakkad",
       "area": "Vaniyamkulam",
       "address": "Vaniyamkulam, Palakkad",
       "phone": "9847741600",
-      "sourceId": "SRC-PLNT-005"
+      "sourceId": "SRC-AKS-002"
     },
     {
       "id": "LOC-AK-005",
-      "type": "akshaya_assistance",
+      "type": "akshaya",
       "name": {
-        "en": "PKD177 Pengottiri",
-        "ml": "PKD177 പെങ്ങോട്ടിരി"
+        "en": "Akshaya Centre PKD177, Pengottiri",
+        "ml": "അക്ഷയ കേന്ദ്രം PKD177, പെങ്ങോട്ടിരി"
       },
       "district": "Palakkad",
       "area": "Pengottiri",
       "address": "Pengottiri, Palakkad",
       "phone": "9961887997",
-      "sourceId": "SRC-PLNT-005"
+      "sourceId": "SRC-AKS-002"
     },
     {
       "id": "LOC-AK-006",
-      "type": "akshaya_assistance",
+      "type": "akshaya",
       "name": {
-        "en": "EKM277 Kolencherry",
-        "ml": "EKM277 കോലഞ്ചേരി"
+        "en": "Akshaya Centre EKM277, Kolencherry",
+        "ml": "അക്ഷയ കേന്ദ്രം EKM277, കോലഞ്ചേരി"
       },
       "district": "Ernakulam",
       "area": "Kolencherry",
       "address": "Kolencherry, Ernakulam",
       "phone": "9495389399",
-      "sourceId": "SRC-PLNT-005"
+      "sourceId": "SRC-AKS-002"
     },
     {
       "id": "LOC-AK-007",
-      "type": "akshaya_assistance",
+      "type": "akshaya",
       "name": {
-        "en": "TSR238 Ayyanthole Ground",
-        "ml": "TSR238 അയ്യന്തോൾ ഗ്രൗണ്ട്"
+        "en": "Akshaya Centre TSR238, Ayyanthole Ground",
+        "ml": "അക്ഷയ കേന്ദ്രം TSR238, അയ്യന്തോൾ ഗ്രൗണ്ട്"
       },
       "district": "Thrissur",
       "area": "Ayyanthole",
       "address": "Ayyanthole Ground, Thrissur",
       "phone": "7025189401",
-      "sourceId": "SRC-PLNT-005"
+      "sourceId": "SRC-AKS-002"
     },
     {
       "id": "LOC-AK-008",
-      "type": "akshaya_assistance",
+      "type": "akshaya",
       "name": {
-        "en": "PKD085 Kalleppulli",
-        "ml": "PKD085 കല്ലേപ്പുള്ളി"
+        "en": "Akshaya Centre PKD085, Kalleppulli",
+        "ml": "അക്ഷയ കേന്ദ്രം PKD085, കല്ലേപ്പുള്ളി"
       },
       "district": "Palakkad",
       "area": "Kalleppulli",
       "address": "Kalleppulli, Palakkad",
       "phone": "9446734195 / 8075714554",
-      "sourceId": "SRC-PLNT-005"
+      "sourceId": "SRC-AKS-002"
     },
     {
       "id": "LOC-FISH-002",
       "type": "fisheries_district_office",
       "name": {
-        "en": "Fisheries Department - Kollam District Office",
-        "ml": "ഫിഷറീസ് വകുപ്പ് - Kollam ജില്ലാ ഓഫീസ്"
+        "en": "Office of the Deputy Director of Fisheries, Kollam",
+        "ml": "ഫിഷറീസ് ഡെപ്യൂട്ടി ഡയറക്ടർ ഓഫീസ്, കൊല്ലം"
       },
       "district": "Kollam",
-      "area": "Fisheries district office",
-      "phone": "0474-2792850",
+      "phone": "0474-2792850, 9496007027",
       "sourceId": "SRC-FISH-008"
     },
     {
       "id": "LOC-FISH-003",
       "type": "fisheries_district_office",
       "name": {
-        "en": "Fisheries Department - Alappuzha District Office",
-        "ml": "ഫിഷറീസ് വകുപ്പ് - Alappuzha ജില്ലാ ഓഫീസ്"
+        "en": "Office of the Deputy Director of Fisheries, Alappuzha",
+        "ml": "ഫിഷറീസ് ഡെപ്യൂട്ടി ഡയറക്ടർ ഓഫീസ്, ആലപ്പുഴ"
       },
       "district": "Alappuzha",
-      "area": "Fisheries district office",
-      "phone": "0477-2251103",
+      "phone": "0477-2251103, 9796007028",
       "sourceId": "SRC-FISH-008"
     },
     {
       "id": "LOC-FISH-004",
       "type": "fisheries_district_office",
       "name": {
-        "en": "Fisheries Department - Pathanamthitta District Office",
-        "ml": "ഫിഷറീസ് വകുപ്പ് - Pathanamthitta ജില്ലാ ഓഫീസ്"
+        "en": "Office of the Assistant Director of Fisheries, Pathanamthitta",
+        "ml": "ഫിഷറീസ് അസിസ്റ്റന്റ് ഡയറക്ടർ ഓഫീസ്, പത്തനംതിട്ട"
       },
       "district": "Pathanamthitta",
-      "area": "Fisheries district office",
-      "phone": "0468-2223134",
+      "phone": "0468-2223134, 9947266889",
       "sourceId": "SRC-FISH-008"
     },
     {
       "id": "LOC-FISH-005",
       "type": "fisheries_district_office",
       "name": {
-        "en": "Fisheries Department - Kottayam District Office",
-        "ml": "ഫിഷറീസ് വകുപ്പ് - Kottayam ജില്ലാ ഓഫീസ്"
+        "en": "Office of the Deputy Director of Fisheries, Kottayam",
+        "ml": "ഫിഷറീസ് ഡെപ്യൂട്ടി ഡയറക്ടർ ഓഫീസ്, കോട്ടയം"
       },
       "district": "Kottayam",
-      "area": "Fisheries district office",
-      "phone": "0481-2566823",
+      "phone": "0481-2566823, 9447232051",
       "sourceId": "SRC-FISH-008"
     },
     {
       "id": "LOC-FISH-006",
       "type": "fisheries_district_office",
       "name": {
-        "en": "Fisheries Department - Idukki District Office",
-        "ml": "ഫിഷറീസ് വകുപ്പ് - Idukki ജില്ലാ ഓഫീസ്"
+        "en": "Office of the Assistant Director of Fisheries, Idukki",
+        "ml": "ഫിഷറീസ് അസിസ്റ്റന്റ് ഡയറക്ടർ ഓഫീസ്, ഇടുക്കി"
       },
       "district": "Idukki",
-      "area": "Fisheries district office",
-      "phone": "04862-233226",
+      "phone": "04862-233226, 9539486468",
       "sourceId": "SRC-FISH-008"
     },
     {
       "id": "LOC-FISH-007",
       "type": "fisheries_district_office",
       "name": {
-        "en": "Fisheries Department - Ernakulam District Office",
-        "ml": "ഫിഷറീസ് വകുപ്പ് - Ernakulam ജില്ലാ ഓഫീസ്"
+        "en": "Office of the Deputy Director of Fisheries, Ernakulam",
+        "ml": "ഫിഷറീസ് ഡെപ്യൂട്ടി ഡയറക്ടർ ഓഫീസ്, എറണാകുളം"
       },
       "district": "Ernakulam",
-      "area": "Fisheries district office",
-      "phone": "0484-2394476",
+      "phone": "0484-2394476, 9495701174",
       "sourceId": "SRC-FISH-008"
     },
     {
       "id": "LOC-FISH-008",
       "type": "fisheries_district_office",
       "name": {
-        "en": "Fisheries Department - Thrissur District Office",
-        "ml": "ഫിഷറീസ് വകുപ്പ് - Thrissur ജില്ലാ ഓഫീസ്"
+        "en": "Office of the Deputy Director of Fisheries, Thrissur",
+        "ml": "ഫിഷറീസ് ഡെപ്യൂട്ടി ഡയറക്ടർ ഓഫീസ്, തൃശ്ശൂർ"
       },
       "district": "Thrissur",
-      "area": "Fisheries district office",
-      "phone": "0487-2441132",
+      "phone": "0487-2441132, 9496007030",
       "sourceId": "SRC-FISH-008"
     },
     {
       "id": "LOC-FISH-009",
       "type": "fisheries_district_office",
       "name": {
-        "en": "Fisheries Department - Palakkad District Office",
-        "ml": "ഫിഷറീസ് വകുപ്പ് - Palakkad ജില്ലാ ഓഫീസ്"
+        "en": "Office of the Deputy Director of Fisheries, Palakkad",
+        "ml": "ഫിഷറീസ് ഡെപ്യൂട്ടി ഡയറക്ടർ ഓഫീസ്, പാലക്കാട്"
       },
       "district": "Palakkad",
-      "area": "Fisheries district office",
-      "phone": "0491-2815245",
+      "phone": "0491-2815245, 9496007050",
       "sourceId": "SRC-FISH-008"
     },
     {
       "id": "LOC-FISH-010",
       "type": "fisheries_district_office",
       "name": {
-        "en": "Fisheries Department - Malappuram District Office",
-        "ml": "ഫിഷറീസ് വകുപ്പ് - Malappuram ജില്ലാ ഓഫീസ്"
+        "en": "Office of the Deputy Director, Ponnani of Fisheries, Malappuram",
+        "ml": "ഫിഷറീസ് ഡെപ്യൂട്ടി ഡയറക്ടർ, പൊന്നാനി ഓഫീസ്, മലപ്പുറം"
       },
       "district": "Malappuram",
-      "area": "Fisheries district office",
-      "phone": "0494-2666428",
+      "phone": "0494-2666428, 9496007031",
       "sourceId": "SRC-FISH-008"
     },
     {
       "id": "LOC-FISH-011",
       "type": "fisheries_district_office",
       "name": {
-        "en": "Fisheries Department - Kozhikode District Office",
-        "ml": "ഫിഷറീസ് വകുപ്പ് - Kozhikode ജില്ലാ ഓഫീസ്"
+        "en": "Office of the Deputy Director of Fisheries, Kozhikode",
+        "ml": "ഫിഷറീസ് ഡെപ്യൂട്ടി ഡയറക്ടർ ഓഫീസ്, കോഴിക്കോട്"
       },
       "district": "Kozhikode",
-      "area": "Fisheries district office",
-      "phone": "0495-2383780",
+      "phone": "0495-2383780, 9496007032",
       "sourceId": "SRC-FISH-008"
     },
     {
       "id": "LOC-FISH-012",
       "type": "fisheries_district_office",
       "name": {
-        "en": "Fisheries Department - Wayanad District Office",
-        "ml": "ഫിഷറീസ് വകുപ്പ് - Wayanad ജില്ലാ ഓഫീസ്"
+        "en": "Office of the Assistant Director of Fisheries, Wayanad",
+        "ml": "ഫിഷറീസ് അസിസ്റ്റന്റ് ഡയറക്ടർ ഓഫീസ്, വയനാട്"
       },
       "district": "Wayanad",
-      "area": "Fisheries district office",
-      "phone": "0493-60293214",
+      "phone": "8129339882",
       "sourceId": "SRC-FISH-008"
     },
     {
       "id": "LOC-FISH-013",
       "type": "fisheries_district_office",
       "name": {
-        "en": "Fisheries Department - Kannur District Office",
-        "ml": "ഫിഷറീസ് വകുപ്പ് - Kannur ജില്ലാ ഓഫീസ്"
+        "en": "Office of the Deputy Director of Fisheries, Kannur",
+        "ml": "ഫിഷറീസ് ഡെപ്യൂട്ടി ഡയറക്ടർ ഓഫീസ്, കണ്ണൂർ"
       },
       "district": "Kannur",
-      "area": "Fisheries district office",
-      "phone": "0497-2731081",
+      "phone": "0497-2731081, 9496007033",
       "sourceId": "SRC-FISH-008"
     },
     {
       "id": "LOC-FISH-014",
       "type": "fisheries_district_office",
       "name": {
-        "en": "Fisheries Department - Kasaragod District Office",
-        "ml": "ഫിഷറീസ് വകുപ്പ് - Kasaragod ജില്ലാ ഓഫീസ്"
+        "en": "Office of the Deputy Director of Fisheries, Kasaragod",
+        "ml": "ഫിഷറീസ് ഡെപ്യൂട്ടി ഡയറക്ടർ ഓഫീസ്, കാസർകോട്"
       },
       "district": "Kasaragod",
-      "area": "Fisheries district office",
-      "phone": "0467-2202537",
+      "phone": "0467-2202537, 9496007034",
       "sourceId": "SRC-FISH-008"
     },
     {
@@ -2141,6 +2248,277 @@
       },
       "district": "Kottayam",
       "sourceId": "SRC-PLNT-003"
+    },
+    {
+      "id": "LOC-FISH-015",
+      "type": "fisheries_district_office",
+      "name": {
+        "en": "Office of the Deputy Director of Fisheries, Thiruvananthapuram",
+        "ml": "ഫിഷറീസ് ഡെപ്യൂട്ടി ഡയറക്ടർ ഓഫീസ്, തിരുവനന്തപുരം"
+      },
+      "district": "Thiruvananthapuram",
+      "phone": "0471-2450773, 9496007026",
+      "sourceId": "SRC-FISH-008"
+    },
+    {
+      "id": "LOC-AKD-001",
+      "type": "akshaya",
+      "name": {
+        "en": "Akshaya District Project Office, Thiruvananthapuram",
+        "ml": "അക്ഷയ ജില്ലാ പ്രോജക്ട് ഓഫീസ്, തിരുവനന്തപുരം"
+      },
+      "district": "Thiruvananthapuram",
+      "area": "District office",
+      "address": "Room No. A-208, 2nd floor, A-Block, Civil Station Kudappanakunnu, Thiruvananthapuram -695043",
+      "phone": "0471-2334070",
+      "sourceId": "SRC-AKS-001"
+    },
+    {
+      "id": "LOC-AKD-002",
+      "type": "akshaya",
+      "name": {
+        "en": "Akshaya District Project Office, Kollam",
+        "ml": "അക്ഷയ ജില്ലാ പ്രോജക്ട് ഓഫീസ്, കൊല്ലം"
+      },
+      "district": "Kollam",
+      "area": "District office",
+      "address": "1st Floor, Corporation Building, Andamukkam, Kollam 691 001",
+      "phone": "0474-2767605",
+      "sourceId": "SRC-AKS-001"
+    },
+    {
+      "id": "LOC-AKD-003",
+      "type": "akshaya",
+      "name": {
+        "en": "Akshaya District Project Office, Pathanamthitta",
+        "ml": "അക്ഷയ ജില്ലാ പ്രോജക്ട് ഓഫീസ്, പത്തനംതിട്ട"
+      },
+      "district": "Pathanamthitta",
+      "area": "District office",
+      "address": "Pathanamthitta Collectorate, Friends Janasevana kendram Building, Pathanamthitta 689 645",
+      "phone": "0468-2322706",
+      "sourceId": "SRC-AKS-001"
+    },
+    {
+      "id": "LOC-AKD-004",
+      "type": "akshaya",
+      "name": {
+        "en": "Akshaya District Project Office, Alappuzha",
+        "ml": "അക്ഷയ ജില്ലാ പ്രോജക്ട് ഓഫീസ്, ആലപ്പുഴ"
+      },
+      "district": "Alappuzha",
+      "area": "District office",
+      "address": "49/A, Kurisadi Jn., Pathirapally P.O., Alappuzha",
+      "phone": "0477-2248130, 0477-2258135",
+      "sourceId": "SRC-AKS-001"
+    },
+    {
+      "id": "LOC-AKD-005",
+      "type": "akshaya",
+      "name": {
+        "en": "Akshaya District Project Office, Kottayam",
+        "ml": "അക്ഷയ ജില്ലാ പ്രോജക്ട് ഓഫീസ്, കോട്ടയം"
+      },
+      "district": "Kottayam",
+      "area": "District office",
+      "address": "Ozhathil Building, Near Railway Station Goods Shed, Kottayam 686001",
+      "phone": "0481 2574477",
+      "sourceId": "SRC-AKS-001"
+    },
+    {
+      "id": "LOC-AKD-006",
+      "type": "akshaya",
+      "name": {
+        "en": "Akshaya District Project Office, Idukki",
+        "ml": "അക്ഷയ ജില്ലാ പ്രോജക്ട് ഓഫീസ്, ഇടുക്കി"
+      },
+      "district": "Idukki",
+      "area": "District office",
+      "address": "Civil Station, Idukki, Painavu P.O. - 685603",
+      "phone": "04862 232 215, 232 209",
+      "sourceId": "SRC-AKS-001"
+    },
+    {
+      "id": "LOC-AKD-007",
+      "type": "akshaya",
+      "name": {
+        "en": "Akshaya District Project Office, Ernakulam",
+        "ml": "അക്ഷയ ജില്ലാ പ്രോജക്ട് ഓഫീസ്, എറണാകുളം"
+      },
+      "district": "Ernakulam",
+      "area": "District office",
+      "address": "5th Floor, District Planning Secretariate Building, Civil Station, Kakkanad, Ernakulam 682030",
+      "phone": "0484-2422693",
+      "sourceId": "SRC-AKS-001"
+    },
+    {
+      "id": "LOC-AKD-008",
+      "type": "akshaya",
+      "name": {
+        "en": "Akshaya District Project Office, Thrissur",
+        "ml": "അക്ഷയ ജില്ലാ പ്രോജക്ട് ഓഫീസ്, തൃശ്ശൂർ"
+      },
+      "district": "Thrissur",
+      "area": "District office",
+      "address": "Global Plaza Building, First Floor, Vanchikkulam Road, Behind Railway Station, Poothole, Thrissur 680 004",
+      "phone": "0487-2386809",
+      "sourceId": "SRC-AKS-001"
+    },
+    {
+      "id": "LOC-AKD-009",
+      "type": "akshaya",
+      "name": {
+        "en": "Akshaya District Project Office, Malappuram",
+        "ml": "അക്ഷയ ജില്ലാ പ്രോജക്ട് ഓഫീസ്, മലപ്പുറം"
+      },
+      "district": "Malappuram",
+      "area": "District office",
+      "address": "Jilla Panchayath Bhavan, Civil Station, Malappuram, 676505",
+      "phone": "0483-2739027, 2739028",
+      "sourceId": "SRC-AKS-001"
+    },
+    {
+      "id": "LOC-AKD-010",
+      "type": "akshaya",
+      "name": {
+        "en": "Akshaya District Project Office, Palakkad",
+        "ml": "അക്ഷയ ജില്ലാ പ്രോജക്ട് ഓഫീസ്, പാലക്കാട്"
+      },
+      "district": "Palakkad",
+      "area": "District office",
+      "address": "FRIENDS Janasevana Kendram Bldg., Civil Station, Palakkad - 678001",
+      "phone": "0491 2544188, 2547820, 9495636111",
+      "sourceId": "SRC-AKS-001"
+    },
+    {
+      "id": "LOC-AKD-011",
+      "type": "akshaya",
+      "name": {
+        "en": "Akshaya District Project Office, Wayanad",
+        "ml": "അക്ഷയ ജില്ലാ പ്രോജക്ട് ഓഫീസ്, വയനാട്"
+      },
+      "district": "Wayanad",
+      "area": "District office",
+      "address": "Civil Station, Ground Floor, Wayanad-673121",
+      "phone": "04936 206267, 9495640111",
+      "sourceId": "SRC-AKS-001"
+    },
+    {
+      "id": "LOC-AKD-012",
+      "type": "akshaya",
+      "name": {
+        "en": "Akshaya District Project Office, Kozhikode",
+        "ml": "അക്ഷയ ജില്ലാ പ്രോജക്ട് ഓഫീസ്, കോഴിക്കോട്"
+      },
+      "district": "Kozhikode",
+      "area": "District office",
+      "address": "2nd Floor, B Block, Civil Station, Eranjipalam, Kozhikode-673020",
+      "phone": "0495 2304775, 9495638111",
+      "sourceId": "SRC-AKS-001"
+    },
+    {
+      "id": "LOC-AKD-013",
+      "type": "akshaya",
+      "name": {
+        "en": "Akshaya District Project Office, Kannur",
+        "ml": "അക്ഷയ ജില്ലാ പ്രോജക്ട് ഓഫീസ്, കണ്ണൂർ"
+      },
+      "district": "Kannur",
+      "area": "District office",
+      "address": "RUBCO HOUSE, 5TH FLOOR, SOUTH BAZAR, Kannur- 670002",
+      "phone": "0497 2712987",
+      "sourceId": "SRC-AKS-001"
+    },
+    {
+      "id": "LOC-AKD-014",
+      "type": "akshaya",
+      "name": {
+        "en": "Akshaya District Project Office, Kasaragod",
+        "ml": "അക്ഷയ ജില്ലാ പ്രോജക്ട് ഓഫീസ്, കാസർകോട്"
+      },
+      "district": "Kasaragod",
+      "area": "District office",
+      "address": "Civil Station, Vidyanagar, Kasaragod 671123",
+      "phone": "04994-227170",
+      "sourceId": "SRC-AKS-001"
+    },
+    {
+      "id": "LOC-AK-KLM118",
+      "type": "akshaya",
+      "name": {
+        "en": "Akshaya Centre KLM118, Perumpuzha Jn.",
+        "ml": "അക്ഷയ കേന്ദ്രം KLM118, Perumpuzha Jn."
+      },
+      "district": "Kollam",
+      "area": "Perumpuzha Jn.",
+      "address": "Perumpuzha Jn., Kollam",
+      "phone": "9446317810, 9020301735",
+      "sourceId": "SRC-AKS-002"
+    },
+    {
+      "id": "LOC-AK-ALP088",
+      "type": "akshaya",
+      "name": {
+        "en": "Akshaya Centre ALP088, Near BSNL Office",
+        "ml": "അക്ഷയ കേന്ദ്രം ALP088, Near BSNL Office"
+      },
+      "district": "Alappuzha",
+      "area": "Near BSNL Office",
+      "address": "Near BSNL Office, Alappuzha",
+      "phone": "0479 2472052",
+      "sourceId": "SRC-AKS-002"
+    },
+    {
+      "id": "LOC-AK-EKM280",
+      "type": "akshaya",
+      "name": {
+        "en": "Akshaya Centre EKM280, Vengola Kavala",
+        "ml": "അക്ഷയ കേന്ദ്രം EKM280, Vengola Kavala"
+      },
+      "district": "Ernakulam",
+      "area": "Vengola Kavala",
+      "address": "Vengola Kavala, Ernakulam",
+      "phone": "9946128570",
+      "sourceId": "SRC-AKS-002"
+    },
+    {
+      "id": "LOC-AK-PKD059",
+      "type": "akshaya",
+      "name": {
+        "en": "Akshaya Centre PKD059, Pattathalachi",
+        "ml": "അക്ഷയ കേന്ദ്രം PKD059, Pattathalachi"
+      },
+      "district": "Palakkad",
+      "area": "Pattathalachi",
+      "address": "Pattathalachi, Palakkad",
+      "phone": "9947447384",
+      "sourceId": "SRC-AKS-002"
+    },
+    {
+      "id": "LOC-AK-KNR269",
+      "type": "akshaya",
+      "name": {
+        "en": "Akshaya Centre KNR269, Edayar",
+        "ml": "അക്ഷയ കേന്ദ്രം KNR269, Edayar"
+      },
+      "district": "Kannur",
+      "area": "Edayar",
+      "address": "Edayar, Kannur",
+      "phone": "9886764200",
+      "sourceId": "SRC-AKS-002"
+    },
+    {
+      "id": "LOC-AK-KNR233",
+      "type": "akshaya",
+      "name": {
+        "en": "Akshaya Centre KNR233, Thirumeni",
+        "ml": "അക്ഷയ കേന്ദ്രം KNR233, Thirumeni"
+      },
+      "district": "Kannur",
+      "area": "Thirumeni",
+      "address": "Thirumeni, Kannur",
+      "phone": "8921407569",
+      "sourceId": "SRC-AKS-002"
     }
   ],
   "terms": [
