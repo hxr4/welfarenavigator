@@ -12,7 +12,7 @@ export function formatNumber(n: number, unit: Fact["unit"], lang: Lang, fact?: P
   const s = n.toLocaleString("en-IN");
   if (unit === "INR") return `₹${s}`;
   if (unit === "years") {
-    if (lang !== "ml") return `${s} years`;
+    if (lang !== "ml") return `${s} ${n === 1 ? "year" : "years"}`;
     return fact && mlYears(fact) === "duration" ? `${s} വർഷം` : `${s} വയസ്സ്`;
   }
   return s;
@@ -36,9 +36,10 @@ function mlBetween(fact: Fact, lo: number, hi: number): string {
 export function rangeLabel(fact: Fact, lo: number, hi: number, lang: Lang): string {
   const f = (n: number) => formatNumber(n, fact.unit, lang, fact);
   if (lo === hi) return f(lo);
-  if (hi >= INF) return lang === "ml" ? mlMoreThan(fact, lo - 1) : `More than ${f(lo - 1)}`;
+  if (hi >= INF) return lang === "ml" ? mlMoreThan(fact, lo - 1) : fact.unit === "INR" ? `More than ${f(lo - 1)}` : `${f(lo)} or more`;
   if (lo <= 0) return lang === "ml" ? `${f(hi)} വരെ` : `Up to ${f(hi)}`;
-  return lang === "ml" ? mlBetween(fact, lo, hi) : `More than ${f(lo - 1)}, up to ${f(hi)}`;
+  if (lang === "ml") return mlBetween(fact, lo, hi);
+  return fact.unit === "INR" ? `${f(lo)} to ${f(hi)}` : fact.unit === "years" ? `${lo.toLocaleString("en-IN")} to ${f(hi)}` : `${f(lo)} to ${f(hi)}`;
 }
 
 function optionLabel(fact: Fact, value: string, lang: Lang): string {

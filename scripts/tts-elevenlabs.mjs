@@ -1,16 +1,25 @@
 import { existsSync, mkdirSync, readdirSync, readFileSync, writeFileSync } from "node:fs";
 
-const CSV = "docs/malayalam-audio-clips.csv";
-const DIR = "public/audio/ml";
-const TEXTS = "data/audio-texts.json";
-const MANIFEST = "data/audio-manifest.json";
-
 const args = process.argv.slice(2);
 const flag = (name) => args.includes(`--${name}`);
 const value = (name) => {
   const i = args.indexOf(`--${name}`);
   return i >= 0 ? args[i + 1] : undefined;
 };
+
+const LANG = value("lang") || "ml";
+const SETUP = {
+  ml: { csv: "docs/malayalam-audio-clips.csv", texts: "data/audio-texts.json", voiceEnv: ["ELEVENLABS_VOICE_ID_ML", "ELEVENLABS_VOICE_ID"] },
+  en: { csv: "docs/english-audio-clips.csv", texts: "data/audio-texts.en.json", voiceEnv: ["ELEVENLABS_VOICE_ID_EN", "ELEVENLABS_VOICE_ID"] },
+}[LANG];
+if (!SETUP) {
+  console.error(`Unknown --lang ${LANG}. Use ml or en.`);
+  process.exit(1);
+}
+const CSV = SETUP.csv;
+const DIR = `public/audio/${LANG}`;
+const TEXTS = SETUP.texts;
+const MANIFEST = "data/audio-manifest.json";
 
 function parseCsv(text) {
   return text
@@ -26,7 +35,16 @@ function parseCsv(text) {
     });
 }
 
-export function spoken(text) {
+export function spoken(text, lang = LANG) {
+  if (lang === "en") {
+    return text
+      .replace(/₹\s?([\d,]+)/g, "$1 rupees")
+      .replace(/\(\+2\)/g, "(Plus Two)")
+      .replace(/\bA\+/g, "A plus")
+      .replace(/\bClass X\b/g, "Class 10")
+      .replace(/\s+/g, " ")
+      .trim();
+  }
   return text.replace(/₹\s?([\d,]+)(-ൽ)?/g, (_, n, suffix) => `${n} രൂപ${suffix ? "യിൽ" : ""}`).replace(/\s+/g, " ").trim();
 }
 
@@ -34,7 +52,8 @@ function refreshManifest(rows, recorded) {
   const want = new Map(rows.map((r) => [r.key, r.text]));
   const files = existsSync(DIR) ? readdirSync(DIR).filter((f) => f.endsWith(".mp3")).map((f) => f.replace(/\.mp3$/, "")) : [];
   const usable = files.filter((k) => want.has(k) && (!(k in recorded) || recorded[k] === want.get(k)));
-  writeFileSync(MANIFEST, JSON.stringify({ ml: usable.sort() }, null, 2) + "\n");
+  const current = existsSync(MANIFEST) ? JSON.parse(readFileSync(MANIFEST, "utf8")) : {};
+  writeFileSync(MANIFEST, JSON.stringify({ ml: [], en: [], ...current, [LANG]: usable.sort() }, null, 2) + "\n");
   return usable.length;
 }
 
@@ -49,7 +68,7 @@ async function main() {
     return !existsSync(file) || (r.key in recorded && recorded[r.key] !== r.text);
   });
   const chars = todo.reduce((n, r) => n + spoken(r.text).length, 0);
-  console.log(`${rows.length} clips in the list, ${todo.length} to generate (${chars} characters).`);
+  console.log(`[${LANG}] ${rows.length} clips in ${CSV}, ${todo.length} to generate (${chars} characters).`);
 
   if (flag("dry-run")) {
     for (const r of todo) console.log(`${r.key}\t${spoken(r.text)}`);
@@ -57,10 +76,10 @@ async function main() {
   }
 
   const key = process.env.ELEVENLABS_API_KEY;
-  const voice = process.env.ELEVENLABS_VOICE_ID;
+  const voice = SETUP.voiceEnv.map((k) => process.env[k]).find(Boolean);
   const model = process.env.ELEVENLABS_MODEL || "eleven_v3";
   if (!key || !voice) {
-    console.error("Set ELEVENLABS_API_KEY and ELEVENLABS_VOICE_ID in your shell first. Nothing was sent.");
+    console.error(`Set ELEVENLABS_API_KEY and ${SETUP.voiceEnv[0]} (or ELEVENLABS_VOICE_ID) in your shell first. Nothing was sent.`);
     process.exit(1);
   }
   mkdirSync(DIR, { recursive: true });
@@ -102,7 +121,7 @@ async function main() {
   }
   const usable = refreshManifest(rows, recorded);
   console.log(`Generated ${done} of ${todo.length}. ${usable} of ${rows.length} clips are now in ${MANIFEST}.`);
-  console.log("Listen to every clip before the demo; a native speaker should reject any that are mispronounced (delete the file and run again).");
+  console.log("Listen to every clip before the demo. Delete any clip that sounds wrong and run the same command again to remake it.");
 }
 
 main().catch((e) => {

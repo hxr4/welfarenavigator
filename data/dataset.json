@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-09-23T19:45:51.281Z",
+    "generatedAt": "2026-09-23T20:50:09.216Z",
     "includesExamples": false,
     "version": "1"
   },
@@ -448,7 +448,7 @@
         "ml": "തൊഴിൽ മേഖല"
       },
       "question": {
-        "en": "Which work does your household do?",
+        "en": "What work does your family do?",
         "ml": "നിങ്ങളുടെ കുടുംബം ഏത് തൊഴിലാണ് ചെയ്യുന്നത്?"
       },
       "help": {
@@ -545,7 +545,7 @@
         "ml": "രജിസ്റ്റർ ചെയ്ത മത്സ്യത്തൊഴിലാളിയാണോ"
       },
       "question": {
-        "en": "Is the beneficiary a registered fisherman?",
+        "en": "Is the person applying a registered fisher?",
         "ml": "ആനുകൂല്യത്തിനായി അപേക്ഷിക്കുന്ന വ്യക്തി രജിസ്റ്റർ ചെയ്ത മത്സ്യത്തൊഴിലാളിയാണോ?"
       },
       "help": {
@@ -565,7 +565,7 @@
         "ml": "സജീവ മത്സ്യത്തൊഴിലാളിയാണോ"
       },
       "question": {
-        "en": "Is the beneficiary an active fisherman?",
+        "en": "Does the person applying still work as a fisher (an active fisher)?",
         "ml": "ആനുകൂല്യത്തിനായി അപേക്ഷിക്കുന്ന വ്യക്തി സജീവ മത്സ്യത്തൊഴിലാളിയാണോ?"
       },
       "unit": "",
@@ -581,7 +581,7 @@
         "ml": "ബി.പി.എൽ കുടുംബമാണോ"
       },
       "question": {
-        "en": "Is the household in the BPL category?",
+        "en": "Is your family in the BPL (below poverty line) category?",
         "ml": "കുടുംബം ബി.പി.എൽ വിഭാഗത്തിലാണോ?"
       },
       "unit": "",
@@ -597,7 +597,7 @@
         "ml": "ബാങ്ക് അക്കൗണ്ട്"
       },
       "question": {
-        "en": "Does the beneficiary have a bank account?",
+        "en": "Does the person applying have a bank account?",
         "ml": "ആനുകൂല്യത്തിനായി അപേക്ഷിക്കുന്ന വ്യക്തിക്ക് ബാങ്ക് അക്കൗണ്ട് ഉണ്ടോ?"
       },
       "unit": "",
@@ -613,7 +613,7 @@
         "ml": "പരമ്പരാഗത മത്സ്യത്തൊഴിലാളി"
       },
       "question": {
-        "en": "Is the beneficiary a registered traditional fisherman?",
+        "en": "Is the person applying a registered traditional fisher?",
         "ml": "ആനുകൂല്യത്തിനായി അപേക്ഷിക്കുന്ന വ്യക്തി രജിസ്റ്റർ ചെയ്ത പരമ്പരാഗത മത്സ്യത്തൊഴിലാളിയാണോ?"
       },
       "unit": "",
@@ -902,7 +902,7 @@
         "ml": "തൊഴിലിൽ നിന്ന് വിരമിച്ചു"
       },
       "question": {
-        "en": "Has the person stopped (retired from) fishing work?",
+        "en": "Has the person stopped fishing work (retired)?",
         "ml": "മത്സ്യബന്ധന തൊഴിലിൽ നിന്ന് വിരമിച്ചോ?"
       },
       "unit": "",
@@ -918,7 +918,7 @@
         "ml": "കുടുംബ വാർഷിക വരുമാനം"
       },
       "question": {
-        "en": "What is the family's total income in a year?",
+        "en": "What is your family's total income in a year?",
         "ml": "കുടുംബത്തിന്റെ ഒരു വർഷത്തെ ആകെ വരുമാനം എത്ര?"
       },
       "help": {
