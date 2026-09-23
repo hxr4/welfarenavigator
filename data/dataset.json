@@ -1,0 +1,628 @@
+{
+  "meta": {
+    "generatedAt": "2026-09-23T13:31:01.549Z",
+    "includesExamples": true,
+    "version": "fixture"
+  },
+  "sources": [
+    {
+      "id": "S1",
+      "tier": 1,
+      "authority": "Fixture",
+      "title": "Fixture order",
+      "url": "https://example.org/x",
+      "docType": "government_order",
+      "language": "en",
+      "accessedOn": "2026-09-23"
+    }
+  ],
+  "facts": [
+    {
+      "id": "livelihood",
+      "type": "multi",
+      "label": {
+        "en": "livelihood",
+        "ml": "livelihood"
+      },
+      "question": {
+        "en": "livelihood?",
+        "ml": "livelihood?"
+      },
+      "sensitivity": "low",
+      "order": 1,
+      "unit": "",
+      "options": [
+        {
+          "value": "fishing",
+          "label": {
+            "en": "fishing",
+            "ml": "fishing"
+          },
+          "synonyms": {
+            "en": [
+              "fishing"
+            ],
+            "ml": []
+          }
+        },
+        {
+          "value": "allied",
+          "label": {
+            "en": "allied",
+            "ml": "allied"
+          },
+          "synonyms": {
+            "en": [
+              "allied"
+            ],
+            "ml": []
+          }
+        },
+        {
+          "value": "plantation",
+          "label": {
+            "en": "plantation",
+            "ml": "plantation"
+          },
+          "synonyms": {
+            "en": [
+              "plantation"
+            ],
+            "ml": []
+          }
+        }
+      ]
+    },
+    {
+      "id": "fwf_member",
+      "type": "boolean",
+      "label": {
+        "en": "fwf_member",
+        "ml": "fwf_member"
+      },
+      "question": {
+        "en": "fwf_member?",
+        "ml": "fwf_member?"
+      },
+      "sensitivity": "low",
+      "order": 2,
+      "unit": "",
+      "options": []
+    },
+    {
+      "id": "spwf_member",
+      "type": "boolean",
+      "label": {
+        "en": "spwf_member",
+        "ml": "spwf_member"
+      },
+      "question": {
+        "en": "spwf_member?",
+        "ml": "spwf_member?"
+      },
+      "sensitivity": "low",
+      "order": 3,
+      "unit": "",
+      "options": []
+    },
+    {
+      "id": "annual_income",
+      "type": "number",
+      "label": {
+        "en": "annual_income",
+        "ml": "annual_income"
+      },
+      "question": {
+        "en": "annual_income?",
+        "ml": "annual_income?"
+      },
+      "sensitivity": "low",
+      "order": 4,
+      "unit": "INR",
+      "options": []
+    },
+    {
+      "id": "age",
+      "type": "number",
+      "label": {
+        "en": "age",
+        "ml": "age"
+      },
+      "question": {
+        "en": "age?",
+        "ml": "age?"
+      },
+      "sensitivity": "low",
+      "order": 5,
+      "unit": "INR",
+      "options": []
+    },
+    {
+      "id": "disability",
+      "type": "boolean",
+      "label": {
+        "en": "disability",
+        "ml": "disability"
+      },
+      "question": {
+        "en": "disability?",
+        "ml": "disability?"
+      },
+      "sensitivity": "high",
+      "order": 6,
+      "unit": "",
+      "options": []
+    }
+  ],
+  "schemes": [
+    {
+      "id": "FX-01",
+      "name": {
+        "en": "FX-01",
+        "ml": "FX-01"
+      },
+      "authority": {
+        "en": "Fixture Board",
+        "ml": "Fixture Board"
+      },
+      "category": "fishing",
+      "summary": {
+        "en": "fixture",
+        "ml": "fixture"
+      },
+      "verification": {
+        "eligibility": "verified",
+        "documents": "verified",
+        "apply": "verified"
+      },
+      "rule": {
+        "all": [
+          {
+            "id": "c1",
+            "fact": "livelihood",
+            "op": "includes",
+            "value": [
+              "fishing",
+              "allied"
+            ],
+            "changeable": false,
+            "source": {
+              "sourceId": "S1",
+              "quote": "fixture quote"
+            },
+            "reviewedBy": "T"
+          },
+          {
+            "id": "c2",
+            "fact": "fwf_member",
+            "op": "eq",
+            "value": true,
+            "changeable": true,
+            "howTo": {
+              "en": "do fwf_member",
+              "ml": "do fwf_member"
+            },
+            "source": {
+              "sourceId": "S1",
+              "quote": "fixture quote"
+            },
+            "reviewedBy": "T"
+          },
+          {
+            "id": "c3",
+            "fact": "annual_income",
+            "op": "lte",
+            "value": 200000,
+            "changeable": false,
+            "source": {
+              "sourceId": "S1",
+              "quote": "fixture quote"
+            },
+            "reviewedBy": "T"
+          }
+        ]
+      },
+      "documents": [
+        {
+          "docId": "id_proof",
+          "source": {
+            "sourceId": "S1",
+            "quote": "fixture quote"
+          }
+        }
+      ],
+      "apply": [
+        {
+          "locationType": "office",
+          "mode": "in_person",
+          "source": {
+            "sourceId": "S1",
+            "quote": "fixture quote"
+          }
+        }
+      ]
+    },
+    {
+      "id": "FX-02",
+      "name": {
+        "en": "FX-02",
+        "ml": "FX-02"
+      },
+      "authority": {
+        "en": "Fixture Board",
+        "ml": "Fixture Board"
+      },
+      "category": "fishing",
+      "summary": {
+        "en": "fixture",
+        "ml": "fixture"
+      },
+      "verification": {
+        "eligibility": "verified",
+        "documents": "verified",
+        "apply": "verified"
+      },
+      "rule": {
+        "all": [
+          {
+            "id": "c1",
+            "fact": "fwf_member",
+            "op": "eq",
+            "value": true,
+            "changeable": true,
+            "howTo": {
+              "en": "do fwf_member",
+              "ml": "do fwf_member"
+            },
+            "source": {
+              "sourceId": "S1",
+              "quote": "fixture quote"
+            },
+            "reviewedBy": "T"
+          },
+          {
+            "id": "c2",
+            "fact": "age",
+            "op": "gte",
+            "value": 60,
+            "changeable": false,
+            "source": {
+              "sourceId": "S1",
+              "quote": "fixture quote"
+            },
+            "reviewedBy": "T"
+          }
+        ]
+      },
+      "documents": [
+        {
+          "docId": "id_proof",
+          "source": {
+            "sourceId": "S1",
+            "quote": "fixture quote"
+          }
+        }
+      ],
+      "apply": [
+        {
+          "locationType": "office",
+          "mode": "in_person",
+          "source": {
+            "sourceId": "S1",
+            "quote": "fixture quote"
+          }
+        }
+      ]
+    },
+    {
+      "id": "FX-03",
+      "name": {
+        "en": "FX-03",
+        "ml": "FX-03"
+      },
+      "authority": {
+        "en": "Fixture Board",
+        "ml": "Fixture Board"
+      },
+      "category": "plantation",
+      "summary": {
+        "en": "fixture",
+        "ml": "fixture"
+      },
+      "verification": {
+        "eligibility": "verified",
+        "documents": "verified",
+        "apply": "verified"
+      },
+      "rule": {
+        "all": [
+          {
+            "id": "c1",
+            "fact": "livelihood",
+            "op": "includes",
+            "value": [
+              "plantation"
+            ],
+            "changeable": false,
+            "source": {
+              "sourceId": "S1",
+              "quote": "fixture quote"
+            },
+            "reviewedBy": "T"
+          },
+          {
+            "id": "c2",
+            "fact": "spwf_member",
+            "op": "eq",
+            "value": true,
+            "changeable": true,
+            "howTo": {
+              "en": "do spwf_member",
+              "ml": "do spwf_member"
+            },
+            "source": {
+              "sourceId": "S1",
+              "quote": "fixture quote"
+            },
+            "reviewedBy": "T"
+          }
+        ]
+      },
+      "documents": [
+        {
+          "docId": "id_proof",
+          "source": {
+            "sourceId": "S1",
+            "quote": "fixture quote"
+          }
+        }
+      ],
+      "apply": [
+        {
+          "locationType": "office",
+          "mode": "in_person",
+          "source": {
+            "sourceId": "S1",
+            "quote": "fixture quote"
+          }
+        }
+      ]
+    },
+    {
+      "id": "FX-04",
+      "name": {
+        "en": "FX-04",
+        "ml": "FX-04"
+      },
+      "authority": {
+        "en": "Fixture Board",
+        "ml": "Fixture Board"
+      },
+      "category": "plantation",
+      "summary": {
+        "en": "fixture",
+        "ml": "fixture"
+      },
+      "verification": {
+        "eligibility": "verified",
+        "documents": "verified",
+        "apply": "verified"
+      },
+      "rule": {
+        "all": [
+          {
+            "id": "c1",
+            "fact": "livelihood",
+            "op": "includes",
+            "value": [
+              "plantation"
+            ],
+            "changeable": false,
+            "source": {
+              "sourceId": "S1",
+              "quote": "fixture quote"
+            },
+            "reviewedBy": "T"
+          },
+          {
+            "any": [
+              {
+                "id": "c2",
+                "fact": "age",
+                "op": "gte",
+                "value": 60,
+                "changeable": false,
+                "source": {
+                  "sourceId": "S1",
+                  "quote": "fixture quote"
+                },
+                "reviewedBy": "T"
+              },
+              {
+                "id": "c3",
+                "fact": "disability",
+                "op": "eq",
+                "value": true,
+                "changeable": false,
+                "source": {
+                  "sourceId": "S1",
+                  "quote": "fixture quote"
+                },
+                "reviewedBy": "T"
+              }
+            ]
+          }
+        ]
+      },
+      "documents": [
+        {
+          "docId": "id_proof",
+          "source": {
+            "sourceId": "S1",
+            "quote": "fixture quote"
+          }
+        },
+        {
+          "docId": "disability_cert",
+          "when": {
+            "fact": "disability",
+            "op": "eq",
+            "value": true
+          },
+          "source": {
+            "sourceId": "S1",
+            "quote": "fixture quote"
+          }
+        }
+      ],
+      "apply": [
+        {
+          "locationType": "office",
+          "mode": "in_person",
+          "source": {
+            "sourceId": "S1",
+            "quote": "fixture quote"
+          }
+        }
+      ]
+    },
+    {
+      "id": "FX-05",
+      "name": {
+        "en": "FX-05",
+        "ml": "FX-05"
+      },
+      "authority": {
+        "en": "Fixture Board",
+        "ml": "Fixture Board"
+      },
+      "category": "fishing",
+      "summary": {
+        "en": "fixture",
+        "ml": "fixture"
+      },
+      "verification": {
+        "eligibility": "partial",
+        "documents": "partial",
+        "apply": "partial"
+      },
+      "rule": {
+        "all": [
+          {
+            "id": "c1",
+            "fact": "livelihood",
+            "op": "includes",
+            "value": [
+              "fishing"
+            ],
+            "changeable": false,
+            "source": {
+              "sourceId": "S1",
+              "quote": "fixture quote"
+            },
+            "reviewedBy": "T"
+          }
+        ]
+      },
+      "documents": [
+        {
+          "docId": "id_proof",
+          "source": {
+            "sourceId": "S1",
+            "quote": "fixture quote"
+          }
+        }
+      ],
+      "apply": [
+        {
+          "locationType": "office",
+          "mode": "in_person",
+          "source": {
+            "sourceId": "S1",
+            "quote": "fixture quote"
+          }
+        }
+      ]
+    }
+  ],
+  "documents": [
+    {
+      "id": "id_proof",
+      "name": {
+        "en": "ID proof",
+        "ml": "ID proof"
+      }
+    },
+    {
+      "id": "disability_cert",
+      "name": {
+        "en": "Disability certificate",
+        "ml": "Disability certificate"
+      }
+    }
+  ],
+  "locationTypes": [
+    {
+      "id": "office",
+      "label": {
+        "en": "Office",
+        "ml": "Office"
+      }
+    }
+  ],
+  "locations": [
+    {
+      "id": "L1",
+      "type": "office",
+      "name": {
+        "en": "Office 1",
+        "ml": "Office 1"
+      },
+      "district": "Ernakulam",
+      "sourceId": "S1"
+    }
+  ],
+  "terms": [],
+  "profiles": [
+    {
+      "id": "P1",
+      "title": "fisher member low income",
+      "kind": "standard",
+      "answers": {
+        "livelihood": "fishing",
+        "fwf_member": "yes",
+        "annual_income": "150000",
+        "age": "45"
+      },
+      "expected": {
+        "FX-01": "potentially_eligible",
+        "FX-02": "not_matched"
+      },
+      "expectedOthers": "not_matched",
+      "expectedMissing": {}
+    },
+    {
+      "id": "P2",
+      "title": "fisher member income unknown",
+      "kind": "incomplete",
+      "answers": {
+        "livelihood": "fishing",
+        "fwf_member": "yes",
+        "annual_income": "unknown",
+        "age": "30"
+      },
+      "expected": {},
+      "expectedMissing": {
+        "FX-01": [
+          "annual_income"
+        ]
+      }
+    }
+  ],
+  "disclaimer": {
+    "main": {
+      "en": "Potentially eligible only.",
+      "ml": "Potentially eligible only."
+    }
+  }
+}

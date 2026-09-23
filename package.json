@@ -1,0 +1,30 @@
+{
+  "name": "sleepdeprived",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "test": "vitest run",
+    "data": "tsx scripts/build-data.ts",
+    "data:template": "tsx scripts/make-template.ts",
+    "data:examples": "tsx scripts/build-data.ts --examples",
+    "data:fixture": "tsx scripts/fixture-data.ts"
+  },
+  "dependencies": {
+    "next": "16.3.6",
+    "react": "19.2.8",
+    "react-dom": "19.2.8",
+    "zod": "^4.6.5"
+  },
+  "devDependencies": {
+    "@types/node": "^22.20.4",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "exceljs": "^4.4.0",
+    "tsx": "^4.23.15",
+    "typescript": "^5",
+    "vitest": "^5.0.1"
+  }
+}
