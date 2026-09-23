@@ -8,12 +8,16 @@ import { isScreenable, screenAll, statusMap } from "@/lib/engine/screen";
 import type { Answer, Answers, Dataset, Lang, SchemeStatus } from "@/lib/engine/types";
 import { answerText, pick } from "@/lib/i18n/describe";
 import { t } from "@/lib/i18n/strings";
+import DocumentChecklist from "./DocumentChecklist";
+import EasyQuestion from "./EasyQuestion";
+import OfficeFinder from "./OfficeFinder";
 import QuestionCard from "./QuestionCard";
 import ResultsList from "./ResultsList";
 import SchemeDetail from "./SchemeDetail";
 import { stopSpeaking } from "./useSpeech";
 
-type Stage = "language" | "intro" | "ask" | "checking" | "results" | "detail" | "answers";
+type Stage = "language" | "intro" | "ask" | "checking" | "results" | "detail" | "answers" | "checklist" | "where";
+type Mode = "standard" | "easy";
 const ENTRY_FACT = "livelihood";
 
 function Stepper({ step, lang }: { step: number; lang: Lang }) {
@@ -45,6 +49,8 @@ export default function Navigator({ ds }: { ds: Dataset }) {
   const [confirmClear, setConfirmClear] = useState(false);
   const [notice, setNotice] = useState("");
   const [online, setOnline] = useState(true);
+  const [mode, setMode] = useState<Mode>("standard");
+  const [autoRead, setAutoRead] = useState(true);
   const introHeading = useRef<HTMLHeadingElement>(null);
   const checkingHeading = useRef<HTMLHeadingElement>(null);
   const answersHeading = useRef<HTMLHeadingElement>(null);
@@ -150,12 +156,62 @@ export default function Navigator({ ds }: { ds: Dataset }) {
   }
 
   const editFact = editing ? ds.facts.find((f) => f.id === editing) : undefined;
+  const easy = mode === "easy";
+  const eligibleSchemes = results.filter((r) => r.status === "potentially_eligible").map((r) => r.scheme);
+
+  function Question(p: {
+    k: string;
+    fact: NonNullable<typeof editFact>;
+    choices: Answer[];
+    current?: Answer;
+    number?: number;
+    remaining?: number;
+    onBack: () => void;
+    onAnswer: (a: Answer) => void;
+    onSeeResults?: () => void;
+    allowUnknown?: boolean;
+  }) {
+    if (easy)
+      return (
+        <EasyQuestion
+          key={`easy-${p.k}`}
+          fact={p.fact}
+          choices={p.choices}
+          lang={lang}
+          current={p.current}
+          number={p.number}
+          autoRead={autoRead}
+          onAutoRead={setAutoRead}
+          canGoBack
+          onBack={p.onBack}
+          onAnswer={p.onAnswer}
+          onSeeResults={p.onSeeResults}
+          allowUnknown={p.allowUnknown}
+        />
+      );
+    return (
+      <QuestionCard
+        key={p.k}
+        fact={p.fact}
+        choices={p.choices}
+        lang={lang}
+        current={p.current}
+        number={p.number}
+        remaining={p.remaining}
+        canGoBack
+        onBack={p.onBack}
+        onAnswer={p.onAnswer}
+        onSeeResults={p.onSeeResults}
+        allowUnknown={p.allowUnknown}
+      />
+    );
+  }
   const opened = openScheme ? results.find((r) => r.scheme.id === openScheme) : undefined;
   const step = stage === "language" || stage === "intro" ? 1 : stage === "ask" && (askEntry || editing === ENTRY_FACT) ? 2 : stage === "ask" ? 3 : 4;
   const answered = Object.keys(answers).length;
 
   return (
-    <div className="shell">
+    <div className={`shell ${easy ? "easy" : ""}`}>
       <a href="#main" className="skip">
         {t("skipToContent", lang)}
       </a>
@@ -166,6 +222,10 @@ export default function Navigator({ ds }: { ds: Dataset }) {
             <p className="brand-sub">{t("appSubtitle", lang)}</p>
           </div>
           {stage !== "language" && (
+            <div className="head-tools">
+            <button type="button" className="mode-switch" aria-pressed={easy} onClick={() => setMode(easy ? "standard" : "easy")}>
+              {easy ? t("easyOn", lang) : t("easyOff", lang)}
+            </button>
             <div className="lang-switch" role="group" aria-label="Language / ഭാഷ">
               <button type="button" lang="ml" aria-pressed={lang === "ml"} onClick={() => setLang("ml")}>
                 മലയാളം
@@ -173,6 +233,7 @@ export default function Navigator({ ds }: { ds: Dataset }) {
               <button type="button" lang="en" aria-pressed={lang === "en"} onClick={() => setLang("en")}>
                 English
               </button>
+            </div>
             </div>
           )}
         </div>
@@ -186,7 +247,7 @@ export default function Navigator({ ds }: { ds: Dataset }) {
             {notice}
           </p>
         )}
-        {stage !== "detail" && stage !== "answers" && <Stepper step={step} lang={lang} />}
+        {stage !== "detail" && stage !== "answers" && stage !== "checklist" && stage !== "where" && <Stepper step={step} lang={lang} />}
 
         {stage === "language" && (
           <section className="panel" aria-labelledby="lang-title">
@@ -239,58 +300,88 @@ export default function Navigator({ ds }: { ds: Dataset }) {
             {screenable === 0 ? (
               <p className="notice">{t("noData", lang)}</p>
             ) : (
-              <button type="button" className="btn btn-primary btn-big" onClick={() => setStage("ask")}>
-                {t("start", lang)}
-              </button>
+              <fieldset className="mode-pick">
+                <legend>{t("modeTitle", lang)}</legend>
+                <button
+                  type="button"
+                  className={`mode-card ${mode === "easy" ? "is-current" : ""}`}
+                  aria-describedby="mode-easy-help"
+                  onClick={() => {
+                    setMode("easy");
+                    setStage("ask");
+                  }}
+                >
+                  <span className="mode-name">{t("modeEasy", lang)}</span>
+                  <span id="mode-easy-help" className="mode-help">
+                    {t("modeEasyHelp", lang)}
+                  </span>
+                  <span className="mode-go">{t("start", lang)} →</span>
+                </button>
+                <button
+                  type="button"
+                  className={`mode-card ${mode === "standard" ? "is-current" : ""}`}
+                  aria-describedby="mode-std-help"
+                  onClick={() => {
+                    setMode("standard");
+                    setStage("ask");
+                  }}
+                >
+                  <span className="mode-name">{t("modeStandard", lang)}</span>
+                  <span id="mode-std-help" className="mode-help">
+                    {t("modeStandardHelp", lang)}
+                  </span>
+                  <span className="mode-go">{t("start", lang)} →</span>
+                </button>
+              </fieldset>
             )}
             {ds.disclaimer.privacy && <p className="meta">{pick(ds.disclaimer.privacy, lang)}</p>}
             {ds.disclaimer.not_official && <p className="meta">{pick(ds.disclaimer.not_official, lang)}</p>}
           </section>
         )}
 
-        {stage === "ask" && editFact && (
-          <QuestionCard
-            key={`edit-${editFact.id}`}
-            fact={editFact}
-            choices={choicesFor(editFact, ds.schemes)}
-            lang={lang}
-            current={answers[editFact.id]}
-            canGoBack
-            onBack={() => {
+        {stage === "ask" &&
+          editFact &&
+          Question({
+            k: `edit-${editFact.id}`,
+            fact: editFact,
+            choices: choicesFor(editFact, ds.schemes),
+            current: answers[editFact.id],
+            onBack: () => {
               setEditing(null);
               setStage(openScheme ? "detail" : "answers");
-            }}
-            onAnswer={(a) => answer(editFact.id, a)}
-          />
-        )}
+            },
+            onAnswer: (a) => answer(editFact.id, a),
+          })}
 
-        {stage === "ask" && !editFact && askEntry && entryFact && (
-          <QuestionCard
-            key={entryFact.id}
-            fact={entryFact}
-            choices={choicesFor(entryFact, ds.schemes)}
-            lang={lang}
-            canGoBack
-            onBack={() => setStage("intro")}
-            allowUnknown={false}
-            onAnswer={(a) => answer(entryFact.id, a)}
-          />
-        )}
+        {stage === "ask" &&
+          !editFact &&
+          askEntry &&
+          entryFact &&
+          Question({
+            k: entryFact.id,
+            fact: entryFact,
+            choices: choicesFor(entryFact, ds.schemes),
+            current: answers[entryFact.id],
+            onBack: () => setStage("intro"),
+            allowUnknown: false,
+            onAnswer: (a) => answer(entryFact.id, a),
+          })}
 
-        {stage === "ask" && !editFact && !askEntry && adaptive && (
-          <QuestionCard
-            key={adaptive.fact.id}
-            fact={adaptive.fact}
-            choices={adaptive.choices}
-            lang={lang}
-            number={history.filter((h) => h !== ENTRY_FACT).length + 1}
-            remaining={adaptive.remainingUpperBound}
-            canGoBack
-            onBack={back}
-            onAnswer={(a) => answer(adaptive.fact.id, a)}
-            onSeeResults={() => setStage("results")}
-          />
-        )}
+        {stage === "ask" &&
+          !editFact &&
+          !askEntry &&
+          adaptive &&
+          Question({
+            k: adaptive.fact.id,
+            fact: adaptive.fact,
+            choices: adaptive.choices,
+            current: answers[adaptive.fact.id],
+            number: history.filter((h) => h !== ENTRY_FACT).length + 1,
+            remaining: adaptive.remainingUpperBound,
+            onBack: back,
+            onAnswer: (a) => answer(adaptive.fact.id, a),
+            onSeeResults: () => setStage("results"),
+          })}
 
         {stage === "checking" && (
           <section className="panel" role="status" aria-labelledby="checking-title">
@@ -309,10 +400,13 @@ export default function Navigator({ ds }: { ds: Dataset }) {
               answeredCount={answered}
               lang={lang}
               previous={previous}
+              easy={easy}
               onOpen={(id) => {
                 setOpenScheme(id);
                 setStage("detail");
               }}
+              onChecklist={() => setStage("checklist")}
+              onWhere={() => setStage("where")}
             />
             <div className="row actions no-print">
               {(adaptive || askEntry) && (
@@ -347,6 +441,35 @@ export default function Navigator({ ds }: { ds: Dataset }) {
             }}
             onAnswerFact={startEdit}
           />
+        )}
+
+        {stage === "checklist" && (
+          <DocumentChecklist
+            ds={ds}
+            results={results}
+            lang={lang}
+            onBack={() => setStage("results")}
+            onFindOffices={() => setStage("where")}
+            onClear={() => clearAll(t("cleared", lang))}
+          />
+        )}
+
+        {stage === "where" && (
+          <>
+            <button type="button" className="btn btn-link" onClick={() => setStage("results")}>
+              ← {t("backToResults", lang)}
+            </button>
+            {eligibleSchemes.length === 0 ? (
+              <p className="notice">{t("checklistNothing", lang)}</p>
+            ) : (
+              <OfficeFinder ds={ds} schemes={eligibleSchemes} lang={lang} district={district} onDistrict={setDistrict} headingLevel={1} />
+            )}
+            <div className="row actions no-print">
+              <button type="button" className="btn" onClick={() => setStage("checklist")}>
+                {t("openChecklist", lang)}
+              </button>
+            </div>
+          </>
         )}
 
         {stage === "answers" && (

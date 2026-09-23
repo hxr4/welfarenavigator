@@ -137,6 +137,55 @@ Mark a UI string as checked by adding `mlReviewed: true` to it in `strings.ts`. 
 | print | Print checklist | പട്ടിക പ്രിന്റ് ചെയ്യുക | NOT REVIEWED |  |
 | copy | Copy checklist | പട്ടിക കോപ്പി ചെയ്യുക | NOT REVIEWED |  |
 | copied | Copied | കോപ്പി ചെയ്തു | NOT REVIEWED |  |
+| modeTitle | How would you like to use this? | ഇത് എങ്ങനെ ഉപയോഗിക്കണം? | NOT REVIEWED |  |
+| modeStandard | Standard mode | സാധാരണ രീതി | NOT REVIEWED |  |
+| modeStandardHelp | All details on screen. Good if you read comfortably. | എല്ലാ വിവരങ്ങളും സ്ക്രീനിൽ. സുഖമായി വായിക്കുന്നവർക്ക്. | NOT REVIEWED |  |
+| modeEasy | Easy mode | എളുപ്പ രീതി | NOT REVIEWED |  |
+| modeEasyHelp | Big buttons. One question at a time. Questions and answers are read aloud. | വലിയ ബട്ടണുകൾ. ഒരു സമയം ഒരു ചോദ്യം. ചോദ്യങ്ങളും ഉത്തരങ്ങളും വായിച്ചുകേൾപ്പിക്കും. | NOT REVIEWED |  |
+| easyOn | Easy mode: on | എളുപ്പ രീതി: ഓൺ | NOT REVIEWED |  |
+| easyOff | Easy mode: off | എളുപ്പ രീതി: ഓഫ് | NOT REVIEWED |  |
+| easyReading | Reading aloud | വായിച്ചുകേൾപ്പിക്കുന്നു | NOT REVIEWED |  |
+| easyNowReading | Reading | വായിക്കുന്നു | NOT REVIEWED |  |
+| easyListenAgain | Listen again | വീണ്ടും കേൾക്കുക | NOT REVIEWED |  |
+| easyAutoRead | Read each question aloud | ഓരോ ചോദ്യവും വായിച്ചുകേൾപ്പിക്കുക | NOT REVIEWED |  |
+| easyMore | More about this question | ഈ ചോദ്യത്തെക്കുറിച്ച് കൂടുതൽ | NOT REVIEWED |  |
+| easyChooseAll | Tap all that apply. Then press Continue. | ബാധകമായതെല്ലാം തൊടുക. പിന്നെ 'തുടരുക' അമർത്തുക. | NOT REVIEWED |  |
+| easyNoAudio | Audio is not available on this device. Tap your answer. | ഈ ഉപകരണത്തിൽ ശബ്ദം ലഭ്യമല്ല. ഉത്തരം തൊട്ട് തിരഞ്ഞെടുക്കുക. | NOT REVIEWED |  |
+| easyPressContinue | Press Continue. | 'തുടരുക' അമർത്തുക. | NOT REVIEWED |  |
+| easyUnselected | Removed | ഒഴിവാക്കി | NOT REVIEWED |  |
+| openChecklist | Open document checklist | രേഖകളുടെ പട്ടിക തുറക്കുക | NOT REVIEWED |  |
+| checklistSummary | {d} documents for {n} schemes. Duplicates are merged. | {n} പദ്ധതികൾക്ക് {d} രേഖകൾ. ആവർത്തിക്കുന്നവ ഒന്നാക്കി. | NOT REVIEWED |  |
+| docChecklistTitle | Your Document Checklist | നിങ്ങളുടെ രേഖകളുടെ പട്ടിക | NOT REVIEWED |  |
+| docChecklistIntro | Based on the information provided, for the {n} schemes you may be potentially eligible for. Tap a document to see which schemes need it. | നൽകിയ വിവരങ്ങളുടെ അടിസ്ഥാനത്തിൽ, സാധ്യതയുള്ള {n} പദ്ധതികൾക്ക്. ഏതെല്ലാം പദ്ധതികൾക്ക് വേണമെന്ന് കാണാൻ രേഖയിൽ തൊടുക. | NOT REVIEWED |  |
+| checklistNothing | No scheme is potentially eligible yet, so there is no checklist. | ഇതുവരെ സാധ്യതയുള്ള പദ്ധതിയില്ല; അതിനാൽ പട്ടികയില്ല. | NOT REVIEWED |  |
+| requiredForOne | Needed for 1 scheme | 1 പദ്ധതിക്ക് വേണം | NOT REVIEWED |  |
+| requiredForN | Needed for {n} schemes | {n} പദ്ധതികൾക്ക് വേണം | NOT REVIEWED |  |
+| neededFor | Needed for | ആവശ്യമുള്ള പദ്ധതികൾ | NOT REVIEWED |  |
+| docListNotVerified | Official document list not published / not verified for: {names}. Ask the office what to bring. | ഔദ്യോഗിക രേഖാ പട്ടിക പ്രസിദ്ധീകരിച്ചിട്ടില്ല / സ്ഥിരീകരിച്ചിട്ടില്ല: {names}. കൊണ്ടുപോകേണ്ടവ ഓഫീസിൽ ചോദിക്കുക. | NOT REVIEWED |  |
+| docListNotVerifiedShort | Official document list not verified | ഔദ്യോഗിക രേഖാ പട്ടിക സ്ഥിരീകരിച്ചിട്ടില്ല | NOT REVIEWED |  |
+| docListPartialFor | The list may not be complete for: {names}. Confirm at the office. | ഇവയുടെ പട്ടിക പൂർണ്ണമല്ലാതിരിക്കാം: {names}. ഓഫീസിൽ ഉറപ്പാക്കുക. | NOT REVIEWED |  |
+| printOrSave | Print or save as PDF | പ്രിന്റ് ചെയ്യുക / PDF ആയി സേവ് ചെയ്യുക | NOT REVIEWED |  |
+| printHint | To save a PDF, choose "Save as PDF" in the print window. | PDF ആയി സേവ് ചെയ്യാൻ പ്രിന്റ് ജാലകത്തിൽ "Save as PDF" തിരഞ്ഞെടുക്കുക. | NOT REVIEWED |  |
+| printedClearPrompt | Done printing? Clear this family's answers from this device. | പ്രിന്റ് കഴിഞ്ഞോ? ഈ കുടുംബത്തിന്റെ മറുപടികൾ ഈ ഉപകരണത്തിൽ നിന്ന് മായ്ക്കുക. | NOT REVIEWED |  |
+| clearAfterPrint | Clear after printing | പ്രിന്റിന് ശേഷം മായ്ക്കുക | NOT REVIEWED |  |
+| generatedOn | Prepared on | തയ്യാറാക്കിയത് | NOT REVIEWED |  |
+| printSchemes | Schemes you may be potentially eligible for | സാധ്യതയുള്ള പദ്ധതികൾ | NOT REVIEWED |  |
+| printDocs | Documents to take | കൊണ്ടുപോകേണ്ട രേഖകൾ | NOT REVIEWED |  |
+| finalDecision | Based on the information provided. Final eligibility is decided by the responsible authority after checking your documents. | നൽകിയ വിവരങ്ങളുടെ അടിസ്ഥാനത്തിൽ മാത്രം. രേഖകൾ പരിശോധിച്ച ശേഷം ബന്ധപ്പെട്ട അധികാരികളാണ് അന്തിമ അർഹത തീരുമാനിക്കുന്നത്. | NOT REVIEWED |  |
+| printNoPersonal | This sheet contains no name, phone number, ID number or answers. | ഈ പേജിൽ പേര്, ഫോൺ നമ്പർ, തിരിച്ചറിയൽ നമ്പർ, മറുപടികൾ എന്നിവ ഇല്ല. | NOT REVIEWED |  |
+| whereTitleAll | Where to apply for your schemes | നിങ്ങളുടെ പദ്ധതികൾക്ക് എവിടെ അപേക്ഷിക്കണം | NOT REVIEWED |  |
+| whereIntro | First we pick the office that handles each scheme, then the office for your district or area. | ആദ്യം ഓരോ പദ്ധതിയും കൈകാര്യം ചെയ്യുന്ന ഓഫീസ്, പിന്നെ നിങ്ങളുടെ ജില്ലയ്ക്കോ പ്രദേശത്തിനോ ഉള്ള ഓഫീസ്. | NOT REVIEWED |  |
+| findNearest | Find nearest centre | അടുത്തുള്ള കേന്ദ്രം കണ്ടെത്തുക | NOT REVIEWED |  |
+| call | Call | വിളിക്കുക | NOT REVIEWED |  |
+| opensMaps | opens a map | മാപ്പ് തുറക്കും | NOT REVIEWED |  |
+| officeServesYou | Serves your district by jurisdiction | പ്രവർത്തന പരിധിയിൽ നിങ്ങളുടെ ജില്ലയും ഉൾപ്പെടുന്നു | NOT REVIEWED |  |
+| officeOtherDistrict | In {d} district, not yours | {d} ജില്ലയിൽ; നിങ്ങളുടെ ജില്ലയല്ല | NOT REVIEWED |  |
+| distanceUnavailable | Distance unavailable — official address provided | ദൂരം ലഭ്യമല്ല — ഔദ്യോഗിക വിലാസം നൽകിയിരിക്കുന്നു | NOT REVIEWED |  |
+| forSchemes | For | പദ്ധതികൾ | NOT REVIEWED |  |
+| chooseDistrictFirst | Choose your district, or use Find nearest centre. | ജില്ല തിരഞ്ഞെടുക്കുക, അല്ലെങ്കിൽ 'അടുത്തുള്ള കേന്ദ്രം കണ്ടെത്തുക' ഉപയോഗിക്കുക. | NOT REVIEWED |  |
+| noOfficeData | No office of this type is listed in the official sources we used. | ഞങ്ങൾ ഉപയോഗിച്ച ഔദ്യോഗിക ഉറവിടങ്ങളിൽ ഈ തരം ഓഫീസ് ഇല്ല. | NOT REVIEWED |  |
+| noOfficeInDistrict | No {type} is listed in the official source for {d} district. | {d} ജില്ലയിൽ {type} ഔദ്യോഗിക ഉറവിടത്തിൽ നൽകിയിട്ടില്ല. | NOT REVIEWED |  |
+| pickByJurisdiction | More than one office serves this district. Check "Serves" on each office to find the one for your taluk. | ഈ ജില്ലയ്ക്ക് ഒന്നിലധികം ഓഫീസുകളുണ്ട്. നിങ്ങളുടെ താലൂക്കിനുള്ളത് കണ്ടെത്താൻ ഓരോ ഓഫീസിന്റെയും 'പ്രവർത്തന പരിധി' നോക്കുക. | NOT REVIEWED |  |
 | yourAnswers | Your answers | നിങ്ങളുടെ മറുപടികൾ | NOT REVIEWED |  |
 | yourAnswersHelp | Change any answer. Results update straight away. | ഏത് മറുപടിയും മാറ്റാം. ഫലം ഉടൻ പുതുക്കും. | NOT REVIEWED |  |
 | clear | Clear my information | എന്റെ വിവരങ്ങൾ മായ്ക്കുക | NOT REVIEWED |  |

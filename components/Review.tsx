@@ -11,6 +11,8 @@ import { isScreenable, screenAll } from "@/lib/engine/screen";
 import type { Dataset, SchemeResult } from "@/lib/engine/types";
 import { conditionText } from "@/lib/i18n/describe";
 import { STRINGS } from "@/lib/i18n/strings";
+import { sameInBothModes } from "@/lib/easy/equivalence";
+import { hasCoords } from "@/lib/offices";
 
 const MARK = { T: "✓", F: "✗", U: "?" } as const;
 const frac = (a: number, b: number) => `${a} / ${b}`;
@@ -37,6 +39,10 @@ export default function Review({ ds }: { ds: Dataset }) {
   const passed = runs.filter((r) => r.passed).length;
   const genPassed = gen.filter((g) => g.ok).length;
   const adaptiveOk = runs.filter((r) => r.adaptiveOk).length;
+  const easySame = useMemo(() => ds.profiles.filter((p) => sameInBothModes(ds, p)).length, [ds, runCount]);
+  const jurisdictionOffices = ds.locations.filter((l) => !!l.jurisdiction).length;
+  const withCoords = ds.locations.filter(hasCoords).length;
+  const matsyafedGaps = DISTRICTS.filter((d) => !ds.locations.some((l) => l.type === "matsyafed_office" && l.district === d.id)).map((d) => d.id);
   const errors = issues.filter((i) => i.level === "error");
   const warnings = issues.filter((i) => i.level === "warning");
   const mlUnreviewed = Object.values(STRINGS).filter((s) => !("mlReviewed" in s && s.mlReviewed)).length;
@@ -119,6 +125,46 @@ export default function Review({ ds }: { ds: Dataset }) {
             </button>
             <span className="meta">Runs so far: {runCount}</span>
           </div>
+        </section>
+
+        <section className="panel" aria-labelledby="x-title">
+          <h2 id="x-title">Accessibility and navigation</h2>
+          <table className="kv">
+            <tbody>
+              <tr>
+                <th>Easy Mode (large buttons, one question per screen, read-aloud)</th>
+                <td>
+                  Available on the start screen and from the header. Same engine; the same household gives the same result in both modes:{" "}
+                  <span className={easySame === runs.length ? "ok" : "bad"}>{frac(easySame, runs.length)} profiles</span>
+                </td>
+              </tr>
+              <tr>
+                <th>Read-aloud with option highlighting</th>
+                <td>Question, then each option as a separate utterance or recorded clip; the option lights up on its start event and clears on its end event. Tapping stops speech and selects. Speaking and selected use different borders, icons and labels, not colour alone.</td>
+              </tr>
+              <tr>
+                <th>Document checklist export</th>
+                <td>Merged across potentially eligible schemes, expandable per document, print or save as PDF through the browser. Contains scheme names, documents, where to apply and the disclaimer; no answers, names, phone or ID numbers. &quot;Clear after printing&quot; erases the session.</td>
+              </tr>
+              <tr>
+                <th>Office navigation</th>
+                <td>
+                  Office type from each scheme first, then district or printed jurisdiction ({jurisdictionOffices} offices mapped by jurisdiction). Matsyafed districts with no listed office are reported, not filled:{" "}
+                  {matsyafedGaps.length ? matsyafedGaps.join(", ") : "none"}.
+                </td>
+              </tr>
+              <tr>
+                <th>Location</th>
+                <td>Asked only when &quot;Find nearest centre&quot; is pressed. Used on the device to estimate the district; never sent or stored. If refused, the district list works the same.</td>
+              </tr>
+              <tr>
+                <th>Distances</th>
+                <td>
+                  Only from verified office coordinates: {withCoords} of {ds.locations.length} offices have them, so the app shows &quot;Distance unavailable — official address provided&quot; with Call and Directions links.
+                </td>
+              </tr>
+            </tbody>
+          </table>
         </section>
 
         <section className="panel" aria-labelledby="d-title">

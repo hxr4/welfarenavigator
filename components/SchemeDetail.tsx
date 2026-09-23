@@ -5,7 +5,7 @@ import type { Answers, Dataset, Lang, SchemeResult } from "@/lib/engine/types";
 import { answerText, conditionText, pick } from "@/lib/i18n/describe";
 import { t, type StringKey } from "@/lib/i18n/strings";
 import { statusLabel } from "@/lib/i18n/terms";
-import FindOffice from "./FindOffice";
+import OfficeFinder from "./OfficeFinder";
 import { SourceNote } from "./SourceNote";
 import { canRead, readAloud, stopSpeaking, useVoicesReady } from "./useSpeech";
 import { SpeakerIcon } from "./icons";
@@ -189,7 +189,7 @@ export default function SchemeDetail({ ds, result, answers, lang, district, onDi
         </section>
       )}
 
-      {finding && <FindOffice ds={ds} scheme={scheme} lang={lang} district={district} onDistrict={onDistrict} />}
+      {finding && <OfficeFinder ds={ds} schemes={[scheme]} lang={lang} district={district} onDistrict={onDistrict} />}
 
       {scheme.lastVerified && <p className="meta">{t("checkedOn", lang, { d: scheme.lastVerified })}</p>}
     </article>
