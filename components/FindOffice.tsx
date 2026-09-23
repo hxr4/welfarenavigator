@@ -23,6 +23,10 @@ function directionsUrl(l: Location): string {
   return `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(q)}`;
 }
 
+function servesDistrict(l: Location, d: string): boolean {
+  return l.district === d || (l.serves ?? []).includes(d);
+}
+
 function phones(raw?: string): string[] {
   return (raw ?? "").split(/[,/]/).map((p) => p.trim()).filter(Boolean);
 }
@@ -59,7 +63,7 @@ export default function FindOffice({ ds, scheme, lang, district, onDistrict }: P
   const districtTypes = types.filter((x) => x.type?.scope !== "state").map((x) => x.apply.locationType);
   const areas = [
     ...new Set(
-      ds.locations.filter((l) => districtTypes.includes(l.type) && l.district === district && l.area).map((l) => l.area as string),
+      ds.locations.filter((l) => districtTypes.includes(l.type) && servesDistrict(l, district) && l.area).map((l) => l.area as string),
     ),
   ].sort();
   const anyCoords = ds.locations.some((l) => districtTypes.includes(l.type) && l.lat !== undefined);
@@ -119,9 +123,19 @@ export default function FindOffice({ ds, scheme, lang, district, onDistrict }: P
 
       {types.map(({ apply, type }, i) => {
         const state = type?.scope === "state";
-        let list = ds.locations.filter((l) => l.type === apply.locationType);
+        const all = ds.locations.filter((l) => l.type === apply.locationType);
+        let list = all;
+        let elsewhere = false;
         if (!state) {
-          list = district ? list.filter((l) => l.district === district && (!area || l.area === area)) : [];
+          list = district ? all.filter((l) => servesDistrict(l, district) && (!area || l.area === area)) : [];
+          if (district && list.length === 0 && all.length > 0) {
+            const hq = DISTRICTS.find((d) => d.id === district)?.hq;
+            const hqOf = (l: Location) => DISTRICTS.find((d) => d.id === l.district)?.hq;
+            list = hq
+              ? [...all].sort((a, b) => haversineKm(hq, hqOf(a) ?? hq) - haversineKm(hq, hqOf(b) ?? hq)).slice(0, 2)
+              : [];
+            elsewhere = list.length > 0;
+          }
         }
         if (origin) {
           list = [...list].sort((a, b) => {
@@ -139,7 +153,8 @@ export default function FindOffice({ ds, scheme, lang, district, onDistrict }: P
             {apply.note && <p>{pick(apply.note, lang)}</p>}
             {state && <p className="note">{t("stateOffice", lang)}</p>}
             {!state && !district && <p className="note">{t("chooseDistrict", lang)}</p>}
-            {!state && district && list.length === 0 && <p className="note">{t("noOffice", lang)}</p>}
+            {!state && district && (list.length === 0 || elsewhere) && <p className="note">{t("noOffice", lang)}</p>}
+            {elsewhere && <p className="note">{t("nearestOther", lang)}</p>}
             <ul className="offices">
               {list.map((l) => {
                 const km = origin && l.lat !== undefined && l.lng !== undefined ? haversineKm(origin, { lat: l.lat, lng: l.lng }) : null;
@@ -149,8 +164,9 @@ export default function FindOffice({ ds, scheme, lang, district, onDistrict }: P
                     {km !== null && <p className="meta">{t("kmAway", lang, { n: km.toFixed(1) })}</p>}
                     <p className="meta">
                       {l.address ?? t("addressNotPublished", lang)}
-                      {state ? ` · ${districtLabel(l.district, lang)}` : ""}
+                      {state || elsewhere ? ` · ${districtLabel(l.district, lang)}` : ""}
                     </p>
+                    {l.jurisdiction && <p className="meta">{t("serves", lang)}: {l.jurisdiction}</p>}
                     {l.hours && <p className="meta">{l.hours}</p>}
                     <div className="row">
                       {phones(l.phone).map((p) => (

@@ -135,6 +135,8 @@ export interface Location {
   hours?: string;
   lat?: number;
   lng?: number;
+  serves?: string[];
+  jurisdiction?: string;
   sourceId?: string;
 }
 

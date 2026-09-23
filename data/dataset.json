@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-09-23T14:30:17.922Z",
+    "generatedAt": "2026-09-23T16:28:49.461Z",
     "includesExamples": false,
     "version": "1"
   },
@@ -86,25 +86,27 @@
       "id": "SRC-PLNT-001",
       "tier": 1,
       "authority": "Government of Kerala (published on India Code, Government of India)",
-      "title": "The Kerala Small Plantation Workers' Welfare Fund Act, 2008",
+      "title": "The Kerala Small Plantation Workers' Welfare Fund Act, 2008 (Act 17 of 2008)",
       "url": "https://www.indiacode.nic.in/bitstream/123456789/20377/1/17-2008-eng.pdf",
       "docType": "act",
       "language": "en",
       "dateIssued": "2008-04-01",
       "accessedOn": "2026-09-23",
-      "notes": "Tier 1 official India Code PDF. Exact quotes for PLNT-01 to PLNT-04 were checked against the PDF text. India Code's metadata page separately displays Act Number 18 while the PDF itself is titled Act 17 of 2008; this discrepancy is recorded for team review."
+      "localFile": "sources/kerala-small-plantation-workers-welfare-fund-act-2008.pdf",
+      "notes": "Tier 1. The Act PDF itself reads 'Act 17 of 2008'; the India Code listing that shows 18 is treated as a listing error."
     },
     {
       "id": "SRC-PLNT-002",
       "tier": 1,
       "authority": "Government of Kerala, Labour and Skills Department",
-      "title": "Maternity Benefit Scheme Gazette Notification",
+      "title": "G.O.(P) No.81/2024/LBR dated 23 November 2024, Kerala Gazette Extraordinary 26 November 2024 (Maternity Benefit Scheme, Aadhaar)",
       "url": "https://document.kerala.gov.in/documents/notifications/notification3011202417%3A32%3A32.pdf",
       "docType": "gazette",
       "language": "en",
-      "dateIssued": "2024-11-30",
+      "dateIssued": "2024-11-23",
       "accessedOn": "2026-09-23",
-      "notes": "Tier 1 Gazette. States maternity benefits are given to female members registered under 17 boards, including Kerala Small Plantation Workers Welfare Fund Board. Local copy not yet saved in sources/."
+      "localFile": "sources/gazette-go-p-81-2024-lbr-maternity-aadhaar.pdf",
+      "notes": "Tier 1. Lists the Kerala Small Plantation Workers' Welfare Fund Board as item 10 of the 17 boards covered. It is an Aadhaar notification: it does not give the benefit amount or other eligibility rules."
     },
     {
       "id": "SRC-PLNT-003",
@@ -148,7 +150,8 @@
       "docType": "department_page",
       "language": "en",
       "accessedOn": "2026-09-23",
-      "notes": "Official directory of Fisheries Department district officers with landline and mobile numbers for all 14 districts. Addresses are not published on this page. Wayanad landline is printed as 0493-60293214 (malformed); only the mobile is used."
+      "localFile": "sources/fisheries-district-officers.pdf",
+      "notes": "Official directory of Fisheries Department district officers for all 14 districts (phones only). Wayanad landline printed malformed (0493-60293214): mobile used. Palakkad email printed as ddfpkd@gmai.com: not used."
     },
     {
       "id": "SRC-FISH-009",
@@ -181,6 +184,7 @@
       "docType": "other",
       "language": "ml",
       "accessedOn": "2026-09-23",
+      "localFile": "sources/fisheries-educational-assistance-application.pdf",
       "notes": "Official five-page application form linked from the Department forms directory. Used for the informational educational-concession record; local copy not yet saved in sources/."
     },
     {
@@ -204,6 +208,115 @@
       "language": "en+ml",
       "accessedOn": "2026-09-23",
       "notes": "Online membership registration and scheme applications for the 16 Labour Department welfare boards; access via Akshaya centres. The portal does not list board names; that the Small Plantation Workers board is one of the 16 is inferred from SRC-PLNT-003 listing 16 boards. Confirm."
+    },
+    {
+      "id": "SRC-KFWFB-001",
+      "tier": 1,
+      "authority": "Kerala Fishermen's Welfare Fund Board (published by the Fisheries Department)",
+      "title": "Welfare schemes guideline, approved 2025 (68 pages)",
+      "url": "https://fisheries.kerala.gov.in/sites/default/files/inline-files/Scheme%20approved%202025%20KFWFB_0.pdf",
+      "docType": "scheme_guideline",
+      "language": "ml",
+      "dateIssued": "2025",
+      "accessedOn": "2026-09-23",
+      "localFile": "sources/kfwfb-welfare-schemes-guideline-2025.pdf",
+      "notes": "Legacy Malayalam font: the text layer is garbled, so quotes were transcribed from the page images (pp.11-31). Newer than the department web pages; preferred where they conflict."
+    },
+    {
+      "id": "SRC-FISH-012",
+      "tier": 2,
+      "authority": "Fisheries Department, Government of Kerala",
+      "title": "Saving cum Relief Scheme application form (Annexure 1, blank-year form)",
+      "url": "",
+      "docType": "other",
+      "language": "ml",
+      "accessedOn": "2026-09-23",
+      "localFile": "sources/fisheries-saving-cum-relief-application.pdf",
+      "notes": "Collected by hand. 2A.pdf and 2B.pdf were byte-identical; one copy kept. Old blank-year form: its declarations (no mechanised boat, no regular-income job in the family) are NOT encoded as rules until a current guideline confirms them."
+    },
+    {
+      "id": "SRC-FISH-013",
+      "tier": 2,
+      "authority": "Fisheries Department, Government of Kerala",
+      "title": "Saving cum Relief Scheme (inland) credit card",
+      "url": "",
+      "docType": "other",
+      "language": "ml",
+      "accessedOn": "2026-09-23",
+      "localFile": "sources/fisheries-saving-cum-relief-credit-card.pdf",
+      "notes": "Contribution record card, not an eligibility document. Kept for reference only."
+    },
+    {
+      "id": "SRC-FISH-014",
+      "tier": 2,
+      "authority": "Fisheries Department, Government of Kerala",
+      "title": "Application for compensation to fishermen losing fishing equipments due to calamities",
+      "url": "https://fisheries.kerala.gov.in/sites/default/files/inline-files/appforms/fisheriesdept/Application%20for%20compensation%20to%20fishermen%20losing%20%20fishing%20equipments%20due%20to%20calamities.pdf",
+      "docType": "other",
+      "language": "ml",
+      "accessedOn": "2026-09-23",
+      "localFile": "sources/fisheries-calamity-equipment-loss-application.pdf",
+      "notes": "Scanned form. Gives application fields only; no governing rule found yet."
+    },
+    {
+      "id": "SRC-PLNT-007",
+      "tier": 2,
+      "authority": "Kerala Small Plantation Workers' Welfare Fund Board",
+      "title": "Office list with Inspector of Plantation jurisdiction",
+      "url": "",
+      "docType": "board_page",
+      "language": "en",
+      "accessedOn": "2026-09-23",
+      "localFile": "sources/spwwfb-offices-jurisdiction.pdf",
+      "notes": "Collected by hand. Jurisdiction is by district and taluk; Vandanmedu is printed as 'Vandanmedu Taluk' and kept as printed."
+    },
+    {
+      "id": "SRC-PLNT-008",
+      "tier": 1,
+      "authority": "Kerala Small Plantation Workers' Welfare Fund Board",
+      "title": "Kerala Small Plantation Workers' Welfare Fund Scheme 2009, Form 14: superannuation pension application (Scheme clause 38(1))",
+      "url": "",
+      "docType": "scheme_guideline",
+      "language": "ml",
+      "accessedOn": "2026-09-23",
+      "localFile": "sources/spwwfb-form-14-superannuation-pension.pdf",
+      "notes": "Form only; clause 38 itself not collected."
+    },
+    {
+      "id": "SRC-PLNT-009",
+      "tier": 1,
+      "authority": "Kerala Small Plantation Workers' Welfare Fund Board",
+      "title": "Kerala Small Plantation Workers' Welfare Fund Scheme 2009, Form 18: marriage assistance application (Scheme clause 45(1))",
+      "url": "",
+      "docType": "scheme_guideline",
+      "language": "ml",
+      "accessedOn": "2026-09-23",
+      "localFile": "sources/spwwfb-form-18-marriage-assistance.pdf",
+      "notes": "Form only; clause 45 itself not collected."
+    },
+    {
+      "id": "SRC-PLNT-010",
+      "tier": 1,
+      "authority": "Kerala Small Plantation Workers' Welfare Fund Board",
+      "title": "Kerala Small Plantation Workers' Welfare Fund Scheme 2009, Form 20: assistance to dependants after a member's death (Scheme clause 45(1))",
+      "url": "",
+      "docType": "scheme_guideline",
+      "language": "ml",
+      "accessedOn": "2026-09-23",
+      "localFile": "sources/spwwfb-form-20-death-assistance.pdf",
+      "notes": "Form only; eligibility and amount are in clause 45, not collected."
+    },
+    {
+      "id": "SRC-MFED-001",
+      "tier": 2,
+      "authority": "Matsyafed (Kerala State Co-operative Federation for Fisheries Development)",
+      "title": "Matsyafed contact list: district offices",
+      "url": "",
+      "docType": "other",
+      "language": "en",
+      "accessedOn": "2026-09-23",
+      "localFile": "sources/matsyafed-contacts.pdf",
+      "notes": "District offices for 10 districts only (no Pathanamthitta, Idukki, Palakkad or Wayanad). Thiruvananthapuram landline printed incomplete ('0471-'); mobile used."
     }
   ],
   "facts": [
@@ -396,61 +509,13 @@
         "ml": "മത്സ്യത്തൊഴിലാളി ക്ഷേമനിധി അംഗത്വം"
       },
       "question": {
-        "en": "Is the beneficiary a member of the Kerala Fishermen Welfare Fund Board?",
-        "ml": "ആനുകൂല്യത്തിനായി അപേക്ഷിക്കുന്ന വ്യക്തി കേരള മത്സ്യത്തൊഴിലാളി ക്ഷേമനിധി ബോർഡ് അംഗമാണോ?"
+        "en": "Is the person a member of the Kerala Fishermen's Welfare Fund Board (Matsyaboard)?",
+        "ml": "കേരള മത്സ്യത്തൊഴിലാളി ക്ഷേമനിധി ബോർഡിൽ (മത്സ്യബോർഡ്) അംഗമാണോ?"
       },
       "unit": "",
       "sensitivity": "medium",
       "order": 8,
       "options": []
-    },
-    {
-      "id": "fisher_beneficiary_status",
-      "type": "enum",
-      "label": {
-        "en": "Fisher pension status",
-        "ml": "മത്സ്യത്തൊഴിലാളി പെൻഷൻ നില"
-      },
-      "question": {
-        "en": "Which applies to the pension beneficiary?",
-        "ml": "പെൻഷൻ അപേക്ഷകനോട് ഏത് ബാധകമാണ്?"
-      },
-      "unit": "",
-      "sensitivity": "medium",
-      "order": 9,
-      "options": [
-        {
-          "value": "registered_fisher",
-          "label": {
-            "en": "Registered fisherman",
-            "ml": "രജിസ്റ്റർ ചെയ്ത മത്സ്യത്തൊഴിലാളി"
-          },
-          "synonyms": {
-            "en": [
-              "registered fisher"
-            ],
-            "ml": [
-              "രജിസ്റ്റർ ചെയ്ത മത്സ്യത്തൊഴിലാളി"
-            ]
-          }
-        },
-        {
-          "value": "fisher_widow",
-          "label": {
-            "en": "Widow of fisherman",
-            "ml": "മത്സ്യത്തൊഴിലാളിയുടെ വിധവ"
-          },
-          "synonyms": {
-            "en": [
-              "fisherman's widow",
-              "widow"
-            ],
-            "ml": [
-              "മത്സ്യത്തൊഴിലാളിയുടെ വിധവ"
-            ]
-          }
-        }
-      ]
     },
     {
       "id": "age",
@@ -460,8 +525,8 @@
         "ml": "പ്രായം"
       },
       "question": {
-        "en": "How old is the beneficiary?",
-        "ml": "ആനുകൂല്യത്തിനായി അപേക്ഷിക്കുന്ന വ്യക്തിയുടെ പ്രായം എത്രയാണ്?"
+        "en": "How old is the person applying?",
+        "ml": "അപേക്ഷിക്കുന്ന വ്യക്തിയുടെ പ്രായം എത്ര?"
       },
       "unit": "years",
       "sensitivity": "low",
@@ -510,6 +575,10 @@
       "question": {
         "en": "Is the worker a member of the Small Plantation Workers Welfare Fund?",
         "ml": "തൊഴിലാളി ചെറുകിട തോട്ടം തൊഴിലാളി ക്ഷേമനിധി അംഗമാണോ?"
+      },
+      "help": {
+        "en": "The Act covers small plantation workers: people who worked at least 90 days in the last 12 months in a plantation of less than 5 hectares (rubber, tea, coffee, cardamom, coco, oil palm or cashew), or self-employed on their own plantation of up to half a hectare.",
+        "ml": "5 ഹെക്ടറിൽ താഴെയുള്ള തോട്ടത്തിൽ (റബ്ബർ, തേയില, കാപ്പി, ഏലം, കൊക്കോ, എണ്ണപ്പന, കശുമാവ്) കഴിഞ്ഞ 12 മാസത്തിൽ കുറഞ്ഞത് 90 ദിവസം ജോലി ചെയ്തവർ, അല്ലെങ്കിൽ അര ഹെക്ടർ വരെയുള്ള സ്വന്തം തോട്ടത്തിൽ സ്വയം തൊഴിൽ ചെയ്യുന്നവർ."
       },
       "unit": "",
       "sensitivity": "medium",
@@ -652,41 +721,476 @@
       "sensitivity": "low",
       "order": 19,
       "options": []
+    },
+    {
+      "id": "kfwfb_contributions_paid",
+      "type": "boolean",
+      "label": {
+        "en": "Welfare Fund contributions paid",
+        "ml": "ക്ഷേമനിധി വിഹിതം അടച്ചു"
+      },
+      "question": {
+        "en": "Are the Fishermen Welfare Fund Board contributions fully paid, with no arrears?",
+        "ml": "മത്സ്യത്തൊഴിലാളി ക്ഷേമനിധി വിഹിതം കുടിശ്ശികയില്ലാതെ പൂർണ്ണമായി അടച്ചിട്ടുണ്ടോ?"
+      },
+      "unit": "",
+      "sensitivity": "low",
+      "order": 20,
+      "options": []
+    },
+    {
+      "id": "kfwfb_membership_years",
+      "type": "number",
+      "label": {
+        "en": "Years since first Welfare Fund contribution",
+        "ml": "ആദ്യ ക്ഷേമനിധി വിഹിതം അടച്ചിട്ട് എത്ര വർഷം"
+      },
+      "question": {
+        "en": "How many years ago was the first Welfare Fund Board contribution paid?",
+        "ml": "ക്ഷേമനിധി ബോർഡിൽ ആദ്യമായി വിഹിതം അടച്ചിട്ട് എത്ര വർഷമായി?"
+      },
+      "unit": "years",
+      "sensitivity": "low",
+      "order": 21,
+      "options": []
+    },
+    {
+      "id": "fisher_work_10_years",
+      "type": "boolean",
+      "label": {
+        "en": "Worked 10 years as a fisherman in Kerala",
+        "ml": "കേരളത്തിൽ 10 വർഷം മത്സ്യത്തൊഴിലാളി"
+      },
+      "question": {
+        "en": "Has the person worked and earned a living as a fisherman in Kerala for at least 10 years?",
+        "ml": "കേരളത്തിൽ കുറഞ്ഞത് 10 വർഷമെങ്കിലും മത്സ്യത്തൊഴിലാളിയായി ജോലി ചെയ്ത് ഉപജീവനം കഴിച്ചിട്ടുണ്ടോ?"
+      },
+      "unit": "",
+      "sensitivity": "low",
+      "order": 22,
+      "options": []
+    },
+    {
+      "id": "retired_from_fishing",
+      "type": "boolean",
+      "label": {
+        "en": "Retired from fishing work",
+        "ml": "തൊഴിലിൽ നിന്ന് വിരമിച്ചു"
+      },
+      "question": {
+        "en": "Has the person stopped (retired from) fishing work?",
+        "ml": "മത്സ്യബന്ധന തൊഴിലിൽ നിന്ന് വിരമിച്ചോ?"
+      },
+      "unit": "",
+      "sensitivity": "low",
+      "order": 23,
+      "options": []
+    },
+    {
+      "id": "annual_family_income",
+      "type": "number",
+      "label": {
+        "en": "Yearly family income",
+        "ml": "കുടുംബ വാർഷിക വരുമാനം"
+      },
+      "question": {
+        "en": "What is the family's total income in a year?",
+        "ml": "കുടുംബത്തിന്റെ ഒരു വർഷത്തെ ആകെ വരുമാനം എത്ര?"
+      },
+      "help": {
+        "en": "As shown on the ration card or income certificate.",
+        "ml": "റേഷൻ കാർഡിലോ വരുമാന സർട്ടിഫിക്കറ്റിലോ ഉള്ളത്."
+      },
+      "unit": "INR",
+      "sensitivity": "medium",
+      "order": 24,
+      "options": []
+    },
+    {
+      "id": "kfwfb_family_status",
+      "type": "multi",
+      "label": {
+        "en": "Fisherman in the family",
+        "ml": "കുടുംബത്തിലെ മത്സ്യത്തൊഴിലാളി"
+      },
+      "question": {
+        "en": "Which of these describe your family? Choose all that apply.",
+        "ml": "ഇവയിൽ ഏതെല്ലാമാണ് നിങ്ങളുടെ കുടുംബത്തിന് ബാധകം? ബാധകമായതെല്ലാം തിരഞ്ഞെടുക്കുക."
+      },
+      "unit": "",
+      "sensitivity": "medium",
+      "order": 25,
+      "options": [
+        {
+          "value": "member_under_60",
+          "label": {
+            "en": "Board member fisherman, under 60",
+            "ml": "60 വയസ്സിൽ താഴെയുള്ള ബോർഡ് അംഗമായ മത്സ്യത്തൊഴിലാളി"
+          },
+          "synonyms": {
+            "en": [],
+            "ml": []
+          }
+        },
+        {
+          "value": "member_over_60",
+          "label": {
+            "en": "Board member fisherman, 60 or older",
+            "ml": "60 വയസ്സോ അതിൽ കൂടുതലോ ഉള്ള ബോർഡ് അംഗമായ മത്സ്യത്തൊഴിലാളി"
+          },
+          "synonyms": {
+            "en": [],
+            "ml": []
+          }
+        },
+        {
+          "value": "pensioner",
+          "label": {
+            "en": "Receives the Board's fishermen pension",
+            "ml": "ബോർഡിന്റെ മത്സ്യത്തൊഴിലാളി പെൻഷൻ വാങ്ങുന്നയാൾ"
+          },
+          "synonyms": {
+            "en": [],
+            "ml": []
+          }
+        },
+        {
+          "value": "widow_of_fisher",
+          "label": {
+            "en": "Widow of a fisherman who was a Board member",
+            "ml": "ബോർഡ് അംഗമായിരുന്ന മത്സ്യത്തൊഴിലാളിയുടെ വിധവ"
+          },
+          "synonyms": {
+            "en": [],
+            "ml": []
+          }
+        },
+        {
+          "value": "widow_of_pensioner",
+          "label": {
+            "en": "Widow of a Board pensioner",
+            "ml": "ബോർഡ് പെൻഷൻകാരന്റെ വിധവ"
+          },
+          "synonyms": {
+            "en": [],
+            "ml": []
+          }
+        },
+        {
+          "value": "bride_is_fisher",
+          "label": {
+            "en": "The bride herself is a fisherworker",
+            "ml": "വധു തന്നെ മത്സ്യത്തൊഴിലാളിയാണ്"
+          },
+          "synonyms": {
+            "en": [],
+            "ml": []
+          }
+        },
+        {
+          "value": "fisher_parent_died",
+          "label": {
+            "en": "The bride's fisherman parent has died",
+            "ml": "വധുവിന്റെ മത്സ്യത്തൊഴിലാളിയായ അച്ഛനോ അമ്മയോ മരിച്ചു"
+          },
+          "synonyms": {
+            "en": [],
+            "ml": []
+          }
+        },
+        {
+          "value": "none",
+          "label": {
+            "en": "None of these",
+            "ml": "ഇവയൊന്നുമല്ല"
+          },
+          "synonyms": {
+            "en": [],
+            "ml": []
+          }
+        }
+      ]
+    },
+    {
+      "id": "prior_marriage_assistance",
+      "type": "boolean",
+      "label": {
+        "en": "Received marriage assistance before",
+        "ml": "മുമ്പ് വിവാഹ ധനസഹായം ലഭിച്ചു"
+      },
+      "question": {
+        "en": "Has the family received this Welfare Fund marriage assistance before?",
+        "ml": "ഈ ക്ഷേമനിധി വിവാഹ ധനസഹായം മുമ്പ് ലഭിച്ചിട്ടുണ്ടോ?"
+      },
+      "unit": "",
+      "sensitivity": "low",
+      "order": 26,
+      "options": []
+    },
+    {
+      "id": "bride_18",
+      "type": "boolean",
+      "label": {
+        "en": "Bride 18 on the marriage date",
+        "ml": "വിവാഹ തീയതിക്ക് വധുവിന് 18 വയസ്സ്"
+      },
+      "question": {
+        "en": "Will the bride have completed 18 years on the marriage date?",
+        "ml": "വിവാഹ തീയതിക്ക് വധുവിന് 18 വയസ്സ് പൂർത്തിയാകുമോ?"
+      },
+      "unit": "",
+      "sensitivity": "low",
+      "order": 28,
+      "options": []
+    },
+    {
+      "id": "death_by_accident",
+      "type": "boolean",
+      "label": {
+        "en": "Death caused by an accident",
+        "ml": "അപകടം മൂലമുള്ള മരണം"
+      },
+      "question": {
+        "en": "Was the death caused by an accident?",
+        "ml": "മരണം അപകടം മൂലമായിരുന്നോ?"
+      },
+      "unit": "",
+      "sensitivity": "high",
+      "order": 41,
+      "options": []
+    },
+    {
+      "id": "deceased_under_60",
+      "type": "boolean",
+      "label": {
+        "en": "Deceased was under 60",
+        "ml": "മരിച്ചയാൾക്ക് 60 വയസ്സിൽ താഴെ"
+      },
+      "question": {
+        "en": "Was the fisherman below 60 years of age when he died?",
+        "ml": "മരിക്കുമ്പോൾ മത്സ്യത്തൊഴിലാളിക്ക് 60 വയസ്സിൽ താഴെയായിരുന്നോ?"
+      },
+      "unit": "",
+      "sensitivity": "high",
+      "order": 42,
+      "options": []
+    },
+    {
+      "id": "deceased_active_after_60",
+      "type": "boolean",
+      "label": {
+        "en": "Still working and contributing after 60",
+        "ml": "60-ന് ശേഷവും തൊഴിലും വിഹിതവും"
+      },
+      "question": {
+        "en": "If he was 60 or older: was he still working, on the fishermen list, and paying contributions regularly?",
+        "ml": "60 വയസ്സോ അതിൽ കൂടുതലോ ആയിരുന്നെങ്കിൽ: തൊഴിൽ തുടരുകയും പട്ടികയിൽ പേരുണ്ടായിരിക്കുകയും വിഹിതം കൃത്യമായി അടക്കുകയും ചെയ്തിരുന്നോ?"
+      },
+      "unit": "",
+      "sensitivity": "high",
+      "order": 43,
+      "options": []
+    },
+    {
+      "id": "death_within_3_months",
+      "type": "boolean",
+      "label": {
+        "en": "Death within the last 3 months",
+        "ml": "കഴിഞ്ഞ 3 മാസത്തിനുള്ളിലെ മരണം"
+      },
+      "question": {
+        "en": "Did the death happen within the last 3 months (90 days)?",
+        "ml": "മരണം കഴിഞ്ഞ 3 മാസത്തിനുള്ളിൽ (90 ദിവസം) ആയിരുന്നോ?"
+      },
+      "unit": "",
+      "sensitivity": "high",
+      "order": 44,
+      "options": []
+    },
+    {
+      "id": "regular_income_job",
+      "type": "boolean",
+      "label": {
+        "en": "Widow has a regular-income job",
+        "ml": "സ്ഥിര വരുമാനമുള്ള ഉദ്യോഗം"
+      },
+      "question": {
+        "en": "Does the widow have a job with a regular income?",
+        "ml": "വിധവയ്ക്ക് സ്ഥിര വരുമാനമുള്ള ഉദ്യോഗമുണ്ടോ?"
+      },
+      "unit": "",
+      "sensitivity": "medium",
+      "order": 45,
+      "options": []
+    },
+    {
+      "id": "widow_remarried",
+      "type": "boolean",
+      "label": {
+        "en": "Widow has remarried",
+        "ml": "വിധവ പുനർവിവാഹം ചെയ്തു"
+      },
+      "question": {
+        "en": "Has the widow remarried?",
+        "ml": "വിധവ പുനർവിവാഹം ചെയ്തിട്ടുണ്ടോ?"
+      },
+      "unit": "",
+      "sensitivity": "high",
+      "order": 46,
+      "options": []
+    },
+    {
+      "id": "accident_within_3_months",
+      "type": "boolean",
+      "label": {
+        "en": "Accident within the last 3 months",
+        "ml": "കഴിഞ്ഞ 3 മാസത്തിനുള്ളിലെ അപകടം"
+      },
+      "question": {
+        "en": "Did the accident happen within the last 3 months?",
+        "ml": "അപകടം കഴിഞ്ഞ 3 മാസത്തിനുള്ളിലായിരുന്നോ?"
+      },
+      "unit": "",
+      "sensitivity": "medium",
+      "order": 49,
+      "options": []
+    },
+    {
+      "id": "family_event",
+      "type": "multi",
+      "label": {
+        "en": "Recent family events",
+        "ml": "കുടുംബത്തിലെ സമീപകാല സംഭവങ്ങൾ"
+      },
+      "question": {
+        "en": "Has any of these happened in the family? Choose all that apply.",
+        "ml": "ഇവയിൽ ഏതെങ്കിലും കുടുംബത്തിൽ ഉണ്ടായിട്ടുണ്ടോ? ബാധകമായതെല്ലാം തിരഞ്ഞെടുക്കുക."
+      },
+      "help": {
+        "en": "Each of these opens a different Welfare Fund Board scheme. Choose None if nothing applies.",
+        "ml": "ഇവ ഓരോന്നും ക്ഷേമനിധി ബോർഡിന്റെ ഓരോ പദ്ധതിയുമായി ബന്ധപ്പെട്ടതാണ്. ഒന്നും ബാധകമല്ലെങ്കിൽ 'ഇവയൊന്നുമല്ല' തിരഞ്ഞെടുക്കുക."
+      },
+      "unit": "",
+      "sensitivity": "medium",
+      "order": 19,
+      "options": [
+        {
+          "value": "daughter_marriage",
+          "label": {
+            "en": "A daughter is getting married, or married in the last 60 days",
+            "ml": "മകളുടെ വിവാഹം അടുത്ത് നടക്കാനുണ്ട്, അല്ലെങ്കിൽ കഴിഞ്ഞ 60 ദിവസത്തിനുള്ളിൽ നടന്നു"
+          },
+          "synonyms": {
+            "en": [],
+            "ml": []
+          }
+        },
+        {
+          "value": "sslc_8_aplus",
+          "label": {
+            "en": "A child got A+ in at least 8 subjects in this year's SSLC",
+            "ml": "ഈ വർഷത്തെ എസ്.എസ്.എൽ.സി-യിൽ കുട്ടിക്ക് കുറഞ്ഞത് 8 വിഷയങ്ങളിൽ എ+ ലഭിച്ചു"
+          },
+          "synonyms": {
+            "en": [],
+            "ml": []
+          }
+        },
+        {
+          "value": "serious_illness",
+          "label": {
+            "en": "Someone needs treatment for heart disease, kidney disease, cancer, a brain tumour, paralysis, or a mental illness that can be cured",
+            "ml": "ഹൃദ്രോഗം, വൃക്കരോഗം, ക്യാൻസർ, തലച്ചോറിലെ ട്യൂമർ, തളർവാതം, ചികിൽസിച്ച് ഭേദമാക്കാവുന്ന മാനസികരോഗം എന്നിവയിൽ ഒന്നിന് ചികിൽസ ആവശ്യമുണ്ട്"
+          },
+          "synonyms": {
+            "en": [],
+            "ml": []
+          }
+        },
+        {
+          "value": "accident",
+          "label": {
+            "en": "A fisherman was hurt in an accident and could not work for 7 days or more",
+            "ml": "അപകടം മൂലം മത്സ്യത്തൊഴിലാളിക്ക് 7 ദിവസമോ അതിൽ കൂടുതലോ ജോലി ചെയ്യാൻ കഴിഞ്ഞില്ല"
+          },
+          "synonyms": {
+            "en": [],
+            "ml": []
+          }
+        },
+        {
+          "value": "member_death",
+          "label": {
+            "en": "A fisherman in the family who was a Welfare Fund member has died",
+            "ml": "കുടുംബത്തിലെ ക്ഷേമനിധി അംഗമായ മത്സ്യത്തൊഴിലാളി മരിച്ചു"
+          },
+          "synonyms": {
+            "en": [],
+            "ml": []
+          }
+        },
+        {
+          "value": "dependant_death",
+          "label": {
+            "en": "In the last 3 months, a fisherman's father, mother, wife or husband, minor son or unmarried daughter died",
+            "ml": "കഴിഞ്ഞ 3 മാസത്തിനുള്ളിൽ മത്സ്യത്തൊഴിലാളിയുടെ അച്ഛൻ, അമ്മ, ഭാര്യ/ഭർത്താവ്, മൈനറായ മകൻ, അവിവാഹിതയായ മകൾ എന്നിവരിൽ ആരെങ്കിലും മരിച്ചു"
+          },
+          "synonyms": {
+            "en": [],
+            "ml": []
+          }
+        },
+        {
+          "value": "none",
+          "label": {
+            "en": "None of these",
+            "ml": "ഇവയൊന്നുമല്ല"
+          },
+          "synonyms": {
+            "en": [],
+            "ml": []
+          }
+        }
+      ]
     }
   ],
   "schemes": [
     {
       "id": "FISH-01",
       "name": {
-        "en": "Group Insurance Scheme for Fishermen",
-        "ml": "മത്സ്യത്തൊഴിലാളികൾക്കുള്ള ഗ്രൂപ്പ് ഇൻഷുറൻസ് സ്കീം"
+        "en": "Group Accident Insurance Scheme",
+        "ml": "ഗ്രൂപ്പ് അപകട ഇൻഷ്വറൻസ് പദ്ധതി"
       },
       "authority": {
-        "en": "Fisheries Department / Kerala Fishermen Welfare Fund Board",
-        "ml": "മത്സ്യബന്ധന വകുപ്പ് / കേരള മത്സ്യത്തൊഴിലാളി ക്ഷേമനിധി ബോർഡ്"
+        "en": "Kerala Fishermen's Welfare Fund Board",
+        "ml": "കേരള മത്സ്യത്തൊഴിലാളി ക്ഷേമനിധി ബോർഡ്"
       },
       "category": "fishing",
       "summary": {
-        "en": "Insurance coverage for active fishermen under the KFWFB.",
-        "ml": "KFWFB-യുടെ കീഴിലുള്ള സജീവ മത്സ്യത്തൊഴിലാളികൾക്കുള്ള ഇൻഷുറൻസ് പരിരക്ഷ."
+        "en": "Accident cover for every Board member, with no premium from the family: ₹10 lakh for accidental death, missing while fishing, or permanent total disability; ₹5 lakh for permanent partial disability; up to ₹25,000 when an accident needs more than 24 hours in hospital; ₹5,000 each for the education of 2 children of a member who died in an accident (up to ₹10,000); ₹2,500 funeral expense.",
+        "ml": "ബോർഡ് അംഗങ്ങൾക്കെല്ലാം അപകട പരിരക്ഷ; ഗുണഭോക്താവിൽ നിന്ന് തുക ഈടാക്കുന്നില്ല: അപകടമരണം, മത്സ്യബന്ധനവേളയിൽ കാണാതാകൽ, സ്ഥിരവും പൂർണ്ണവുമായ അവശത എന്നിവയ്ക്ക് 10 ലക്ഷം രൂപ; സ്ഥിരവും ഭാഗികവുമായ അവശതയ്ക്ക് 5 ലക്ഷം; 24 മണിക്കൂറിലധികം ആശുപത്രി ചികിൽസയ്ക്ക് പരമാവധി 25,000; അപകടമരണമടഞ്ഞ മത്സ്യത്തൊഴിലാളികളുടെ 2 കുട്ടികൾക്ക് 5,000 വീതം (പരമാവധി 10,000) വിദ്യാഭ്യാസ സഹായം; ശവസംസ്കാര ചെലവ് 2,500."
       },
       "verification": {
         "eligibility": "verified",
-        "documents": "partial",
+        "documents": "verified",
         "apply": "verified"
       },
       "rule": {
         "all": [
           {
             "id": "c1",
-            "fact": "active_fisher",
+            "fact": "kfwfb_member",
             "op": "eq",
             "value": true,
-            "changeable": false,
+            "changeable": true,
+            "howTo": {
+              "en": "Ask at your Fisheries Department district office about joining the Kerala Fishermen's Welfare Fund Board.",
+              "ml": "കേരള മത്സ്യത്തൊഴിലാളി ക്ഷേമനിധി ബോർഡിൽ അംഗമാകുന്നതിനെക്കുറിച്ച് ഫിഷറീസ് വകുപ്പ് ജില്ലാ ഓഫീസിൽ അന്വേഷിക്കുക."
+            },
             "source": {
-              "sourceId": "SRC-FISH-003",
-              "quote": "Active Fishermen in the State are insured",
-              "locator": "Scheme page, opening paragraph"
+              "sourceId": "SRC-KFWFB-001",
+              "quote": "മത്സ്യബോർഡിൽ അംഗത്വമുള്ള എല്ലാ മത്സ്യത്തൊഴിലാളികളെയും ഈ പദ്ധതി പ്രകാരം ഇൻഷുർ ചെയ്തുവരുന്നു.",
+              "locator": "p.11, para 1"
             },
             "reviewedBy": "PENDING_SECOND_REVIEW"
           },
@@ -699,32 +1203,117 @@
             ],
             "changeable": false,
             "source": {
-              "sourceId": "SRC-FISH-003",
-              "quote": "Active Fishermen in the State are insured",
-              "locator": "Beneficiary description"
+              "sourceId": "SRC-KFWFB-001",
+              "quote": "പരമ്പരാഗത മത്സ്യത്തൊഴിലാളികളുടെ കുടുംബ ഭദ്രത ഉറപ്പുവരുത്തുന്നതിനുവേണ്ടി മത്സ്യബോർഡിന്റെ തുടക്കം മുതൽ നടപ്പാക്കി വരുന്ന പദ്ധതിയാണിത്.",
+              "locator": "p.11, para 1"
             },
             "reviewedBy": "PENDING_SECOND_REVIEW"
           }
         ]
       },
-      "documents": [],
+      "documents": [
+        {
+          "docId": "death_certificate",
+          "source": {
+            "sourceId": "SRC-KFWFB-001",
+            "quote": "മരണ സർട്ടിഫിക്കറ്റ് അസ്സൽ"
+          }
+        },
+        {
+          "docId": "fir_copy",
+          "source": {
+            "sourceId": "SRC-KFWFB-001",
+            "quote": "പോലീസ് സ്റ്റേഷനിലെ പ്രഥമ വിവര റിപ്പോർട്ടിന്റെ (എഫ് ഐ ആർ) പകർപ്പ്"
+          }
+        },
+        {
+          "docId": "postmortem_inquest",
+          "source": {
+            "sourceId": "SRC-KFWFB-001",
+            "quote": "പോസ്റ്റ്മോർട്ടം സർട്ടിഫിക്കറ്റിന്റെയും ഇൻക്വസ്റ്റ് റിപ്പോർട്ടിന്റെയും പകർപ്പ്"
+          }
+        },
+        {
+          "docId": "legal_heir_certificate",
+          "source": {
+            "sourceId": "SRC-KFWFB-001",
+            "quote": "ലീഗൽ ഹെയർഷിപ്പ് /റിലേഷൻഷിപ്പ് സർട്ടിഫിക്കറ്റ്"
+          }
+        },
+        {
+          "docId": "student_school_certificate",
+          "source": {
+            "sourceId": "SRC-KFWFB-001",
+            "quote": "വിദ്യാഭ്യാസ ആനുകൂല്യത്തിന് വിദ്യാർത്ഥിയുടെ സ്കൂൾ സർട്ടിഫിക്കറ്റ്"
+          }
+        },
+        {
+          "docId": "funeral_bill",
+          "source": {
+            "sourceId": "SRC-KFWFB-001",
+            "quote": "ശവസംസ്കാര ചെലവ് ലഭ്യമാകുന്നതിന് ആയതിന്റെ ബിൽ"
+          }
+        },
+        {
+          "docId": "disability_certificate",
+          "source": {
+            "sourceId": "SRC-KFWFB-001",
+            "quote": "ആശുപത്രിയിലെ കേസ് സർട്ടിഫിക്കറ്റ്/ഡിസെബിലിറ്റി സർട്ടിഫിക്കറ്റ്"
+          }
+        },
+        {
+          "docId": "doctor_certificate_form",
+          "source": {
+            "sourceId": "SRC-KFWFB-001",
+            "quote": "ഡോക്ടറുടെ സർട്ടിഫിക്കറ്റ് നിശ്ചിത ഫോറത്തിൽ"
+          }
+        },
+        {
+          "docId": "police_report",
+          "source": {
+            "sourceId": "SRC-KFWFB-001",
+            "quote": "പോലീസ് സ്റ്റേഷനിൽ നിന്നുളള റിപ്പോർട്ട്"
+          }
+        },
+        {
+          "docId": "collector_rdo_certificate",
+          "source": {
+            "sourceId": "SRC-KFWFB-001",
+            "quote": "കളക്ടർ/ആർ.ഡി.ഒ നൽകുന്ന സർട്ടിഫിക്കററ്"
+          }
+        },
+        {
+          "docId": "hospital_discharge_card",
+          "source": {
+            "sourceId": "SRC-KFWFB-001",
+            "quote": "ആശുപത്രി ഡിസ്ചാർജ്ജ് കാർഡ്"
+          }
+        },
+        {
+          "docId": "hospital_bill",
+          "source": {
+            "sourceId": "SRC-KFWFB-001",
+            "quote": "ആശുപത്രിയിലെ അസ്സൽ ബിൽ"
+          }
+        }
+      ],
       "apply": [
         {
           "locationType": "fisheries_district_office",
           "mode": "in_person",
           "note": {
-            "en": "The scheme is implemented through district offices and Matsyaboard.",
-            "ml": "പദ്ധതി ജില്ലാ ഓഫീസുകളും മത്സ്യബോർഡും വഴി നടപ്പാക്കുന്നു."
+            "en": "Report the accident to the police station and the Matsyaboard Fisheries Officer at once. Submit the claim in 4 copies to the Fisheries Officer.",
+            "ml": "അപകടമുണ്ടായാലുടനെ പോലീസ് സ്റ്റേഷനിലും മത്സ്യബോർഡ് ഫിഷറീസ് ഓഫീസറെയും അറിയിക്കണം. അപേക്ഷ (നാല് പകർപ്പുകൾ) ഫിഷറീസ് ഓഫീസർക്ക് നൽകണം."
           },
           "source": {
-            "sourceId": "SRC-FISH-001",
-            "quote": "implementing through district offices& Matsyaboard"
+            "sourceId": "SRC-KFWFB-001",
+            "quote": "കഴിയുന്നത്ര വേഗം അപേക്ഷ തയ്യാറാക്കി (നാല് പകർപ്പുകൾ) ഫിഷറീസ് ഓഫീസർക്ക് നൽകണം."
           }
         }
       ],
       "lastVerified": "2026-09-23",
-      "verifiedBy": "HR",
-      "notes": "HR (primary curation)"
+      "verifiedBy": "AI-review",
+      "notes": "Upgraded to the 2025 KFWFB guideline p.11-12. CONFLICT: the older Fisheries Department page says 'Active Fishermen' are insured with Rs 1 lakh cover; the 2025 guideline says all Board members, Rs 10 lakh. The 2025 guideline is used. Documents depend on the claim type and are named that way."
     },
     {
       "id": "FISH-02",
@@ -823,6 +1412,13 @@
             "sourceId": "SRC-FISH-010",
             "quote": "Application for savings cum relief scheme(Marine)"
           }
+        },
+        {
+          "docId": "scr_contribution_receipt",
+          "source": {
+            "sourceId": "SRC-FISH-012",
+            "quote": "അപേക്ഷകൻ അംഗമായ മത്സ്യത്തൊഴിലാളി സംഘത്തിന്റെ പേരും അംഗനമ്പരും നടപ്പു വർഷ ക്ഷേമനിധി വിഹിതം ഒടുക്കിയതിന്റെ രസീത് നമ്പരും"
+          }
         }
       ],
       "apply": [
@@ -841,7 +1437,7 @@
       ],
       "lastVerified": "2026-09-23",
       "verifiedBy": "HR",
-      "notes": "HR (primary curation)"
+      "notes": "HR (primary curation) The collected application form (SRC-FISH-012) also declares no ownership of mechanised boats or beach-landing craft and no regular-income job in the family; these are NOT encoded because the form is an old blank-year form and no current guideline confirms them."
     },
     {
       "id": "FISH-03",
@@ -1076,55 +1672,25 @@
     {
       "id": "FISH-06",
       "name": {
-        "en": "Pension to Fishermen",
-        "ml": "മത്സ്യത്തൊഴിലാളി പെൻഷൻ"
+        "en": "Old Age Pension for Fishermen",
+        "ml": "വാർദ്ധക്യകാല പെൻഷൻ"
       },
       "authority": {
-        "en": "Fisheries Department / Kerala Fishermen Welfare Fund Board",
-        "ml": "മത്സ്യബന്ധന വകുപ്പ് / കേരള മത്സ്യത്തൊഴിലാളി ക്ഷേമനിധി ബോർഡ്"
+        "en": "Kerala Fishermen's Welfare Fund Board",
+        "ml": "കേരള മത്സ്യത്തൊഴിലാളി ക്ഷേമനിധി ബോർഡ്"
       },
       "category": "fishing",
       "summary": {
-        "en": "Old-age and widow pension for registered fishermen or widows of fishermen.",
-        "ml": "രജിസ്റ്റർ ചെയ്ത മത്സ്യത്തൊഴിലാളികൾക്കും മത്സ്യത്തൊഴിലാളികളുടെ വിധവകൾക്കും വയോജന/വിധവ പെൻഷൻ."
+        "en": "Monthly pension of ₹1,600 for Board members who have retired from fishing after age 60.",
+        "ml": "60 വയസ്സ് പൂർത്തിയാക്കി തൊഴിലിൽ നിന്ന് വിരമിച്ച ബോർഡ് അംഗങ്ങൾക്ക് പ്രതിമാസം 1,600 രൂപ പെൻഷൻ."
       },
       "verification": {
-        "eligibility": "partial",
-        "documents": "partial",
+        "eligibility": "verified",
+        "documents": "verified",
         "apply": "verified"
       },
       "rule": {
         "all": [
-          {
-            "any": [
-              {
-                "id": "c1",
-                "fact": "fisher_beneficiary_status",
-                "op": "eq",
-                "value": "registered_fisher",
-                "changeable": false,
-                "source": {
-                  "sourceId": "SRC-FISH-001",
-                  "quote": "Registered fishermen/widows of fishermen are the benefiaries",
-                  "locator": "Scheme Highlights, Pension to Fishermen"
-                },
-                "reviewedBy": "PENDING_SECOND_REVIEW"
-              },
-              {
-                "id": "c1",
-                "fact": "fisher_beneficiary_status",
-                "op": "eq",
-                "value": "fisher_widow",
-                "changeable": false,
-                "source": {
-                  "sourceId": "SRC-FISH-001",
-                  "quote": "Registered fishermen/widows of fishermen are the benefiaries",
-                  "locator": "Scheme Highlights, Pension to Fishermen"
-                },
-                "reviewedBy": "PENDING_SECOND_REVIEW"
-              }
-            ]
-          },
           {
             "id": "g0",
             "fact": "livelihood",
@@ -1134,32 +1700,144 @@
             ],
             "changeable": false,
             "source": {
-              "sourceId": "SRC-FISH-001",
-              "quote": "Registered fishermen/widows of fishermen",
-              "locator": "Beneficiary description"
+              "sourceId": "SRC-KFWFB-001",
+              "quote": "വാർദ്ധക്യകാലത്ത് വരുമാന മാർഗ്ഗമില്ലാതെയാവുന്ന മത്സ്യത്തൊഴിലാളികൾക്ക് പ്രതിമാസ പെൻഷൻ നൽകുന്നതിനുള്ള പദ്ധതിയാണിത്.",
+              "locator": "p.18, scheme 5"
+            },
+            "reviewedBy": "PENDING_SECOND_REVIEW"
+          },
+          {
+            "id": "c1",
+            "fact": "kfwfb_member",
+            "op": "eq",
+            "value": true,
+            "changeable": true,
+            "howTo": {
+              "en": "Ask at your Fisheries Department district office about joining the Kerala Fishermen's Welfare Fund Board.",
+              "ml": "കേരള മത്സ്യത്തൊഴിലാളി ക്ഷേമനിധി ബോർഡിൽ അംഗമാകുന്നതിനെക്കുറിച്ച് ഫിഷറീസ് വകുപ്പ് ജില്ലാ ഓഫീസിൽ അന്വേഷിക്കുക."
+            },
+            "source": {
+              "sourceId": "SRC-KFWFB-001",
+              "quote": "കേരളത്തിൽ കുറഞ്ഞത് 10 വർഷമെങ്കിലും മത്സ്യത്തൊഴിലാളിയായി ജോലി ചെയ്ത് ഉപജീവനം കഴിക്കുകയും 60 വയസ്സ് പൂർത്തിയാക്കുകയും തൊഴിലിൽ നിന്നും വിരമിക്കുകയും ചെയ്യുന്ന ക്ഷേമനിധി അംഗങ്ങൾ പെൻഷൻ ലഭിക്കുന്നതിന് അർഹരാണ്.",
+              "locator": "p.18, eligibility"
+            },
+            "reviewedBy": "PENDING_SECOND_REVIEW"
+          },
+          {
+            "id": "c2",
+            "fact": "age",
+            "op": "gte",
+            "value": 60,
+            "changeable": false,
+            "source": {
+              "sourceId": "SRC-KFWFB-001",
+              "quote": "കേരളത്തിൽ കുറഞ്ഞത് 10 വർഷമെങ്കിലും മത്സ്യത്തൊഴിലാളിയായി ജോലി ചെയ്ത് ഉപജീവനം കഴിക്കുകയും 60 വയസ്സ് പൂർത്തിയാക്കുകയും തൊഴിലിൽ നിന്നും വിരമിക്കുകയും ചെയ്യുന്ന ക്ഷേമനിധി അംഗങ്ങൾ പെൻഷൻ ലഭിക്കുന്നതിന് അർഹരാണ്.",
+              "locator": "p.18, eligibility"
+            },
+            "reviewedBy": "PENDING_SECOND_REVIEW"
+          },
+          {
+            "id": "c3",
+            "fact": "fisher_work_10_years",
+            "op": "eq",
+            "value": true,
+            "changeable": false,
+            "source": {
+              "sourceId": "SRC-KFWFB-001",
+              "quote": "കേരളത്തിൽ കുറഞ്ഞത് 10 വർഷമെങ്കിലും മത്സ്യത്തൊഴിലാളിയായി ജോലി ചെയ്ത് ഉപജീവനം കഴിക്കുകയും 60 വയസ്സ് പൂർത്തിയാക്കുകയും തൊഴിലിൽ നിന്നും വിരമിക്കുകയും ചെയ്യുന്ന ക്ഷേമനിധി അംഗങ്ങൾ പെൻഷൻ ലഭിക്കുന്നതിന് അർഹരാണ്.",
+              "locator": "p.18, eligibility"
+            },
+            "reviewedBy": "PENDING_SECOND_REVIEW"
+          },
+          {
+            "id": "c4",
+            "fact": "retired_from_fishing",
+            "op": "eq",
+            "value": true,
+            "changeable": false,
+            "source": {
+              "sourceId": "SRC-KFWFB-001",
+              "quote": "കേരളത്തിൽ കുറഞ്ഞത് 10 വർഷമെങ്കിലും മത്സ്യത്തൊഴിലാളിയായി ജോലി ചെയ്ത് ഉപജീവനം കഴിക്കുകയും 60 വയസ്സ് പൂർത്തിയാക്കുകയും തൊഴിലിൽ നിന്നും വിരമിക്കുകയും ചെയ്യുന്ന ക്ഷേമനിധി അംഗങ്ങൾ പെൻഷൻ ലഭിക്കുന്നതിന് അർഹരാണ്.",
+              "locator": "p.18, eligibility"
+            },
+            "reviewedBy": "PENDING_SECOND_REVIEW"
+          },
+          {
+            "id": "c5",
+            "fact": "kfwfb_membership_years",
+            "op": "gte",
+            "value": 5,
+            "changeable": false,
+            "source": {
+              "sourceId": "SRC-KFWFB-001",
+              "quote": "പെൻഷൻ അപേക്ഷ തിയ്യതി തൊട്ട് 5 വർഷം മുമ്പെങ്കിലും മത്സ്യബോർഡിൽ അംഗത്വം എടുത്ത് വിഹിതം അടച്ചിരിക്കണം.",
+              "locator": "p.18, eligibility"
             },
             "reviewedBy": "PENDING_SECOND_REVIEW"
           }
         ]
       },
-      "documents": [],
+      "documents": [
+        {
+          "docId": "age_proof",
+          "source": {
+            "sourceId": "SRC-KFWFB-001",
+            "quote": "അപേക്ഷന്റെ വയസ്സ് തെളിയിക്കുന്നതിന് സ്കൂളിൽ നിന്നോ, ജനന മരണ രജിസ്ട്രാറിൽ നിന്നോ, ലഭിക്കുന്ന സർട്ടിഫിക്കററ്, പാസ്സ്പോർട്ട്, ഡ്രൈവിംഗ് ലൈസൻസ് ഇവയൊന്നുമില്ലെങ്കിൽ നിശ്ചിത ഫോറത്തിൽ ഉള്ള മെഡിക്കൽ സർട്ടിഫിക്കറ്റ്."
+          }
+        },
+        {
+          "docId": "kfwfb_passbook",
+          "source": {
+            "sourceId": "SRC-KFWFB-001",
+            "quote": "ഫിഷറീസ് ഓഫീസർ സാക്ഷ്യപ്പെടുത്തിയ അപേക്ഷകന്റെ മത്സ്യബോർഡ് പാസ്സ് ബുക്കിന്റെ പകർപ്പ്"
+          }
+        },
+        {
+          "docId": "bank_passbook_aadhaar_linked",
+          "source": {
+            "sourceId": "SRC-KFWFB-001",
+            "quote": "ആധാർ ലിങ്ക് ചെയ്ത വ്യക്തിഗത ബാങ്ക് അക്കൗണ്ട് പാസ് ബുക്കിന്റെ പകർപ്പ്"
+          }
+        },
+        {
+          "docId": "ration_card",
+          "source": {
+            "sourceId": "SRC-KFWFB-001",
+            "quote": "റേഷൻ കാർഡിന്റെ പകർപ്പ് ഫിഷറീസ് ഓഫീസർ സാക്ഷ്യപ്പെടുത്തിയത്."
+          }
+        },
+        {
+          "docId": "aadhaar_copy",
+          "source": {
+            "sourceId": "SRC-KFWFB-001",
+            "quote": "ആധാർ കാർഡിന്റെ പകർപ്പ്"
+          }
+        },
+        {
+          "docId": "income_certificate",
+          "source": {
+            "sourceId": "SRC-KFWFB-001",
+            "quote": "വരുമാന സർട്ടിഫിക്കറ്റ്"
+          }
+        }
+      ],
       "apply": [
         {
           "locationType": "fisheries_district_office",
-          "mode": "in_person",
+          "mode": "online",
           "note": {
-            "en": "The scheme is implemented through district offices and Matsyaboard.",
-            "ml": "പദ്ധതി ജില്ലാ ഓഫീസുകളും മത്സ്യബോർഡും വഴി നടപ്പാക്കുന്നു."
+            "en": "Apply online on www.fims.kerala.gov.in to the Fisheries Officer once the person completes 60.",
+            "ml": "60 വയസ്സ് പൂർത്തിയാക്കുന്ന മുറക്ക് www.fims.kerala.gov.in പോർട്ടൽ മുഖേന ഫിഷറീസ് ഓഫീസർക്ക് അപേക്ഷ സമർപ്പിക്കുക."
           },
           "source": {
-            "sourceId": "SRC-FISH-001",
-            "quote": "implementing through district offices& Matsyaboard"
+            "sourceId": "SRC-KFWFB-001",
+            "quote": "60 വയസ്സ് പൂർത്തിയാക്കുന്ന മുറക്ക് അപേക്ഷ www.fims.kerala.gov.in എന്ന പോർട്ടൽ മുഖേന ഫിഷറീസ് ഓഫീസർക്ക് സമർപ്പിക്കണം."
           }
         }
       ],
       "lastVerified": "2026-09-23",
-      "verifiedBy": "HR",
-      "notes": "HR (primary curation)"
+      "verifiedBy": "AI-review",
+      "notes": "Upgraded from partial using the 2025 KFWFB guideline p.18-19. CONFLICT: the older department page said Rs 450/month for 'registered fishermen/widows'; the 2025 guideline gives Rs 1,600 and the conditions below. Widows are now covered by FISH-10."
     },
     {
       "id": "PLNT-01",
@@ -1230,7 +1908,15 @@
           }
         ]
       },
-      "documents": [],
+      "documents": [
+        {
+          "docId": "spwwfb_form_14",
+          "source": {
+            "sourceId": "SRC-PLNT-008",
+            "quote": ""
+          }
+        }
+      ],
       "apply": [
         {
           "locationType": "spwwfb_office",
@@ -1240,8 +1926,8 @@
             "ml": "ബോർഡുമായി ബന്ധപ്പെടുക. അപേക്ഷാ നടപടിക്രമം ഞങ്ങളുടെ ഉറവിടങ്ങളിൽ ലഭ്യമല്ല."
           },
           "source": {
-            "sourceId": "SRC-PLNT-003",
-            "quote": "Kerala Small Plantation Workers' Welfare Fund Board, Kottayam"
+            "sourceId": "SRC-PLNT-007",
+            "quote": "Office of the Chief Executive Officer, Azad Lane, Kottayam - 686 001"
           }
         },
         {
@@ -1255,11 +1941,23 @@
             "sourceId": "SRC-PLNT-006",
             "quote": "Akshaya and Trade Union Login / Sign-up Access via Akshaya centre"
           }
+        },
+        {
+          "locationType": "plantation_district_office",
+          "mode": "in_person",
+          "note": {
+            "en": "The District Executive Officer for your area handles the Fund's members. The application procedure for this benefit is not published in our sources.",
+            "ml": "നിങ്ങളുടെ പ്രദേശത്തെ ജില്ലാ എക്സിക്യൂട്ടീവ് ഓഫീസറാണ് ക്ഷേമനിധി അംഗങ്ങളുടെ കാര്യങ്ങൾ കൈകാര്യം ചെയ്യുന്നത്. ഈ ആനുകൂല്യത്തിന്റെ അപേക്ഷാ നടപടിക്രമം ഞങ്ങളുടെ ഉറവിടങ്ങളിൽ ലഭ്യമല്ല."
+          },
+          "source": {
+            "sourceId": "SRC-PLNT-007",
+            "quote": "Office of the District Executive Officer"
+          }
         }
       ],
       "lastVerified": "2026-09-23",
       "verifiedBy": "HR",
-      "notes": "HR (primary curation); eligibility set to verified on the Act clause (quotes reported checked against the PDF)."
+      "notes": "Act 17 of 2008 s.3(5)(a). Form 14 (Scheme 2009, clause 38(1)) is the application; clause 38 itself (contribution period, amount) is not collected, so documents and procedure stay partial."
     },
     {
       "id": "PLNT-02",
@@ -1340,8 +2038,8 @@
             "ml": "ബോർഡുമായി ബന്ധപ്പെടുക. അപേക്ഷാ നടപടിക്രമം ഞങ്ങളുടെ ഉറവിടങ്ങളിൽ ലഭ്യമല്ല."
           },
           "source": {
-            "sourceId": "SRC-PLNT-003",
-            "quote": "Kerala Small Plantation Workers' Welfare Fund Board, Kottayam"
+            "sourceId": "SRC-PLNT-007",
+            "quote": "Office of the Chief Executive Officer, Azad Lane, Kottayam - 686 001"
           }
         },
         {
@@ -1354,6 +2052,18 @@
           "source": {
             "sourceId": "SRC-PLNT-006",
             "quote": "Akshaya and Trade Union Login / Sign-up Access via Akshaya centre"
+          }
+        },
+        {
+          "locationType": "plantation_district_office",
+          "mode": "in_person",
+          "note": {
+            "en": "The District Executive Officer for your area handles the Fund's members. The application procedure for this benefit is not published in our sources.",
+            "ml": "നിങ്ങളുടെ പ്രദേശത്തെ ജില്ലാ എക്സിക്യൂട്ടീവ് ഓഫീസറാണ് ക്ഷേമനിധി അംഗങ്ങളുടെ കാര്യങ്ങൾ കൈകാര്യം ചെയ്യുന്നത്. ഈ ആനുകൂല്യത്തിന്റെ അപേക്ഷാ നടപടിക്രമം ഞങ്ങളുടെ ഉറവിടങ്ങളിൽ ലഭ്യമല്ല."
+          },
+          "source": {
+            "sourceId": "SRC-PLNT-007",
+            "quote": "Office of the District Executive Officer"
           }
         }
       ],
@@ -1440,8 +2150,8 @@
             "ml": "ബോർഡുമായി ബന്ധപ്പെടുക. അപേക്ഷാ നടപടിക്രമം ഞങ്ങളുടെ ഉറവിടങ്ങളിൽ ലഭ്യമല്ല."
           },
           "source": {
-            "sourceId": "SRC-PLNT-003",
-            "quote": "Kerala Small Plantation Workers' Welfare Fund Board, Kottayam"
+            "sourceId": "SRC-PLNT-007",
+            "quote": "Office of the Chief Executive Officer, Azad Lane, Kottayam - 686 001"
           }
         },
         {
@@ -1454,6 +2164,18 @@
           "source": {
             "sourceId": "SRC-PLNT-006",
             "quote": "Akshaya and Trade Union Login / Sign-up Access via Akshaya centre"
+          }
+        },
+        {
+          "locationType": "plantation_district_office",
+          "mode": "in_person",
+          "note": {
+            "en": "The District Executive Officer for your area handles the Fund's members. The application procedure for this benefit is not published in our sources.",
+            "ml": "നിങ്ങളുടെ പ്രദേശത്തെ ജില്ലാ എക്സിക്യൂട്ടീവ് ഓഫീസറാണ് ക്ഷേമനിധി അംഗങ്ങളുടെ കാര്യങ്ങൾ കൈകാര്യം ചെയ്യുന്നത്. ഈ ആനുകൂല്യത്തിന്റെ അപേക്ഷാ നടപടിക്രമം ഞങ്ങളുടെ ഉറവിടങ്ങളിൽ ലഭ്യമല്ല."
+          },
+          "source": {
+            "sourceId": "SRC-PLNT-007",
+            "quote": "Office of the District Executive Officer"
           }
         }
       ],
@@ -1530,7 +2252,15 @@
           }
         ]
       },
-      "documents": [],
+      "documents": [
+        {
+          "docId": "spwwfb_form_18",
+          "source": {
+            "sourceId": "SRC-PLNT-009",
+            "quote": ""
+          }
+        }
+      ],
       "apply": [
         {
           "locationType": "spwwfb_office",
@@ -1540,8 +2270,8 @@
             "ml": "ബോർഡുമായി ബന്ധപ്പെടുക. അപേക്ഷാ നടപടിക്രമം ഞങ്ങളുടെ ഉറവിടങ്ങളിൽ ലഭ്യമല്ല."
           },
           "source": {
-            "sourceId": "SRC-PLNT-003",
-            "quote": "Kerala Small Plantation Workers' Welfare Fund Board, Kottayam"
+            "sourceId": "SRC-PLNT-007",
+            "quote": "Office of the Chief Executive Officer, Azad Lane, Kottayam - 686 001"
           }
         },
         {
@@ -1555,11 +2285,23 @@
             "sourceId": "SRC-PLNT-006",
             "quote": "Akshaya and Trade Union Login / Sign-up Access via Akshaya centre"
           }
+        },
+        {
+          "locationType": "plantation_district_office",
+          "mode": "in_person",
+          "note": {
+            "en": "The District Executive Officer for your area handles the Fund's members. The application procedure for this benefit is not published in our sources.",
+            "ml": "നിങ്ങളുടെ പ്രദേശത്തെ ജില്ലാ എക്സിക്യൂട്ടീവ് ഓഫീസറാണ് ക്ഷേമനിധി അംഗങ്ങളുടെ കാര്യങ്ങൾ കൈകാര്യം ചെയ്യുന്നത്. ഈ ആനുകൂല്യത്തിന്റെ അപേക്ഷാ നടപടിക്രമം ഞങ്ങളുടെ ഉറവിടങ്ങളിൽ ലഭ്യമല്ല."
+          },
+          "source": {
+            "sourceId": "SRC-PLNT-007",
+            "quote": "Office of the District Executive Officer"
+          }
         }
       ],
       "lastVerified": "2026-09-23",
       "verifiedBy": "HR",
-      "notes": "HR (primary curation); eligibility set to verified on the Act clause (quotes reported checked against the PDF)."
+      "notes": "Act 17 of 2008 s.3(5)(d). Form 18 (Scheme 2009, clause 45(1)) is the application; clause 45 itself is not collected."
     },
     {
       "id": "PLNT-05",
@@ -1632,7 +2374,7 @@
       },
       "documents": [
         {
-          "docId": "aadhaar",
+          "docId": "aadhaar_or_enrolment",
           "source": {
             "sourceId": "SRC-PLNT-002",
             "quote": "Any individual eligible for receiving the benefits under the above Scheme shall hereby be required to furnish proof of possession of the Aadhaar number or undergo Aadhaar authentication"
@@ -1667,7 +2409,7 @@
       ],
       "lastVerified": "2026-09-23",
       "verifiedBy": "HR",
-      "notes": "HR (primary curation)"
+      "notes": "G.O.(P) No.81/2024/LBR lists the Kerala Small Plantation Workers' Welfare Fund Board (item 10) among the 17 boards whose female members get the Maternity Benefit Scheme. Amount, number of deliveries and other conditions are in the 'extant Scheme guidelines', not collected."
     },
     {
       "id": "FISH-07",
@@ -1855,6 +2597,1412 @@
       "lastVerified": "2026-09-23",
       "verifiedBy": "AI-review",
       "notes": "Scheme Highlights: beneficiaries \"Members of cooperative societies affliated to Matysafed\", implemented \"through Matysafed offices\". Malayalam name is our translation."
+    },
+    {
+      "id": "FISH-10",
+      "name": {
+        "en": "Widow Pension (Fishermen's Welfare Fund)",
+        "ml": "വിധവ പെൻഷൻ"
+      },
+      "authority": {
+        "en": "Kerala Fishermen's Welfare Fund Board",
+        "ml": "കേരള മത്സ്യത്തൊഴിലാളി ക്ഷേമനിധി ബോർഡ്"
+      },
+      "category": "fishing",
+      "summary": {
+        "en": "Monthly pension of ₹1,600 for the wife of a Board member who died before receiving any old-age pension instalment.",
+        "ml": "വാർദ്ധക്യകാല പെൻഷൻ ഒരു ഗഡുപോലും കൈപ്പറ്റുന്നതിനുമുമ്പ് മരണമടഞ്ഞ ബോർഡ് അംഗങ്ങളുടെ ഭാര്യമാർക്ക് പ്രതിമാസം 1,600 രൂപ."
+      },
+      "verification": {
+        "eligibility": "verified",
+        "documents": "verified",
+        "apply": "verified"
+      },
+      "rule": {
+        "all": [
+          {
+            "id": "g0",
+            "fact": "livelihood",
+            "op": "includes",
+            "value": [
+              "fishing"
+            ],
+            "changeable": false,
+            "source": {
+              "sourceId": "SRC-KFWFB-001",
+              "quote": "മത്സ്യത്തൊഴിലാളികളുടെ മരണം മൂലം നിരാലംബരായി തീരുന്ന അവരുടെ ഭാര്യമാർക്ക് ആശ്വാസ ധനസഹായമെന്ന നിലയിൽ പ്രതിമാസ പെൻഷൻ നൽകുന്നതിനുള്ള പദ്ധതിയാണിത്.",
+              "locator": "p.30"
+            },
+            "reviewedBy": "PENDING_SECOND_REVIEW"
+          },
+          {
+            "id": "c1",
+            "fact": "kfwfb_family_status",
+            "op": "includes",
+            "value": [
+              "widow_of_fisher"
+            ],
+            "changeable": false,
+            "source": {
+              "sourceId": "SRC-KFWFB-001",
+              "quote": "മത്സ്യബോർഡിൽ വിഹിതമടച്ച് അംഗത്വമെടുത്ത ശേഷം വാർദ്ധക്യകാല പെൻഷൻ പദ്ധതി പ്രകാരമുള്ള പെൻഷൻ തുക ഒരു ഗഡുപോലും കൈപ്പറ്റുന്നതിനുമുമ്പായി മരണമടയുന്ന മത്സ്യത്തൊഴിലാളികളുടെ ഭാര്യമാർക്ക് ഈ പദ്ധതി പ്രകാരം പ്രതിമാസ പെൻഷൻ തുക 1600/- രൂപ നൽകി വരുന്നു.",
+              "locator": "p.30"
+            },
+            "reviewedBy": "PENDING_SECOND_REVIEW"
+          },
+          {
+            "id": "c2",
+            "fact": "regular_income_job",
+            "op": "eq",
+            "value": false,
+            "changeable": false,
+            "source": {
+              "sourceId": "SRC-KFWFB-001",
+              "quote": "സ്ഥിര വരുമാനമുള്ള ഉദ്യോഗമുണ്ടെങ്കിൽ ഈ പദ്ധതി പ്രകാരമുള്ള പെൻഷൻ ലഭിക്കുകയില്ല.",
+              "locator": "p.30, condition 1"
+            },
+            "reviewedBy": "PENDING_SECOND_REVIEW"
+          },
+          {
+            "id": "c3",
+            "fact": "widow_remarried",
+            "op": "eq",
+            "value": false,
+            "changeable": false,
+            "source": {
+              "sourceId": "SRC-KFWFB-001",
+              "quote": "പുനർവിവാഹം നടക്കുന്ന പക്ഷം വിവാഹം നടക്കുന്ന മാസം മുതൽ പെൻഷൻ റദ്ദുചെയ്യുന്നതാണ്.",
+              "locator": "p.30, condition 2"
+            },
+            "reviewedBy": "PENDING_SECOND_REVIEW"
+          },
+          {
+            "id": "c4",
+            "fact": "death_within_3_months",
+            "op": "eq",
+            "value": true,
+            "changeable": false,
+            "source": {
+              "sourceId": "SRC-KFWFB-001",
+              "quote": "മരണം നടന്ന് 90 ദിവസത്തിനുള്ളിൽ ഫിഷറീസ് ഓഫീസർക്ക് അപേക്ഷ നൽകണം.",
+              "locator": "p.30, how to apply"
+            },
+            "reviewedBy": "PENDING_SECOND_REVIEW"
+          }
+        ]
+      },
+      "documents": [
+        {
+          "docId": "member_death_certificate_attested",
+          "source": {
+            "sourceId": "SRC-KFWFB-001",
+            "quote": "മത്സ്യത്തൊഴിലാളിയുടെ മരണ സർട്ടിഫിക്കറ്റ് പകർപ്പ് ഫിഷറീസ് ഓഫീസർ സാക്ഷ്യപ്പെടുത്തിയത്."
+          }
+        },
+        {
+          "docId": "passbook_contribution_pages",
+          "source": {
+            "sourceId": "SRC-KFWFB-001",
+            "quote": "മത്സ്യബോർഡ് വിഹിതമടച്ച പേജിന്റെയും പാസ്സ് ബുക്കിന്റെയും പൂർണ്ണമായ പകർപ്പ് ഫിഷറീസ് ഓഫീസർ സാക്ഷ്യപ്പെടുത്തിയത്."
+          }
+        },
+        {
+          "docId": "no_other_pension_proof",
+          "source": {
+            "sourceId": "SRC-KFWFB-001",
+            "quote": "മറ്റു പെൻഷൻ ലഭിക്കുന്നില്ല എന്ന് തെളിയിക്കുന്ന രേഖ"
+          }
+        },
+        {
+          "docId": "aadhaar_copy",
+          "source": {
+            "sourceId": "SRC-KFWFB-001",
+            "quote": "ആധാർ കാർഡിന്റെ പകർപ്പ്"
+          }
+        },
+        {
+          "docId": "bank_passbook_aadhaar_linked",
+          "source": {
+            "sourceId": "SRC-KFWFB-001",
+            "quote": "വ്യക്തിഗത ബാങ്ക് പാസ് ബുക്കിന്റെ പകർപ്പ് (ആധാർ ലിങ്ക് ചെയ്ത ബാങ്ക് അക്കൗണ്ട്)"
+          }
+        },
+        {
+          "docId": "ration_card_family_page",
+          "source": {
+            "sourceId": "SRC-KFWFB-001",
+            "quote": "റേഷൻ കാർഡിന്റെ പകർപ്പ് (കുടുംബ വിവരം അടങ്ങിയ പേജ് സഹിതം)"
+          }
+        },
+        {
+          "docId": "not_remarried_certificate",
+          "source": {
+            "sourceId": "SRC-KFWFB-001",
+            "quote": "പുനർവിവഹം നടത്തിയിട്ടില്ലെന്നും സ്ഥിരവരുമാനമുള്ള തൊഴിൽ ഇല്ലെന്നുംതെളിയിക്കുന്നതിന് പഞ്ചായത്ത്, മുൻസിപ്പാലിറ്റി/ കോർപ്പറേഷൻ/ സെക്രട്ടറി വാർഡ് കൗൺസിലർ നൽകുന്ന സാക്ഷ്യപത്രം"
+          }
+        }
+      ],
+      "apply": [
+        {
+          "locationType": "fisheries_district_office",
+          "mode": "in_person",
+          "note": {
+            "en": "Submit 2 copies of the prescribed form to the Fisheries Officer in charge of the village where the fisherman was a member, within 90 days of the death.",
+            "ml": "നിശ്ചിത ഫോറത്തിൽ 2 കോപ്പികൾ, മരിച്ച മത്സ്യത്തൊഴിലാളി അംഗമായിരുന്ന ഗ്രാമത്തിന്റെ ചുമതല വഹിക്കുന്ന ഫിഷറീസ് ഓഫീസർക്ക്, മരണം നടന്ന് 90 ദിവസത്തിനുള്ളിൽ സമർപ്പിക്കുക."
+          },
+          "source": {
+            "sourceId": "SRC-KFWFB-001",
+            "quote": "നിശ്ചിത ഫോറത്തിൽ അപേക്ഷയുടെ 2 കോപ്പികൾ തയ്യാറാക്കി മരിച്ച മത്സ്യത്തൊഴിലാളി അംഗമായിരുന്ന ഗ്രാമത്തിന്റെ ചുമതല വഹിക്കുന്ന ഫിഷറീസ് ഓഫീസർക്ക് സമർപ്പിക്കേണ്ടതാണ്."
+          }
+        }
+      ],
+      "lastVerified": "2026-09-23",
+      "verifiedBy": "AI-review",
+      "notes": "2025 KFWFB guideline p.30-31. The 90-day application limit is encoded as a condition because the page states it. Condition 3 on p.30 is printed blank."
+    },
+    {
+      "id": "FISH-11",
+      "name": {
+        "en": "Marriage Assistance for Fishermen's Daughters",
+        "ml": "വിവാഹ ധനസഹായ പദ്ധതി"
+      },
+      "authority": {
+        "en": "Kerala Fishermen's Welfare Fund Board",
+        "ml": "കേരള മത്സ്യത്തൊഴിലാളി ക്ഷേമനിധി ബോർഡ്"
+      },
+      "category": "fishing",
+      "summary": {
+        "en": "₹25,000 towards the marriage of a fisherman's daughter.",
+        "ml": "മത്സ്യത്തൊഴിലാളികളുടെ പെൺമക്കളുടെ വിവാഹത്തിന് 25,000 രൂപ ധനസഹായം."
+      },
+      "verification": {
+        "eligibility": "verified",
+        "documents": "verified",
+        "apply": "verified"
+      },
+      "rule": {
+        "all": [
+          {
+            "id": "g0",
+            "fact": "livelihood",
+            "op": "includes",
+            "value": [
+              "fishing"
+            ],
+            "changeable": false,
+            "source": {
+              "sourceId": "SRC-KFWFB-001",
+              "quote": "മത്സ്യത്തൊഴിലാളികളുടെ പെൺമക്കളുടെ വിവാഹത്തിന് ധനസഹായം നൽകുന്നതിനുള്ള പദ്ധതിയാണിത്.",
+              "locator": "p.15"
+            },
+            "reviewedBy": "PENDING_SECOND_REVIEW"
+          },
+          {
+            "id": "c1",
+            "fact": "kfwfb_family_status",
+            "op": "includes",
+            "value": [
+              "member_under_60",
+              "widow_of_fisher",
+              "member_over_60",
+              "pensioner",
+              "widow_of_pensioner",
+              "bride_is_fisher",
+              "fisher_parent_died"
+            ],
+            "changeable": false,
+            "source": {
+              "sourceId": "SRC-KFWFB-001",
+              "quote": "60 വയസ്സിൽ താഴെ പ്രായമുള്ള മത്സ്യത്തൊഴിലാളി; മത്സ്യത്തൊഴിലാളികളുടെ വിധവകൾ; 60 വയസ്സിൽ കൂടുതൽ പ്രായമുള്ള മത്സ്യത്തൊഴിലാളികൾ; പെൻഷൻകാർ; പെൻഷൻകാരുടെ വിധവകൾ; വധു മത്സ്യത്തൊഴിലാളിയാണെങ്കിൽ; മത്സ്യത്തൊഴിലാളിയായ പിതാവ്/മാതാവ് മരണപ്പെട്ടാൽ",
+              "locator": "p.15, eligibility items 1-7 (joined)"
+            },
+            "reviewedBy": "PENDING_SECOND_REVIEW"
+          },
+          {
+            "any": [
+              {
+                "id": "c2a",
+                "fact": "kfwfb_family_status",
+                "op": "includes",
+                "value": [
+                  "member_under_60",
+                  "widow_of_fisher",
+                  "bride_is_fisher",
+                  "fisher_parent_died"
+                ],
+                "changeable": false,
+                "source": {
+                  "sourceId": "SRC-KFWFB-001",
+                  "quote": "60 വയസ്സിൽ താഴെ പ്രായമുള്ള മത്സ്യത്തൊഴിലാളി; മത്സ്യത്തൊഴിലാളികളുടെ വിധവകൾ; 60 വയസ്സിൽ കൂടുതൽ പ്രായമുള്ള മത്സ്യത്തൊഴിലാളികൾ; പെൻഷൻകാർ; പെൻഷൻകാരുടെ വിധവകൾ; വധു മത്സ്യത്തൊഴിലാളിയാണെങ്കിൽ; മത്സ്യത്തൊഴിലാളിയായ പിതാവ്/മാതാവ് മരണപ്പെട്ടാൽ",
+                  "locator": "p.15, items 1-2 and 6-7 have no one-time limit"
+                },
+                "reviewedBy": "PENDING_SECOND_REVIEW"
+              },
+              {
+                "id": "c2b",
+                "fact": "prior_marriage_assistance",
+                "op": "eq",
+                "value": false,
+                "changeable": false,
+                "source": {
+                  "sourceId": "SRC-KFWFB-001",
+                  "quote": "മുൻപൊരിക്കലും ഈ സഹായം ലഭിച്ചിട്ടില്ലെങ്കിൽ ഒരു മകളുടെ വിവാഹത്തിന്",
+                  "locator": "p.15, items 3-5"
+                },
+                "reviewedBy": "PENDING_SECOND_REVIEW"
+              }
+            ]
+          },
+          {
+            "id": "c3",
+            "fact": "family_event",
+            "op": "includes",
+            "value": [
+              "daughter_marriage"
+            ],
+            "changeable": false,
+            "source": {
+              "sourceId": "SRC-KFWFB-001",
+              "quote": "വിവാഹ തിയ്യതി മുതൽ 60 ദിവസത്തിനകം അപേക്ഷ ഫിഷറീസ് ഓഫീസർക്ക് സമർപ്പിക്കേണ്ടതാണ്.",
+              "locator": "p.16, how to apply 1"
+            },
+            "reviewedBy": "PENDING_SECOND_REVIEW"
+          },
+          {
+            "id": "c4",
+            "fact": "bride_18",
+            "op": "eq",
+            "value": true,
+            "changeable": false,
+            "source": {
+              "sourceId": "SRC-KFWFB-001",
+              "quote": "വധുവിന് വിവാഹ തിയ്യതിക്ക് 18 വയസ്സ് പൂർത്തിയായിരിക്കണം",
+              "locator": "p.15, condition 1"
+            },
+            "reviewedBy": "PENDING_SECOND_REVIEW"
+          },
+          {
+            "id": "c5",
+            "fact": "annual_family_income",
+            "op": "lt",
+            "value": 50000,
+            "changeable": false,
+            "source": {
+              "sourceId": "SRC-KFWFB-001",
+              "quote": "അപേക്ഷകരുടെ കുടുംബ വാർഷിക വരുമാനം 50,000/- രൂപയിൽ താഴെ ആയിരിക്കണം",
+              "locator": "p.15, condition 2"
+            },
+            "reviewedBy": "PENDING_SECOND_REVIEW"
+          },
+          {
+            "id": "c6",
+            "fact": "kfwfb_contributions_paid",
+            "op": "eq",
+            "value": true,
+            "changeable": true,
+            "howTo": {
+              "en": "Clear any arrears of Welfare Fund contribution at the Fisheries Office.",
+              "ml": "ക്ഷേമനിധി വിഹിതത്തിലെ കുടിശ്ശിക ഫിഷറീസ് ഓഫീസിൽ അടച്ചുതീർക്കുക."
+            },
+            "source": {
+              "sourceId": "SRC-KFWFB-001",
+              "quote": "മത്സ്യത്തൊഴിലാളി വിഹിതങ്ങൾ പൂർണ്ണമായും അടച്ചിരിക്കണം",
+              "locator": "p.15, condition 3"
+            },
+            "reviewedBy": "PENDING_SECOND_REVIEW"
+          },
+          {
+            "id": "c7",
+            "fact": "kfwfb_membership_years",
+            "op": "gte",
+            "value": 3,
+            "changeable": false,
+            "source": {
+              "sourceId": "SRC-KFWFB-001",
+              "quote": "അംഗത്വമെടുത്ത് ആദ്യമായി വിഹിതം അടച്ചതുമുതൽ 3 വർഷം കഴിഞ്ഞാൽ മാത്രമേ ഈ പദ്ധതി പ്രകാരമുള്ള ധനസഹായം ലഭിക്കുകയുള്ളൂ.",
+              "locator": "p.15, condition 4"
+            },
+            "reviewedBy": "PENDING_SECOND_REVIEW"
+          }
+        ]
+      },
+      "documents": [
+        {
+          "docId": "bride_age_proof",
+          "source": {
+            "sourceId": "SRC-KFWFB-001",
+            "quote": "വധുവിന്റെ വയസ്സ് തെളിയിക്കുന്ന രേഖ"
+          }
+        },
+        {
+          "docId": "income_proof_ration_or_certificate",
+          "source": {
+            "sourceId": "SRC-KFWFB-001",
+            "quote": "50,000/- രൂപയിൽ താഴെ റേഷൻകാർഡിൽ വാർഷിക വരുമാനം രേഖപ്പെടുത്തിയതിന്റെ പകർപ്പ് ( റേഷൻ കാർഡ്/വരുമാന സർട്ടിഫിക്കറ്റ്)"
+          }
+        },
+        {
+          "docId": "kfwfb_passbook",
+          "source": {
+            "sourceId": "SRC-KFWFB-001",
+            "quote": "മത്സ്യബോർഡ് പാസ് ബുക്കിന്റെ പകർപ്പ് ( ഫിഷറീസ് ഓഫീസർ സാക്ഷ്യപ്പെടുത്തിയത്)"
+          }
+        },
+        {
+          "docId": "marriage_certificate",
+          "source": {
+            "sourceId": "SRC-KFWFB-001",
+            "quote": "തദ്ദേശസ്വയംഭരണ സ്ഥാപനങ്ങളിൽ നിന്നും ലഭിക്കുന്ന വിവാഹ സർട്ടിഫിക്കറ്റ്"
+          }
+        },
+        {
+          "docId": "aadhaar_copy",
+          "source": {
+            "sourceId": "SRC-KFWFB-001",
+            "quote": "അപേക്ഷകന്റെ/അപേക്ഷകയുടെ ആധാർ നമ്പർ"
+          }
+        }
+      ],
+      "apply": [
+        {
+          "locationType": "fisheries_district_office",
+          "mode": "in_person",
+          "note": {
+            "en": "Submit 2 copies of the prescribed form to the Fisheries Officer within 60 days of the marriage.",
+            "ml": "വിവാഹ തിയ്യതി മുതൽ 60 ദിവസത്തിനകം നിശ്ചിത ഫോറത്തിൽ 2 പകർപ്പുകൾ ഫിഷറീസ് ഓഫീസർക്ക് സമർപ്പിക്കുക."
+          },
+          "source": {
+            "sourceId": "SRC-KFWFB-001",
+            "quote": "വിവാഹ തിയ്യതി മുതൽ 60 ദിവസത്തിനകം അപേക്ഷ ഫിഷറീസ് ഓഫീസർക്ക് സമർപ്പിക്കേണ്ടതാണ്."
+          }
+        }
+      ],
+      "lastVerified": "2026-09-23",
+      "verifiedBy": "AI-review",
+      "notes": "2025 KFWFB guideline p.15-16. Membership duration is 3 years from the first contribution and the application window is 60 days (the English summary said 60 months / 3 months; the page says otherwise). Condition 5 on p.15 (members removed from the list after an insured disability remain eligible) is not modelled. For the widow category the contributions must be paid up to the husband's death."
+    },
+    {
+      "id": "FISH-12",
+      "name": {
+        "en": "Assistance to Dependants on a Fisherman's Non-Accidental Death",
+        "ml": "അപകടം കൊണ്ടല്ലാതെ ആകസ്മിക കാരണങ്ങളാൽ ഉണ്ടാകുന്ന മരണത്തിന് ആശ്രിതർക്ക് ധനസഹായം"
+      },
+      "authority": {
+        "en": "Kerala Fishermen's Welfare Fund Board",
+        "ml": "കേരള മത്സ്യത്തൊഴിലാളി ക്ഷേമനിധി ബോർഡ്"
+      },
+      "category": "fishing",
+      "summary": {
+        "en": "₹1,00,000 to the dependants when a fisherman dies suddenly from a cause other than an accident, during or right after fishing, and the group insurance does not apply.",
+        "ml": "മത്സ്യബന്ധനസമയത്തോ തൊട്ടുപിന്നാലെയോ അപകടം കൊണ്ടല്ലാതെ ആകസ്മിക കാരണങ്ങളാൽ മരിക്കുന്ന മത്സ്യത്തൊഴിലാളികളുടെ ആശ്രിതർക്ക് 1,00,000 രൂപ."
+      },
+      "verification": {
+        "eligibility": "verified",
+        "documents": "verified",
+        "apply": "verified"
+      },
+      "rule": {
+        "all": [
+          {
+            "id": "g0",
+            "fact": "livelihood",
+            "op": "includes",
+            "value": [
+              "fishing"
+            ],
+            "changeable": false,
+            "source": {
+              "sourceId": "SRC-KFWFB-001",
+              "quote": "മത്സ്യബന്ധനസമയത്തോ, തൊട്ടുപിന്നാലെയോ അപകടം കൊണ്ടല്ലാതെ ആകസ്മിക കാരണങ്ങളാൽ മരിക്കുകയും , ഗ്രൂപ്പ് ഇൻഷ്വറൻസ് പദ്ധതി പ്രകാരമുള്ള ധനസഹായം ലഭിക്കാൻ അർഹതയില്ലാതാകുകയും ചെയ്യുന്ന മത്സ്യത്തൊഴിലാളികളുടെ ആശ്രിതർക്ക്",
+              "locator": "p.13"
+            },
+            "reviewedBy": "PENDING_SECOND_REVIEW"
+          },
+          {
+            "id": "c1",
+            "fact": "family_event",
+            "op": "includes",
+            "value": [
+              "member_death"
+            ],
+            "changeable": false,
+            "source": {
+              "sourceId": "SRC-KFWFB-001",
+              "quote": "മത്സ്യബന്ധനസമയത്തോ, തൊട്ടുപിന്നാലെയോ അപകടം കൊണ്ടല്ലാതെ ആകസ്മിക കാരണങ്ങളാൽ മരിക്കുകയും , ഗ്രൂപ്പ് ഇൻഷ്വറൻസ് പദ്ധതി പ്രകാരമുള്ള ധനസഹായം ലഭിക്കാൻ അർഹതയില്ലാതാകുകയും ചെയ്യുന്ന മത്സ്യത്തൊഴിലാളികളുടെ ആശ്രിതർക്ക്",
+              "locator": "p.13"
+            },
+            "reviewedBy": "PENDING_SECOND_REVIEW"
+          },
+          {
+            "id": "c2",
+            "fact": "death_by_accident",
+            "op": "eq",
+            "value": false,
+            "changeable": false,
+            "source": {
+              "sourceId": "SRC-KFWFB-001",
+              "quote": "അപകടം കൊണ്ടല്ലാതെ ആകസ്മിക കാരണങ്ങളാൽ",
+              "locator": "p.13"
+            },
+            "reviewedBy": "PENDING_SECOND_REVIEW"
+          },
+          {
+            "any": [
+              {
+                "id": "c3a",
+                "fact": "deceased_under_60",
+                "op": "eq",
+                "value": true,
+                "changeable": false,
+                "source": {
+                  "sourceId": "SRC-KFWFB-001",
+                  "quote": "മരിച്ച മത്സ്യത്തൊഴിലാളി 60 വയസ്സിൽ താഴെ പ്രായമുള്ള ആളായിരിക്കണം.",
+                  "locator": "p.13, condition 1"
+                },
+                "reviewedBy": "PENDING_SECOND_REVIEW"
+              },
+              {
+                "id": "c3b",
+                "fact": "deceased_active_after_60",
+                "op": "eq",
+                "value": true,
+                "changeable": false,
+                "source": {
+                  "sourceId": "SRC-KFWFB-001",
+                  "quote": "60 വയസ്സിനു ശേഷം തൊഴിൽ തുടരുകയും പട്ടികയിൽ പേരുണ്ടായിരിക്കുകയും വിഹിതങ്ങൾ കൃത്യമായി അടക്കുകയും ചെയ്യുന്നവരുടെ ആശ്രിതർക്ക് ഈ പദ്ധതിയുടെ ആനുകൂല്യം ലഭിക്കുന്നതാണ്.",
+                  "locator": "p.13, condition 3"
+                },
+                "reviewedBy": "PENDING_SECOND_REVIEW"
+              }
+            ]
+          },
+          {
+            "id": "c4",
+            "fact": "kfwfb_contributions_paid",
+            "op": "eq",
+            "value": true,
+            "changeable": false,
+            "source": {
+              "sourceId": "SRC-KFWFB-001",
+              "quote": "ക്ഷേമനിധി വിഹിതം പൂർണ്ണമായി അടച്ചിരിക്കണം.",
+              "locator": "p.13, condition 2"
+            },
+            "reviewedBy": "PENDING_SECOND_REVIEW"
+          }
+        ]
+      },
+      "documents": [
+        {
+          "docId": "death_certificate",
+          "source": {
+            "sourceId": "SRC-KFWFB-001",
+            "quote": "മരണ സർട്ടിഫിക്കറ്റ് – അസ്സൽ"
+          }
+        },
+        {
+          "docId": "doctor_certificate_cause",
+          "source": {
+            "sourceId": "SRC-KFWFB-001",
+            "quote": "ആശുപത്രിയിൽ പ്രവേശിച്ച ശേഷമാണ് മരണമെങ്കിൽമരണം സാധാരണ രോഗം കൊണ്ടുണ്ടായതല്ലെന്നും അപ്രതീക്ഷിതമായ കാരണങ്ങൾകൊണ്ടായിരുന്നുവെന്നും തെളിയിക്കുന്നതിന് ചികിൽസിച്ച ഡോക്ടറുടെ സർട്ടിഫിക്കറ്റ്"
+          }
+        },
+        {
+          "docId": "police_report",
+          "source": {
+            "sourceId": "SRC-KFWFB-001",
+            "quote": "പോലീസ് സ്റ്റേഷനിൽ നിന്നും ലഭിക്കുന്ന റിപ്പോർട്ടിന്റെ പകർപ്പ്."
+          }
+        },
+        {
+          "docId": "kfwfb_passbook",
+          "source": {
+            "sourceId": "SRC-KFWFB-001",
+            "quote": "മരിച്ചയാളിന്റെ മത്സ്യബോർഡ് പാസ്സ് ബുക്കിന്റെ ഫോട്ടോ കോപ്പി ഫിഷറീസ് ഓഫീസർ സാക്ഷ്യപ്പെടുത്തിയത്."
+          }
+        },
+        {
+          "docId": "bank_details",
+          "source": {
+            "sourceId": "SRC-KFWFB-001",
+            "quote": "അവകാശിയുടെ ബാങ്ക് അക്കൌണ്ട് വിശദാംശങ്ങൾ"
+          }
+        },
+        {
+          "docId": "aadhaar_copy",
+          "source": {
+            "sourceId": "SRC-KFWFB-001",
+            "quote": "അവകാശിയുടെ ആധാർ നമ്പർ"
+          }
+        }
+      ],
+      "apply": [
+        {
+          "locationType": "fisheries_district_office",
+          "mode": "in_person",
+          "note": {
+            "en": "Inform the Fisheries Officer and the nearest police station at once. Submit 3 copies of the application with the documents to the Fisheries Officer.",
+            "ml": "ഉടനെ തന്നെ ഫിഷറീസ് ഓഫീസറേയും തൊട്ടടുത്ത പോലീസ് സ്റ്റേഷനിലും അറിയിക്കണം. അപേക്ഷയുടെ മൂന്ന് പകർപ്പുകൾ രേഖകൾ സഹിതം ഫിഷറീസ് ഓഫീസർക്ക് സമർപ്പിക്കുക."
+          },
+          "source": {
+            "sourceId": "SRC-KFWFB-001",
+            "quote": "സാമ്പത്തിക സഹായത്തിനുള്ള അപേക്ഷയുടെ മൂന്ന് പകർപ്പുകൾ തയ്യാറാക്കി താഴെ പറയുന്ന രേഖകൾ സഹിതം ബന്ധപ്പെട്ട ഫിഷറീസ് ഓഫീസർക്ക് സമർപ്പിക്കേണ്ടതാണ്."
+          }
+        }
+      ],
+      "lastVerified": "2026-09-23",
+      "verifiedBy": "AI-review",
+      "notes": "2025 KFWFB guideline p.13-14. The 'during or right after fishing' timing is shown in the summary but not asked as a separate question."
+    },
+    {
+      "id": "FISH-13",
+      "name": {
+        "en": "Death Assistance to Fishermen's Dependants",
+        "ml": "മത്സ്യത്തൊഴിലാളികളുടെ മരണത്തോടനുബന്ധിച്ച് ആശ്രിതർക്കുള്ള ധനസഹായ പദ്ധതി"
+      },
+      "authority": {
+        "en": "Kerala Fishermen's Welfare Fund Board",
+        "ml": "കേരള മത്സ്യത്തൊഴിലാളി ക്ഷേമനിധി ബോർഡ്"
+      },
+      "category": "fishing",
+      "summary": {
+        "en": "₹15,000 to the dependants when a fisherman dies in any circumstance. Amounts already paid under another death-related scheme are deducted.",
+        "ml": "മത്സ്യത്തൊഴിലാളികൾ ഏതു സാഹചര്യത്തിൽ മരിച്ചാലും ആശ്രിതർക്ക് 15,000 രൂപ. മരണവുമായി ബന്ധപ്പെട്ട മറ്റു പദ്ധതി പ്രകാരം ലഭിച്ച തുക കുറയ്ക്കും."
+      },
+      "verification": {
+        "eligibility": "verified",
+        "documents": "verified",
+        "apply": "verified"
+      },
+      "rule": {
+        "all": [
+          {
+            "id": "g0",
+            "fact": "livelihood",
+            "op": "includes",
+            "value": [
+              "fishing"
+            ],
+            "changeable": false,
+            "source": {
+              "sourceId": "SRC-KFWFB-001",
+              "quote": "മത്സ്യത്തൊഴിലാളികൾ ഏതു സാഹചര്യത്തിൽ മരിച്ചാലും ആശ്രിതർക്ക് ധനസഹായം നൽകുന്ന പദ്ധതിയാണിത്.",
+              "locator": "p.21"
+            },
+            "reviewedBy": "PENDING_SECOND_REVIEW"
+          },
+          {
+            "id": "c1",
+            "fact": "family_event",
+            "op": "includes",
+            "value": [
+              "member_death"
+            ],
+            "changeable": false,
+            "source": {
+              "sourceId": "SRC-KFWFB-001",
+              "quote": "മത്സ്യത്തൊഴിലാളികൾ ഏതു സാഹചര്യത്തിൽ മരിച്ചാലും ആശ്രിതർക്ക് ധനസഹായം നൽകുന്ന പദ്ധതിയാണിത്.",
+              "locator": "p.21"
+            },
+            "reviewedBy": "PENDING_SECOND_REVIEW"
+          },
+          {
+            "any": [
+              {
+                "id": "c2a",
+                "fact": "deceased_under_60",
+                "op": "eq",
+                "value": true,
+                "changeable": false,
+                "source": {
+                  "sourceId": "SRC-KFWFB-001",
+                  "quote": "മരിച്ച മത്സ്യത്തൊഴിലാളി 60 വയസ്സിൽ താഴെ പ്രായമുള്ള ആളായിരിക്കണം. ക്ഷേമനിധി വിഹിതം പൂർണ്ണമായി അടച്ചിരിക്കണം.",
+                  "locator": "p.21, condition 1"
+                },
+                "reviewedBy": "PENDING_SECOND_REVIEW"
+              },
+              {
+                "id": "c2b",
+                "fact": "deceased_active_after_60",
+                "op": "eq",
+                "value": true,
+                "changeable": false,
+                "source": {
+                  "sourceId": "SRC-KFWFB-001",
+                  "quote": "60 വയസ്സിനുശേഷം തൊഴിൽ തുടരുകയും പട്ടികയിൽ പേരുണ്ടായിരിക്കുകയും വിഹിതങ്ങൾ കൃത്യമായി അടക്കുകയും ചെയ്യുന്നവരുടെ ആശ്രിതർക്ക് ഈ പദ്ധതിയുടെ ആനുകൂല്യം ലഭിക്കുന്നതാണ്.",
+                  "locator": "p.21, condition 2"
+                },
+                "reviewedBy": "PENDING_SECOND_REVIEW"
+              }
+            ]
+          },
+          {
+            "id": "c3",
+            "fact": "kfwfb_contributions_paid",
+            "op": "eq",
+            "value": true,
+            "changeable": false,
+            "source": {
+              "sourceId": "SRC-KFWFB-001",
+              "quote": "മരിച്ച മത്സ്യത്തൊഴിലാളി 60 വയസ്സിൽ താഴെ പ്രായമുള്ള ആളായിരിക്കണം. ക്ഷേമനിധി വിഹിതം പൂർണ്ണമായി അടച്ചിരിക്കണം.",
+              "locator": "p.21, condition 1"
+            },
+            "reviewedBy": "PENDING_SECOND_REVIEW"
+          },
+          {
+            "id": "c4",
+            "fact": "death_within_3_months",
+            "op": "eq",
+            "value": true,
+            "changeable": false,
+            "source": {
+              "sourceId": "SRC-KFWFB-001",
+              "quote": "മത്സ്യത്തൊഴിലാളി മരണപ്പെട്ട് മൂന്ന് മാസത്തിനകം ഈ അപേക്ഷ സമർപ്പിക്കേണ്ടതാണ്.",
+              "locator": "p.21, how to apply"
+            },
+            "reviewedBy": "PENDING_SECOND_REVIEW"
+          }
+        ]
+      },
+      "documents": [
+        {
+          "docId": "kfwfb_passbook",
+          "source": {
+            "sourceId": "SRC-KFWFB-001",
+            "quote": "മരിച്ചയാളിന്റെ മത്സ്യബോർഡ് പാസ്സ് ബുക്കിന്റെ സാക്ഷ്യപ്പെടുത്തിയ പകർപ്പും"
+          }
+        },
+        {
+          "docId": "death_certificate",
+          "source": {
+            "sourceId": "SRC-KFWFB-001",
+            "quote": "മരണസർട്ടിഫിക്കറ്റും"
+          }
+        },
+        {
+          "docId": "legal_heir_certificate",
+          "source": {
+            "sourceId": "SRC-KFWFB-001",
+            "quote": "ലീഗൽ ഹെയർഷിപ്പ് സർട്ടിഫിക്കറ്റും"
+          }
+        },
+        {
+          "docId": "aadhaar_copy",
+          "source": {
+            "sourceId": "SRC-KFWFB-001",
+            "quote": "അപേക്ഷകന്റെ ആധാർ കാർഡിന്റെ പകർപ്പ്"
+          }
+        },
+        {
+          "docId": "bank_passbook",
+          "source": {
+            "sourceId": "SRC-KFWFB-001",
+            "quote": "ബാങ്ക് പാസ്സ് ബുക്കിന്റെ പകർപ്പ്"
+          }
+        }
+      ],
+      "apply": [
+        {
+          "locationType": "fisheries_district_office",
+          "mode": "in_person",
+          "note": {
+            "en": "Dependants submit 2 copies of the application to the Fisheries Officer within 3 months of the death, stating the relationship and the date of death.",
+            "ml": "മരിച്ച് മൂന്ന് മാസത്തിനകം ആശ്രിതർ അപേക്ഷയുടെ 2 പകർപ്പുകൾ ബന്ധവും മരിച്ച തീയതിയും വ്യക്തമാക്കി ഫിഷറീസ് ഓഫീസർക്ക് സമർപ്പിക്കുക."
+          },
+          "source": {
+            "sourceId": "SRC-KFWFB-001",
+            "quote": "ആശ്രിതർ അപേക്ഷയുടെ 2 പകർപ്പുകൾ തയ്യാറാക്കി ബന്ധപ്പെട്ട ഫിഷറീസ് ഓഫീസർക്ക് സമർപ്പിച്ചിരിക്കണം."
+          }
+        }
+      ],
+      "lastVerified": "2026-09-23",
+      "verifiedBy": "AI-review",
+      "notes": "2025 KFWFB guideline p.21-22. Condition 4 (Rs 1,000 to whoever paid funeral costs when there is no dependant) is not modelled."
+    },
+    {
+      "id": "FISH-14",
+      "name": {
+        "en": "Funeral Assistance on the Death of a Fisherman's Dependant",
+        "ml": "മത്സ്യത്തൊഴിലാളികളുടെ ആശ്രിതരുടെ മരണാനന്തര ചെലവുകൾക്ക് ധനസഹായം"
+      },
+      "authority": {
+        "en": "Kerala Fishermen's Welfare Fund Board",
+        "ml": "കേരള മത്സ്യത്തൊഴിലാളി ക്ഷേമനിധി ബോർഡ്"
+      },
+      "category": "fishing",
+      "summary": {
+        "en": "₹2,000 towards funeral expenses when a fisherman's father, mother, spouse, minor son or unmarried daughter dies.",
+        "ml": "മത്സ്യത്തൊഴിലാളികളുടെ അച്ഛൻ, അമ്മ, ഭാര്യ/ഭർത്താവ്, മൈനർമാരായ ആൺമക്കൾ, അവിവാഹിതരായ പെൺമക്കൾ മരിക്കുമ്പോൾ ശവസംസ്കാര ചെലവിന് 2,000 രൂപ."
+      },
+      "verification": {
+        "eligibility": "verified",
+        "documents": "verified",
+        "apply": "verified"
+      },
+      "rule": {
+        "all": [
+          {
+            "id": "g0",
+            "fact": "livelihood",
+            "op": "includes",
+            "value": [
+              "fishing"
+            ],
+            "changeable": false,
+            "source": {
+              "sourceId": "SRC-KFWFB-001",
+              "quote": "മത്സ്യത്തൊഴിലാളികളുടെ ആശ്രിതർ മരണമടയുമ്പോൾ ശവസംസ്കാരം തുടങ്ങിയ ചെലവുകൾ നടത്തുന്നതിന് സാമ്പത്തിക സഹായം നൽകുന്ന പദ്ധതിയാണിത്.",
+              "locator": "p.17"
+            },
+            "reviewedBy": "PENDING_SECOND_REVIEW"
+          },
+          {
+            "id": "c1",
+            "fact": "family_event",
+            "op": "includes",
+            "value": [
+              "dependant_death"
+            ],
+            "changeable": false,
+            "source": {
+              "sourceId": "SRC-KFWFB-001",
+              "quote": "മത്സ്യത്തൊഴിലാളികളുടെ അച്ഛൻ, അമ്മ, ഭാര്യ/ഭർത്താവ്, മൈനർമാരായ ആൺ മക്കൾ, അവിവാഹിതരായ പെൺമക്കൾ എന്നിവരുടെ മരണം സംഭവിക്കുമ്പോഴാണ് ഈ പദ്ധതി പ്രകാരമുള്ള ധനസഹായം നൽകുന്നത്. ആശ്രിതൻ മരിച്ച് മൂന്ന് മാസത്തിനകം നിശ്ചിത ഫോറത്തിൽ അപേക്ഷയുടെ 2 പകർപ്പുകൾ തയ്യാറാക്കി ഫിഷറീസ് ഓഫീസർക്ക് സമർപ്പിക്കണം.",
+              "locator": "p.17"
+            },
+            "reviewedBy": "PENDING_SECOND_REVIEW"
+          }
+        ]
+      },
+      "documents": [
+        {
+          "docId": "dependant_death_certificate",
+          "source": {
+            "sourceId": "SRC-KFWFB-001",
+            "quote": "ആശ്രിതന്റെ മരണ സർട്ടിഫിക്കറ്റ്"
+          }
+        },
+        {
+          "docId": "kfwfb_passbook",
+          "source": {
+            "sourceId": "SRC-KFWFB-001",
+            "quote": "മത്സ്യബോർഡ് പാസ്സ് ബുക്കിന്റെ പകർപ്പ് – ഫിഷറീസ് ഓഫീസർ സാക്ഷ്യപ്പെടുത്തിയത്."
+          }
+        },
+        {
+          "docId": "legal_heir_certificate",
+          "source": {
+            "sourceId": "SRC-KFWFB-001",
+            "quote": "ലീഗൽ ഹെയർഷിപ്പ് / റിലേഷൻഷിപ്പ് സർട്ടിഫിക്കറ്റ്"
+          }
+        }
+      ],
+      "apply": [
+        {
+          "locationType": "fisheries_district_office",
+          "mode": "in_person",
+          "note": {
+            "en": "Submit 2 copies of the prescribed form to the Fisheries Officer within 3 months of the death.",
+            "ml": "മരിച്ച് മൂന്ന് മാസത്തിനകം നിശ്ചിത ഫോറത്തിൽ 2 പകർപ്പുകൾ ഫിഷറീസ് ഓഫീസർക്ക് സമർപ്പിക്കുക."
+          },
+          "source": {
+            "sourceId": "SRC-KFWFB-001",
+            "quote": "ആശ്രിതൻ മരിച്ച് മൂന്ന് മാസത്തിനകം നിശ്ചിത ഫോറത്തിൽ അപേക്ഷയുടെ 2 പകർപ്പുകൾ തയ്യാറാക്കി ഫിഷറീസ് ഓഫീസർക്ക് സമർപ്പിക്കണം."
+          }
+        }
+      ],
+      "lastVerified": "2026-09-23",
+      "verifiedBy": "AI-review",
+      "notes": "2025 KFWFB guideline p.17. Board membership is not stated as a condition on this page (the Matsyaboard passbook is a required document), so it is not encoded."
+    },
+    {
+      "id": "FISH-15",
+      "name": {
+        "en": "Relief for Temporary Disability due to Accident",
+        "ml": "അപകടം മൂലമുണ്ടാകുന്ന താൽക്കാലിക അവശതയ്ക്ക് ആശ്വാസ ധനസഹായ പദ്ധതി"
+      },
+      "authority": {
+        "en": "Kerala Fishermen's Welfare Fund Board",
+        "ml": "കേരള മത്സ്യത്തൊഴിലാളി ക്ഷേമനിധി ബോർഡ്"
+      },
+      "category": "fishing",
+      "summary": {
+        "en": "Relief while a fisherman cannot work after an accident: ₹100 for the first 7 days, then ₹15 a day, up to ₹500.",
+        "ml": "അപകടം മൂലം ജോലി ചെയ്യാൻ കഴിയാത്ത കാലത്തേക്ക് ആദ്യത്തെ ഏഴ് ദിവസത്തേക്ക് 100 രൂപ, പിന്നീട് ഓരോ ദിവസത്തേക്കും 15 രൂപ, പരമാവധി 500 രൂപ."
+      },
+      "verification": {
+        "eligibility": "verified",
+        "documents": "verified",
+        "apply": "verified"
+      },
+      "rule": {
+        "all": [
+          {
+            "id": "g0",
+            "fact": "livelihood",
+            "op": "includes",
+            "value": [
+              "fishing"
+            ],
+            "changeable": false,
+            "source": {
+              "sourceId": "SRC-KFWFB-001",
+              "quote": "അപകടം മൂലം താൽക്കാലികമായി തൊഴിൽ ചെയ്യാൻ കഴിയാതെ വരുന്ന കാലത്തേക്ക് ഉപജീവനത്തിനുള്ള ആശ്വാസ ധനസഹായം നൽകുന്ന പദ്ധതിയാണിത്.",
+              "locator": "p.20"
+            },
+            "reviewedBy": "PENDING_SECOND_REVIEW"
+          },
+          {
+            "id": "c1",
+            "fact": "family_event",
+            "op": "includes",
+            "value": [
+              "accident"
+            ],
+            "changeable": false,
+            "source": {
+              "sourceId": "SRC-KFWFB-001",
+              "quote": "കുറഞ്ഞത് ഏഴ് ദിവസമെങ്കിലും തൊഴിൽ ചെയ്യാൻ പറ്റാതെ വന്നാൽ മാത്രമെ ഈ പദ്ധതിയുടെ ആനുകൂല്യം ലഭിക്കുകയുള്ളൂ.",
+              "locator": "p.20"
+            },
+            "reviewedBy": "PENDING_SECOND_REVIEW"
+          },
+          {
+            "id": "c2",
+            "fact": "accident_within_3_months",
+            "op": "eq",
+            "value": true,
+            "changeable": false,
+            "source": {
+              "sourceId": "SRC-KFWFB-001",
+              "quote": "അപകടം സംഭവിച്ച തിയ്യതി മുതൽ 3 മാസത്തിനകം ബന്ധപ്പെട്ട ഫിഷറീസ് ഓഫീസർക്ക് സമർപ്പിച്ചിരിക്കണം.",
+              "locator": "p.20, how to apply"
+            },
+            "reviewedBy": "PENDING_SECOND_REVIEW"
+          }
+        ]
+      },
+      "documents": [
+        {
+          "docId": "govt_medical_certificate",
+          "source": {
+            "sourceId": "SRC-KFWFB-001",
+            "quote": "ചികിൽസിച്ച സർക്കാർ ഡോക്ടറിൽ നിന്നും ലഭിച്ച നിശ്ചിത ഫോറത്തിലുള്ള മെഡിക്കൽ സർട്ടിഫിക്കറ്റ്."
+          }
+        },
+        {
+          "docId": "kfwfb_passbook",
+          "source": {
+            "sourceId": "SRC-KFWFB-001",
+            "quote": "അപേക്ഷകന്റെ മത്സ്യബോർഡ് പാസ് ബുക്കിന്റെ ശരി പകർപ്പ് (ഫിഷറീസ് ഓഫീസർ സാക്ഷ്യപ്പെടുത്തിയത്)"
+          }
+        }
+      ],
+      "apply": [
+        {
+          "locationType": "fisheries_district_office",
+          "mode": "in_person",
+          "note": {
+            "en": "Inform the Fisheries Officer at once. Submit 2 copies of the prescribed form within 3 months of the accident.",
+            "ml": "ഉടനെ ഫിഷറീസ് ഓഫീസറെ അറിയിക്കണം. അപകടം സംഭവിച്ച തിയ്യതി മുതൽ 3 മാസത്തിനകം നിശ്ചിത ഫോറത്തിൽ 2 പകർപ്പുകൾ സമർപ്പിക്കുക."
+          },
+          "source": {
+            "sourceId": "SRC-KFWFB-001",
+            "quote": "ധനസഹായത്തിനുള്ള അപേക്ഷ നിശ്ചിത ഫോറത്തിൽ 2 പകർപ്പുകൾ തയ്യാറാക്കി അപകടം സംഭവിച്ച തിയ്യതി മുതൽ 3 മാസത്തിനകം ബന്ധപ്പെട്ട ഫിഷറീസ് ഓഫീസർക്ക് സമർപ്പിച്ചിരിക്കണം."
+          }
+        }
+      ],
+      "lastVerified": "2026-09-23",
+      "verifiedBy": "AI-review",
+      "notes": "2025 KFWFB guideline p.20. Board membership is not stated as a condition on this page (the applicant's Matsyaboard passbook is a required document), so it is not encoded."
+    },
+    {
+      "id": "FISH-16",
+      "name": {
+        "en": "SSLC Cash Award for Fishermen's Children",
+        "ml": "എസ്.എസ്.എൽ.സി പരീക്ഷയിൽ ഉന്നത വിജയം നേടുന്നവർക്ക് ക്യാഷ് അവാർഡ്"
+      },
+      "authority": {
+        "en": "Kerala Fishermen's Welfare Fund Board",
+        "ml": "കേരള മത്സ്യത്തൊഴിലാളി ക്ഷേമനിധി ബോർഡ്"
+      },
+      "category": "fishing",
+      "summary": {
+        "en": "Cash award for fishermen's children with top SSLC results: ₹5,000 for A+ in all subjects, ₹4,000 for A+ in 9, ₹3,000 for A+ in 8.",
+        "ml": "എസ്.എസ്.എൽ.സി-യിൽ ഉന്നത വിജയം നേടുന്ന മത്സ്യത്തൊഴിലാളികളുടെ മക്കൾക്ക്: എല്ലാ വിഷയങ്ങളിലും എ+ 5,000 രൂപ, 9 വിഷയങ്ങളിൽ 4,000, 8 വിഷയങ്ങളിൽ 3,000."
+      },
+      "verification": {
+        "eligibility": "verified",
+        "documents": "verified",
+        "apply": "partial"
+      },
+      "rule": {
+        "all": [
+          {
+            "id": "g0",
+            "fact": "livelihood",
+            "op": "includes",
+            "value": [
+              "fishing"
+            ],
+            "changeable": false,
+            "source": {
+              "sourceId": "SRC-KFWFB-001",
+              "quote": "വിദ്യാഭ്യാസ പുരോഗതി നേടുന്നതിന് മത്സ്യത്തൊഴിലാളികളുടെ മക്കളായ വിദ്യാർത്ഥികൾക്ക് പ്രോത്സാഹനം നൽകുന്നതിനാണ് ഈ പദ്ധതി തയ്യാറാക്കിയിട്ടുള്ളത് .",
+              "locator": "p.22"
+            },
+            "reviewedBy": "PENDING_SECOND_REVIEW"
+          },
+          {
+            "id": "c1",
+            "fact": "family_event",
+            "op": "includes",
+            "value": [
+              "sslc_8_aplus"
+            ],
+            "changeable": false,
+            "source": {
+              "sourceId": "SRC-KFWFB-001",
+              "quote": "എസ്.എസ്.എൽ.സി പരീക്ഷയ്ക്ക് 8വിഷയങ്ങളിലും എ+ ഗ്രേഡ്ലഭിക്കാത്തവിദ്യാർത്ഥികളെ അവാർഡിനായി പരിഗണിക്കുന്നതല്ല.",
+              "locator": "p.23, condition 2"
+            },
+            "reviewedBy": "PENDING_SECOND_REVIEW"
+          },
+          {
+            "id": "c2",
+            "fact": "kfwfb_member",
+            "op": "eq",
+            "value": true,
+            "changeable": true,
+            "howTo": {
+              "en": "Ask at your Fisheries Department district office about joining the Kerala Fishermen's Welfare Fund Board.",
+              "ml": "കേരള മത്സ്യത്തൊഴിലാളി ക്ഷേമനിധി ബോർഡിൽ അംഗമാകുന്നതിനെക്കുറിച്ച് ഫിഷറീസ് വകുപ്പ് ജില്ലാ ഓഫീസിൽ അന്വേഷിക്കുക."
+            },
+            "source": {
+              "sourceId": "SRC-KFWFB-001",
+              "quote": "വിദ്യാർത്ഥിയുടെ രക്ഷിതാവിന് ക്ഷേമനിധി അംഗത്വമുണ്ടെങ്കിൽ പോലും മത്സ്യബന്ധനം മുഖ്യ ഉപജീവനമായി സ്വീകരിച്ചിട്ടുള്ള പ്രവർത്തനോന്മുഖ മത്സ്യത്തൊഴിലാളിയായി തുടരുന്നുവെന്ന് ഉറപ്പുവരുത്തിയശേഷം മാത്രമേ അപേക്ഷ പരിഗണനീയമാണെന്ന ശുപാർശ ഫിഷറീസ് ഓഫീസർ മേലാധികാരിക്ക് സമർപ്പിക്കുകയുള്ളൂ.",
+              "locator": "p.23, condition 1"
+            },
+            "reviewedBy": "PENDING_SECOND_REVIEW"
+          },
+          {
+            "id": "c3",
+            "fact": "active_fisher",
+            "op": "eq",
+            "value": true,
+            "changeable": false,
+            "source": {
+              "sourceId": "SRC-KFWFB-001",
+              "quote": "വിദ്യാർത്ഥിയുടെ രക്ഷിതാവിന് ക്ഷേമനിധി അംഗത്വമുണ്ടെങ്കിൽ പോലും മത്സ്യബന്ധനം മുഖ്യ ഉപജീവനമായി സ്വീകരിച്ചിട്ടുള്ള പ്രവർത്തനോന്മുഖ മത്സ്യത്തൊഴിലാളിയായി തുടരുന്നുവെന്ന് ഉറപ്പുവരുത്തിയശേഷം മാത്രമേ അപേക്ഷ പരിഗണനീയമാണെന്ന ശുപാർശ ഫിഷറീസ് ഓഫീസർ മേലാധികാരിക്ക് സമർപ്പിക്കുകയുള്ളൂ.",
+              "locator": "p.23, condition 1"
+            },
+            "reviewedBy": "PENDING_SECOND_REVIEW"
+          }
+        ]
+      },
+      "documents": [
+        {
+          "docId": "sslc_certificate",
+          "source": {
+            "sourceId": "SRC-KFWFB-001",
+            "quote": "വിദ്യാർത്ഥിയുടെ എസ്.എസ്.എൽ.സി സട്ടിഫിക്കറ്റിന്റെ ശരിപ്പകർപ്പ് (ഫിഷറീസ് ഓഫീസർ സാക്ഷ്യപ്പെടുത്തിയത്) വയസ്സും, മാർക്കും തെളിയിക്കുന്നതിനായി."
+          }
+        },
+        {
+          "docId": "parent_kfwfb_passbook",
+          "source": {
+            "sourceId": "SRC-KFWFB-001",
+            "quote": "രക്ഷിതാക്കളുടെ മത്സ്യബോർഡ് പാസ്സ് ബുക്കിന്റെ ശരി പകർപ്പ് (ഫിഷറീസ് ഓഫീസർ സാക്ഷ്യപ്പെടുത്തിയത്)"
+          }
+        },
+        {
+          "docId": "photos_2",
+          "source": {
+            "sourceId": "SRC-KFWFB-001",
+            "quote": "വിദ്യാർത്ഥിയുടെ പാസ്പോർട്ട് സൈസ് ഫോട്ടോ 2 എണ്ണം"
+          }
+        },
+        {
+          "docId": "aadhaar_copy",
+          "source": {
+            "sourceId": "SRC-KFWFB-001",
+            "quote": "ആധാർകാർഡിന്റെ പകർപ്പ്"
+          }
+        },
+        {
+          "docId": "bank_passbook",
+          "source": {
+            "sourceId": "SRC-KFWFB-001",
+            "quote": "ബാങ്ക് പാസ് ബുക്കിന്റെ പകർപ്പ്"
+          }
+        }
+      ],
+      "apply": [
+        {
+          "locationType": "fisheries_district_office",
+          "mode": "in_person",
+          "note": {
+            "en": "Watch for the Commissioner's notification after SSLC results. Apply on plain paper to the office named in it before the deadline; late applications are not accepted.",
+            "ml": "എസ്.എസ്.എൽ.സി ഫലത്തിന് ശേഷം കമ്മീഷണർ പുറപ്പെടുവിക്കുന്ന വിജ്ഞാപനം ശ്രദ്ധിക്കുക. നിശ്ചിത തിയ്യതിക്കകം വെള്ളക്കടലാസിൽ അപേക്ഷ സമർപ്പിക്കുക."
+          },
+          "source": {
+            "sourceId": "SRC-KFWFB-001",
+            "quote": "വിദ്യാർത്ഥികൾ നേരിട്ടോ രക്ഷിതാവ് മുഖേനയോ നിശ്ചിത തിയ്യതിക്കകം അപക്ഷകൻ ബന്ധപ്പെട്ട ഓഫീസർക്ക് സമർപ്പിക്കണം. സമയപരിധിക്കുശേഷം ലഭിക്കുന്ന അപേക്ഷകൾ സ്വീകരിക്കുന്നതല്ല."
+          }
+        }
+      ],
+      "lastVerified": "2026-09-23",
+      "verifiedBy": "AI-review",
+      "notes": "2025 KFWFB guideline p.22-23. The separate category for the top 3 students of each Regional Fisheries Technical School (Rs 3,000) is not modelled. Applications open only after the Commissioner's notification each year."
+    },
+    {
+      "id": "FISH-17",
+      "name": {
+        "en": "Treatment Assistance for Serious Illness",
+        "ml": "മാരകരോഗ ചികിൽസാ പദ്ധതി"
+      },
+      "authority": {
+        "en": "Kerala Fishermen's Welfare Fund Board",
+        "ml": "കേരള മത്സ്യത്തൊഴിലാളി ക്ഷേമനിധി ബോർഡ്"
+      },
+      "category": "fishing",
+      "summary": {
+        "en": "Treatment help for fishermen with serious illness: up to ₹50,000 each for heart disease, kidney disease, cancer and brain tumour; up to ₹12,000 for paralysis; up to ₹5,000 for mental illness that can be cured with treatment. Treatment must be at a government or co-operative hospital, or on referral.",
+        "ml": "മാരകരോഗങ്ങൾക്ക് ചികിൽസാ സഹായം: ഹൃദ്രോഗം, വൃക്കരോഗം, ക്യാൻസർ, തലച്ചോറിലെ ട്യൂമർ എന്നിവയ്ക്ക് പരമാവധി 50,000 രൂപ വീതം; തളർവാതം 12,000; ചികിൽസിച്ച് ഭേദമാക്കാൻ പറ്റുന്ന മാനസികരോഗം 5,000. സർക്കാർ/സഹകരണ ആശുപത്രിയിലെ ചികിൽസയ്ക്ക് (അല്ലെങ്കിൽ റഫർ ചെയ്താൽ)."
+      },
+      "verification": {
+        "eligibility": "verified",
+        "documents": "verified",
+        "apply": "verified"
+      },
+      "rule": {
+        "all": [
+          {
+            "id": "g0",
+            "fact": "livelihood",
+            "op": "includes",
+            "value": [
+              "fishing"
+            ],
+            "changeable": false,
+            "source": {
+              "sourceId": "SRC-KFWFB-001",
+              "quote": "മാരകരോഗങ്ങൾ പിടിപെട്ട് കഷ്ടത അനുഭവിക്കുന്ന മത്സ്യത്തൊഴിലാളികൾക്ക് വിദഗ്ദ ചികിൽസയ്ക്കുവേണ്ട ധനസഹായം നൽകുന്നതിനുള്ള പദ്ധതിയാണിത്.",
+              "locator": "p.25"
+            },
+            "reviewedBy": "PENDING_SECOND_REVIEW"
+          },
+          {
+            "id": "c1",
+            "fact": "family_event",
+            "op": "includes",
+            "value": [
+              "serious_illness"
+            ],
+            "changeable": false,
+            "source": {
+              "sourceId": "SRC-KFWFB-001",
+              "quote": "മാരകരോഗങ്ങൾ പിടിപെട്ട് കഷ്ടത അനുഭവിക്കുന്ന മത്സ്യത്തൊഴിലാളികൾക്ക് വിദഗ്ദ ചികിൽസയ്ക്കുവേണ്ട ധനസഹായം നൽകുന്നതിനുള്ള പദ്ധതിയാണിത്.",
+              "locator": "p.25, list of diseases"
+            },
+            "reviewedBy": "PENDING_SECOND_REVIEW"
+          },
+          {
+            "id": "c2",
+            "fact": "age",
+            "op": "gte",
+            "value": 23,
+            "changeable": false,
+            "source": {
+              "sourceId": "SRC-KFWFB-001",
+              "quote": "അപേക്ഷകർ 23 വയസ്സിനും 60 വയസ്സിനും ഇടയിൽ പ്രായമുള്ളവരായിരിക്കണം.",
+              "locator": "p.25, condition 1"
+            },
+            "reviewedBy": "PENDING_SECOND_REVIEW"
+          },
+          {
+            "id": "c3",
+            "fact": "age",
+            "op": "lte",
+            "value": 60,
+            "changeable": false,
+            "source": {
+              "sourceId": "SRC-KFWFB-001",
+              "quote": "അപേക്ഷകർ 23 വയസ്സിനും 60 വയസ്സിനും ഇടയിൽ പ്രായമുള്ളവരായിരിക്കണം.",
+              "locator": "p.25, condition 1"
+            },
+            "reviewedBy": "PENDING_SECOND_REVIEW"
+          },
+          {
+            "id": "c4",
+            "fact": "kfwfb_member",
+            "op": "eq",
+            "value": true,
+            "changeable": true,
+            "howTo": {
+              "en": "Ask at your Fisheries Department district office about joining the Kerala Fishermen's Welfare Fund Board.",
+              "ml": "കേരള മത്സ്യത്തൊഴിലാളി ക്ഷേമനിധി ബോർഡിൽ അംഗമാകുന്നതിനെക്കുറിച്ച് ഫിഷറീസ് വകുപ്പ് ജില്ലാ ഓഫീസിൽ അന്വേഷിക്കുക."
+            },
+            "source": {
+              "sourceId": "SRC-KFWFB-001",
+              "quote": "മത്സ്യബോർഡിൽ അംഗത്വമുള്ളവരായിരിക്കണം. ആദ്യമായി വിഹിതം അടച്ച് 5 വർഷമെങ്കിലും പൂർത്തിയാക്കുകയും കുടിശ്ശികയില്ലാതെ വിഹിതങ്ങളെല്ലാം അടക്കുകയും ചെയ്തിരിക്കണം.",
+              "locator": "p.25, condition 2"
+            },
+            "reviewedBy": "PENDING_SECOND_REVIEW"
+          },
+          {
+            "id": "c5",
+            "fact": "kfwfb_membership_years",
+            "op": "gte",
+            "value": 5,
+            "changeable": false,
+            "source": {
+              "sourceId": "SRC-KFWFB-001",
+              "quote": "മത്സ്യബോർഡിൽ അംഗത്വമുള്ളവരായിരിക്കണം. ആദ്യമായി വിഹിതം അടച്ച് 5 വർഷമെങ്കിലും പൂർത്തിയാക്കുകയും കുടിശ്ശികയില്ലാതെ വിഹിതങ്ങളെല്ലാം അടക്കുകയും ചെയ്തിരിക്കണം.",
+              "locator": "p.25, condition 2"
+            },
+            "reviewedBy": "PENDING_SECOND_REVIEW"
+          },
+          {
+            "id": "c6",
+            "fact": "kfwfb_contributions_paid",
+            "op": "eq",
+            "value": true,
+            "changeable": true,
+            "howTo": {
+              "en": "Clear any arrears of Welfare Fund contribution at the Fisheries Office.",
+              "ml": "ക്ഷേമനിധി വിഹിതത്തിലെ കുടിശ്ശിക ഫിഷറീസ് ഓഫീസിൽ അടച്ചുതീർക്കുക."
+            },
+            "source": {
+              "sourceId": "SRC-KFWFB-001",
+              "quote": "മത്സ്യബോർഡിൽ അംഗത്വമുള്ളവരായിരിക്കണം. ആദ്യമായി വിഹിതം അടച്ച് 5 വർഷമെങ്കിലും പൂർത്തിയാക്കുകയും കുടിശ്ശികയില്ലാതെ വിഹിതങ്ങളെല്ലാം അടക്കുകയും ചെയ്തിരിക്കണം.",
+              "locator": "p.25, condition 2"
+            },
+            "reviewedBy": "PENDING_SECOND_REVIEW"
+          },
+          {
+            "id": "c7",
+            "fact": "annual_family_income",
+            "op": "lte",
+            "value": 50000,
+            "changeable": false,
+            "source": {
+              "sourceId": "SRC-KFWFB-001",
+              "quote": "വാർഷിക വരുമാനം 50,000/- രൂപയിൽ കൂടുതലായിരിക്കരുത്.",
+              "locator": "p.25, condition 3"
+            },
+            "reviewedBy": "PENDING_SECOND_REVIEW"
+          }
+        ]
+      },
+      "documents": [
+        {
+          "docId": "income_proof_ration_or_certificate",
+          "source": {
+            "sourceId": "SRC-KFWFB-001",
+            "quote": "വരുമാനം തെളിയിക്കുന്നതിന് റേഷൻകാർഡിന്റെ /വരുമാന സർട്ടിഫിക്കറ്റിന്റെ പകർപ്പ് - ഫിഷറീസ് ഓഫീസർ സാക്ഷ്യപ്പെടുത്തയത്."
+          }
+        },
+        {
+          "docId": "govt_hospital_medical_certificate",
+          "source": {
+            "sourceId": "SRC-KFWFB-001",
+            "quote": "സർക്കാർ ആശുപത്രിയിൽ ചികിസിച്ച ഡോക്ടർ നൽകുന്ന മെഡിക്കൽ സർട്ടിഫിക്കറ്റ്."
+          }
+        },
+        {
+          "docId": "referral_document",
+          "source": {
+            "sourceId": "SRC-KFWFB-001",
+            "quote": "സർക്കാർ ആശുപത്രിയിൽ നിന്നും സ്വകാര്യ ആശുപത്രിയിലേക്ക് റഫർ ചെയ്തിട്ടുണ്ടെങ്കിൽ ആയതിനുള്ള രേഖ."
+          }
+        },
+        {
+          "docId": "treatment_bills",
+          "source": {
+            "sourceId": "SRC-KFWFB-001",
+            "quote": "ചികിൽസാ ചിലവിലേക്കുള്ള ബില്ലുകൾ ചികിൽസിച്ച ഡോക്ടർ സാക്ഷ്യപ്പെടുത്തി സമർപ്പിക്കണം."
+          }
+        },
+        {
+          "docId": "patient_age_proof",
+          "source": {
+            "sourceId": "SRC-KFWFB-001",
+            "quote": "രോഗിയുടെ വയസ്സ് തെളിയിക്കുന്നതിന് സ്കൂൾ സർട്ടിഫിക്കറ്റ് അഥവാ ജനന മരണ രജിസ്ട്രാറുടെ സർട്ടിഫിക്കറ്റ് ഇല്ലെങ്കിൽ ജ്ഞാനസ്നാന സർട്ടിഫിക്കറ്റ്."
+          }
+        },
+        {
+          "docId": "kfwfb_passbook",
+          "source": {
+            "sourceId": "SRC-KFWFB-001",
+            "quote": "മത്സ്യബോർഡ് പാസ്സ് ബുക്കിന്റെ ശരി പകർപ്പ് ഫിഷറീസ് ഓഫീസർ സാക്ഷ്യപ്പെടുത്തിയത്."
+          }
+        },
+        {
+          "docId": "prescription_copy",
+          "source": {
+            "sourceId": "SRC-KFWFB-001",
+            "quote": "ചികിൽസിക്കുന്ന ഡോക്ടറുടെ പ്രിസ്ക്രിപ്ഷന്റെ പകർപ്പ്"
+          }
+        }
+      ],
+      "apply": [
+        {
+          "locationType": "fisheries_district_office",
+          "mode": "in_person",
+          "note": {
+            "en": "The patient or a dependant submits 3 copies of the prescribed form to the Fisheries Officer.",
+            "ml": "രോഗിയോ രോഗിയുടെ ആശ്രിതരോ നിശ്ചിത ഫോറത്തിൽ 3 പകർപ്പുകൾ ഫിഷറീസ് ഓഫീസർക്ക് സമർപ്പിക്കണം."
+          },
+          "source": {
+            "sourceId": "SRC-KFWFB-001",
+            "quote": "നിശ്ചിത ഫോറത്തിലുള്ള അപേക്ഷയുടെ 3 പകർപ്പുകൾ തയ്യാറാക്കി ഫിഷറീസ് ഓഫീസർക്ക് സമർപ്പിക്കണം."
+          }
+        }
+      ],
+      "lastVerified": "2026-09-23",
+      "verifiedBy": "AI-review",
+      "notes": "2025 KFWFB guideline p.25-26. 'Between 23 and 60' is encoded as 23 to 60 inclusive; confirm whether 23 and 60 themselves are included. The hospital restriction is shown in the summary, not asked."
+    },
+    {
+      "id": "FISH-18",
+      "name": {
+        "en": "Compensation for Fishing Equipment Lost in a Calamity",
+        "ml": "പ്രകൃതിക്ഷോഭം മൂലം മത്സ്യബന്ധന ഉപകരണങ്ങൾ നഷ്ടപ്പെട്ടവർക്കുള്ള നഷ്ടപരിഹാരം"
+      },
+      "authority": {
+        "en": "Fisheries Department, Government of Kerala",
+        "ml": "കേരള സർക്കാർ മത്സ്യബന്ധന വകുപ്പ്"
+      },
+      "category": "fishing",
+      "summary": {
+        "en": "Compensation when fishing equipment is lost or damaged in a sea calamity. We have the official application form, but not the rule that decides who qualifies.",
+        "ml": "കടൽക്ഷോഭം പോലുള്ള പ്രകൃതിക്ഷോഭത്തിൽ മത്സ്യബന്ധന ഉപകരണങ്ങൾ നഷ്ടപ്പെട്ടാൽ നഷ്ടപരിഹാരം. ഔദ്യോഗിക അപേക്ഷാ ഫോറം ലഭ്യമാണ്; അർഹത നിർണ്ണയിക്കുന്ന നിയമം ലഭ്യമല്ല."
+      },
+      "verification": {
+        "eligibility": "informational",
+        "documents": "partial",
+        "apply": "partial"
+      },
+      "rule": {
+        "all": []
+      },
+      "documents": [
+        {
+          "docId": "calamity_application",
+          "source": {
+            "sourceId": "SRC-FISH-014",
+            "quote": ""
+          }
+        }
+      ],
+      "apply": [
+        {
+          "locationType": "fisheries_district_office",
+          "mode": "in_person",
+          "note": {
+            "en": "Ask at the Fisheries Department district office; the form has an enquiry section for the Fisheries Department / Board.",
+            "ml": "ഫിഷറീസ് വകുപ്പ് ജില്ലാ ഓഫീസിൽ അന്വേഷിക്കുക."
+          },
+          "source": {
+            "sourceId": "SRC-FISH-014",
+            "quote": ""
+          }
+        }
+      ],
+      "lastVerified": "2026-09-23",
+      "verifiedBy": "AI-review",
+      "notes": "Form only (3B, scanned). Display-only until the governing order is found."
+    },
+    {
+      "id": "PLNT-06",
+      "name": {
+        "en": "Assistance to Dependants after a Small Plantation Worker Member's Death",
+        "ml": "അംഗത്തിന്റെ മരണാനന്തരം ആശ്രിതർക്ക് ധനസഹായം"
+      },
+      "authority": {
+        "en": "Kerala Small Plantation Workers' Welfare Fund Board",
+        "ml": "കേരള ചെറുകിട തോട്ടം തൊഴിലാളി ക്ഷേമനിധി ബോർഡ്"
+      },
+      "category": "plantation",
+      "summary": {
+        "en": "Financial assistance to dependants after a member's death, applied for with Form 20. The amount and eligibility are in Scheme clause 45, which we do not have yet.",
+        "ml": "അംഗം മരിച്ചാൽ ആശ്രിതർക്ക് ധനസഹായം; ഫാറം 20 വഴി അപേക്ഷിക്കണം. തുകയും അർഹതയും പദ്ധതി ഖണ്ഡിക 45-ൽ; അത് ഇതുവരെ ലഭ്യമല്ല."
+      },
+      "verification": {
+        "eligibility": "informational",
+        "documents": "partial",
+        "apply": "partial"
+      },
+      "rule": {
+        "all": []
+      },
+      "documents": [
+        {
+          "docId": "spwwfb_form_20",
+          "source": {
+            "sourceId": "SRC-PLNT-010",
+            "quote": ""
+          }
+        }
+      ],
+      "apply": [
+        {
+          "locationType": "plantation_district_office",
+          "mode": "in_person",
+          "note": {
+            "en": "Ask the District Executive Officer for your area.",
+            "ml": "നിങ്ങളുടെ പ്രദേശത്തെ ജില്ലാ എക്സിക്യൂട്ടീവ് ഓഫീസറോട് അന്വേഷിക്കുക."
+          },
+          "source": {
+            "sourceId": "SRC-PLNT-007",
+            "quote": "Office of the District Executive Officer"
+          }
+        }
+      ],
+      "lastVerified": "2026-09-23",
+      "verifiedBy": "AI-review",
+      "notes": "Form 20 only. Needs Scheme 2009 clause 45."
+    },
+    {
+      "id": "PLNT-07",
+      "name": {
+        "en": "Family Pension (Small Plantation Workers' Welfare Fund)",
+        "ml": "കുടുംബ പെൻഷൻ (ചെറുകിട തോട്ടം തൊഴിലാളി ക്ഷേമനിധി)"
+      },
+      "authority": {
+        "en": "Kerala Small Plantation Workers' Welfare Fund Board",
+        "ml": "കേരള ചെറുകിട തോട്ടം തൊഴിലാളി ക്ഷേമനിധി ബോർഡ്"
+      },
+      "category": "plantation",
+      "summary": {
+        "en": "The Act allows the Fund to pay a family pension. Who qualifies and how much is set in the Scheme, which we do not have yet.",
+        "ml": "കുടുംബ പെൻഷൻ നൽകാൻ നിയമം അനുവദിക്കുന്നു. അർഹതയും തുകയും പദ്ധതിയിലാണ്; അത് ഇതുവരെ ലഭ്യമല്ല."
+      },
+      "verification": {
+        "eligibility": "informational",
+        "documents": "partial",
+        "apply": "partial"
+      },
+      "rule": {
+        "all": []
+      },
+      "documents": [],
+      "apply": [
+        {
+          "locationType": "plantation_district_office",
+          "mode": "in_person",
+          "note": {
+            "en": "Ask the District Executive Officer for your area.",
+            "ml": "നിങ്ങളുടെ പ്രദേശത്തെ ജില്ലാ എക്സിക്യൂട്ടീവ് ഓഫീസറോട് അന്വേഷിക്കുക."
+          },
+          "source": {
+            "sourceId": "SRC-PLNT-007",
+            "quote": "Office of the District Executive Officer"
+          }
+        }
+      ],
+      "lastVerified": "2026-09-23",
+      "verifiedBy": "AI-review",
+      "notes": "Act 17 of 2008 s.3(5)(b) only."
     }
   ],
   "documents": [
@@ -1905,6 +4053,366 @@
         "ml": "UIDAI (ആധാർ എൻറോൾമെന്റ് കേന്ദ്രം)"
       },
       "sourceId": "SRC-PLNT-002"
+    },
+    {
+      "id": "death_certificate",
+      "name": {
+        "en": "Death certificate (original)",
+        "ml": "മരണ സർട്ടിഫിക്കറ്റ് (അസ്സൽ)"
+      },
+      "sourceId": "SRC-KFWFB-001"
+    },
+    {
+      "id": "fir_copy",
+      "name": {
+        "en": "Copy of the police First Information Report (FIR)",
+        "ml": "പോലീസ് സ്റ്റേഷനിലെ പ്രഥമ വിവര റിപ്പോർട്ടിന്റെ (എഫ് ഐ ആർ) പകർപ്പ്"
+      },
+      "sourceId": "SRC-KFWFB-001"
+    },
+    {
+      "id": "postmortem_inquest",
+      "name": {
+        "en": "Copies of the post-mortem certificate and inquest report",
+        "ml": "പോസ്റ്റ്മോർട്ടം സർട്ടിഫിക്കറ്റിന്റെയും ഇൻക്വസ്റ്റ് റിപ്പോർട്ടിന്റെയും പകർപ്പ്"
+      },
+      "sourceId": "SRC-KFWFB-001"
+    },
+    {
+      "id": "legal_heir_certificate",
+      "name": {
+        "en": "Legal heirship / relationship certificate",
+        "ml": "ലീഗൽ ഹെയർഷിപ്പ് / റിലേഷൻഷിപ്പ് സർട്ടിഫിക്കറ്റ്"
+      },
+      "sourceId": "SRC-KFWFB-001"
+    },
+    {
+      "id": "student_school_certificate",
+      "name": {
+        "en": "Student's school certificate (for the children's education benefit)",
+        "ml": "വിദ്യാഭ്യാസ ആനുകൂല്യത്തിന് വിദ്യാർത്ഥിയുടെ സ്കൂൾ സർട്ടിഫിക്കറ്റ്"
+      },
+      "sourceId": "SRC-KFWFB-001"
+    },
+    {
+      "id": "funeral_bill",
+      "name": {
+        "en": "Bill for the funeral expense",
+        "ml": "ശവസംസ്കാര ചെലവ് ലഭ്യമാകുന്നതിന് ആയതിന്റെ ബിൽ"
+      },
+      "sourceId": "SRC-KFWFB-001"
+    },
+    {
+      "id": "disability_certificate",
+      "name": {
+        "en": "Hospital case certificate / disability certificate",
+        "ml": "ആശുപത്രിയിലെ കേസ് സർട്ടിഫിക്കറ്റ്/ഡിസെബിലിറ്റി സർട്ടിഫിക്കറ്റ്"
+      },
+      "sourceId": "SRC-KFWFB-001"
+    },
+    {
+      "id": "doctor_certificate_form",
+      "name": {
+        "en": "Doctor's certificate in the prescribed form",
+        "ml": "ഡോക്ടറുടെ സർട്ടിഫിക്കറ്റ് നിശ്ചിത ഫോറത്തിൽ"
+      },
+      "sourceId": "SRC-KFWFB-001"
+    },
+    {
+      "id": "police_report",
+      "name": {
+        "en": "Report from the police station",
+        "ml": "പോലീസ് സ്റ്റേഷനിൽ നിന്നുള്ള റിപ്പോർട്ട്"
+      },
+      "sourceId": "SRC-KFWFB-001"
+    },
+    {
+      "id": "collector_rdo_certificate",
+      "name": {
+        "en": "Certificate from the Collector / RDO (missing at sea)",
+        "ml": "കളക്ടർ/ആർ.ഡി.ഒ നൽകുന്ന സർട്ടിഫിക്കറ്റ്"
+      },
+      "sourceId": "SRC-KFWFB-001"
+    },
+    {
+      "id": "hospital_discharge_card",
+      "name": {
+        "en": "Hospital discharge card",
+        "ml": "ആശുപത്രി ഡിസ്ചാർജ്ജ് കാർഡ്"
+      },
+      "sourceId": "SRC-KFWFB-001"
+    },
+    {
+      "id": "hospital_bill",
+      "name": {
+        "en": "Original hospital bill",
+        "ml": "ആശുപത്രിയിലെ അസ്സൽ ബിൽ"
+      },
+      "sourceId": "SRC-KFWFB-001"
+    },
+    {
+      "id": "kfwfb_passbook",
+      "name": {
+        "en": "Copy of the Matsyaboard passbook, attested by the Fisheries Officer",
+        "ml": "ഫിഷറീസ് ഓഫീസർ സാക്ഷ്യപ്പെടുത്തിയ മത്സ്യബോർഡ് പാസ്സ് ബുക്കിന്റെ പകർപ്പ്"
+      },
+      "sourceId": "SRC-KFWFB-001"
+    },
+    {
+      "id": "bank_passbook",
+      "name": {
+        "en": "Copy of the bank passbook",
+        "ml": "ബാങ്ക് പാസ് ബുക്കിന്റെ പകർപ്പ്"
+      },
+      "sourceId": "SRC-KFWFB-001"
+    },
+    {
+      "id": "bank_passbook_aadhaar_linked",
+      "name": {
+        "en": "Copy of the personal bank passbook (Aadhaar-linked account)",
+        "ml": "ആധാർ ലിങ്ക് ചെയ്ത വ്യക്തിഗത ബാങ്ക് അക്കൗണ്ട് പാസ് ബുക്കിന്റെ പകർപ്പ്"
+      },
+      "sourceId": "SRC-KFWFB-001"
+    },
+    {
+      "id": "ration_card",
+      "name": {
+        "en": "Copy of the ration card",
+        "ml": "റേഷൻ കാർഡിന്റെ പകർപ്പ്"
+      },
+      "sourceId": "SRC-KFWFB-001"
+    },
+    {
+      "id": "income_certificate",
+      "name": {
+        "en": "Income certificate",
+        "ml": "വരുമാന സർട്ടിഫിക്കറ്റ്"
+      },
+      "sourceId": "SRC-KFWFB-001"
+    },
+    {
+      "id": "income_proof_ration_or_certificate",
+      "name": {
+        "en": "Ration card or income certificate copy showing income",
+        "ml": "വരുമാനം തെളിയിക്കുന്ന റേഷൻ കാർഡ് / വരുമാന സർട്ടിഫിക്കറ്റ് പകർപ്പ്"
+      },
+      "sourceId": "SRC-KFWFB-001"
+    },
+    {
+      "id": "age_proof",
+      "name": {
+        "en": "Age proof: school or birth-registrar certificate, passport, driving licence, or medical certificate in the prescribed form",
+        "ml": "വയസ്സ് തെളിയിക്കുന്ന രേഖ: സ്കൂൾ / ജനന മരണ രജിസ്ട്രാർ സർട്ടിഫിക്കറ്റ്, പാസ്പോർട്ട്, ഡ്രൈവിംഗ് ലൈസൻസ്, അല്ലെങ്കിൽ നിശ്ചിത ഫോറത്തിലുള്ള മെഡിക്കൽ സർട്ടിഫിക്കറ്റ്"
+      },
+      "sourceId": "SRC-KFWFB-001"
+    },
+    {
+      "id": "bride_age_proof",
+      "name": {
+        "en": "Proof of the bride's age",
+        "ml": "വധുവിന്റെ വയസ്സ് തെളിയിക്കുന്ന രേഖ"
+      },
+      "sourceId": "SRC-KFWFB-001"
+    },
+    {
+      "id": "marriage_certificate",
+      "name": {
+        "en": "Marriage certificate from the local self-government institution",
+        "ml": "തദ്ദേശസ്വയംഭരണ സ്ഥാപനങ്ങളിൽ നിന്നും ലഭിക്കുന്ന വിവാഹ സർട്ടിഫിക്കറ്റ്"
+      },
+      "sourceId": "SRC-KFWFB-001"
+    },
+    {
+      "id": "aadhaar_copy",
+      "name": {
+        "en": "Copy of the Aadhaar card",
+        "ml": "ആധാർ കാർഡിന്റെ പകർപ്പ്"
+      },
+      "sourceId": "SRC-KFWFB-001"
+    },
+    {
+      "id": "doctor_certificate_cause",
+      "name": {
+        "en": "Certificate from the treating doctor on the cause of death (if the death was after hospital admission)",
+        "ml": "ചികിൽസിച്ച ഡോക്ടറുടെ സർട്ടിഫിക്കറ്റ് (ആശുപത്രിയിൽ പ്രവേശിച്ച ശേഷമാണ് മരണമെങ്കിൽ)"
+      },
+      "sourceId": "SRC-KFWFB-001"
+    },
+    {
+      "id": "bank_details",
+      "name": {
+        "en": "Bank account details of the claimant",
+        "ml": "അവകാശിയുടെ ബാങ്ക് അക്കൗണ്ട് വിശദാംശങ്ങൾ"
+      },
+      "sourceId": "SRC-KFWFB-001"
+    },
+    {
+      "id": "dependant_death_certificate",
+      "name": {
+        "en": "Death certificate of the dependant",
+        "ml": "ആശ്രിതന്റെ മരണ സർട്ടിഫിക്കറ്റ്"
+      },
+      "sourceId": "SRC-KFWFB-001"
+    },
+    {
+      "id": "govt_medical_certificate",
+      "name": {
+        "en": "Medical certificate in the prescribed form from the treating government doctor",
+        "ml": "ചികിൽസിച്ച സർക്കാർ ഡോക്ടറിൽ നിന്നും ലഭിച്ച നിശ്ചിത ഫോറത്തിലുള്ള മെഡിക്കൽ സർട്ടിഫിക്കറ്റ്"
+      },
+      "sourceId": "SRC-KFWFB-001"
+    },
+    {
+      "id": "sslc_certificate",
+      "name": {
+        "en": "Copy of the SSLC certificate, attested by the Fisheries Officer",
+        "ml": "ഫിഷറീസ് ഓഫീസർ സാക്ഷ്യപ്പെടുത്തിയ എസ്.എസ്.എൽ.സി സർട്ടിഫിക്കറ്റിന്റെ ശരിപ്പകർപ്പ്"
+      },
+      "sourceId": "SRC-KFWFB-001"
+    },
+    {
+      "id": "parent_kfwfb_passbook",
+      "name": {
+        "en": "Copy of the parent's Matsyaboard passbook, attested by the Fisheries Officer",
+        "ml": "ഫിഷറീസ് ഓഫീസർ സാക്ഷ്യപ്പെടുത്തിയ രക്ഷിതാക്കളുടെ മത്സ്യബോർഡ് പാസ്സ് ബുക്കിന്റെ ശരി പകർപ്പ്"
+      },
+      "sourceId": "SRC-KFWFB-001"
+    },
+    {
+      "id": "photos_2",
+      "name": {
+        "en": "Two passport-size photographs of the student",
+        "ml": "വിദ്യാർത്ഥിയുടെ പാസ്പോർട്ട് സൈസ് ഫോട്ടോ 2 എണ്ണം"
+      },
+      "sourceId": "SRC-KFWFB-001"
+    },
+    {
+      "id": "govt_hospital_medical_certificate",
+      "name": {
+        "en": "Medical certificate from the doctor who treated at a government hospital",
+        "ml": "സർക്കാർ ആശുപത്രിയിൽ ചികിൽസിച്ച ഡോക്ടർ നൽകുന്ന മെഡിക്കൽ സർട്ടിഫിക്കറ്റ്"
+      },
+      "sourceId": "SRC-KFWFB-001"
+    },
+    {
+      "id": "referral_document",
+      "name": {
+        "en": "Referral document, if referred from a government hospital to a private hospital",
+        "ml": "സർക്കാർ ആശുപത്രിയിൽ നിന്നും സ്വകാര്യ ആശുപത്രിയിലേക്ക് റഫർ ചെയ്തിട്ടുണ്ടെങ്കിൽ ആയതിനുള്ള രേഖ"
+      },
+      "sourceId": "SRC-KFWFB-001"
+    },
+    {
+      "id": "treatment_bills",
+      "name": {
+        "en": "Treatment bills attested by the treating doctor",
+        "ml": "ചികിൽസിച്ച ഡോക്ടർ സാക്ഷ്യപ്പെടുത്തിയ ചികിൽസാ ചിലവിലേക്കുള്ള ബില്ലുകൾ"
+      },
+      "sourceId": "SRC-KFWFB-001"
+    },
+    {
+      "id": "patient_age_proof",
+      "name": {
+        "en": "Patient's age proof: school certificate, birth-registrar certificate or baptism certificate",
+        "ml": "രോഗിയുടെ വയസ്സ് തെളിയിക്കുന്നതിന് സ്കൂൾ സർട്ടിഫിക്കറ്റ് അഥവാ ജനന മരണ രജിസ്ട്രാറുടെ സർട്ടിഫിക്കറ്റ് ഇല്ലെങ്കിൽ ജ്ഞാനസ്നാന സർട്ടിഫിക്കറ്റ്"
+      },
+      "sourceId": "SRC-KFWFB-001"
+    },
+    {
+      "id": "prescription_copy",
+      "name": {
+        "en": "Copy of the treating doctor's prescription",
+        "ml": "ചികിൽസിക്കുന്ന ഡോക്ടറുടെ പ്രിസ്ക്രിപ്ഷന്റെ പകർപ്പ്"
+      },
+      "sourceId": "SRC-KFWFB-001"
+    },
+    {
+      "id": "member_death_certificate_attested",
+      "name": {
+        "en": "Copy of the fisherman's death certificate, attested by the Fisheries Officer",
+        "ml": "ഫിഷറീസ് ഓഫീസർ സാക്ഷ്യപ്പെടുത്തിയ മത്സ്യത്തൊഴിലാളിയുടെ മരണ സർട്ടിഫിക്കറ്റ് പകർപ്പ്"
+      },
+      "sourceId": "SRC-KFWFB-001"
+    },
+    {
+      "id": "passbook_contribution_pages",
+      "name": {
+        "en": "Full copy of the Matsyaboard passbook including contribution pages, attested by the Fisheries Officer",
+        "ml": "ഫിഷറീസ് ഓഫീസർ സാക്ഷ്യപ്പെടുത്തിയ മത്സ്യബോർഡ് വിഹിതമടച്ച പേജിന്റെയും പാസ്സ് ബുക്കിന്റെയും പൂർണ്ണമായ പകർപ്പ്"
+      },
+      "sourceId": "SRC-KFWFB-001"
+    },
+    {
+      "id": "no_other_pension_proof",
+      "name": {
+        "en": "Proof of not receiving any other pension",
+        "ml": "മറ്റു പെൻഷൻ ലഭിക്കുന്നില്ല എന്ന് തെളിയിക്കുന്ന രേഖ"
+      },
+      "sourceId": "SRC-KFWFB-001"
+    },
+    {
+      "id": "ration_card_family_page",
+      "name": {
+        "en": "Copy of the ration card including the family details page",
+        "ml": "കുടുംബ വിവരം അടങ്ങിയ പേജ് സഹിതം റേഷൻ കാർഡിന്റെ പകർപ്പ്"
+      },
+      "sourceId": "SRC-KFWFB-001"
+    },
+    {
+      "id": "not_remarried_certificate",
+      "name": {
+        "en": "Certificate from the panchayat / municipality / corporation secretary or ward councillor that she has not remarried and has no regular-income job",
+        "ml": "പുനർവിവാഹം നടത്തിയിട്ടില്ലെന്നും സ്ഥിരവരുമാനമുള്ള തൊഴിൽ ഇല്ലെന്നും തെളിയിക്കുന്നതിന് പഞ്ചായത്ത്, മുൻസിപ്പാലിറ്റി / കോർപ്പറേഷൻ സെക്രട്ടറി / വാർഡ് കൗൺസിലർ നൽകുന്ന സാക്ഷ്യപത്രം"
+      },
+      "sourceId": "SRC-KFWFB-001"
+    },
+    {
+      "id": "scr_contribution_receipt",
+      "name": {
+        "en": "Receipt number of this year's Welfare Fund contribution (asked in the form)",
+        "ml": "നടപ്പു വർഷ ക്ഷേമനിധി വിഹിതം ഒടുക്കിയതിന്റെ രസീത് നമ്പർ"
+      },
+      "sourceId": "SRC-FISH-012"
+    },
+    {
+      "id": "calamity_application",
+      "name": {
+        "en": "Application for compensation to fishermen losing fishing equipment due to calamities",
+        "ml": "പ്രകൃതിക്ഷോഭം മൂലം മത്സ്യബന്ധന ഉപകരണങ്ങൾ നഷ്ടപ്പെട്ടവർക്കുള്ള നഷ്ടപരിഹാര അപേക്ഷ"
+      },
+      "sourceId": "SRC-FISH-014"
+    },
+    {
+      "id": "spwwfb_form_14",
+      "name": {
+        "en": "Form 14: superannuation pension application (Scheme 2009)",
+        "ml": "ഫാറം 14: സൂപ്പറാന്വേഷൻ പെൻഷനുള്ള അപേക്ഷ (പദ്ധതി 2009)"
+      },
+      "sourceId": "SRC-PLNT-008"
+    },
+    {
+      "id": "spwwfb_form_18",
+      "name": {
+        "en": "Form 18: marriage assistance application (Scheme 2009)",
+        "ml": "ഫാറം 18: വിവാഹ ധനസഹായത്തിനുള്ള അപേക്ഷ (പദ്ധതി 2009)"
+      },
+      "sourceId": "SRC-PLNT-009"
+    },
+    {
+      "id": "spwwfb_form_20",
+      "name": {
+        "en": "Form 20: application for assistance to dependants after a member's death (Scheme 2009)",
+        "ml": "ഫാറം 20: അംഗത്തിന്റെ മരണാനന്തരം ആശ്രിതർക്ക് ധനസഹായത്തിനുള്ള അപേക്ഷ (പദ്ധതി 2009)"
+      },
+      "sourceId": "SRC-PLNT-010"
+    },
+    {
+      "id": "aadhaar_or_enrolment",
+      "name": {
+        "en": "Aadhaar; or, if not yet assigned, the Aadhaar enrolment slip with one other identity document (for example bank or post office passbook with photo, PAN card, passport, ration card, voter ID, MGNREGA card, Kisan photo passbook)",
+        "ml": "ആധാർ; ഇല്ലെങ്കിൽ ആധാർ എൻറോൾമെന്റ് സ്ലിപ്പും മറ്റൊരു തിരിച്ചറിയൽ രേഖയും (ഫോട്ടോയുള്ള ബാങ്ക്/പോസ്റ്റ് ഓഫീസ് പാസ്ബുക്ക്, പാൻ കാർഡ്, പാസ്പോർട്ട്, റേഷൻ കാർഡ്, വോട്ടർ ഐഡി, തൊഴിലുറപ്പ് കാർഡ്, കിസാൻ ഫോട്ടോ പാസ്ബുക്ക് തുടങ്ങിയവ)"
+      },
+      "sourceId": "SRC-PLNT-002"
     }
   ],
   "locationTypes": [
@@ -1943,8 +4451,8 @@
     {
       "id": "spwwfb_office",
       "label": {
-        "en": "Small Plantation Workers' Welfare Fund Board office",
-        "ml": "ചെറുകിട തോട്ടം തൊഴിലാളി ക്ഷേമനിധി ബോർഡ് ഓഫീസ്"
+        "en": "Small Plantation Workers' Welfare Fund — Chief Executive Officer",
+        "ml": "ചെറുകിട തോട്ടം തൊഴിലാളി ക്ഷേമനിധി — ചീഫ് എക്സിക്യൂട്ടീവ് ഓഫീസർ"
       },
       "scope": "state"
     },
@@ -1963,6 +4471,14 @@
         "ml": "ഫിഷറീസ് ഡയറക്ടറേറ്റ്"
       },
       "scope": "state"
+    },
+    {
+      "id": "plantation_district_office",
+      "label": {
+        "en": "Small Plantation Workers' Welfare Fund — District Executive Office",
+        "ml": "ചെറുകിട തോട്ടം തൊഴിലാളി ക്ഷേമനിധി — ജില്ലാ എക്സിക്യൂട്ടീവ് ഓഫീസ്"
+      },
+      "scope": "district"
     }
   ],
   "locations": [
@@ -2243,11 +4759,15 @@
       "id": "LOC-PLNT-001",
       "type": "spwwfb_office",
       "name": {
-        "en": "Kerala Small Plantation Workers' Welfare Fund Board",
-        "ml": "കേരള ചെറുകിട തോട്ടം തൊഴിലാളി ക്ഷേമനിധി ബോർഡ്"
+        "en": "Office of the Chief Executive Officer, Kerala Small Plantation Workers' Welfare Fund",
+        "ml": "ചീഫ് എക്സിക്യൂട്ടീവ് ഓഫീസറുടെ കാര്യാലയം, കേരള ചെറുകിട തോട്ടം തൊഴിലാളി ക്ഷേമനിധി"
       },
       "district": "Kottayam",
-      "sourceId": "SRC-PLNT-003"
+      "area": "Azad Lane",
+      "address": "Azad Lane, Kottayam - 686 001",
+      "phone": "0481-2566672",
+      "jurisdiction": "Inspector of Plantation Nedumangad to Inspector of Plantation Mananthavady",
+      "sourceId": "SRC-PLNT-007"
     },
     {
       "id": "LOC-FISH-015",
@@ -2519,6 +5039,298 @@
       "address": "Thirumeni, Kannur",
       "phone": "8921407569",
       "sourceId": "SRC-AKS-002"
+    },
+    {
+      "id": "LOC-PLNT-002",
+      "type": "plantation_district_office",
+      "name": {
+        "en": "Office of the District Executive Officer, Nedumangad",
+        "ml": "ജില്ലാ എക്സിക്യൂട്ടീവ് ഓഫീസറുടെ കാര്യാലയം, Nedumangad"
+      },
+      "district": "Thiruvananthapuram",
+      "area": "Nedumangad",
+      "address": "Revenue Tower, Nedumangad PO, Thiruvananthapuram - 695 541",
+      "phone": "0472-2802032",
+      "serves": [
+        "Kollam"
+      ],
+      "jurisdiction": "Revenue District Thiruvananthapuram and taluks of Kollam, Karunagapally & Kottarakkara in Kollam District",
+      "sourceId": "SRC-PLNT-007"
+    },
+    {
+      "id": "LOC-PLNT-003",
+      "type": "plantation_district_office",
+      "name": {
+        "en": "Office of the District Executive Officer, Pathanamthitta",
+        "ml": "ജില്ലാ എക്സിക്യൂട്ടീവ് ഓഫീസറുടെ കാര്യാലയം, Pathanamthitta"
+      },
+      "district": "Pathanamthitta",
+      "area": "Pathanamthitta",
+      "address": "College Road, Excel Complex, Pathanamthitta PO - 689 645",
+      "phone": "0468-2223069",
+      "serves": [
+        "Alappuzha",
+        "Kottayam"
+      ],
+      "jurisdiction": "Revenue Districts Pathanamthitta, Alappuzha and Kottayam",
+      "sourceId": "SRC-PLNT-007"
+    },
+    {
+      "id": "LOC-PLNT-004",
+      "type": "plantation_district_office",
+      "name": {
+        "en": "Office of the District Executive Officer, Pathanapuram",
+        "ml": "ജില്ലാ എക്സിക്യൂട്ടീവ് ഓഫീസറുടെ കാര്യാലയം, Pathanapuram"
+      },
+      "district": "Kollam",
+      "area": "Pathanapuram",
+      "address": "Mini Civil Station, Pallimukku, Pathanapuram - 689 695",
+      "phone": "0475-2352551",
+      "jurisdiction": "Taluks of Pathanapuram & Kunnathur in Kollam District",
+      "sourceId": "SRC-PLNT-007"
+    },
+    {
+      "id": "LOC-PLNT-005",
+      "type": "plantation_district_office",
+      "name": {
+        "en": "Office of the District Executive Officer, Peerumade",
+        "ml": "ജില്ലാ എക്സിക്യൂട്ടീവ് ഓഫീസറുടെ കാര്യാലയം, Peerumade"
+      },
+      "district": "Idukki",
+      "area": "Peerumade",
+      "address": "Peerumade PO, Idukki - 685 531",
+      "phone": "04869-233878",
+      "jurisdiction": "Peerumade Taluk, Idukki District",
+      "sourceId": "SRC-PLNT-007"
+    },
+    {
+      "id": "LOC-PLNT-006",
+      "type": "plantation_district_office",
+      "name": {
+        "en": "Office of the District Executive Officer, Vandanmedu",
+        "ml": "ജില്ലാ എക്സിക്യൂട്ടീവ് ഓഫീസറുടെ കാര്യാലയം, Vandanmedu"
+      },
+      "district": "Idukki",
+      "area": "Vandanmedu",
+      "address": "Old Taluk Office Complex, Udumbanchola, Nedumkandam PO - 685 553",
+      "phone": "04868-288386",
+      "jurisdiction": "Vandanmedu Taluk, Idukki District (as printed)",
+      "sourceId": "SRC-PLNT-007"
+    },
+    {
+      "id": "LOC-PLNT-007",
+      "type": "plantation_district_office",
+      "name": {
+        "en": "Office of the District Executive Officer, Munnar",
+        "ml": "ജില്ലാ എക്സിക്യൂട്ടീവ് ഓഫീസറുടെ കാര്യാലയം, Munnar"
+      },
+      "district": "Idukki",
+      "area": "Munnar",
+      "address": "Devikulam PO, Idukki - 685 612",
+      "phone": "04865-232565",
+      "jurisdiction": "Devikulam Taluk, Idukki District",
+      "sourceId": "SRC-PLNT-007"
+    },
+    {
+      "id": "LOC-PLNT-008",
+      "type": "plantation_district_office",
+      "name": {
+        "en": "Office of the District Executive Officer, Aluva",
+        "ml": "ജില്ലാ എക്സിക്യൂട്ടീവ് ഓഫീസറുടെ കാര്യാലയം, Aluva"
+      },
+      "district": "Ernakulam",
+      "area": "Aluva",
+      "address": "Cart Stand Building, Market Road, opp. Fire Station, Aluva PO, Ernakulam - 683 101",
+      "phone": "0484-2620284",
+      "serves": [
+        "Thrissur",
+        "Idukki"
+      ],
+      "jurisdiction": "Thodupuzha Taluk (Idukki), Revenue District Ernakulam, Revenue District Thrissur",
+      "sourceId": "SRC-PLNT-007"
+    },
+    {
+      "id": "LOC-PLNT-009",
+      "type": "plantation_district_office",
+      "name": {
+        "en": "Office of the District Executive Officer, Nemmara",
+        "ml": "ജില്ലാ എക്സിക്യൂട്ടീവ് ഓഫീസറുടെ കാര്യാലയം, Nemmara"
+      },
+      "district": "Palakkad",
+      "area": "Nemmara",
+      "address": "Guruvayoorappan Building, Guru Complex, Ayiloor Road, Nemmara PO, Palakkad - 678 508",
+      "phone": "04923-244070",
+      "jurisdiction": "Revenue District Palakkad",
+      "sourceId": "SRC-PLNT-007"
+    },
+    {
+      "id": "LOC-PLNT-010",
+      "type": "plantation_district_office",
+      "name": {
+        "en": "Office of the District Executive Officer, Manjeri",
+        "ml": "ജില്ലാ എക്സിക്യൂട്ടീവ് ഓഫീസറുടെ കാര്യാലയം, Manjeri"
+      },
+      "district": "Malappuram",
+      "area": "Manjeri",
+      "address": "Karuvambram PO, Melakkam, Manjeri, Malappuram - 676 123",
+      "phone": "04832-760204",
+      "serves": [
+        "Kozhikode"
+      ],
+      "jurisdiction": "Revenue Districts Malappuram and Kozhikode (phone as printed: 04832-760204)",
+      "sourceId": "SRC-PLNT-007"
+    },
+    {
+      "id": "LOC-PLNT-011",
+      "type": "plantation_district_office",
+      "name": {
+        "en": "Office of the District Executive Officer, Kalpetta",
+        "ml": "ജില്ലാ എക്സിക്യൂട്ടീവ് ഓഫീസറുടെ കാര്യാലയം, Kalpetta"
+      },
+      "district": "Wayanad",
+      "area": "Kalpetta",
+      "address": "Asoothrana Bhavan, 4th Floor, Kalpetta - 673 122",
+      "phone": "04936-204646",
+      "jurisdiction": "Vythiri and Sulthan Bathery Taluks in Wayanad District",
+      "sourceId": "SRC-PLNT-007"
+    },
+    {
+      "id": "LOC-PLNT-012",
+      "type": "plantation_district_office",
+      "name": {
+        "en": "Office of the District Executive Officer, Mananthavady",
+        "ml": "ജില്ലാ എക്സിക്യൂട്ടീവ് ഓഫീസറുടെ കാര്യാലയം, Mananthavady"
+      },
+      "district": "Wayanad",
+      "area": "Mananthavady",
+      "address": "Mini Civil Station, Mananthavady PO, Wayanad - 670 645",
+      "phone": "04935-241072",
+      "serves": [
+        "Kannur",
+        "Kasaragod"
+      ],
+      "jurisdiction": "Mananthavady Taluk (Wayanad), Revenue Districts Kannur and Kasaragod",
+      "sourceId": "SRC-PLNT-007"
+    },
+    {
+      "id": "LOC-MFED-001",
+      "type": "matsyafed_office",
+      "name": {
+        "en": "Matsyafed District Office, Thiruvananthapuram",
+        "ml": "മത്സ്യഫെഡ് ജില്ലാ ഓഫീസ്, തിരുവനന്തപുരം"
+      },
+      "district": "Thiruvananthapuram",
+      "address": "Muttathara, near Matsyafed Net Factory, Thiruvananthapuram",
+      "phone": "9526041126",
+      "sourceId": "SRC-MFED-001"
+    },
+    {
+      "id": "LOC-MFED-002",
+      "type": "matsyafed_office",
+      "name": {
+        "en": "Matsyafed District Office, Kollam",
+        "ml": "മത്സ്യഫെഡ് ജില്ലാ ഓഫീസ്, കൊല്ലം"
+      },
+      "district": "Kollam",
+      "address": "Anila House, Sakthikulangara, Kollam",
+      "phone": "0474-2772971, 9526041109",
+      "sourceId": "SRC-MFED-001"
+    },
+    {
+      "id": "LOC-MFED-003",
+      "type": "matsyafed_office",
+      "name": {
+        "en": "Matsyafed District Office, Alappuzha",
+        "ml": "മത്സ്യഫെഡ് ജില്ലാ ഓഫീസ്, ആലപ്പുഴ"
+      },
+      "district": "Alappuzha",
+      "address": "Convent Square East Side, Alappuzha 688001",
+      "phone": "0477-2241597, 9526041037",
+      "sourceId": "SRC-MFED-001"
+    },
+    {
+      "id": "LOC-MFED-004",
+      "type": "matsyafed_office",
+      "name": {
+        "en": "Matsyafed District Office, Kottayam",
+        "ml": "മത്സ്യഫെഡ് ജില്ലാ ഓഫീസ്, കോട്ടയം"
+      },
+      "district": "Kottayam",
+      "address": "Vaikom, Kottayam 686141",
+      "phone": "04829-216180, 9447232051",
+      "sourceId": "SRC-MFED-001"
+    },
+    {
+      "id": "LOC-MFED-005",
+      "type": "matsyafed_office",
+      "name": {
+        "en": "Matsyafed District Office, Ernakulam",
+        "ml": "മത്സ്യഫെഡ് ജില്ലാ ഓഫീസ്, എറണാകുളം"
+      },
+      "district": "Ernakulam",
+      "address": "Thoppumpady, Kochi, Ernakulam 682005",
+      "phone": "0484-2222511, 9526041387",
+      "sourceId": "SRC-MFED-001"
+    },
+    {
+      "id": "LOC-MFED-006",
+      "type": "matsyafed_office",
+      "name": {
+        "en": "Matsyafed District Office, Thrissur",
+        "ml": "മത്സ്യഫെഡ് ജില്ലാ ഓഫീസ്, തൃശ്ശൂർ"
+      },
+      "district": "Thrissur",
+      "address": "Mini Civil Station, Triprayar, P.O. Valapad, Thrissur",
+      "phone": "0487-2396106, 9526041111",
+      "sourceId": "SRC-MFED-001"
+    },
+    {
+      "id": "LOC-MFED-007",
+      "type": "matsyafed_office",
+      "name": {
+        "en": "Matsyafed District Office, Malappuram",
+        "ml": "മത്സ്യഫെഡ് ജില്ലാ ഓഫീസ്, മലപ്പുറം"
+      },
+      "district": "Malappuram",
+      "address": "K.G. Padi, Tirur-1, Malappuram",
+      "phone": "0494-2423503, 9526041060",
+      "sourceId": "SRC-MFED-001"
+    },
+    {
+      "id": "LOC-MFED-008",
+      "type": "matsyafed_office",
+      "name": {
+        "en": "Matsyafed District Office, Kozhikode",
+        "ml": "മത്സ്യഫെഡ് ജില്ലാ ഓഫീസ്, കോഴിക്കോട്"
+      },
+      "district": "Kozhikode",
+      "address": "West Hill, Kozhikode",
+      "phone": "0495-2380344, 9526041060",
+      "sourceId": "SRC-MFED-001"
+    },
+    {
+      "id": "LOC-MFED-009",
+      "type": "matsyafed_office",
+      "name": {
+        "en": "Matsyafed District Office, Kannur",
+        "ml": "മത്സ്യഫെഡ് ജില്ലാ ഓഫീസ്, കണ്ണൂർ"
+      },
+      "district": "Kannur",
+      "address": "Mopla Bay, Kannur",
+      "phone": "0497-2731257, 9496243403",
+      "sourceId": "SRC-MFED-001"
+    },
+    {
+      "id": "LOC-MFED-010",
+      "type": "matsyafed_office",
+      "name": {
+        "en": "Matsyafed District Office, Kasaragod",
+        "ml": "മത്സ്യഫെഡ് ജില്ലാ ഓഫീസ്, കാസർകോട്"
+      },
+      "district": "Kasaragod",
+      "address": "Kasaba Beach, Kasaragod 671121",
+      "phone": "04994-230176, 9526041127",
+      "sourceId": "SRC-MFED-001"
     }
   ],
   "terms": [
@@ -2584,6 +5396,62 @@
       "ml": "പ്രസവാനുകൂല്യം",
       "context": "Plantation welfare",
       "sourceId": "SRC-PLNT-002"
+    },
+    {
+      "id": "matsyaboard",
+      "en": "Matsyaboard (Kerala Fishermen's Welfare Fund Board)",
+      "ml": "മത്സ്യബോർഡ്",
+      "context": "Fishing welfare",
+      "sourceId": "SRC-KFWFB-001"
+    },
+    {
+      "id": "fisheries_officer",
+      "en": "Fisheries Officer",
+      "ml": "ഫിഷറീസ് ഓഫീസർ",
+      "context": "Where to apply",
+      "sourceId": "SRC-KFWFB-001"
+    },
+    {
+      "id": "welfare_contribution",
+      "en": "Welfare Fund contribution",
+      "ml": "ക്ഷേമനിധി വിഹിതം",
+      "context": "Fishing welfare",
+      "sourceId": "SRC-KFWFB-001"
+    },
+    {
+      "id": "old_age_pension",
+      "en": "Old age pension",
+      "ml": "വാർദ്ധക്യകാല പെൻഷൻ",
+      "context": "Fishing welfare",
+      "sourceId": "SRC-KFWFB-001"
+    },
+    {
+      "id": "widow_pension",
+      "en": "Widow pension",
+      "ml": "വിധവ പെൻഷൻ",
+      "context": "Fishing welfare",
+      "sourceId": "SRC-KFWFB-001"
+    },
+    {
+      "id": "marriage_assistance",
+      "en": "Marriage assistance",
+      "ml": "വിവാഹ ധനസഹായം",
+      "context": "Welfare",
+      "sourceId": "SRC-KFWFB-001"
+    },
+    {
+      "id": "legal_heirship_certificate",
+      "en": "Legal heirship certificate",
+      "ml": "ലീഗൽ ഹെയർഷിപ്പ് സർട്ടിഫിക്കറ്റ്",
+      "context": "Documents",
+      "sourceId": "SRC-KFWFB-001"
+    },
+    {
+      "id": "small_plantation_worker",
+      "en": "Small plantation worker",
+      "ml": "ചെറുകിട തോട്ടം തൊഴിലാളി",
+      "context": "Plantation welfare",
+      "sourceId": "SRC-PLNT-001"
     }
   ],
   "profiles": [
@@ -2599,7 +5467,6 @@
         "bank_account": "yes",
         "traditional_fisher": "yes",
         "kfwfb_member": "yes",
-        "fisher_beneficiary_status": "registered_fisher",
         "age": "42",
         "female_member": "no",
         "matsyafed_society_member": "no"
@@ -2608,12 +5475,20 @@
         "FISH-01": "potentially_eligible",
         "FISH-02": "potentially_eligible",
         "FISH-03": "potentially_eligible",
-        "FISH-04": "potentially_eligible"
+        "FISH-04": "potentially_eligible",
+        "FISH-10": "needs_information",
+        "FISH-11": "needs_information",
+        "FISH-12": "needs_information",
+        "FISH-13": "needs_information",
+        "FISH-14": "needs_information",
+        "FISH-15": "needs_information",
+        "FISH-16": "needs_information",
+        "FISH-17": "needs_information"
       },
       "expectedOthers": "not_matched",
       "expectedMissing": {},
       "writtenBy": "HR",
-      "notes": "All supplied facts satisfy the known conditions for the four listed fishing schemes."
+      "notes": "All supplied facts satisfy the known conditions for the four listed fishing schemes. [2025 update] The new KFWFB schemes (widow pension, marriage, death, disability, SSLC award, treatment) need facts this household did not give, so they need information. FISH-06 is not matched at age 42."
     },
     {
       "id": "P-02",
@@ -2647,8 +5522,17 @@
         "FISH-01": "needs_information",
         "FISH-03": "needs_information",
         "FISH-04": "needs_information",
+        "FISH-06": "needs_information",
         "FISH-08": "needs_information",
-        "FISH-09": "needs_information"
+        "FISH-09": "needs_information",
+        "FISH-10": "needs_information",
+        "FISH-11": "needs_information",
+        "FISH-12": "needs_information",
+        "FISH-13": "needs_information",
+        "FISH-14": "needs_information",
+        "FISH-15": "needs_information",
+        "FISH-16": "needs_information",
+        "FISH-17": "needs_information"
       },
       "expectedOthers": "not_matched",
       "expectedMissing": {
@@ -2657,7 +5541,7 @@
         ]
       },
       "writtenBy": "HR",
-      "notes": "The official saving-cum-relief page states a bank account is needed for enrolment. [review] Active status, BPL, traditional and Matsyafed answers are also unknown, so those schemes need information; they cannot be not_matched."
+      "notes": "The official saving-cum-relief page states a bank account is needed for enrolment. [review] Active status, BPL, traditional and Matsyafed answers are also unknown, so those schemes need information; they cannot be not_matched. [2025 update] Membership, age and the new KFWFB facts are unknown, so every fishing scheme needs information."
     },
     {
       "id": "P-04",
@@ -2670,22 +5554,29 @@
         "registered_fisher": "yes",
         "traditional_fisher": "yes",
         "bank_account": "yes",
-        "fisher_beneficiary_status": "registered_fisher",
         "matsyafed_society_member": "yes"
       },
       "expected": {
-        "FISH-01": "potentially_eligible",
+        "FISH-01": "needs_information",
         "FISH-02": "potentially_eligible",
         "FISH-03": "not_matched",
         "FISH-04": "potentially_eligible",
+        "FISH-06": "needs_information",
         "FISH-08": "potentially_eligible",
         "FISH-09": "potentially_eligible",
-        "FISH-06": "informational"
+        "FISH-10": "needs_information",
+        "FISH-11": "needs_information",
+        "FISH-12": "needs_information",
+        "FISH-13": "needs_information",
+        "FISH-14": "needs_information",
+        "FISH-15": "needs_information",
+        "FISH-16": "needs_information",
+        "FISH-17": "needs_information"
       },
       "expectedOthers": "not_matched",
       "expectedMissing": {},
       "writtenBy": "HR",
-      "notes": "Housing scheme is specifically described for active fishermen of BPL category; saving scheme says both BPL and APL are enrolled. [review] FISH-06 is partial (no age in source) so it is display-only."
+      "notes": "Housing scheme is specifically described for active fishermen of BPL category; saving scheme says both BPL and APL are enrolled. [review] FISH-06 is partial (no age in source) so it is display-only. [2025 update] FISH-01 now requires Welfare Fund Board membership (2025 guideline p.11), which this profile does not state, so it needs information. FISH-06 is now verified and needs membership, age, 10 years of work, retirement and 5 years of membership."
     },
     {
       "id": "P-05",
@@ -2790,16 +5681,25 @@
         "matsyafed_society_member": "no"
       },
       "expected": {
-        "FISH-01": "potentially_eligible",
+        "FISH-01": "needs_information",
         "FISH-02": "potentially_eligible",
         "FISH-03": "potentially_eligible",
+        "FISH-06": "needs_information",
         "PLNT-01": "potentially_eligible",
-        "PLNT-04": "potentially_eligible"
+        "PLNT-04": "potentially_eligible",
+        "FISH-10": "needs_information",
+        "FISH-11": "needs_information",
+        "FISH-12": "needs_information",
+        "FISH-13": "needs_information",
+        "FISH-14": "needs_information",
+        "FISH-15": "needs_information",
+        "FISH-16": "needs_information",
+        "FISH-17": "not_matched"
       },
       "expectedOthers": "not_matched",
       "expectedMissing": {},
       "writtenBy": "HR",
-      "notes": "Mixed-sector case exercises simultaneous screening across fishing and plantation benefits."
+      "notes": "Mixed-sector case exercises simultaneous screening across fishing and plantation benefits. [2025 update] FISH-01 needs Board membership, not given. FISH-17 is not matched because the member is 61 and the treatment scheme is for ages 23 to 60."
     },
     {
       "id": "P-09",
@@ -2817,14 +5717,23 @@
       "expected": {
         "FISH-08": "not_matched",
         "FISH-09": "not_matched",
-        "FISH-01": "potentially_eligible",
+        "FISH-01": "needs_information",
         "FISH-02": "potentially_eligible",
-        "FISH-04": "potentially_eligible"
+        "FISH-04": "potentially_eligible",
+        "FISH-06": "needs_information",
+        "FISH-10": "needs_information",
+        "FISH-11": "needs_information",
+        "FISH-12": "needs_information",
+        "FISH-13": "needs_information",
+        "FISH-14": "needs_information",
+        "FISH-15": "needs_information",
+        "FISH-16": "needs_information",
+        "FISH-17": "needs_information"
       },
       "expectedOthers": "not_matched",
       "expectedMissing": {},
       "writtenBy": "AI-review",
-      "notes": "FISH-08/09 should show one step away: join a Matsyafed society."
+      "notes": "FISH-08/09 should show one step away: join a Matsyafed society. [2025 update] FISH-01 needs Board membership, not given."
     },
     {
       "id": "P-10",
@@ -2846,6 +5755,266 @@
       "expectedMissing": {},
       "writtenBy": "AI-review",
       "notes": "All plantation schemes need Board membership; one step away: membership."
+    },
+    {
+      "id": "P-11",
+      "title": "Retired KFWFB member at the pension boundary (age 60, 5 years)",
+      "kind": "boundary",
+      "answers": {
+        "livelihood": "fishing",
+        "kfwfb_member": "yes",
+        "kfwfb_contributions_paid": "yes",
+        "age": "60",
+        "fisher_work_10_years": "yes",
+        "retired_from_fishing": "yes",
+        "kfwfb_membership_years": "5"
+      },
+      "expected": {
+        "FISH-06": "potentially_eligible",
+        "FISH-01": "potentially_eligible"
+      },
+      "expectedMissing": {
+        "FISH-17": [
+          "family_event"
+        ]
+      },
+      "writtenBy": "AI-review",
+      "notes": "2025 KFWFB guideline p.23: pension from 60 years, after 10 years as a fisherman, on retirement, with 5 years of membership. Age 60 and 5 years sit exactly on the limits."
+    },
+    {
+      "id": "P-12",
+      "title": "Retired KFWFB member aged 59",
+      "kind": "boundary",
+      "answers": {
+        "livelihood": "fishing",
+        "kfwfb_member": "yes",
+        "kfwfb_contributions_paid": "yes",
+        "age": "59",
+        "fisher_work_10_years": "yes",
+        "retired_from_fishing": "yes",
+        "kfwfb_membership_years": "12"
+      },
+      "expected": {
+        "FISH-06": "not_matched",
+        "FISH-01": "potentially_eligible"
+      },
+      "expectedMissing": {},
+      "writtenBy": "AI-review",
+      "notes": "One year below the pension age. The app should show FISH-06 as not matched with age as the reason."
+    },
+    {
+      "id": "P-13",
+      "title": "Member under 60 with a daughter's marriage, income just under the limit",
+      "kind": "boundary",
+      "answers": {
+        "livelihood": "fishing",
+        "kfwfb_member": "yes",
+        "kfwfb_contributions_paid": "yes",
+        "kfwfb_family_status": "member_under_60",
+        "family_event": "daughter_marriage",
+        "bride_18": "yes",
+        "annual_family_income": "49999",
+        "kfwfb_membership_years": "3"
+      },
+      "expected": {
+        "FISH-11": "potentially_eligible",
+        "FISH-01": "potentially_eligible"
+      },
+      "expectedMissing": {},
+      "writtenBy": "AI-review",
+      "notes": "2025 KFWFB guideline p.15-16: income below Rs 50,000, 3 years from the first contribution, bride aged 18, application within 60 days. A member under 60 has no one-time limit, so prior assistance is not asked."
+    },
+    {
+      "id": "P-14",
+      "title": "Marriage assistance at income exactly Rs 50,000",
+      "kind": "boundary",
+      "answers": {
+        "livelihood": "fishing",
+        "kfwfb_member": "yes",
+        "kfwfb_contributions_paid": "yes",
+        "kfwfb_family_status": "member_under_60",
+        "family_event": "daughter_marriage",
+        "bride_18": "yes",
+        "annual_family_income": "50000",
+        "kfwfb_membership_years": "3"
+      },
+      "expected": {
+        "FISH-11": "not_matched"
+      },
+      "expectedMissing": {},
+      "writtenBy": "AI-review",
+      "notes": "The page says income must be below (താഴെ) Rs 50,000, so exactly 50,000 is not matched."
+    },
+    {
+      "id": "P-15",
+      "title": "Pensioner who already received marriage assistance once",
+      "kind": "standard",
+      "answers": {
+        "livelihood": "fishing",
+        "kfwfb_family_status": "pensioner",
+        "prior_marriage_assistance": "yes",
+        "family_event": "daughter_marriage",
+        "bride_18": "yes",
+        "annual_family_income": "30000",
+        "kfwfb_contributions_paid": "yes",
+        "kfwfb_membership_years": "10"
+      },
+      "expected": {
+        "FISH-11": "not_matched"
+      },
+      "expectedMissing": {},
+      "writtenBy": "AI-review",
+      "notes": "Items 3-5 on p.15 (over 60, pensioners, widows of pensioners) get the assistance for one daughter only if never received before."
+    },
+    {
+      "id": "P-16",
+      "title": "Fisher's widow, not remarried, applying within 90 days",
+      "kind": "standard",
+      "answers": {
+        "livelihood": "fishing",
+        "kfwfb_family_status": "widow_of_fisher",
+        "regular_income_job": "no",
+        "widow_remarried": "no",
+        "death_within_3_months": "yes"
+      },
+      "expected": {
+        "FISH-10": "potentially_eligible"
+      },
+      "expectedMissing": {
+        "FISH-13": [
+          "family_event"
+        ]
+      },
+      "writtenBy": "AI-review",
+      "notes": "2025 KFWFB guideline p.30-31."
+    },
+    {
+      "id": "P-17",
+      "title": "Fisher's widow who has remarried",
+      "kind": "standard",
+      "answers": {
+        "livelihood": "fishing",
+        "kfwfb_family_status": "widow_of_fisher",
+        "regular_income_job": "no",
+        "widow_remarried": "yes",
+        "death_within_3_months": "yes"
+      },
+      "expected": {
+        "FISH-10": "not_matched"
+      },
+      "expectedMissing": {},
+      "writtenBy": "AI-review",
+      "notes": "p.30, condition 2: the pension is cancelled from the month of remarriage."
+    },
+    {
+      "id": "P-18",
+      "title": "Member under 60 died suddenly, not by accident",
+      "kind": "standard",
+      "answers": {
+        "livelihood": "fishing",
+        "family_event": "member_death",
+        "death_by_accident": "no",
+        "deceased_under_60": "yes",
+        "kfwfb_contributions_paid": "yes",
+        "death_within_3_months": "yes"
+      },
+      "expected": {
+        "FISH-12": "potentially_eligible",
+        "FISH-13": "potentially_eligible"
+      },
+      "expectedMissing": {},
+      "writtenBy": "AI-review",
+      "notes": "2025 KFWFB guideline p.13 (Rs 1 lakh) and p.21 (Rs 15,000; amounts paid under another death scheme are deducted)."
+    },
+    {
+      "id": "P-19",
+      "title": "Member died after 60 and had stopped working",
+      "kind": "standard",
+      "answers": {
+        "livelihood": "fishing",
+        "family_event": "member_death",
+        "death_by_accident": "no",
+        "deceased_under_60": "no",
+        "deceased_active_after_60": "no",
+        "kfwfb_contributions_paid": "yes",
+        "death_within_3_months": "yes"
+      },
+      "expected": {
+        "FISH-12": "not_matched",
+        "FISH-13": "not_matched"
+      },
+      "expectedMissing": {},
+      "writtenBy": "AI-review",
+      "notes": "Both schemes cover a death under 60, or after 60 only if the member kept working, stayed on the list and kept paying."
+    },
+    {
+      "id": "P-20",
+      "title": "Seriously ill member aged 23 with income at the limit",
+      "kind": "boundary",
+      "answers": {
+        "livelihood": "fishing",
+        "kfwfb_member": "yes",
+        "kfwfb_contributions_paid": "yes",
+        "family_event": "serious_illness",
+        "age": "23",
+        "kfwfb_membership_years": "5",
+        "annual_family_income": "50000"
+      },
+      "expected": {
+        "FISH-17": "potentially_eligible",
+        "FISH-06": "not_matched"
+      },
+      "expectedMissing": {},
+      "writtenBy": "AI-review",
+      "notes": "2025 KFWFB guideline p.25-26: ages 23 to 60, income not above Rs 50,000, 5 years of membership. Age 23 and income 50,000 are on the limits. Whether 23 and 60 are inclusive is flagged for second review."
+    },
+    {
+      "id": "P-21",
+      "title": "Active member's child scored 8 A+ in SSLC",
+      "kind": "standard",
+      "answers": {
+        "livelihood": "fishing",
+        "active_fisher": "yes",
+        "kfwfb_member": "yes",
+        "family_event": "sslc_8_aplus"
+      },
+      "expected": {
+        "FISH-16": "potentially_eligible",
+        "FISH-01": "potentially_eligible",
+        "FISH-03": "needs_information"
+      },
+      "expectedMissing": {
+        "FISH-03": [
+          "bpl"
+        ]
+      },
+      "writtenBy": "AI-review",
+      "notes": "2025 KFWFB guideline SSLC award. The technical-school category is not modelled."
+    },
+    {
+      "id": "P-22",
+      "title": "Member with a daughter's marriage, income not given",
+      "kind": "incomplete",
+      "answers": {
+        "livelihood": "fishing",
+        "kfwfb_member": "yes",
+        "kfwfb_contributions_paid": "yes",
+        "kfwfb_family_status": "member_under_60",
+        "family_event": "daughter_marriage",
+        "bride_18": "yes",
+        "annual_family_income": "unknown",
+        "kfwfb_membership_years": "4"
+      },
+      "expected": {
+        "FISH-11": "needs_information"
+      },
+      "expectedMissing": {
+        "FISH-11": [
+          "annual_family_income"
+        ]
+      },
+      "writtenBy": "AI-review",
+      "notes": "Every other marriage condition is met; only income is unknown, so the app must ask rather than guess."
     }
   ],
   "disclaimer": {

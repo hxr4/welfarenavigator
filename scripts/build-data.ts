@@ -257,7 +257,7 @@ async function main() {
       tier: Number(s.tier) as 1 | 2 | 3,
       authority: s.authority,
       title: s.title,
-      url: s.url,
+      url: s.url || "",
       docType: s.doc_type,
       language: s.language,
       dateIssued: s.date_issued || undefined,
@@ -284,6 +284,14 @@ async function main() {
       hours: l.hours || undefined,
       lat: l.lat ? Number(l.lat) : undefined,
       lng: l.lng ? Number(l.lng) : undefined,
+      serves: l.serves_districts
+        ? list(l.serves_districts).map((d) => {
+            const c = canonicalDistrict(d);
+            if (!c) errors.push(`${l.__row}: serves_districts "${d}" is not one of the 14 Kerala districts`);
+            return c ?? d;
+          })
+        : undefined,
+      jurisdiction: l.jurisdiction || undefined,
       sourceId: l.source_id || undefined,
     })),
     terms: r.terminology.map((t: Row) => ({ id: t.term_id, en: t.en, ml: t.ml, context: t.context || undefined, sourceId: t.source_id || undefined })),

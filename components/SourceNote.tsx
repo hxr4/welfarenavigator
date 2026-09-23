@@ -24,9 +24,13 @@ export function SourceNote({ ds, sourceId, quote, locator, lang }: Props) {
         {src.title}
         {locator ? ` · ${locator}` : ""} · {t(`tier${src.tier}` as StringKey, lang)} · {src.accessedOn}
       </p>
-      <a href={src.url} target="_blank" rel="noreferrer noopener">
-        {t("openSource", lang)} ↗
-      </a>
+      {src.url ? (
+        <a href={src.url} target="_blank" rel="noreferrer noopener">
+          {t("openSource", lang)} ↗
+        </a>
+      ) : (
+        src.localFile && <p className="meta">{src.localFile}</p>
+      )}
     </details>
   );
 }

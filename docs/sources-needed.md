@@ -1,18 +1,40 @@
-# Official sources we could not use yet
+# Official sources still needed
 
-Each item blocks something specific. Download the document yourself (browser), save it in `sources/`, and attach it; scanned or legacy-font Malayalam PDFs can be read page by page as images.
+Updated after the manually collected documents in `sources/` were read page by page (legacy-font Malayalam pages were read from the rendered images).
 
-| # | Document | Authority | URL | Why we could not use it | What we need from it |
-|---|---|---|---|---|---|
-| 1 | Scheme approved 2025 KFWFB | Kerala Fishermen's Welfare Fund Board (via Fisheries Department) | https://fisheries.kerala.gov.in/sites/default/files/inline-files/Scheme%20approved%202025%20KFWFB_0.pdf | Malayalam text in a legacy font; extracted text is garbled | Every KFWFB benefit: eligibility wording, age limits (pension), membership conditions, amounts, documents, where to apply. This is the biggest single source of additional fishing schemes. |
-| 2 | Kerala Small Plantation Workers' Welfare Fund Act, 2008 | Government of Kerala (India Code copy) | https://www.indiacode.nic.in/bitstream/123456789/20377/1/17-2008-eng.pdf | India Code blocks automated access | Second person to confirm the quotes and section numbers used for PLNT-01 to PLNT-04, and the Act number (the PDF says 17, the India Code page says 18). |
-| 3 | Kerala Small Plantation Workers' Welfare Fund Scheme (2009) and Board office details | Kerala Small Plantation Workers' Welfare Fund Board, Kottayam | not found online | Not located on any official site | Scheme-level conditions (membership period, contribution), documents, how to apply, Board address and phone. |
-| 4 | Maternity benefit scheme guidelines for welfare board members | Labour and Skills Department / Labour Commissionerate | referred to as "extant Scheme guidelines" in the Nov 2024 Gazette | Not found online | Amount, number of deliveries, membership period, documents, application steps. |
-| 5 | Saving cum Relief application forms (inland and marine) | Fisheries Department | forms page: https://fisheries.kerala.gov.in/en/forms-department-fisheries | Malayalam PDFs with legacy font; garbled | The list of attachments the form asks for (the verified document list for FISH-02). |
-| 6 | Application for compensation to fishermen losing fishing equipment due to calamities | Fisheries Department | same forms page, item 25 | Garbled | Who may apply, conditions and attachments (could become a new screened scheme). |
-| 7 | Educational assistance (above matriculation) form | Fisheries Department | same forms page, item 21 | Garbled | Eligibility and attachments. |
-| 8 | Estate Workers (Distress Relief) Welfare Fund Scheme notification | Labour Commissionerate | https://lc.kerala.gov.in/en/major-functions mentions it only in one line | No detail published | Eligibility, benefit, application route (could become a new screened plantation scheme). |
-| 9 | Confirmation that the Small Plantation Workers' board is on AIIS | Labour Commissionerate | https://aiis.lc.kerala.gov.in/index.php/launch | The portal lists 16 boards but not their names | Board list, so the online/Akshaya route for PLNT schemes can move from partial to verified. |
-| 10 | Matsyafed office list | Matsyafed | not found | No official directory located | District or regional Matsyafed offices for FISH-08 and FISH-09. |
-| 11 | Fisheries district office addresses | Fisheries Department | https://fisheries.kerala.gov.in/en/node/628 lists phones only | Addresses not published there | Street addresses (and map positions if published) for the 14 district offices. The Wayanad landline on that page is malformed (0493-60293214). |
-| 12 | Full Akshaya centre list | Kerala State IT Mission | https://akshaya.kerala.gov.in/centers | Page shows a few centres at a time | Centre list per district/panchayat, if the team wants individual centres beyond the 14 district project offices. |
+## Resolved by the collected documents
+
+| Document | Saved as | Used for |
+|---|---|---|
+| Scheme approved 2025 KFWFB (welfare scheme guideline) | sources/kfwfb-welfare-schemes-guideline-2025.pdf | FISH-01 upgraded, FISH-06 upgraded to verified, FISH-10 to FISH-17 added |
+| Kerala Small Plantation Workers' Welfare Fund Act, 2008 (Act 17 of 2008) | sources/kerala-small-plantation-workers-welfare-fund-act-2008.pdf | Act number corrected to 17; plantation_member help text; PLNT-07 |
+| Small Plantation Workers' Welfare Fund Board office list with jurisdiction | sources/spwwfb-offices-jurisdiction.pdf | CEO office and 11 district executive offices, mapped by jurisdiction |
+| Scheme 2009 Forms 14, 18, 20 | sources/spwwfb-form-14/18/20-*.pdf | Application form documents for PLNT-01, PLNT-04, PLNT-06 |
+| G.O.(P) No.81/2024/LBR, 23 November 2024 | sources/gazette-go-p-81-2024-lbr-maternity-aadhaar.pdf | PLNT-05 board inclusion and Aadhaar or enrolment document |
+| Saving cum Relief application and card | sources/fisheries-saving-cum-relief-*.pdf | FISH-02 contribution receipt document |
+| Calamity equipment-loss application | sources/fisheries-calamity-equipment-loss-application.pdf | FISH-18 (display only) |
+| Fisheries district officers | sources/fisheries-district-officers.pdf | Phones for all 14 districts |
+| Matsyafed contacts | sources/matsyafed-contacts.pdf | 10 district offices |
+
+## Still needed
+
+| # | Document | Authority | What it unblocks |
+|---|---|---|---|
+| 1 | Kerala Small Plantation Workers' Welfare Fund Scheme, 2009: full text, especially clauses 38 and 45 | Small Plantation Workers' Welfare Fund Board, Kottayam | Contribution period, amounts, documents and procedure for PLNT-01 to PLNT-04, PLNT-06 and PLNT-07. Until then their documents and application steps stay partial, and PLNT-06 and PLNT-07 stay display only. |
+| 2 | Maternity benefit scheme guidelines referred to in G.O.(P) No.81/2024/LBR as the "extant Scheme guidelines" | Labour and Skills Department | Amount, number of deliveries, membership period and document list for PLNT-05. |
+| 3 | Estate Workers (Distress Relief) Welfare Fund Scheme notification | Labour Commissionerate | A possible new plantation scheme. Not encoded. |
+| 4 | The order that governs compensation for fishing equipment lost to calamities | Fisheries Department | FISH-18 eligibility. Only the scanned form is available, so it stays display only. |
+| 5 | 2025 KFWFB guideline pages 24 and 27 to 29 | already saved (1.pdf) | Not yet encoded: page 24 (scheme 9), page 27 (Chairman's relief fund), pages 28 to 29 (higher education incentive). These need the same page-by-page reading before they can be added. |
+| 6 | Confirmation that the Small Plantation Workers' Board is on the AIIS portal | Labour Commissionerate | Would move the online/Akshaya route for PLNT schemes from partial to verified. |
+| 7 | Document lists for FISH-03, FISH-04, FISH-05, FISH-08, FISH-09 | Fisheries Department, Matsyafed | These schemes are screened, but the app says their document list is not published. |
+| 8 | Matsyafed offices for Pathanamthitta, Idukki, Palakkad and Wayanad | Matsyafed | The contact list has no office for these four districts. The app shows the two nearest offices in other districts and says so; no office is invented. |
+| 9 | Correct Wayanad Fisheries landline and Palakkad Fisheries email | Fisheries Department | The printed values are malformed (0493-60293214 and ddfpkd@gmai.com). They are kept in the source notes as printed and not used; the Wayanad mobile is used instead. |
+| 10 | Full Akshaya centre list | Kerala State IT Mission | Individual centres beyond the 14 district project offices. |
+
+## Conflicts found and how they are handled
+
+| Scheme | Older source | Newer source | Used |
+|---|---|---|---|
+| FISH-01 group accident insurance | Fisheries Department page: "Active Fishermen", Rs 1 lakh | 2025 KFWFB guideline p.11: every Board member, Rs 10 lakh | 2025 guideline, conflict noted in the scheme notes |
+| FISH-06 old-age pension | Department page: Rs 450 a month, registered fishermen and widows | 2025 KFWFB guideline p.18 to 19: Rs 1,600, age 60, 10 years of work, retired, 5 years of membership | 2025 guideline |
+| FISH-17 treatment assistance | — | p.25 says "between 23 and 60" | Encoded inclusive (23 and 60 allowed); flagged for second review |

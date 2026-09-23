@@ -199,7 +199,7 @@ export default function Review({ ds }: { ds: Dataset }) {
                                 <li key={l.id}>
                                   <strong>{l.id}</strong> {conditionText(l, ds.facts.find((f) => f.id === l.fact), "en")}
                                   {l.source?.quote && <blockquote>“{l.source.quote}”</blockquote>}
-                                  {src && (
+                                  {src && src.url && (
                                     <a href={src.url} target="_blank" rel="noreferrer noopener">
                                       {src.id} · tier {src.tier} · {src.title}
                                       {l.source?.locator ? ` · ${l.source.locator}` : ""}
@@ -247,7 +247,7 @@ export default function Review({ ds }: { ds: Dataset }) {
                   <tr key={d.id}>
                     <td>{d.en}</td>
                     {districtTypes.map((t) => {
-                      const n = ds.locations.filter((l) => l.type === t.id && l.district === d.id).length;
+                      const n = ds.locations.filter((l) => l.type === t.id && (l.district === d.id || (l.serves ?? []).includes(d.id))).length;
                       return (
                         <td key={t.id} className={n ? "" : "bad"}>
                           {n}
@@ -279,9 +279,15 @@ export default function Review({ ds }: { ds: Dataset }) {
                     <td>{s.tier}</td>
                     <td>{s.authority}</td>
                     <td>
-                      <a href={s.url} target="_blank" rel="noreferrer noopener">
-                        {s.title}
-                      </a>
+                      {s.url ? (
+                        <a href={s.url} target="_blank" rel="noreferrer noopener">
+                          {s.title}
+                        </a>
+                      ) : (
+                        <span>
+                          {s.title} <span className="meta">(saved copy: {s.localFile})</span>
+                        </span>
+                      )}
                       {s.notes && <p className="meta">{s.notes}</p>}
                     </td>
                     <td>{s.accessedOn}</td>

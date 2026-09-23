@@ -64,7 +64,9 @@ export function validateDataset(ds: Dataset): Issue[] {
 
   for (const s of ds.sources) {
     if (/utm_/i.test(s.url)) add("error", `sources ${s.id}`, "URL contains a tracking parameter (utm_). Use the clean official URL.");
-    if (!/^https?:\/\//.test(s.url)) add("error", `sources ${s.id}`, "URL must start with https://");
+    if (s.url && !/^https?:\/\//.test(s.url)) add("error", `sources ${s.id}`, "URL must start with https://");
+    if (!s.url && !s.localFile) add("error", `sources ${s.id}`, "Give the official URL, or the saved copy in local_file");
+    if (!s.url) add("warning", `sources ${s.id}`, "No public URL; only the saved copy in sources/ is cited");
   }
 
   for (const f of ds.facts) {
@@ -126,6 +128,7 @@ export function validateDataset(ds: Dataset): Issue[] {
   for (const l of ds.locations) {
     if (!ds.locationTypes.some((t) => t.id === l.type)) add("error", `locations ${l.id}`, `Unknown type "${l.type}"`);
     if (!DISTRICTS.some((d) => d.id === l.district)) add("error", `locations ${l.id}`, `"${l.district}" is not one of the 14 Kerala districts`);
+    for (const d of l.serves ?? []) if (!DISTRICTS.some((x) => x.id === d)) add("error", `locations ${l.id}`, `serves "${d}" is not one of the 14 Kerala districts`);
     if ((l.lat === undefined) !== (l.lng === undefined)) add("error", `locations ${l.id}`, "Give both lat and lng, or neither");
     if (!l.sourceId) add("warning", `locations ${l.id}`, "No source for this address");
   }

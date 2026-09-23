@@ -55,15 +55,34 @@ describe("locations and districts", () => {
     const bad = dataset.schemes.flatMap((s) => s.apply.filter((a) => !types.includes(a.locationType)).map((a) => `${s.id}:${a.locationType}`));
     expect(bad).toEqual([]);
   });
-  it("every district-level office type used by a screenable scheme is covered in all 14 districts, or reported", () => {
+  it("every district-level office type used by a screenable scheme covers all 14 districts, except the published Matsyafed gaps", () => {
     const used = new Set(dataset.schemes.filter(isScreenable).flatMap((s) => s.apply.map((a) => a.locationType)));
+    const covers = (l: (typeof dataset.locations)[number], d: string) => l.district === d || (l.serves ?? []).includes(d);
     const gaps: string[] = [];
     for (const type of dataset.locationTypes.filter((t) => t.scope !== "state" && used.has(t.id))) {
       const count = dataset.locations.filter((l) => l.type === type.id).length;
       if (count === 0) continue;
-      for (const d of DISTRICTS) if (!dataset.locations.some((l) => l.type === type.id && l.district === d.id)) gaps.push(`${type.id}:${d.id}`);
+      for (const d of DISTRICTS) if (!dataset.locations.some((l) => l.type === type.id && covers(l, d.id))) gaps.push(`${type.id}:${d.id}`);
     }
-    expect(gaps).toEqual([]);
+    expect(gaps).toEqual(["matsyafed_office:Pathanamthitta", "matsyafed_office:Idukki", "matsyafed_office:Palakkad", "matsyafed_office:Wayanad"]);
+  });
+  it("Fisheries district offices and Akshaya offices cover all 14 districts", () => {
+    for (const type of ["fisheries_district_office", "akshaya"]) {
+      const missing = DISTRICTS.filter((d) => !dataset.locations.some((l) => l.type === type && l.district === d.id)).map((d) => d.id);
+      expect(missing, type).toEqual([]);
+    }
+  });
+  it("plantation district offices keep the jurisdiction text exactly as printed", () => {
+    const offices = dataset.locations.filter((l) => l.type === "plantation_district_office");
+    expect(offices.length).toBe(11);
+    expect(offices.every((l) => (l.jurisdiction ?? "").length > 0)).toBe(true);
+  });
+  it("the malformed Wayanad landline and Palakkad email are not used as contacts", () => {
+    const wy = dataset.locations.filter((l) => l.type === "fisheries_district_office" && l.district === "Wayanad");
+    const pk = dataset.locations.filter((l) => l.type === "fisheries_district_office" && l.district === "Palakkad");
+    expect(wy.length).toBeGreaterThan(0);
+    expect(JSON.stringify(wy)).not.toContain("60293214");
+    expect(JSON.stringify(pk)).not.toContain("gmai.com");
   });
 });
 

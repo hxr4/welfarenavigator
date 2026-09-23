@@ -121,7 +121,9 @@ Mark a UI string as checked by adding `mlReviewed: true` to it in `strings.ts`. 
 | allAreas | All areas | എല്ലാ പ്രദേശങ്ങളും | NOT REVIEWED |  |
 | stateOffice | State office (for all districts) | സംസ്ഥാന ഓഫീസ് (എല്ലാ ജില്ലകൾക്കും) | NOT REVIEWED |  |
 | noOffice | No office of this type is listed for this district in our data. | ഈ ജില്ലയിൽ ഈ തരം ഓഫീസ് ഞങ്ങളുടെ വിവരങ്ങളിൽ ഇല്ല. | NOT REVIEWED |  |
+| nearestOther | Nearest offices in other districts, by district headquarters. Call before you travel. | മറ്റു ജില്ലകളിലെ അടുത്തുള്ള ഓഫീസുകൾ (ജില്ലാ ആസ്ഥാനം അനുസരിച്ച്). യാത്രയ്ക്ക് മുമ്പ് ഫോൺ ചെയ്ത് ഉറപ്പാക്കുക. | NOT REVIEWED |  |
 | phone | Phone | ഫോൺ | NOT REVIEWED |  |
+| serves | Serves | പ്രവർത്തന പരിധി | NOT REVIEWED |  |
 | directions | Directions | വഴി കാണുക | NOT REVIEWED |  |
 | addressNotPublished | Address not published in the official source | ഔദ്യോഗിക ഉറവിടത്തിൽ വിലാസം ഇല്ല | NOT REVIEWED |  |
 | kmAway | About {n} km away | ഏകദേശം {n} കി.മീ. അകലെ | NOT REVIEWED |  |
@@ -152,9 +154,9 @@ Mark a UI string as checked by adding `mlReviewed: true` to it in `strings.ts`. 
 
 | Where | English | Malayalam |
 |---|---|---|
-| scheme FISH-01 name | Group Insurance Scheme for Fishermen | മത്സ്യത്തൊഴിലാളികൾക്കുള്ള ഗ്രൂപ്പ് ഇൻഷുറൻസ് സ്കീം |
-| scheme FISH-01 summary | Insurance coverage for active fishermen under the KFWFB. | KFWFB-യുടെ കീഴിലുള്ള സജീവ മത്സ്യത്തൊഴിലാളികൾക്കുള്ള ഇൻഷുറൻസ് പരിരക്ഷ. |
-| scheme FISH-01 authority | Fisheries Department / Kerala Fishermen Welfare Fund Board | മത്സ്യബന്ധന വകുപ്പ് / കേരള മത്സ്യത്തൊഴിലാളി ക്ഷേമനിധി ബോർഡ് |
+| scheme FISH-01 name | Group Accident Insurance Scheme | ഗ്രൂപ്പ് അപകട ഇൻഷ്വറൻസ് പദ്ധതി |
+| scheme FISH-01 summary | Accident cover for every Board member, with no premium from the family: ₹10 lakh for accidental death, missing while fishing, or permanent total disability; ₹5 lakh for permanent partial disability; up to ₹25,000 when an accident needs more than 24 hours in hospital; ₹5,000 each for the education of 2 children of a member who died in an accident (up to ₹10,000); ₹2,500 funeral expense. | ബോർഡ് അംഗങ്ങൾക്കെല്ലാം അപകട പരിരക്ഷ; ഗുണഭോക്താവിൽ നിന്ന് തുക ഈടാക്കുന്നില്ല: അപകടമരണം, മത്സ്യബന്ധനവേളയിൽ കാണാതാകൽ, സ്ഥിരവും പൂർണ്ണവുമായ അവശത എന്നിവയ്ക്ക് 10 ലക്ഷം രൂപ; സ്ഥിരവും ഭാഗികവുമായ അവശതയ്ക്ക് 5 ലക്ഷം; 24 മണിക്കൂറിലധികം ആശുപത്രി ചികിൽസയ്ക്ക് പരമാവധി 25,000; അപകടമരണമടഞ്ഞ മത്സ്യത്തൊഴിലാളികളുടെ 2 കുട്ടികൾക്ക് 5,000 വീതം (പരമാവധി 10,000) വിദ്യാഭ്യാസ സഹായം; ശവസംസ്കാര ചെലവ് 2,500. |
+| scheme FISH-01 authority | Kerala Fishermen's Welfare Fund Board | കേരള മത്സ്യത്തൊഴിലാളി ക്ഷേമനിധി ബോർഡ് |
 | scheme FISH-02 name | Saving Cum Relief Scheme to Fishermen | മത്സ്യത്തൊഴിലാളികൾക്കുള്ള സമ്പാദ്യ സമാശ്വാസ പദ്ധതി |
 | scheme FISH-02 summary | Off-season relief for registered marine and inland fishermen; a bank account is required for enrolment. | രജിസ്റ്റർ ചെയ്ത കടൽ-ഉൾനാടൻ മത്സ്യത്തൊഴിലാളികൾക്ക് ഓഫ്-സീസൺ ആശ്വാസധനം; എൻറോൾമെന്റിന് ബാങ്ക് അക്കൗണ്ട് ആവശ്യമാണ്. |
 | scheme FISH-02 authority | Fisheries Department, Government of Kerala | കേരള സർക്കാർ മത്സ്യബന്ധന വകുപ്പ് |
@@ -167,9 +169,9 @@ Mark a UI string as checked by adding `mlReviewed: true` to it in `strings.ts`. 
 | scheme FISH-05 name | Group Insurance Scheme for Allied Workers in Fishery Sector | മത്സ്യബന്ധന അനുബന്ധ തൊഴിലാളികൾക്കുള്ള ഗ്രൂപ്പ് ഇൻഷുറൻസ് സ്കീം |
 | scheme FISH-05 summary | Insurance for allied fishery workers who are members of the KFWFB. | കേരള മത്സ്യത്തൊഴിലാളി ക്ഷേമനിധി ബോർഡ് അംഗങ്ങളായ അനുബന്ധ മത്സ്യത്തൊഴിലാളികൾക്കുള്ള ഇൻഷുറൻസ്. |
 | scheme FISH-05 authority | Fisheries Department / Kerala Fishermen Welfare Fund Board | മത്സ്യബന്ധന വകുപ്പ് / കേരള മത്സ്യത്തൊഴിലാളി ക്ഷേമനിധി ബോർഡ് |
-| scheme FISH-06 name | Pension to Fishermen | മത്സ്യത്തൊഴിലാളി പെൻഷൻ |
-| scheme FISH-06 summary | Old-age and widow pension for registered fishermen or widows of fishermen. | രജിസ്റ്റർ ചെയ്ത മത്സ്യത്തൊഴിലാളികൾക്കും മത്സ്യത്തൊഴിലാളികളുടെ വിധവകൾക്കും വയോജന/വിധവ പെൻഷൻ. |
-| scheme FISH-06 authority | Fisheries Department / Kerala Fishermen Welfare Fund Board | മത്സ്യബന്ധന വകുപ്പ് / കേരള മത്സ്യത്തൊഴിലാളി ക്ഷേമനിധി ബോർഡ് |
+| scheme FISH-06 name | Old Age Pension for Fishermen | വാർദ്ധക്യകാല പെൻഷൻ |
+| scheme FISH-06 summary | Monthly pension of ₹1,600 for Board members who have retired from fishing after age 60. | 60 വയസ്സ് പൂർത്തിയാക്കി തൊഴിലിൽ നിന്ന് വിരമിച്ച ബോർഡ് അംഗങ്ങൾക്ക് പ്രതിമാസം 1,600 രൂപ പെൻഷൻ. |
+| scheme FISH-06 authority | Kerala Fishermen's Welfare Fund Board | കേരള മത്സ്യത്തൊഴിലാളി ക്ഷേമനിധി ബോർഡ് |
 | scheme PLNT-01 name | Small Plantation Workers' Old-Age Pension | ചെറുകിട തോട്ടം തൊഴിലാളികളുടെ വയോജന പെൻഷൻ |
 | scheme PLNT-01 summary | The 2008 Act provides for pension to a member who has completed 60 years; full scheme-level conditions are not all reproduced in the Act. | 2008-ലെ നിയമം 60 വയസ്സ് പൂർത്തിയാക്കിയ അംഗത്തിന് പെൻഷൻ നൽകുന്നതിനുള്ള വ്യവസ്ഥ ചെയ്യുന്നു; മുഴുവൻ സ്കീം നിബന്ധനകൾ നിയമത്തിൽ നൽകിയിട്ടില്ല. |
 | scheme PLNT-01 authority | Kerala Small Plantation Workers' Welfare Fund Board | കേരള ചെറുകിട തോട്ടം തൊഴിലാളി ക്ഷേമനിധി ബോർഡ് |
@@ -194,6 +196,39 @@ Mark a UI string as checked by adding `mlReviewed: true` to it in `strings.ts`. 
 | scheme FISH-09 name | Purchasing of Fishing Nets | മത്സ്യബന്ധന വല വാങ്ങൽ സഹായം |
 | scheme FISH-09 summary | Assistance to buy fishing nets, for members of fishermen cooperative societies affiliated to Matsyafed. | മത്സ്യഫെഡുമായി അഫിലിയേറ്റ് ചെയ്ത സഹകരണ സംഘങ്ങളിലെ അംഗങ്ങൾക്ക് മത്സ്യബന്ധന വല വാങ്ങാനുള്ള സഹായം. |
 | scheme FISH-09 authority | Fisheries Department / Matsyafed | മത്സ്യബന്ധന വകുപ്പ് / മത്സ്യഫെഡ് |
+| scheme FISH-10 name | Widow Pension (Fishermen's Welfare Fund) | വിധവ പെൻഷൻ |
+| scheme FISH-10 summary | Monthly pension of ₹1,600 for the wife of a Board member who died before receiving any old-age pension instalment. | വാർദ്ധക്യകാല പെൻഷൻ ഒരു ഗഡുപോലും കൈപ്പറ്റുന്നതിനുമുമ്പ് മരണമടഞ്ഞ ബോർഡ് അംഗങ്ങളുടെ ഭാര്യമാർക്ക് പ്രതിമാസം 1,600 രൂപ. |
+| scheme FISH-10 authority | Kerala Fishermen's Welfare Fund Board | കേരള മത്സ്യത്തൊഴിലാളി ക്ഷേമനിധി ബോർഡ് |
+| scheme FISH-11 name | Marriage Assistance for Fishermen's Daughters | വിവാഹ ധനസഹായ പദ്ധതി |
+| scheme FISH-11 summary | ₹25,000 towards the marriage of a fisherman's daughter. | മത്സ്യത്തൊഴിലാളികളുടെ പെൺമക്കളുടെ വിവാഹത്തിന് 25,000 രൂപ ധനസഹായം. |
+| scheme FISH-11 authority | Kerala Fishermen's Welfare Fund Board | കേരള മത്സ്യത്തൊഴിലാളി ക്ഷേമനിധി ബോർഡ് |
+| scheme FISH-12 name | Assistance to Dependants on a Fisherman's Non-Accidental Death | അപകടം കൊണ്ടല്ലാതെ ആകസ്മിക കാരണങ്ങളാൽ ഉണ്ടാകുന്ന മരണത്തിന് ആശ്രിതർക്ക് ധനസഹായം |
+| scheme FISH-12 summary | ₹1,00,000 to the dependants when a fisherman dies suddenly from a cause other than an accident, during or right after fishing, and the group insurance does not apply. | മത്സ്യബന്ധനസമയത്തോ തൊട്ടുപിന്നാലെയോ അപകടം കൊണ്ടല്ലാതെ ആകസ്മിക കാരണങ്ങളാൽ മരിക്കുന്ന മത്സ്യത്തൊഴിലാളികളുടെ ആശ്രിതർക്ക് 1,00,000 രൂപ. |
+| scheme FISH-12 authority | Kerala Fishermen's Welfare Fund Board | കേരള മത്സ്യത്തൊഴിലാളി ക്ഷേമനിധി ബോർഡ് |
+| scheme FISH-13 name | Death Assistance to Fishermen's Dependants | മത്സ്യത്തൊഴിലാളികളുടെ മരണത്തോടനുബന്ധിച്ച് ആശ്രിതർക്കുള്ള ധനസഹായ പദ്ധതി |
+| scheme FISH-13 summary | ₹15,000 to the dependants when a fisherman dies in any circumstance. Amounts already paid under another death-related scheme are deducted. | മത്സ്യത്തൊഴിലാളികൾ ഏതു സാഹചര്യത്തിൽ മരിച്ചാലും ആശ്രിതർക്ക് 15,000 രൂപ. മരണവുമായി ബന്ധപ്പെട്ട മറ്റു പദ്ധതി പ്രകാരം ലഭിച്ച തുക കുറയ്ക്കും. |
+| scheme FISH-13 authority | Kerala Fishermen's Welfare Fund Board | കേരള മത്സ്യത്തൊഴിലാളി ക്ഷേമനിധി ബോർഡ് |
+| scheme FISH-14 name | Funeral Assistance on the Death of a Fisherman's Dependant | മത്സ്യത്തൊഴിലാളികളുടെ ആശ്രിതരുടെ മരണാനന്തര ചെലവുകൾക്ക് ധനസഹായം |
+| scheme FISH-14 summary | ₹2,000 towards funeral expenses when a fisherman's father, mother, spouse, minor son or unmarried daughter dies. | മത്സ്യത്തൊഴിലാളികളുടെ അച്ഛൻ, അമ്മ, ഭാര്യ/ഭർത്താവ്, മൈനർമാരായ ആൺമക്കൾ, അവിവാഹിതരായ പെൺമക്കൾ മരിക്കുമ്പോൾ ശവസംസ്കാര ചെലവിന് 2,000 രൂപ. |
+| scheme FISH-14 authority | Kerala Fishermen's Welfare Fund Board | കേരള മത്സ്യത്തൊഴിലാളി ക്ഷേമനിധി ബോർഡ് |
+| scheme FISH-15 name | Relief for Temporary Disability due to Accident | അപകടം മൂലമുണ്ടാകുന്ന താൽക്കാലിക അവശതയ്ക്ക് ആശ്വാസ ധനസഹായ പദ്ധതി |
+| scheme FISH-15 summary | Relief while a fisherman cannot work after an accident: ₹100 for the first 7 days, then ₹15 a day, up to ₹500. | അപകടം മൂലം ജോലി ചെയ്യാൻ കഴിയാത്ത കാലത്തേക്ക് ആദ്യത്തെ ഏഴ് ദിവസത്തേക്ക് 100 രൂപ, പിന്നീട് ഓരോ ദിവസത്തേക്കും 15 രൂപ, പരമാവധി 500 രൂപ. |
+| scheme FISH-15 authority | Kerala Fishermen's Welfare Fund Board | കേരള മത്സ്യത്തൊഴിലാളി ക്ഷേമനിധി ബോർഡ് |
+| scheme FISH-16 name | SSLC Cash Award for Fishermen's Children | എസ്.എസ്.എൽ.സി പരീക്ഷയിൽ ഉന്നത വിജയം നേടുന്നവർക്ക് ക്യാഷ് അവാർഡ് |
+| scheme FISH-16 summary | Cash award for fishermen's children with top SSLC results: ₹5,000 for A+ in all subjects, ₹4,000 for A+ in 9, ₹3,000 for A+ in 8. | എസ്.എസ്.എൽ.സി-യിൽ ഉന്നത വിജയം നേടുന്ന മത്സ്യത്തൊഴിലാളികളുടെ മക്കൾക്ക്: എല്ലാ വിഷയങ്ങളിലും എ+ 5,000 രൂപ, 9 വിഷയങ്ങളിൽ 4,000, 8 വിഷയങ്ങളിൽ 3,000. |
+| scheme FISH-16 authority | Kerala Fishermen's Welfare Fund Board | കേരള മത്സ്യത്തൊഴിലാളി ക്ഷേമനിധി ബോർഡ് |
+| scheme FISH-17 name | Treatment Assistance for Serious Illness | മാരകരോഗ ചികിൽസാ പദ്ധതി |
+| scheme FISH-17 summary | Treatment help for fishermen with serious illness: up to ₹50,000 each for heart disease, kidney disease, cancer and brain tumour; up to ₹12,000 for paralysis; up to ₹5,000 for mental illness that can be cured with treatment. Treatment must be at a government or co-operative hospital, or on referral. | മാരകരോഗങ്ങൾക്ക് ചികിൽസാ സഹായം: ഹൃദ്രോഗം, വൃക്കരോഗം, ക്യാൻസർ, തലച്ചോറിലെ ട്യൂമർ എന്നിവയ്ക്ക് പരമാവധി 50,000 രൂപ വീതം; തളർവാതം 12,000; ചികിൽസിച്ച് ഭേദമാക്കാൻ പറ്റുന്ന മാനസികരോഗം 5,000. സർക്കാർ/സഹകരണ ആശുപത്രിയിലെ ചികിൽസയ്ക്ക് (അല്ലെങ്കിൽ റഫർ ചെയ്താൽ). |
+| scheme FISH-17 authority | Kerala Fishermen's Welfare Fund Board | കേരള മത്സ്യത്തൊഴിലാളി ക്ഷേമനിധി ബോർഡ് |
+| scheme FISH-18 name | Compensation for Fishing Equipment Lost in a Calamity | പ്രകൃതിക്ഷോഭം മൂലം മത്സ്യബന്ധന ഉപകരണങ്ങൾ നഷ്ടപ്പെട്ടവർക്കുള്ള നഷ്ടപരിഹാരം |
+| scheme FISH-18 summary | Compensation when fishing equipment is lost or damaged in a sea calamity. We have the official application form, but not the rule that decides who qualifies. | കടൽക്ഷോഭം പോലുള്ള പ്രകൃതിക്ഷോഭത്തിൽ മത്സ്യബന്ധന ഉപകരണങ്ങൾ നഷ്ടപ്പെട്ടാൽ നഷ്ടപരിഹാരം. ഔദ്യോഗിക അപേക്ഷാ ഫോറം ലഭ്യമാണ്; അർഹത നിർണ്ണയിക്കുന്ന നിയമം ലഭ്യമല്ല. |
+| scheme FISH-18 authority | Fisheries Department, Government of Kerala | കേരള സർക്കാർ മത്സ്യബന്ധന വകുപ്പ് |
+| scheme PLNT-06 name | Assistance to Dependants after a Small Plantation Worker Member's Death | അംഗത്തിന്റെ മരണാനന്തരം ആശ്രിതർക്ക് ധനസഹായം |
+| scheme PLNT-06 summary | Financial assistance to dependants after a member's death, applied for with Form 20. The amount and eligibility are in Scheme clause 45, which we do not have yet. | അംഗം മരിച്ചാൽ ആശ്രിതർക്ക് ധനസഹായം; ഫാറം 20 വഴി അപേക്ഷിക്കണം. തുകയും അർഹതയും പദ്ധതി ഖണ്ഡിക 45-ൽ; അത് ഇതുവരെ ലഭ്യമല്ല. |
+| scheme PLNT-06 authority | Kerala Small Plantation Workers' Welfare Fund Board | കേരള ചെറുകിട തോട്ടം തൊഴിലാളി ക്ഷേമനിധി ബോർഡ് |
+| scheme PLNT-07 name | Family Pension (Small Plantation Workers' Welfare Fund) | കുടുംബ പെൻഷൻ (ചെറുകിട തോട്ടം തൊഴിലാളി ക്ഷേമനിധി) |
+| scheme PLNT-07 summary | The Act allows the Fund to pay a family pension. Who qualifies and how much is set in the Scheme, which we do not have yet. | കുടുംബ പെൻഷൻ നൽകാൻ നിയമം അനുവദിക്കുന്നു. അർഹതയും തുകയും പദ്ധതിയിലാണ്; അത് ഇതുവരെ ലഭ്യമല്ല. |
+| scheme PLNT-07 authority | Kerala Small Plantation Workers' Welfare Fund Board | കേരള ചെറുകിട തോട്ടം തൊഴിലാളി ക്ഷേമനിധി ബോർഡ് |
 | fact livelihood label | Livelihood | തൊഴിൽ മേഖല |
 | fact livelihood question | Which work does your household do? | നിങ്ങളുടെ കുടുംബം ഏത് തൊഴിലാണ് ചെയ്യുന്നത്? |
 | option livelihood.fishing | Fishing | മത്സ്യബന്ധനം |
@@ -211,13 +246,9 @@ Mark a UI string as checked by adding `mlReviewed: true` to it in `strings.ts`. 
 | fact traditional_fisher label | Traditional fisherman | പരമ്പരാഗത മത്സ്യത്തൊഴിലാളി |
 | fact traditional_fisher question | Is the beneficiary a registered traditional fisherman? | ആനുകൂല്യത്തിനായി അപേക്ഷിക്കുന്ന വ്യക്തി രജിസ്റ്റർ ചെയ്ത പരമ്പരാഗത മത്സ്യത്തൊഴിലാളിയാണോ? |
 | fact kfwfb_member label | KFWFB member | മത്സ്യത്തൊഴിലാളി ക്ഷേമനിധി അംഗത്വം |
-| fact kfwfb_member question | Is the beneficiary a member of the Kerala Fishermen Welfare Fund Board? | ആനുകൂല്യത്തിനായി അപേക്ഷിക്കുന്ന വ്യക്തി കേരള മത്സ്യത്തൊഴിലാളി ക്ഷേമനിധി ബോർഡ് അംഗമാണോ? |
-| fact fisher_beneficiary_status label | Fisher pension status | മത്സ്യത്തൊഴിലാളി പെൻഷൻ നില |
-| fact fisher_beneficiary_status question | Which applies to the pension beneficiary? | പെൻഷൻ അപേക്ഷകനോട് ഏത് ബാധകമാണ്? |
-| option fisher_beneficiary_status.registered_fisher | Registered fisherman | രജിസ്റ്റർ ചെയ്ത മത്സ്യത്തൊഴിലാളി |
-| option fisher_beneficiary_status.fisher_widow | Widow of fisherman | മത്സ്യത്തൊഴിലാളിയുടെ വിധവ |
+| fact kfwfb_member question | Is the person a member of the Kerala Fishermen's Welfare Fund Board (Matsyaboard)? | കേരള മത്സ്യത്തൊഴിലാളി ക്ഷേമനിധി ബോർഡിൽ (മത്സ്യബോർഡ്) അംഗമാണോ? |
 | fact age label | Age | പ്രായം |
-| fact age question | How old is the beneficiary? | ആനുകൂല്യത്തിനായി അപേക്ഷിക്കുന്ന വ്യക്തിയുടെ പ്രായം എത്രയാണ്? |
+| fact age question | How old is the person applying? | അപേക്ഷിക്കുന്ന വ്യക്തിയുടെ പ്രായം എത്ര? |
 | fact small_plantation_worker label | Small plantation worker | ചെറുകിട തോട്ടം തൊഴിലാളിയാണോ |
 | fact small_plantation_worker question | Is the worker employed in a small plantation covered by the Small Plantation Workers Welfare Fund? | തൊഴിലാളി ചെറുകിട തോട്ടം തൊഴിലാളി ക്ഷേമനിധിയുടെ പരിധിയിലെ തോട്ടത്തിൽ ജോലി ചെയ്യുന്നുണ്ടോ? |
 | fact plantation_90_days label | 90 days of plantation work | 90 ദിവസത്തെ തോട്ടം ജോലി |
@@ -238,17 +269,110 @@ Mark a UI string as checked by adding `mlReviewed: true` to it in `strings.ts`. 
 | option fishing_sector.inland | Inland | ഉൾനാടൻ |
 | fact matsyafed_society_member label | Matsyafed society member | മത്സ്യഫെഡ് സംഘാംഗം |
 | fact matsyafed_society_member question | Is the person a member of a fishermen cooperative society affiliated to Matsyafed? | മത്സ്യഫെഡുമായി അഫിലിയേറ്റ് ചെയ്ത മത്സ്യത്തൊഴിലാളി സഹകരണ സംഘത്തിൽ അംഗമാണോ? |
+| fact kfwfb_contributions_paid label | Welfare Fund contributions paid | ക്ഷേമനിധി വിഹിതം അടച്ചു |
+| fact kfwfb_contributions_paid question | Are the Fishermen Welfare Fund Board contributions fully paid, with no arrears? | മത്സ്യത്തൊഴിലാളി ക്ഷേമനിധി വിഹിതം കുടിശ്ശികയില്ലാതെ പൂർണ്ണമായി അടച്ചിട്ടുണ്ടോ? |
+| fact kfwfb_membership_years label | Years since first Welfare Fund contribution | ആദ്യ ക്ഷേമനിധി വിഹിതം അടച്ചിട്ട് എത്ര വർഷം |
+| fact kfwfb_membership_years question | How many years ago was the first Welfare Fund Board contribution paid? | ക്ഷേമനിധി ബോർഡിൽ ആദ്യമായി വിഹിതം അടച്ചിട്ട് എത്ര വർഷമായി? |
+| fact fisher_work_10_years label | Worked 10 years as a fisherman in Kerala | കേരളത്തിൽ 10 വർഷം മത്സ്യത്തൊഴിലാളി |
+| fact fisher_work_10_years question | Has the person worked and earned a living as a fisherman in Kerala for at least 10 years? | കേരളത്തിൽ കുറഞ്ഞത് 10 വർഷമെങ്കിലും മത്സ്യത്തൊഴിലാളിയായി ജോലി ചെയ്ത് ഉപജീവനം കഴിച്ചിട്ടുണ്ടോ? |
+| fact retired_from_fishing label | Retired from fishing work | തൊഴിലിൽ നിന്ന് വിരമിച്ചു |
+| fact retired_from_fishing question | Has the person stopped (retired from) fishing work? | മത്സ്യബന്ധന തൊഴിലിൽ നിന്ന് വിരമിച്ചോ? |
+| fact annual_family_income label | Yearly family income | കുടുംബ വാർഷിക വരുമാനം |
+| fact annual_family_income question | What is the family's total income in a year? | കുടുംബത്തിന്റെ ഒരു വർഷത്തെ ആകെ വരുമാനം എത്ര? |
+| fact kfwfb_family_status label | Fisherman in the family | കുടുംബത്തിലെ മത്സ്യത്തൊഴിലാളി |
+| fact kfwfb_family_status question | Which of these describe your family? Choose all that apply. | ഇവയിൽ ഏതെല്ലാമാണ് നിങ്ങളുടെ കുടുംബത്തിന് ബാധകം? ബാധകമായതെല്ലാം തിരഞ്ഞെടുക്കുക. |
+| option kfwfb_family_status.member_under_60 | Board member fisherman, under 60 | 60 വയസ്സിൽ താഴെയുള്ള ബോർഡ് അംഗമായ മത്സ്യത്തൊഴിലാളി |
+| option kfwfb_family_status.member_over_60 | Board member fisherman, 60 or older | 60 വയസ്സോ അതിൽ കൂടുതലോ ഉള്ള ബോർഡ് അംഗമായ മത്സ്യത്തൊഴിലാളി |
+| option kfwfb_family_status.pensioner | Receives the Board's fishermen pension | ബോർഡിന്റെ മത്സ്യത്തൊഴിലാളി പെൻഷൻ വാങ്ങുന്നയാൾ |
+| option kfwfb_family_status.widow_of_fisher | Widow of a fisherman who was a Board member | ബോർഡ് അംഗമായിരുന്ന മത്സ്യത്തൊഴിലാളിയുടെ വിധവ |
+| option kfwfb_family_status.widow_of_pensioner | Widow of a Board pensioner | ബോർഡ് പെൻഷൻകാരന്റെ വിധവ |
+| option kfwfb_family_status.bride_is_fisher | The bride herself is a fisherworker | വധു തന്നെ മത്സ്യത്തൊഴിലാളിയാണ് |
+| option kfwfb_family_status.fisher_parent_died | The bride's fisherman parent has died | വധുവിന്റെ മത്സ്യത്തൊഴിലാളിയായ അച്ഛനോ അമ്മയോ മരിച്ചു |
+| option kfwfb_family_status.none | None of these | ഇവയൊന്നുമല്ല |
+| fact prior_marriage_assistance label | Received marriage assistance before | മുമ്പ് വിവാഹ ധനസഹായം ലഭിച്ചു |
+| fact prior_marriage_assistance question | Has the family received this Welfare Fund marriage assistance before? | ഈ ക്ഷേമനിധി വിവാഹ ധനസഹായം മുമ്പ് ലഭിച്ചിട്ടുണ്ടോ? |
+| fact bride_18 label | Bride 18 on the marriage date | വിവാഹ തീയതിക്ക് വധുവിന് 18 വയസ്സ് |
+| fact bride_18 question | Will the bride have completed 18 years on the marriage date? | വിവാഹ തീയതിക്ക് വധുവിന് 18 വയസ്സ് പൂർത്തിയാകുമോ? |
+| fact death_by_accident label | Death caused by an accident | അപകടം മൂലമുള്ള മരണം |
+| fact death_by_accident question | Was the death caused by an accident? | മരണം അപകടം മൂലമായിരുന്നോ? |
+| fact deceased_under_60 label | Deceased was under 60 | മരിച്ചയാൾക്ക് 60 വയസ്സിൽ താഴെ |
+| fact deceased_under_60 question | Was the fisherman below 60 years of age when he died? | മരിക്കുമ്പോൾ മത്സ്യത്തൊഴിലാളിക്ക് 60 വയസ്സിൽ താഴെയായിരുന്നോ? |
+| fact deceased_active_after_60 label | Still working and contributing after 60 | 60-ന് ശേഷവും തൊഴിലും വിഹിതവും |
+| fact deceased_active_after_60 question | If he was 60 or older: was he still working, on the fishermen list, and paying contributions regularly? | 60 വയസ്സോ അതിൽ കൂടുതലോ ആയിരുന്നെങ്കിൽ: തൊഴിൽ തുടരുകയും പട്ടികയിൽ പേരുണ്ടായിരിക്കുകയും വിഹിതം കൃത്യമായി അടക്കുകയും ചെയ്തിരുന്നോ? |
+| fact death_within_3_months label | Death within the last 3 months | കഴിഞ്ഞ 3 മാസത്തിനുള്ളിലെ മരണം |
+| fact death_within_3_months question | Did the death happen within the last 3 months (90 days)? | മരണം കഴിഞ്ഞ 3 മാസത്തിനുള്ളിൽ (90 ദിവസം) ആയിരുന്നോ? |
+| fact regular_income_job label | Widow has a regular-income job | സ്ഥിര വരുമാനമുള്ള ഉദ്യോഗം |
+| fact regular_income_job question | Does the widow have a job with a regular income? | വിധവയ്ക്ക് സ്ഥിര വരുമാനമുള്ള ഉദ്യോഗമുണ്ടോ? |
+| fact widow_remarried label | Widow has remarried | വിധവ പുനർവിവാഹം ചെയ്തു |
+| fact widow_remarried question | Has the widow remarried? | വിധവ പുനർവിവാഹം ചെയ്തിട്ടുണ്ടോ? |
+| fact accident_within_3_months label | Accident within the last 3 months | കഴിഞ്ഞ 3 മാസത്തിനുള്ളിലെ അപകടം |
+| fact accident_within_3_months question | Did the accident happen within the last 3 months? | അപകടം കഴിഞ്ഞ 3 മാസത്തിനുള്ളിലായിരുന്നോ? |
+| fact family_event label | Recent family events | കുടുംബത്തിലെ സമീപകാല സംഭവങ്ങൾ |
+| fact family_event question | Has any of these happened in the family? Choose all that apply. | ഇവയിൽ ഏതെങ്കിലും കുടുംബത്തിൽ ഉണ്ടായിട്ടുണ്ടോ? ബാധകമായതെല്ലാം തിരഞ്ഞെടുക്കുക. |
+| option family_event.daughter_marriage | A daughter is getting married, or married in the last 60 days | മകളുടെ വിവാഹം അടുത്ത് നടക്കാനുണ്ട്, അല്ലെങ്കിൽ കഴിഞ്ഞ 60 ദിവസത്തിനുള്ളിൽ നടന്നു |
+| option family_event.sslc_8_aplus | A child got A+ in at least 8 subjects in this year's SSLC | ഈ വർഷത്തെ എസ്.എസ്.എൽ.സി-യിൽ കുട്ടിക്ക് കുറഞ്ഞത് 8 വിഷയങ്ങളിൽ എ+ ലഭിച്ചു |
+| option family_event.serious_illness | Someone needs treatment for heart disease, kidney disease, cancer, a brain tumour, paralysis, or a mental illness that can be cured | ഹൃദ്രോഗം, വൃക്കരോഗം, ക്യാൻസർ, തലച്ചോറിലെ ട്യൂമർ, തളർവാതം, ചികിൽസിച്ച് ഭേദമാക്കാവുന്ന മാനസികരോഗം എന്നിവയിൽ ഒന്നിന് ചികിൽസ ആവശ്യമുണ്ട് |
+| option family_event.accident | A fisherman was hurt in an accident and could not work for 7 days or more | അപകടം മൂലം മത്സ്യത്തൊഴിലാളിക്ക് 7 ദിവസമോ അതിൽ കൂടുതലോ ജോലി ചെയ്യാൻ കഴിഞ്ഞില്ല |
+| option family_event.member_death | A fisherman in the family who was a Welfare Fund member has died | കുടുംബത്തിലെ ക്ഷേമനിധി അംഗമായ മത്സ്യത്തൊഴിലാളി മരിച്ചു |
+| option family_event.dependant_death | In the last 3 months, a fisherman's father, mother, wife or husband, minor son or unmarried daughter died | കഴിഞ്ഞ 3 മാസത്തിനുള്ളിൽ മത്സ്യത്തൊഴിലാളിയുടെ അച്ഛൻ, അമ്മ, ഭാര്യ/ഭർത്താവ്, മൈനറായ മകൻ, അവിവാഹിതയായ മകൾ എന്നിവരിൽ ആരെങ്കിലും മരിച്ചു |
+| option family_event.none | None of these | ഇവയൊന്നുമല്ല |
 | document saving_relief_application_inland | Application for Saving Cum Relief Scheme (Inland) | സമ്പാദ്യ സമാശ്വാസ പദ്ധതിക്കുള്ള അപേക്ഷ (ഉൾനാടൻ) |
 | document saving_relief_application_marine | Application for Saving Cum Relief Scheme (Marine) | സമ്പാദ്യ സമാശ്വാസ പദ്ധതിക്കുള്ള അപേക്ഷ (കടൽ) |
 | document fisher_educational_assistance_application | Application form for educational assistance (above matriculation) to fishermen children | മത്സ്യത്തൊഴിലാളികളുടെ കുട്ടികൾക്കുള്ള വിദ്യാഭ്യാസ സഹായത്തിനുള്ള അപേക്ഷ (മെട്രിക്കുലേഷൻ കഴിഞ്ഞ്) |
 | document aadhaar | Aadhaar (or proof of Aadhaar possession) | ആധാർ (അല്ലെങ്കിൽ ആധാർ ഉണ്ടെന്നതിന്റെ തെളിവ്) |
+| document death_certificate | Death certificate (original) | മരണ സർട്ടിഫിക്കറ്റ് (അസ്സൽ) |
+| document fir_copy | Copy of the police First Information Report (FIR) | പോലീസ് സ്റ്റേഷനിലെ പ്രഥമ വിവര റിപ്പോർട്ടിന്റെ (എഫ് ഐ ആർ) പകർപ്പ് |
+| document postmortem_inquest | Copies of the post-mortem certificate and inquest report | പോസ്റ്റ്മോർട്ടം സർട്ടിഫിക്കറ്റിന്റെയും ഇൻക്വസ്റ്റ് റിപ്പോർട്ടിന്റെയും പകർപ്പ് |
+| document legal_heir_certificate | Legal heirship / relationship certificate | ലീഗൽ ഹെയർഷിപ്പ് / റിലേഷൻഷിപ്പ് സർട്ടിഫിക്കറ്റ് |
+| document student_school_certificate | Student's school certificate (for the children's education benefit) | വിദ്യാഭ്യാസ ആനുകൂല്യത്തിന് വിദ്യാർത്ഥിയുടെ സ്കൂൾ സർട്ടിഫിക്കറ്റ് |
+| document funeral_bill | Bill for the funeral expense | ശവസംസ്കാര ചെലവ് ലഭ്യമാകുന്നതിന് ആയതിന്റെ ബിൽ |
+| document disability_certificate | Hospital case certificate / disability certificate | ആശുപത്രിയിലെ കേസ് സർട്ടിഫിക്കറ്റ്/ഡിസെബിലിറ്റി സർട്ടിഫിക്കറ്റ് |
+| document doctor_certificate_form | Doctor's certificate in the prescribed form | ഡോക്ടറുടെ സർട്ടിഫിക്കറ്റ് നിശ്ചിത ഫോറത്തിൽ |
+| document police_report | Report from the police station | പോലീസ് സ്റ്റേഷനിൽ നിന്നുള്ള റിപ്പോർട്ട് |
+| document collector_rdo_certificate | Certificate from the Collector / RDO (missing at sea) | കളക്ടർ/ആർ.ഡി.ഒ നൽകുന്ന സർട്ടിഫിക്കറ്റ് |
+| document hospital_discharge_card | Hospital discharge card | ആശുപത്രി ഡിസ്ചാർജ്ജ് കാർഡ് |
+| document hospital_bill | Original hospital bill | ആശുപത്രിയിലെ അസ്സൽ ബിൽ |
+| document kfwfb_passbook | Copy of the Matsyaboard passbook, attested by the Fisheries Officer | ഫിഷറീസ് ഓഫീസർ സാക്ഷ്യപ്പെടുത്തിയ മത്സ്യബോർഡ് പാസ്സ് ബുക്കിന്റെ പകർപ്പ് |
+| document bank_passbook | Copy of the bank passbook | ബാങ്ക് പാസ് ബുക്കിന്റെ പകർപ്പ് |
+| document bank_passbook_aadhaar_linked | Copy of the personal bank passbook (Aadhaar-linked account) | ആധാർ ലിങ്ക് ചെയ്ത വ്യക്തിഗത ബാങ്ക് അക്കൗണ്ട് പാസ് ബുക്കിന്റെ പകർപ്പ് |
+| document ration_card | Copy of the ration card | റേഷൻ കാർഡിന്റെ പകർപ്പ് |
+| document income_certificate | Income certificate | വരുമാന സർട്ടിഫിക്കറ്റ് |
+| document income_proof_ration_or_certificate | Ration card or income certificate copy showing income | വരുമാനം തെളിയിക്കുന്ന റേഷൻ കാർഡ് / വരുമാന സർട്ടിഫിക്കറ്റ് പകർപ്പ് |
+| document age_proof | Age proof: school or birth-registrar certificate, passport, driving licence, or medical certificate in the prescribed form | വയസ്സ് തെളിയിക്കുന്ന രേഖ: സ്കൂൾ / ജനന മരണ രജിസ്ട്രാർ സർട്ടിഫിക്കറ്റ്, പാസ്പോർട്ട്, ഡ്രൈവിംഗ് ലൈസൻസ്, അല്ലെങ്കിൽ നിശ്ചിത ഫോറത്തിലുള്ള മെഡിക്കൽ സർട്ടിഫിക്കറ്റ് |
+| document bride_age_proof | Proof of the bride's age | വധുവിന്റെ വയസ്സ് തെളിയിക്കുന്ന രേഖ |
+| document marriage_certificate | Marriage certificate from the local self-government institution | തദ്ദേശസ്വയംഭരണ സ്ഥാപനങ്ങളിൽ നിന്നും ലഭിക്കുന്ന വിവാഹ സർട്ടിഫിക്കറ്റ് |
+| document aadhaar_copy | Copy of the Aadhaar card | ആധാർ കാർഡിന്റെ പകർപ്പ് |
+| document doctor_certificate_cause | Certificate from the treating doctor on the cause of death (if the death was after hospital admission) | ചികിൽസിച്ച ഡോക്ടറുടെ സർട്ടിഫിക്കറ്റ് (ആശുപത്രിയിൽ പ്രവേശിച്ച ശേഷമാണ് മരണമെങ്കിൽ) |
+| document bank_details | Bank account details of the claimant | അവകാശിയുടെ ബാങ്ക് അക്കൗണ്ട് വിശദാംശങ്ങൾ |
+| document dependant_death_certificate | Death certificate of the dependant | ആശ്രിതന്റെ മരണ സർട്ടിഫിക്കറ്റ് |
+| document govt_medical_certificate | Medical certificate in the prescribed form from the treating government doctor | ചികിൽസിച്ച സർക്കാർ ഡോക്ടറിൽ നിന്നും ലഭിച്ച നിശ്ചിത ഫോറത്തിലുള്ള മെഡിക്കൽ സർട്ടിഫിക്കറ്റ് |
+| document sslc_certificate | Copy of the SSLC certificate, attested by the Fisheries Officer | ഫിഷറീസ് ഓഫീസർ സാക്ഷ്യപ്പെടുത്തിയ എസ്.എസ്.എൽ.സി സർട്ടിഫിക്കറ്റിന്റെ ശരിപ്പകർപ്പ് |
+| document parent_kfwfb_passbook | Copy of the parent's Matsyaboard passbook, attested by the Fisheries Officer | ഫിഷറീസ് ഓഫീസർ സാക്ഷ്യപ്പെടുത്തിയ രക്ഷിതാക്കളുടെ മത്സ്യബോർഡ് പാസ്സ് ബുക്കിന്റെ ശരി പകർപ്പ് |
+| document photos_2 | Two passport-size photographs of the student | വിദ്യാർത്ഥിയുടെ പാസ്പോർട്ട് സൈസ് ഫോട്ടോ 2 എണ്ണം |
+| document govt_hospital_medical_certificate | Medical certificate from the doctor who treated at a government hospital | സർക്കാർ ആശുപത്രിയിൽ ചികിൽസിച്ച ഡോക്ടർ നൽകുന്ന മെഡിക്കൽ സർട്ടിഫിക്കറ്റ് |
+| document referral_document | Referral document, if referred from a government hospital to a private hospital | സർക്കാർ ആശുപത്രിയിൽ നിന്നും സ്വകാര്യ ആശുപത്രിയിലേക്ക് റഫർ ചെയ്തിട്ടുണ്ടെങ്കിൽ ആയതിനുള്ള രേഖ |
+| document treatment_bills | Treatment bills attested by the treating doctor | ചികിൽസിച്ച ഡോക്ടർ സാക്ഷ്യപ്പെടുത്തിയ ചികിൽസാ ചിലവിലേക്കുള്ള ബില്ലുകൾ |
+| document patient_age_proof | Patient's age proof: school certificate, birth-registrar certificate or baptism certificate | രോഗിയുടെ വയസ്സ് തെളിയിക്കുന്നതിന് സ്കൂൾ സർട്ടിഫിക്കറ്റ് അഥവാ ജനന മരണ രജിസ്ട്രാറുടെ സർട്ടിഫിക്കറ്റ് ഇല്ലെങ്കിൽ ജ്ഞാനസ്നാന സർട്ടിഫിക്കറ്റ് |
+| document prescription_copy | Copy of the treating doctor's prescription | ചികിൽസിക്കുന്ന ഡോക്ടറുടെ പ്രിസ്ക്രിപ്ഷന്റെ പകർപ്പ് |
+| document member_death_certificate_attested | Copy of the fisherman's death certificate, attested by the Fisheries Officer | ഫിഷറീസ് ഓഫീസർ സാക്ഷ്യപ്പെടുത്തിയ മത്സ്യത്തൊഴിലാളിയുടെ മരണ സർട്ടിഫിക്കറ്റ് പകർപ്പ് |
+| document passbook_contribution_pages | Full copy of the Matsyaboard passbook including contribution pages, attested by the Fisheries Officer | ഫിഷറീസ് ഓഫീസർ സാക്ഷ്യപ്പെടുത്തിയ മത്സ്യബോർഡ് വിഹിതമടച്ച പേജിന്റെയും പാസ്സ് ബുക്കിന്റെയും പൂർണ്ണമായ പകർപ്പ് |
+| document no_other_pension_proof | Proof of not receiving any other pension | മറ്റു പെൻഷൻ ലഭിക്കുന്നില്ല എന്ന് തെളിയിക്കുന്ന രേഖ |
+| document ration_card_family_page | Copy of the ration card including the family details page | കുടുംബ വിവരം അടങ്ങിയ പേജ് സഹിതം റേഷൻ കാർഡിന്റെ പകർപ്പ് |
+| document not_remarried_certificate | Certificate from the panchayat / municipality / corporation secretary or ward councillor that she has not remarried and has no regular-income job | പുനർവിവാഹം നടത്തിയിട്ടില്ലെന്നും സ്ഥിരവരുമാനമുള്ള തൊഴിൽ ഇല്ലെന്നും തെളിയിക്കുന്നതിന് പഞ്ചായത്ത്, മുൻസിപ്പാലിറ്റി / കോർപ്പറേഷൻ സെക്രട്ടറി / വാർഡ് കൗൺസിലർ നൽകുന്ന സാക്ഷ്യപത്രം |
+| document scr_contribution_receipt | Receipt number of this year's Welfare Fund contribution (asked in the form) | നടപ്പു വർഷ ക്ഷേമനിധി വിഹിതം ഒടുക്കിയതിന്റെ രസീത് നമ്പർ |
+| document calamity_application | Application for compensation to fishermen losing fishing equipment due to calamities | പ്രകൃതിക്ഷോഭം മൂലം മത്സ്യബന്ധന ഉപകരണങ്ങൾ നഷ്ടപ്പെട്ടവർക്കുള്ള നഷ്ടപരിഹാര അപേക്ഷ |
+| document spwwfb_form_14 | Form 14: superannuation pension application (Scheme 2009) | ഫാറം 14: സൂപ്പറാന്വേഷൻ പെൻഷനുള്ള അപേക്ഷ (പദ്ധതി 2009) |
+| document spwwfb_form_18 | Form 18: marriage assistance application (Scheme 2009) | ഫാറം 18: വിവാഹ ധനസഹായത്തിനുള്ള അപേക്ഷ (പദ്ധതി 2009) |
+| document spwwfb_form_20 | Form 20: application for assistance to dependants after a member's death (Scheme 2009) | ഫാറം 20: അംഗത്തിന്റെ മരണാനന്തരം ആശ്രിതർക്ക് ധനസഹായത്തിനുള്ള അപേക്ഷ (പദ്ധതി 2009) |
+| document aadhaar_or_enrolment | Aadhaar; or, if not yet assigned, the Aadhaar enrolment slip with one other identity document (for example bank or post office passbook with photo, PAN card, passport, ration card, voter ID, MGNREGA card, Kisan photo passbook) | ആധാർ; ഇല്ലെങ്കിൽ ആധാർ എൻറോൾമെന്റ് സ്ലിപ്പും മറ്റൊരു തിരിച്ചറിയൽ രേഖയും (ഫോട്ടോയുള്ള ബാങ്ക്/പോസ്റ്റ് ഓഫീസ് പാസ്ബുക്ക്, പാൻ കാർഡ്, പാസ്പോർട്ട്, റേഷൻ കാർഡ്, വോട്ടർ ഐഡി, തൊഴിലുറപ്പ് കാർഡ്, കിസാൻ ഫോട്ടോ പാസ്ബുക്ക് തുടങ്ങിയവ) |
 | office type fisheries_district_office | Fisheries Department district office | ഫിഷറീസ് വകുപ്പ് ജില്ലാ ഓഫീസ് |
 | office type matsyaboard_office | Matsyaboard / Fishermen Welfare Board office | മത്സ്യബോർഡ് / മത്സ്യത്തൊഴിലാളി ക്ഷേമനിധി ബോർഡ് ഓഫീസ് |
 | office type labour_commissionerate | Labour Commissionerate | തൊഴിൽ കമ്മീഷണറേറ്റ് |
 | office type akshaya | Akshaya centre | അക്ഷയ കേന്ദ്രം |
-| office type spwwfb_office | Small Plantation Workers' Welfare Fund Board office | ചെറുകിട തോട്ടം തൊഴിലാളി ക്ഷേമനിധി ബോർഡ് ഓഫീസ് |
+| office type spwwfb_office | Small Plantation Workers' Welfare Fund — Chief Executive Officer | ചെറുകിട തോട്ടം തൊഴിലാളി ക്ഷേമനിധി — ചീഫ് എക്സിക്യൂട്ടീവ് ഓഫീസർ |
 | office type matsyafed_office | Matsyafed office | മത്സ്യഫെഡ് ഓഫീസ് |
 | office type fisheries_directorate | Directorate of Fisheries | ഫിഷറീസ് ഡയറക്ടറേറ്റ് |
+| office type plantation_district_office | Small Plantation Workers' Welfare Fund — District Executive Office | ചെറുകിട തോട്ടം തൊഴിലാളി ക്ഷേമനിധി — ജില്ലാ എക്സിക്യൂട്ടീവ് ഓഫീസ് |
 | disclaimer main | This screening shows schemes you may be potentially eligible for, based only on your answers. It is not a decision. The responsible office decides eligibility after checking your documents. | നിങ്ങളുടെ മറുപടികളെ മാത്രം അടിസ്ഥാനമാക്കി, നിങ്ങൾക്ക് സാധ്യതയുള്ള പദ്ധതികളാണ് ഇവിടെ കാണിക്കുന്നത്. ഇതൊരു തീരുമാനമല്ല. രേഖകൾ പരിശോധിച്ച ശേഷം ബന്ധപ്പെട്ട ഓഫീസാണ് അർഹത തീരുമാനിക്കുന്നത്. |
 | disclaimer not_official | This is not an official Government of Kerala service. Scheme rules were collected by our team from the official sources listed, as of the date shown. | ഇത് കേരള സർക്കാരിന്റെ ഔദ്യോഗിക സേവനമല്ല. കാണിച്ചിരിക്കുന്ന തീയതി വരെയുള്ള ഔദ്യോഗിക രേഖകളിൽ നിന്ന് ഞങ്ങളുടെ ടീം ശേഖരിച്ചതാണ് പദ്ധതി നിയമങ്ങൾ. |
 | disclaimer privacy | We do not ask for your name, phone number or ID numbers. Your answers stay in this browser tab and are erased when you press Clear or close the tab. | നിങ്ങളുടെ പേര്, ഫോൺ നമ്പർ, തിരിച്ചറിയൽ നമ്പറുകൾ എന്നിവ ഞങ്ങൾ ചോദിക്കുന്നില്ല. നിങ്ങളുടെ മറുപടികൾ ഈ ബ്രൗസർ ടാബിൽ മാത്രം നിൽക്കും; മായ്ക്കുക അമർത്തുമ്പോഴോ ടാബ് അടയ്ക്കുമ്പോഴോ അവ ഇല്ലാതാകും. |
