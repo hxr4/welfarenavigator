@@ -27,7 +27,7 @@ export default function Review({ ds }: { ds: Dataset }) {
   const byCat = (c: string) => screenable.filter((s) => s.category === c).length;
   const allLeaves = screenable.flatMap((s) => leavesOf(s.rule));
   const quoted = allLeaves.filter((l) => l.source?.quote).length;
-  const reviewed = allLeaves.filter((l) => l.reviewedBy).length;
+  const reviewed = screenable.flatMap((s) => leavesOf(s.rule).filter((l) => l.reviewedBy && !/pending/i.test(l.reviewedBy) && l.reviewedBy.trim() !== (s.verifiedBy ?? "").trim())).length;
   const passedProfiles = runs.filter((r) => r.passed).length;
   const passedGen = gen.filter((g) => g.ok).length;
   const adaptiveOk = runs.filter((r) => r.adaptiveOk).length;

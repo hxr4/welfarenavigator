@@ -92,7 +92,8 @@ export function validateDataset(ds: Dataset): Issue[] {
         if (!src) add("error", lw, "Verified scheme condition needs a source_id that exists in sources");
         else if (src.tier === 3) add("error", lw, `Source ${src.id} is tier 3 (report). Reports cannot be a rule source.`);
         if (!leaf.source?.quote?.trim()) add("error", lw, "Verified scheme condition needs the exact quote");
-        if (!leaf.reviewedBy) add("warning", lw, "Not cross-checked yet (reviewed_by empty)");
+        if (!leaf.reviewedBy || /pending/i.test(leaf.reviewedBy)) add("warning", lw, "Not cross-checked yet (reviewed_by empty or pending)");
+        else if (s.verifiedBy && leaf.reviewedBy.trim() === s.verifiedBy.trim()) add("warning", lw, `Cross-checked by the same person who entered it (${leaf.reviewedBy})`);
       }
       if (leaf.changeable && !leaf.howTo?.en) add("warning", lw, "Changeable condition has no how_to text");
     }
