@@ -1,3 +1,4 @@
+import { INF } from "../engine/evaluate";
 import type { Answer, Fact, Lang } from "../engine/types";
 import { answerText, pick } from "../i18n/describe";
 import { t } from "../i18n/strings";
@@ -21,9 +22,14 @@ export function optionLabel(fact: Fact, choice: Answer, index: number, lang: Lan
   return pick(fact.options[index].label, lang);
 }
 
-export function optionClip(fact: Fact, index: number): string | undefined {
+export function bandClip(factId: string, choice: Answer): string | undefined {
+  if (choice.kind !== "range") return undefined;
+  return `option.${factId}.${choice.lo}-${choice.hi >= INF ? "plus" : choice.hi}`;
+}
+
+export function optionClip(fact: Fact, index: number, choice?: Answer): string | undefined {
   if (fact.type === "boolean") return index === 0 ? "option.yes" : "option.no";
-  if (fact.type === "number") return undefined;
+  if (fact.type === "number") return choice ? bandClip(fact.id, choice) : undefined;
   return `option.${fact.id}.${fact.options[index].value}`;
 }
 
@@ -34,13 +40,13 @@ export function easyOptions(fact: Fact, choices: Answer[], lang: Lang, opts: { a
       id: `c${i}`,
       kind: "choice",
       label: optionLabel(fact, c, i, lang),
-      clip: optionClip(fact, i),
+      clip: optionClip(fact, i, c),
       answer: fact.type === "multi" ? undefined : c,
       value,
     };
   });
   if (opts.allowUnknown !== false) out.push({ id: "unknown", kind: "unknown", label: t("dontKnow", lang), clip: "option.unknown", answer: { kind: "unknown" } });
-  if (fact.sensitivity === "high") out.push({ id: "declined", kind: "declined", label: t("preferNot", lang), answer: { kind: "declined" } });
+  if (fact.sensitivity === "high") out.push({ id: "declined", kind: "declined", label: t("preferNot", lang), clip: "option.declined", answer: { kind: "declined" } });
   return out;
 }
 

@@ -4,19 +4,41 @@ import { t } from "./strings";
 
 export const pick = (x: L10n | undefined, lang: Lang) => (x ? x[lang] || x.en : "");
 
-export function formatNumber(n: number, unit: Fact["unit"], lang: Lang): string {
+function mlYears(fact: Pick<Fact, "id">): "age" | "duration" {
+  return fact.id === "age" || fact.id.endsWith("_age") ? "age" : "duration";
+}
+
+export function formatNumber(n: number, unit: Fact["unit"], lang: Lang, fact?: Pick<Fact, "id">): string {
   const s = n.toLocaleString("en-IN");
   if (unit === "INR") return `₹${s}`;
-  if (unit === "years") return lang === "ml" ? `${s} വയസ്സ്` : `${s} years`;
+  if (unit === "years") {
+    if (lang !== "ml") return `${s} years`;
+    return fact && mlYears(fact) === "duration" ? `${s} വർഷം` : `${s} വയസ്സ്`;
+  }
   return s;
 }
 
+function mlMoreThan(fact: Fact, n: number): string {
+  const s = n.toLocaleString("en-IN");
+  if (fact.unit === "INR") return `₹${s}-ൽ കൂടുതൽ`;
+  if (fact.unit === "years") return mlYears(fact) === "age" ? `${s} വയസ്സിൽ കൂടുതൽ` : `${s} വർഷത്തിൽ കൂടുതൽ`;
+  return `${s}-ൽ കൂടുതൽ`;
+}
+
+function mlBetween(fact: Fact, lo: number, hi: number): string {
+  const a = lo.toLocaleString("en-IN");
+  const b = hi.toLocaleString("en-IN");
+  if (fact.unit === "INR") return `₹${a} മുതൽ ₹${b} വരെ`;
+  if (fact.unit === "years") return `${a} മുതൽ ${b} വരെ ${mlYears(fact) === "age" ? "വയസ്സ്" : "വർഷം"}`;
+  return `${a} മുതൽ ${b} വരെ`;
+}
+
 export function rangeLabel(fact: Fact, lo: number, hi: number, lang: Lang): string {
-  const f = (n: number) => formatNumber(n, fact.unit, lang);
+  const f = (n: number) => formatNumber(n, fact.unit, lang, fact);
   if (lo === hi) return f(lo);
-  if (hi >= INF) return lang === "ml" ? `${f(lo - 1)}-ൽ കൂടുതൽ` : `More than ${f(lo - 1)}`;
+  if (hi >= INF) return lang === "ml" ? mlMoreThan(fact, lo - 1) : `More than ${f(lo - 1)}`;
   if (lo <= 0) return lang === "ml" ? `${f(hi)} വരെ` : `Up to ${f(hi)}`;
-  return lang === "ml" ? `${f(lo - 1)}-ൽ കൂടുതൽ, ${f(hi)} വരെ` : `More than ${f(lo - 1)}, up to ${f(hi)}`;
+  return lang === "ml" ? mlBetween(fact, lo, hi) : `More than ${f(lo - 1)}, up to ${f(hi)}`;
 }
 
 function optionLabel(fact: Fact, value: string, lang: Lang): string {
@@ -26,7 +48,7 @@ function optionLabel(fact: Fact, value: string, lang: Lang): string {
 
 export function valueText(fact: Fact, value: LeafValue, lang: Lang): string {
   if (typeof value === "boolean") return t(value ? "yes" : "no", lang);
-  if (typeof value === "number") return formatNumber(value, fact.unit, lang);
+  if (typeof value === "number") return formatNumber(value, fact.unit, lang, fact);
   const vals = Array.isArray(value) ? value : [value];
   return vals.map((v) => optionLabel(fact, v, lang)).join(lang === "ml" ? " / " : " or ");
 }

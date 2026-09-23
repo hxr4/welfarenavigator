@@ -12,7 +12,8 @@
     "data:examples": "tsx scripts/build-data.ts --examples",
     "data:fixture": "tsx scripts/fixture-data.ts",
     "audio": "tsx scripts/audio.ts",
-    "i18n:review": "tsx scripts/ml-review.ts"
+    "i18n:review": "tsx scripts/ml-review.ts",
+    "tts": "node scripts/tts-elevenlabs.mjs"
   },
   "dependencies": {
     "jszip": "^3.10.2",
