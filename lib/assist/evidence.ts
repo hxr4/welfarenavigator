@@ -5,6 +5,12 @@ import { pick } from "../i18n/describe";
 export const INTENTS = ["what", "who", "documents", "apply"] as const;
 export type Intent = (typeof INTENTS)[number];
 
+export const AI_INTENTS: readonly Intent[] = ["what", "documents", "apply"];
+
+export function aiAllowed(intent: Intent): boolean {
+  return AI_INTENTS.includes(intent);
+}
+
 export interface Passage {
   n: number;
   label: string;
@@ -128,6 +134,14 @@ export function checkGrounding(answer: string, passages: Passage[]): Grounding {
   if (text.length > 900) reasons.push("too_long");
   const cites = [...text.matchAll(/\[(\d+(?:\s*,\s*\d+)*)\]/g)].flatMap((m) => m[1].split(",").map((x) => Number(x.trim())));
   if (cites.length === 0) reasons.push("no_citation");
+  const sentences = text
+    .replace(/\[(\d+(?:\s*,\s*\d+)*)\]\s*/g, "[$1] ")
+    .split(/(?<=[.!?।])\s+|(?<=\])\s+|\n+/)
+    .map((x) => x.trim())
+    .filter((x) => /[\p{L}]/u.test(x));
+  if (sentences.length > 5) reasons.push("too_many_sentences");
+  if (sentences.some((x) => !/\[\d+(?:\s*,\s*\d+)*\]/.test(x))) reasons.push("uncited_sentence");
+  if (new Set(sentences).size < sentences.length) reasons.push("repetition");
   if (cites.some((c) => c < 1 || c > passages.length)) reasons.push("bad_citation");
   const allowed = new Set(passages.flatMap((p) => numbersIn(p.text)));
   const stray = numbersIn(text).filter((n) => !allowed.has(n));
@@ -139,20 +153,16 @@ export function checkGrounding(answer: string, passages: Passage[]): Grounding {
 export function buildPrompt(scheme: Scheme, intent: Intent, lang: Lang, passages: Passage[]): { system: string; user: string } {
   const language = lang === "ml" ? "Malayalam" : "English";
   const system = [
-    "You rewrite official Kerala Government welfare-scheme text into plain language for a family that may have little reading practice.",
-    "Use only the numbered quotes you are given. Do not add any fact, amount, age, deadline, office or document that is not in them.",
+    "You explain official Kerala Government welfare-scheme text in plain language for a family that may have little reading practice.",
+    "Use only the numbered quotes. Do not add any fact, amount, age, deadline, office or document that is not in them.",
+    "Write 2 to 4 short sentences of plain prose. No headings, no lists, and do not copy the quote list.",
     "End every sentence with the number of the quote it comes from, in square brackets, like [2].",
-    "Copy every amount, age and number exactly as it is written in the quotes.",
+    "Copy every amount, age and number exactly as written in the quotes. Do not mention page numbers or document titles.",
+    "Some quotes list alternatives (one of several groups of people). Say that clearly instead of listing them as requirements.",
     "You do not know this family's answers. Never say whether they qualify, will get money, or are approved.",
-    "At most four short sentences.",
     `Write in ${language}.`,
     "If the quotes do not answer the question, reply with exactly: NOT_IN_SOURCES",
   ].join("\n");
-  const user = [
-    `Scheme: ${scheme.name.en}`,
-    `Question: ${intentQuestion(intent)}`,
-    "Quotes:",
-    ...passages.map((p) => `[${p.n}] (${p.label}${p.sourceTitle ? `; ${p.sourceTitle}` : ""}${p.locator ? `, ${p.locator}` : ""}) ${p.text}`),
-  ].join("\n");
+  const user = [`Scheme: ${scheme.name.en}`, `Question: ${intentQuestion(intent)}`, "", "Quotes:", ...passages.map((p) => `[${p.n}] ${p.text}`)].join("\n");
   return { system, user };
 }

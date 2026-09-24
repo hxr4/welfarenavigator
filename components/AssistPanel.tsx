@@ -1,7 +1,8 @@
 "use client";
 
 import { useEffect, useMemo, useState } from "react";
-import { gatherEvidence, isMalayalam, type Intent } from "@/lib/assist/evidence";
+import { deviceComplete, deviceStatus, type DeviceStatus } from "@/lib/assist/browser";
+import { aiAllowed, buildPrompt, checkGrounding, gatherEvidence, isMalayalam, type Intent } from "@/lib/assist/evidence";
 import type { Dataset, Lang, Scheme } from "@/lib/engine/types";
 import { t, type StringKey } from "@/lib/i18n/strings";
 
@@ -11,7 +12,7 @@ interface Props {
   lang: Lang;
 }
 
-type State = { kind: "idle" } | { kind: "loading" } | { kind: "ok"; text: string } | { kind: "fallback" };
+type State = { kind: "idle" } | { kind: "loading" } | { kind: "ok"; text: string; where: "device" | "server" } | { kind: "fallback" };
 
 const BUTTONS: [Intent, StringKey][] = [
   ["what", "assistWhat"],
@@ -25,6 +26,7 @@ export default function AssistPanel({ ds, scheme, lang }: Props) {
   const [state, setState] = useState<State>({ kind: "idle" });
   const [available, setAvailable] = useState(false);
   const [online, setOnline] = useState(true);
+  const [device, setDevice] = useState<DeviceStatus>("unavailable");
 
   useEffect(() => {
     const update = () => setOnline(navigator.onLine);
@@ -45,13 +47,23 @@ export default function AssistPanel({ ds, scheme, lang }: Props) {
     };
   }, []);
 
+  useEffect(() => {
+    let live = true;
+    deviceStatus(lang).then((d) => live && setDevice(d));
+    return () => {
+      live = false;
+    };
+  }, [lang]);
+
   useEffect(() => setState({ kind: "idle" }), [intent, lang, scheme.id]);
+
+  const useDevice = device !== "unavailable";
+  const canSimplify = intent !== null && aiAllowed(intent) && (useDevice || (available && online));
 
   const passages = useMemo(() => (intent ? gatherEvidence(ds, scheme.id, intent, lang) : []), [ds, scheme.id, intent, lang]);
 
-  async function simplify() {
-    if (!intent) return;
-    setState({ kind: "loading" });
+  async function viaServer(): Promise<string | null> {
+    if (!intent || !available || !navigator.onLine) return null;
     try {
       const res = await fetch("/api/assist", {
         method: "POST",
@@ -60,10 +72,28 @@ export default function AssistPanel({ ds, scheme, lang }: Props) {
         body: JSON.stringify({ schemeId: scheme.id, intent, lang }),
       });
       const j = (await res.json()) as { ok?: boolean; text?: string };
-      setState(j.ok && j.text ? { kind: "ok", text: j.text } : { kind: "fallback" });
+      return j.ok && j.text ? j.text : null;
     } catch {
-      setState({ kind: "fallback" });
+      return null;
     }
+  }
+
+  async function simplify() {
+    if (!intent) return;
+    if (useDevice) {
+      const { system, user } = buildPrompt(scheme, intent, lang, passages);
+      const pending = deviceComplete(system, user, lang);
+      setState({ kind: "loading" });
+      try {
+        const text = await pending;
+        if (checkGrounding(text, passages).ok) return setState({ kind: "ok", text, where: "device" });
+      } catch {}
+      const server = await viaServer();
+      return setState(server ? { kind: "ok", text: server, where: "server" } : { kind: "fallback" });
+    }
+    setState({ kind: "loading" });
+    const server = await viaServer();
+    setState(server ? { kind: "ok", text: server, where: "server" } : { kind: "fallback" });
   }
 
   return (
@@ -80,18 +110,20 @@ export default function AssistPanel({ ds, scheme, lang }: Props) {
 
       {intent && (
         <div aria-live="polite">
-          {available && online && state.kind === "idle" && passages.length > 0 && (
+          {canSimplify && state.kind === "idle" && passages.length > 0 && (
             <>
               <button type="button" className="btn btn-quiet" onClick={simplify}>
-                {t("assistSimplify", lang)}
+                {t(useDevice ? "assistSimplifyDevice" : "assistSimplify", lang)}
               </button>
-              <p className="meta">{t("assistSends", lang)}</p>
+              <p className="meta">{t(useDevice ? "assistDeviceNote" : "assistSends", lang)}</p>
+              {device === "downloadable" && <p className="meta">{t("assistDownload", lang)}</p>}
             </>
           )}
+          {intent && !aiAllowed(intent) && (useDevice || available) && <p className="meta">{t("assistWhoNote", lang)}</p>}
           {state.kind === "loading" && <p className="meta">{t("assistWorking", lang)}</p>}
           {state.kind === "ok" && (
             <div className="assist-answer">
-              <p className="notice">{t("assistMachine", lang)}</p>
+              <p className="notice">{t(state.where === "device" ? "assistMachineDevice" : "assistMachine", lang)}</p>
               <p lang={isMalayalam(state.text) ? "ml" : "en"}>{state.text}</p>
             </div>
           )}

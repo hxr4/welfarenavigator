@@ -1,7 +1,7 @@
 import { z } from "zod";
 import { dataset } from "@/lib/data/load";
-import { buildPrompt, checkGrounding, gatherEvidence, INTENTS } from "@/lib/assist/evidence";
-import { assistConfigured, assistModel, complete, ModelError } from "@/lib/assist/model";
+import { aiAllowed, buildPrompt, checkGrounding, gatherEvidence, INTENTS } from "@/lib/assist/evidence";
+import { assistConfigured, assistModel, assistProvider, complete, ModelError, reachable } from "@/lib/assist/model";
 
 const headers = { "cache-control": "no-store" };
 
@@ -14,7 +14,8 @@ const Body = z
   .strict();
 
 export async function GET() {
-  return Response.json({ available: assistConfigured(), model: assistConfigured() ? assistModel() : null }, { headers });
+  const available = assistConfigured() && (await reachable());
+  return Response.json({ available, provider: available ? assistProvider() : null, model: available ? assistModel() : null }, { headers });
 }
 
 export async function POST(request: Request) {
@@ -28,6 +29,7 @@ export async function POST(request: Request) {
   const parsed = Body.safeParse(body);
   if (!parsed.success) return Response.json({ ok: false, reason: "bad_request" }, { status: 400, headers });
   const { schemeId, intent, lang } = parsed.data;
+  if (!aiAllowed(intent)) return Response.json({ ok: false, reason: "not_allowed" }, { status: 400, headers });
   const scheme = dataset.schemes.find((s) => s.id === schemeId);
   if (!scheme) return Response.json({ ok: false, reason: "unknown_scheme" }, { status: 404, headers });
   const passages = gatherEvidence(dataset, schemeId, intent, lang);
@@ -44,5 +46,5 @@ export async function POST(request: Request) {
   if (text.includes("NOT_IN_SOURCES")) return Response.json({ ok: false, reason: "not_in_sources" }, { headers });
   const grounding = checkGrounding(text, passages);
   if (!grounding.ok) return Response.json({ ok: false, reason: "ungrounded", checks: grounding.reasons }, { headers });
-  return Response.json({ ok: true, text, model: assistModel(), passages: passages.length }, { headers });
+  return Response.json({ ok: true, text, provider: assistProvider(), model: assistModel(), passages: passages.length }, { headers });
 }

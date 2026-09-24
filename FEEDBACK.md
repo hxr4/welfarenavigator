@@ -6,7 +6,7 @@ Each row is a comment we received, what we changed, and the commit that shows it
 
 | Round | Feedback | Change made | Commit |
 |---|---|---|---|
-| 1 | Add an AI component. | Added AI beside the engine, not inside it. (1) A plain-language helper on each scheme page: four fixed questions, official quotes retrieved by scheme ID, optional model rewrite that sends only scheme, question and language, with a grounding guard that discards any reply with an uncited sentence or a number not in the quotes. (2) `npm run audit:rules`, an automated rule check in CI, with an advisory AI second opinion on whether each quote supports its encoded condition. Eligibility is still decided only by the rules. See `docs/llm-rag.md`. | ba4e8d9 |
+| 1 | Add an AI component. | Added AI beside the engine, not inside it. (1) A plain-language helper on each scheme page: four fixed questions, official quotes retrieved by scheme ID, optional model rewrite that sends only scheme, question and language, with a grounding guard that discards any reply with an uncited sentence or a number not in the quotes. (2) `npm run audit:rules`, an automated rule check in CI, with an advisory AI second opinion on whether each quote supports its encoded condition. Eligibility is still decided only by the rules. Follow-up: removed the dependency on a paid API. The helper now runs on Chrome's built-in on-device AI, a local Ollama model, or any free-tier OpenAI-compatible provider. After live tests with free 1B and 3B models, AI is barred from rewording eligibility and the guard now rejects uncited sentences and repetition. See `docs/llm-rag.md`. | 187b71c, plus the free-model follow-up |
 | 2 | to fill | | |
 | 3 (coach) | to fill | | |
 

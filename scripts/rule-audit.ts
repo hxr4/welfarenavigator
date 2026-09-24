@@ -50,7 +50,7 @@ async function secondOpinions(): Promise<Opinion[]> {
         `Quotation: ${leaf.source!.quote}`,
       ].join("\n");
       try {
-        const text = await complete(system, user, { maxTokens: 120, timeoutMs: 20000 });
+        const text = await complete(system, user, { maxTokens: 120, timeoutMs: 90000 });
         const json = JSON.parse(text.replace(/```json|```/g, "").trim()) as { verdict?: string; reason?: string };
         results.push({ schemeId: scheme.id, leafId: leaf.id, verdict: String(json.verdict ?? "unclear"), reason: String(json.reason ?? "") });
       } catch {
@@ -58,7 +58,7 @@ async function secondOpinions(): Promise<Opinion[]> {
       }
     }
   }
-  await Promise.all(Array.from({ length: 4 }, worker));
+  await Promise.all(Array.from({ length: process.env.WN_ASSIST_PROVIDER === "ollama" ? 1 : 4 }, worker));
   return results.sort((a, b) => (a.schemeId + a.leafId).localeCompare(b.schemeId + b.leafId));
 }
 
@@ -66,7 +66,7 @@ async function main() {
   let opinions: Opinion[] = [];
   if (useLlm) {
     if (!assistConfigured()) {
-      console.error("--llm needs ANTHROPIC_API_KEY in the shell. Running deterministic checks only.");
+      console.error("--llm needs a model: WN_ASSIST_PROVIDER=ollama (free, local), an OpenAI-compatible WN_ASSIST_BASE_URL + WN_ASSIST_MODEL, or ANTHROPIC_API_KEY. Running deterministic checks only.");
     } else {
       opinions = await secondOpinions();
     }

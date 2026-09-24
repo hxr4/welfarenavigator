@@ -44,6 +44,7 @@ flowchart LR
     ENG --> NQ["next question"] --> UI
     ENG --> RES["results, why, documents, offices"]
     RES --> AP["AssistPanel<br/>official quotes"]
+    AP -. "optional" .-> NANO["Chrome built-in AI<br/>on-device, free"]
     MEM[("answers in memory only")] --- UI
   end
   subgraph Server["Stateless server (Vercel or localhost)"]
@@ -51,7 +52,7 @@ flowchart LR
     AS["POST /api/assist<br/>schemeId + intent + lang"]
     HL["GET /api/health"]
   end
-  AP -- "optional, online" --> AS --> LLM["Model API<br/>only if key set"]
+  AP -- "optional" --> AS --> LLM["Ollama (local, free)<br/>or free-tier hosted model"]
   UI -- "voice, opt-in" --> STT["Browser speech service<br/>(Google in Chrome)"]
 ```
 
@@ -66,7 +67,8 @@ The eligibility engine runs in the browser, so household answers never go to our
 | Recorded audio clips | `public/audio/ml`, `public/audio/en` | Static files | No |
 | Fonts | Self-hosted by `next/font` at build | Static files | No |
 | `POST /api/screen` | Same engine, stateless, for reviewers and scripts | No, `no-store`, no logging | Only if called remotely |
-| `POST /api/assist` | Optional plain-language rewrite | No, `no-store`, no logging | Yes, and a server key |
+| `POST /api/assist` | Optional plain-language rewrite via Ollama or a hosted model | No, `no-store`, no logging | Not with local Ollama |
+| Chrome built-in AI | On-device model in the browser | Not by us | No, after the one-time model download |
 | `GET /api/health` | Dataset counts and build info | No | No on localhost |
 | Voice input | Browser speech recognition | Not by us | Yes; hidden when offline |
 | Browser storage | Not used | | |
@@ -161,7 +163,7 @@ Voice buttons check for a network and a supported browser; if either is missing 
 
 ### Install and run
 
-Optional environment for the AI helper: `ANTHROPIC_API_KEY`, `WN_ASSIST_MODEL` (default `claude-opus-5-5`), `WN_ASSIST=off`.
+Optional AI helper, free and local: install Ollama, run `ollama pull gemma3:4b`, then start the app with `WN_ASSIST_PROVIDER=ollama npm start`. Chrome's built-in AI needs no setup. Hosted options (`WN_ASSIST_BASE_URL`, `WN_ASSIST_MODEL`, `WN_ASSIST_API_KEY`, or `ANTHROPIC_API_KEY`) are in `docs/llm-rag.md`.
 
 ```bash
 npm install
@@ -189,7 +191,7 @@ npm start
 | `npm test` | Run the full Vitest suite |
 | `npm run typecheck` | TypeScript check |
 | `npm run audit:rules` | Check every rule against its quote and write `docs/rule-audit.md` |
-| `npm run audit:rules:ai` | Same, plus an advisory AI second opinion (needs `ANTHROPIC_API_KEY`) |
+| `npm run audit:rules:ai` | Same, plus an advisory AI second opinion (Ollama or any configured model) |
 | `npm run data` | Validate the workbook and generate `data/dataset.json` |
 | `npm run data:examples` | Generate data including example rows |
 | `npm run data:fixture` | Build fixture data for development and tests |
@@ -227,7 +229,7 @@ The office type comes from each scheme first, then the district office or the of
 
 ## API
 
-The stateless screening endpoint is `POST /api/screen`. The optional helper endpoint is `POST /api/assist` with `{"schemeId", "intent": "what|who|documents|apply", "lang": "en|ml"}`; `GET /api/assist` reports whether it is configured.
+The stateless screening endpoint is `POST /api/screen`. The optional helper endpoint is `POST /api/assist` with `{"schemeId", "intent": "what|documents|apply", "lang": "en|ml"}` (`who` is refused); `GET /api/assist` reports whether a server model is configured and reachable.
 
 ```json
 {
@@ -281,20 +283,22 @@ npm test
 
 ## AI assistance
 
-The eligibility engine contains no AI. AI is used only beside it:
+The eligibility engine contains no AI. AI is used only beside it, and every option is free or optional:
 
-- **Plain-language helper** (runtime, optional). On a scheme page the user taps one of four fixed questions. The app shows that scheme's official quotes, offline. If the server has `ANTHROPIC_API_KEY`, a button asks the model to rewrite only those quotes in simple Malayalam or English. The reply must cite a quote for every sentence and may not contain any number that is not in the quotes, or it is discarded. It is labelled machine-written and the quotes stay below it. Only scheme id, question type and language are sent.
+- **Plain-language helper** (runtime). On a scheme page the user taps one of four fixed questions and sees that scheme's official quotes, offline. For *what is it*, *which documents* and *how to apply*, a model can rewrite only those quotes in simple Malayalam or English. *Who can get it* is never sent to a model. A guard discards any reply with an uncited sentence, a number not in the quotes, repetition or promise wording, and the quotes stay below every reply.
+- **Which model**: Chrome's built-in on-device AI when the browser has it (free, no key, nothing leaves the device); otherwise Ollama on the demo laptop (free, offline); otherwise any OpenAI-compatible free tier such as Google AI Studio; Anthropic is still supported. With none, the helper shows the official text only.
 - **Rule audit** (developer workflow). `npm run audit:rules` runs in CI; `npm run audit:rules:ai` adds an advisory model opinion on whether each quote supports its encoded condition. A person makes every workbook change.
 
-Details: `docs/llm-rag.md`.
+We tested the helper live with free 1B and 3B local models. The guard rejected three of four bad answers; the fourth read eligibility wrongly while looking plausible, which is why eligibility is excluded. Details and configuration: `docs/llm-rag.md`.
 
 ### AI use declaration
 
 | Tool | Used for | Checked by |
 |---|---|---|
-| Claude Opus 5.5 (Anthropic) | Coding assistance, code review, test writing, README and docs drafting; optional runtime model for the plain-language helper and the rule-audit second opinion | Team review; tests; grounding guard at runtime |
+| Claude Opus 5.5 (Anthropic) | Coding assistance, code review, test writing, README and docs drafting | Team review; tests |
 | ChatGPT, GPT-6 Sol (OpenAI) | Coding assistance, drafting Malayalam and English interface text and scheme summaries, cross-checking source readings | Team review against the cited source |
 | ElevenLabs Eleven v3 | Generating the recorded Malayalam and English question and answer clips | Listened to by the team |
+| Runtime helper model: Chrome built-in AI (Gemini Nano), or Ollama (gemma3:4b), or a free-tier hosted model | Optional plain-language rewrite of official quotes; advisory rule-audit opinions | Grounding guard; official quotes always shown; never used for eligibility |
 | Browser speech recognition (Google in Chrome) | Optional voice input, matched only against the current question's options and always confirmed | User confirms every voice answer |
 
 No AI model decides eligibility, writes rules into the dataset, or sees a household's answers. Every eligibility condition comes from a quote a team member copied from an official source.

@@ -3,7 +3,8 @@ import { readFileSync, readdirSync } from "node:fs";
 import datasetJson from "../data/dataset.json";
 import { auditDataset, directionHint, numberMentioned } from "../lib/assist/audit";
 import { buildPrompt, checkGrounding, gatherEvidence, INTENTS, numbersIn, type Passage } from "../lib/assist/evidence";
-import { complete, ModelError } from "../lib/assist/model";
+import { assistModel, assistProvider, complete, ModelError, reachable } from "../lib/assist/model";
+import { deviceComplete, deviceStatus } from "../lib/assist/browser";
 import type { Dataset } from "../lib/engine/types";
 
 const ds = datasetJson as unknown as Dataset;
@@ -56,6 +57,20 @@ describe("grounding guard", () => {
   it("rejects promises", () => {
     expect(checkGrounding("You are eligible for this [1].", passages).reasons).toContain("promises_benefit");
   });
+  it("rejects an uncited sentence, repetition and rambling", () => {
+    expect(checkGrounding("Income must be below 50,000 [1]. Members apply at the office.", passages).reasons).toContain("uncited_sentence");
+    expect(checkGrounding("Members for 3 years [2]. Members for 3 years [2].", passages).reasons).toContain("repetition");
+    expect(checkGrounding(Array.from({ length: 6 }, (_, i) => `Point ${i} [1].`).join(" "), passages).reasons).toContain("too_many_sentences");
+  });
+  it("rejects the real failures seen from small local models", () => {
+    const real = "You need to submit your application within 18 days of your daughter turning 21 years old. [1]";
+    expect(checkGrounding(real, [{ n: 1, label: "c", text: "Bride must be 18. Apply within 60 days." }]).ok).toBe(false);
+  });
+  it("never lets AI reword eligibility", async () => {
+    const { aiAllowed } = await import("../lib/assist/evidence");
+    expect(aiAllowed("who")).toBe(false);
+    expect(aiAllowed("what")).toBe(true);
+  });
   it("reads Malayalam digits and ignores citation markers", () => {
     expect(numbersIn("൫൦,൦൦൦ രൂപ [1, 2]")).toEqual(["50000"]);
   });
@@ -63,17 +78,75 @@ describe("grounding guard", () => {
 
 describe("model client", () => {
   afterEach(() => vi.restoreAllMocks());
-  it("refuses to run without a key", async () => {
-    await expect(complete("s", "u", { env: {} as NodeJS.ProcessEnv })).rejects.toBeInstanceOf(ModelError);
+  const env = (e: Record<string, string>) => e as unknown as NodeJS.ProcessEnv;
+  it("picks a provider from the environment, free options first-class", () => {
+    expect(assistProvider(env({}))).toBe("none");
+    expect(assistProvider(env({ WN_ASSIST_PROVIDER: "ollama" }))).toBe("ollama");
+    expect(assistModel(env({ WN_ASSIST_PROVIDER: "ollama" }))).toBe("gemma3:4b");
+    expect(assistProvider(env({ WN_ASSIST_BASE_URL: "https://x/v1", WN_ASSIST_MODEL: "m" }))).toBe("openai");
+    expect(assistProvider(env({ WN_ASSIST_PROVIDER: "openai", WN_ASSIST_BASE_URL: "https://x/v1" }))).toBe("none");
+    expect(assistProvider(env({ ANTHROPIC_API_KEY: "k" }))).toBe("anthropic");
+    expect(assistProvider(env({ WN_ASSIST_PROVIDER: "ollama", WN_ASSIST: "off" }))).toBe("none");
   });
-  it("sends only system and user text and returns the text blocks", async () => {
+  it("refuses to run with no provider", async () => {
+    await expect(complete("s", "u", { env: env({}) })).rejects.toBeInstanceOf(ModelError);
+  });
+  it("talks to Ollama's OpenAI-compatible endpoint with no key", async () => {
+    const fetchImpl = vi.fn(async (url: string | URL | Request, init?: RequestInit) => {
+      expect(String(url)).toBe("http://localhost:11434/v1/chat/completions");
+      const headers = init?.headers as Record<string, string>;
+      expect(headers.authorization).toBeUndefined();
+      const body = JSON.parse(String(init?.body));
+      expect(body.model).toBe("gemma3:4b");
+      expect(body.messages.map((m: { role: string }) => m.role)).toEqual(["system", "user"]);
+      return new Response(JSON.stringify({ choices: [{ message: { content: " ok [1] " } }] }), { status: 200 });
+    });
+    const text = await complete("s", "u", { env: env({ WN_ASSIST_PROVIDER: "ollama" }), fetchImpl: fetchImpl as unknown as typeof fetch });
+    expect(text).toBe("ok [1]");
+  });
+  it("sends a bearer key to other OpenAI-compatible providers", async () => {
+    const fetchImpl = vi.fn(async (url: string | URL | Request, init?: RequestInit) => {
+      expect(String(url)).toBe("https://free.example/v1/chat/completions");
+      expect((init?.headers as Record<string, string>).authorization).toBe("Bearer k");
+      return new Response(JSON.stringify({ choices: [{ message: { content: "ok [1]" } }] }), { status: 200 });
+    });
+    await complete("s", "u", { env: env({ WN_ASSIST_BASE_URL: "https://free.example/v1/", WN_ASSIST_MODEL: "m", WN_ASSIST_API_KEY: "k" }), fetchImpl: fetchImpl as unknown as typeof fetch });
+    expect(fetchImpl).toHaveBeenCalledOnce();
+  });
+  it("still supports Anthropic when a key is present", async () => {
     const fetchImpl = vi.fn(async (_url: string | URL | Request, init?: RequestInit) => {
       const body = JSON.parse(String(init?.body));
       expect(Object.keys(body).sort()).toEqual(["max_tokens", "messages", "model", "system", "temperature"]);
       return new Response(JSON.stringify({ content: [{ type: "text", text: "ok [1]" }] }), { status: 200 });
     });
-    const text = await complete("s", "u", { env: { ANTHROPIC_API_KEY: "k" } as unknown as NodeJS.ProcessEnv, fetchImpl: fetchImpl as unknown as typeof fetch });
-    expect(text).toBe("ok [1]");
+    expect(await complete("s", "u", { env: env({ ANTHROPIC_API_KEY: "k" }), fetchImpl: fetchImpl as unknown as typeof fetch })).toBe("ok [1]");
+  });
+  it("reports Ollama as unreachable when it is not running", async () => {
+    const fetchImpl = vi.fn(async () => {
+      throw new TypeError("refused");
+    });
+    expect(await reachable({ env: env({ WN_ASSIST_PROVIDER: "ollama" }), fetchImpl: fetchImpl as unknown as typeof fetch })).toBe(false);
+  });
+});
+
+describe("on-device model (Chrome built-in AI)", () => {
+  afterEach(() => {
+    delete (globalThis as { LanguageModel?: unknown }).LanguageModel;
+  });
+  it("is unavailable when the browser has no LanguageModel", async () => {
+    expect(await deviceStatus("en")).toBe("unavailable");
+  });
+  it("maps availability and passes the system prompt and output language", async () => {
+    const prompt = vi.fn(async () => "  simple [1] ");
+    const destroy = vi.fn();
+    const create = vi.fn(async (_o: unknown) => ({ prompt, destroy }));
+    (globalThis as { LanguageModel?: unknown }).LanguageModel = { availability: async () => "downloadable", create };
+    expect(await deviceStatus("ml")).toBe("downloadable");
+    expect(await deviceComplete("SYS", "USER", "ml")).toBe("simple [1]");
+    const o = create.mock.calls[0][0] as { initialPrompts: { role: string; content: string }[]; expectedOutputs: { languages: string[] }[] };
+    expect(o.initialPrompts[0]).toEqual({ role: "system", content: "SYS" });
+    expect(o.expectedOutputs[0].languages).toEqual(["ml"]);
+    expect(destroy).toHaveBeenCalled();
   });
 });
 
@@ -82,12 +155,20 @@ describe("assist API", () => {
     vi.unstubAllEnvs();
     vi.resetModules();
   });
-  it("reports unavailable and refuses work without a key", async () => {
+  it("reports unavailable and refuses work without a provider", async () => {
     vi.stubEnv("ANTHROPIC_API_KEY", "");
+    vi.stubEnv("WN_ASSIST_PROVIDER", "");
+    vi.stubEnv("WN_ASSIST_BASE_URL", "");
     const { GET, POST } = await import("../app/api/assist/route");
     expect(await (await GET()).json()).toMatchObject({ available: false });
     const res = await POST(new Request("http://x/api/assist", { method: "POST", body: JSON.stringify({ schemeId: "FISH-01", intent: "what", lang: "en" }) }));
     expect(res.status).toBe(503);
+  });
+  it("refuses to send eligibility conditions to a model", async () => {
+    vi.stubEnv("WN_ASSIST_PROVIDER", "ollama");
+    const { POST } = await import("../app/api/assist/route");
+    const res = await POST(new Request("http://x/api/assist", { method: "POST", body: JSON.stringify({ schemeId: "FISH-01", intent: "who", lang: "en" }) }));
+    expect(res.status).toBe(400);
   });
   it("rejects extra fields such as household answers", async () => {
     vi.stubEnv("ANTHROPIC_API_KEY", "k");
