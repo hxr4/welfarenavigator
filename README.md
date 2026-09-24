@@ -28,25 +28,120 @@ Welfare information is often distributed across multiple government pages, forms
 - Keyboard, screen-reader, high-contrast, and reduced-motion support
 - Browser-based screening with no user account or persistent answer storage
 
-## How it works
+## System and data flow
 
-```text
-Official sources and curated dataset
-                │
-                ▼
-       Dataset validation and build
-                │
-                ▼
-     Three-valued eligibility engine
-                │
-                ▼
-       Adaptive question selection
-                │
-                ▼
- Results, explanations, documents, offices
+```mermaid
+flowchart LR
+  subgraph Build["Build time (team laptop)"]
+    SRC["Official sources<br/>37 PDFs, pages, Acts, GOs"] --> WB["Workbook<br/>dataset/anavandi-dataset.xlsx"]
+    WB --> BD["npm run data<br/>validate + convert"]
+    BD --> DJ["data/dataset.json"]
+    DJ --> AU["npm run audit:rules<br/>CI gate"]
+  end
+  subgraph Browser["User's browser tab (works offline)"]
+    UI["Questions / Easy Mode"] --> ENG["lib/engine<br/>3-valued rules"]
+    DJ -. bundled .-> ENG
+    ENG --> NQ["next question"] --> UI
+    ENG --> RES["results, why, documents, offices"]
+    RES --> AP["AssistPanel<br/>official quotes"]
+    MEM[("answers in memory only")] --- UI
+  end
+  subgraph Server["Stateless server (Vercel or localhost)"]
+    SCR["POST /api/screen<br/>reviewers and scripts"]
+    AS["POST /api/assist<br/>schemeId + intent + lang"]
+    HL["GET /api/health"]
+  end
+  AP -- "optional, online" --> AS --> LLM["Model API<br/>only if key set"]
+  UI -- "voice, opt-in" --> STT["Browser speech service<br/>(Google in Chrome)"]
 ```
 
-Scheme rules are represented as data using `all`, `any`, and `not` groups with typed conditions. The rules engine evaluates every condition as `T` (true), `F` (false), or `U` (unknown). Unknown information is never treated as a rejection; the interface reports it as **Needs information**. The same answers and dataset always produce the same result, and no AI model makes eligibility decisions at runtime.
+The eligibility engine runs in the browser, so household answers never go to our server. Scheme rules are data using `all`, `any` and `not` groups with typed conditions. Every condition evaluates to `T`, `F` or `U`; unknown information is never a rejection on its own and is reported as **Needs information**. The same answers and dataset always produce the same result.
+
+### Storage, APIs and offline behaviour
+
+| Part | Where it lives | Persists? | Needs internet? |
+|---|---|---|---|
+| Rules, documents, offices, strings | `data/dataset.json`, bundled into the page | Build artefact | No |
+| Household answers | React state in the open tab | No. Cleared on Clear, tab close, or idle (10 min, 3 min in assisted mode) | No |
+| Recorded audio clips | `public/audio/ml`, `public/audio/en` | Static files | No |
+| Fonts | Self-hosted by `next/font` at build | Static files | No |
+| `POST /api/screen` | Same engine, stateless, for reviewers and scripts | No, `no-store`, no logging | Only if called remotely |
+| `POST /api/assist` | Optional plain-language rewrite | No, `no-store`, no logging | Yes, and a server key |
+| `GET /api/health` | Dataset counts and build info | No | No on localhost |
+| Voice input | Browser speech recognition | Not by us | Yes; hidden when offline |
+| Browser storage | Not used | | |
+
+Offline test: `npm run build && npm start`, then disconnect. Screening, both languages, tap input, recorded audio, results, checklist, office addresses, the official quotes in the helper and `/review` keep working. Voice and the AI rewrite hide themselves.
+
+## Data
+
+### Sources
+
+37 sources, each with authority, title, URL or stored file, document type, language, issue date and access date. 6 are tier 1 (Act, gazette, government order, official report) and 31 tier 2 (official department or board pages). The main ones are the Kerala Fishermen's Welfare Fund Board welfare schemes guideline (2025), the Fisheries Department scheme pages and district officer list, the Kerala Small Plantation Workers' Welfare Fund Act 2008, the Small Plantation Workers' Welfare Fund Board benefit pages and forms, G.O.(P) 81/2024/LBR, Matsyafed contacts and the Akshaya centre directory. Copies of downloadable sources are in `sources/`.
+
+### Fields
+
+| Sheet | Key fields |
+|---|---|
+| `sources` | id, tier, authority, title, url, doc type, language, issued, accessed, local file |
+| `facts` | id, type (boolean, enum, multi, number), question and label in EN/ML, unit, sensitivity, order |
+| `options` | fact, value, EN/ML label, spoken synonyms |
+| `schemes` | id, EN/ML name, authority, category, summary, verification level for eligibility / documents / apply, last verified, verified by |
+| `conditions` | scheme, condition id, group (same group = OR), fact, operator, value, changeable, how-to, source id, exact quote, locator, reviewed by |
+| `documents`, `scheme_documents` | document names EN/ML, issuer, optional `when` condition, source quote |
+| `location_types`, `locations`, `scheme_apply` | office type, district, address, phone, jurisdiction, mode (in person / online) |
+| `terminology`, `disclaimer` | approved EN/ML terms and disclaimer text |
+| `profiles` | test households with expected status per scheme and expected missing facts |
+
+Current build: 32 schemes (22 fishing, 10 plantation; 27 screenable, 5 informational), 106 conditions, 41 facts, 67 documents, 66 offices across 14 districts, 32 test profiles (18 standard, 10 boundary, 3 incomplete, 1 mixed).
+
+### Transformations
+
+1. Team reads each source and copies the exact sentence into the workbook with a page locator.
+2. `npm run data` validates the workbook (duplicate ids, fact and operator types, source references, quotes present, documents, districts, offices, Malayalam text) and fails on errors.
+3. Condition groups become `all` / `any` trees; numeric facts become answer bands cut at the rules' own thresholds, so nobody is asked an exact income or age.
+4. District names are normalised to the 14 Kerala districts; offices are routed by type, district and printed jurisdiction.
+5. `npm run audit:rules` cross-checks each numeric threshold and limit wording against its quote and writes `docs/rule-audit.md`.
+
+### Limitations
+
+- All 106 conditions await a second person's review against the source (`reviewed_by` is pending). They are sourced and quoted, but single-checked.
+- Several Malayalam PDFs use legacy fonts and cannot be text-searched, so their quotes were typed by hand (`docs/sources-needed.md`).
+- FISH-07 has no published application route; six verified schemes (FISH-03, 04, 05, 08, 09, PLNT-03) have no published document list and say so on screen.
+- No office has verified coordinates, so distance is not shown; addresses, phone numbers and directions links are.
+- Interface Malayalam strings are not yet marked native-reviewed (`docs/malayalam-review.md`).
+- Rules are a snapshot as of the access dates shown; the app is not an official Government of Kerala service.
+
+### Privacy controls
+
+- Never asks for name, phone, Aadhaar, address, email or any free text.
+- Income, age and years are asked as bands; sensitive questions are asked only when a remaining scheme depends on them and offer **Prefer not to say**.
+- Answers live only in tab memory: not in the URL, not in localStorage, not on the server; cleared on Clear, close or idle.
+- The document checklist prints scheme names, documents, offices and the disclaimer only, never answers.
+- Location for **Find nearest centre** is used on the device and never sent or stored.
+- API handlers do not log and respond with `no-store`; request sizes are capped and errors never echo submitted values.
+- Voice is opt-in and every mic button says the audio goes to Google's speech service. The AI helper sends only scheme id, question type and language, and says so next to its button.
+
+## Core user journey
+
+1. A fisher family member opens the app, picks Malayalam and Easy Mode.
+2. Chooses **Fishing** (multi-select, so a household that also does estate work can pick both).
+3. Answers about 10–13 yes/no or band questions, each read aloud, each picked because it can still change a result. "I don't know" is always there.
+4. Sees schemes grouped as **Potentially eligible**, **Needs information**, **One step away**, **Did not match**, each with the approved disclaimer.
+5. Opens a scheme: every condition shows their answer, the rule and the official quote with page number.
+6. Gets one merged document checklist and the right office for their district, prints it without any answers, and presses **Clear my information**.
+
+![Results](docs/screenshots/results.png)
+
+### Edge case: contributions in arrears
+
+A Welfare Fund Board member whose contributions are not fully paid answers **No** to "contributions fully paid". Marriage Assistance for Fishermen's Daughters is shown as **Not matched**, not hidden, with **You may be one step away**: clear the arrears at the Fisheries Office. The engine re-evaluates with that one changeable condition flipped and shows the status it would reach, here **Needs information**, because the income condition is still unanswered. Nothing is promised.
+
+![One step away](docs/screenshots/one-step-away.png)
+
+### Failure case: no internet or no speech service
+
+Voice buttons check for a network and a supported browser; if either is missing the button is replaced with "Voice answers are not available here… You can tap your answer". After two failed matches on one question voice stops and asks for a tap. The AI rewrite button is simply not shown offline; the official quotes still are.
 
 ## Technology
 
@@ -65,6 +160,8 @@ Scheme rules are represented as data using `all`, `any`, and `not` groups with t
 - npm
 
 ### Install and run
+
+Optional environment for the AI helper: `ANTHROPIC_API_KEY`, `WN_ASSIST_MODEL` (default `claude-opus-5-5`), `WN_ASSIST=off`.
 
 ```bash
 npm install
@@ -90,6 +187,9 @@ npm start
 | `npm run build` | Create a production build |
 | `npm start` | Start the production server |
 | `npm test` | Run the full Vitest suite |
+| `npm run typecheck` | TypeScript check |
+| `npm run audit:rules` | Check every rule against its quote and write `docs/rule-audit.md` |
+| `npm run audit:rules:ai` | Same, plus an advisory AI second opinion (needs `ANTHROPIC_API_KEY`) |
 | `npm run data` | Validate the workbook and generate `data/dataset.json` |
 | `npm run data:examples` | Generate data including example rows |
 | `npm run data:fixture` | Build fixture data for development and tests |
@@ -127,7 +227,7 @@ The office type comes from each scheme first, then the district office or the of
 
 ## API
 
-The stateless screening endpoint is `POST /api/screen`.
+The stateless screening endpoint is `POST /api/screen`. The optional helper endpoint is `POST /api/assist` with `{"schemeId", "intent": "what|who|documents|apply", "lang": "en|ml"}`; `GET /api/assist` reports whether it is configured.
 
 ```json
 {
@@ -159,27 +259,49 @@ lib/data/             Dataset loading, validation, districts, and spreadsheet he
 lib/i18n/             English/Malayalam strings and display helpers
 lib/a11y/             Read-aloud sequencing with per-option start/end events
 lib/easy/             Easy Mode options, selection reducer, and Standard/Easy equivalence driver
+lib/assist/           Quote retrieval, grounding guard, model client and rule audit
 lib/checklist.ts      Consolidated document checklist
 lib/offices.ts        Office routing by type, district, and jurisdiction
 data/                 Generated runtime dataset, audio manifest, and recorded clip texts
 public/audio/         Recorded Malayalam (ml/) and English (en/) clips
 dataset/              Source workbooks
-docs/                 Data, source, Malayalam, and architecture notes
-scripts/              Dataset, audio, and review tooling
+docs/                 Data, source, Malayalam, rule-audit and AI notes; screenshots
+scripts/              Dataset, audio, rule-audit and review tooling
+.github/workflows/    CI: typecheck, tests, rule audit, build
 tests/                Engine, dataset, flow, location, and wording tests
 ```
 
 ## Testing
 
-The test suite covers rule evaluation, three-valued logic, threshold boundaries, dataset validation, adaptive question selection, expected household profiles, district locations, user-facing wording, Easy Mode equivalence, read-aloud highlighting, the document checklist, office routing, and the screening API.
+The test suite covers rule evaluation, three-valued logic, threshold boundaries, dataset validation, adaptive question selection, expected household profiles, district locations, user-facing wording, Easy Mode equivalence, read-aloud highlighting, the document checklist, office routing, and the screening API, the helper's retrieval and grounding guard, and the rule audit.
 
 ```bash
 npm test
 ```
 
-## Responsible AI disclosure
+## AI assistance
 
-The application does not use AI at runtime. AI-assisted development and dataset drafting were reviewed by the team against cited official sources. Any dataset row awaiting an additional cross-check remains labelled accordingly and is not silently promoted to a verified rule.
+The eligibility engine contains no AI. AI is used only beside it:
+
+- **Plain-language helper** (runtime, optional). On a scheme page the user taps one of four fixed questions. The app shows that scheme's official quotes, offline. If the server has `ANTHROPIC_API_KEY`, a button asks the model to rewrite only those quotes in simple Malayalam or English. The reply must cite a quote for every sentence and may not contain any number that is not in the quotes, or it is discarded. It is labelled machine-written and the quotes stay below it. Only scheme id, question type and language are sent.
+- **Rule audit** (developer workflow). `npm run audit:rules` runs in CI; `npm run audit:rules:ai` adds an advisory model opinion on whether each quote supports its encoded condition. A person makes every workbook change.
+
+Details: `docs/llm-rag.md`.
+
+### AI use declaration
+
+| Tool | Used for | Checked by |
+|---|---|---|
+| Claude Opus 5.5 (Anthropic) | Coding assistance, code review, test writing, README and docs drafting; optional runtime model for the plain-language helper and the rule-audit second opinion | Team review; tests; grounding guard at runtime |
+| ChatGPT, GPT-6 Sol (OpenAI) | Coding assistance, drafting Malayalam and English interface text and scheme summaries, cross-checking source readings | Team review against the cited source |
+| ElevenLabs Eleven v3 | Generating the recorded Malayalam and English question and answer clips | Listened to by the team |
+| Browser speech recognition (Google in Chrome) | Optional voice input, matched only against the current question's options and always confirmed | User confirms every voice answer |
+
+No AI model decides eligibility, writes rules into the dataset, or sees a household's answers. Every eligibility condition comes from a quote a team member copied from an official source.
+
+## Feedback
+
+Judge feedback and what we changed for each round are in [FEEDBACK.md](FEEDBACK.md).
 
 ## License and project status
 
