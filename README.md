@@ -301,7 +301,7 @@ No AI model decides eligibility, writes rules into the dataset, or sees a househ
 
 ## Feedback
 
-Judge feedback and what we changed for each round are in [FEEDBACK.md](FEEDBACK.md).
+Judge feedback and what we changed for each round are in [FEEDBACK.md](FEEDBACK.md). The 5-slide pitch deck is `docs/Welfare-Navigator-PS07.pptx`.
 
 ## License and project status
 
