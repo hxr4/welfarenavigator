@@ -7,12 +7,15 @@
     "build": "next build",
     "start": "next start",
     "test": "vitest run",
+    "typecheck": "tsc --noEmit",
     "data": "tsx scripts/build-data.ts",
     "data:template": "tsx scripts/make-template.ts",
     "data:examples": "tsx scripts/build-data.ts --examples",
     "data:fixture": "tsx scripts/fixture-data.ts",
     "audio": "tsx scripts/audio.ts",
     "i18n:review": "tsx scripts/ml-review.ts",
+    "audit:rules": "tsx scripts/rule-audit.ts",
+    "audit:rules:ai": "tsx scripts/rule-audit.ts --llm",
     "tts": "node scripts/tts-elevenlabs.mjs"
   },
   "dependencies": {

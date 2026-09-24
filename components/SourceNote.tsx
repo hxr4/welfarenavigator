@@ -1,6 +1,7 @@
 "use client";
 
 import type { Dataset, Lang } from "@/lib/engine/types";
+import { isMalayalam } from "@/lib/assist/evidence";
 import { t, type StringKey } from "@/lib/i18n/strings";
 
 interface Props {
@@ -19,7 +20,7 @@ export function SourceNote({ ds, sourceId, quote, locator, lang }: Props) {
       <summary>
         {t("source", lang)}: {src.authority}
       </summary>
-      {quote && <blockquote lang="en">“{quote}”</blockquote>}
+      {quote && <blockquote lang={isMalayalam(quote) ? "ml" : "en"}>“{quote}”</blockquote>}
       <p className="meta">
         {src.title}
         {locator ? ` · ${locator}` : ""} · {t(`tier${src.tier}` as StringKey, lang)} · {src.accessedOn}

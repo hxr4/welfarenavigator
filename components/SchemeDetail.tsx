@@ -5,6 +5,7 @@ import type { Answers, Dataset, Lang, SchemeResult } from "@/lib/engine/types";
 import { answerText, conditionText, pick } from "@/lib/i18n/describe";
 import { t, type StringKey } from "@/lib/i18n/strings";
 import { statusLabel } from "@/lib/i18n/terms";
+import AssistPanel from "./AssistPanel";
 import OfficeFinder from "./OfficeFinder";
 import { SourceNote } from "./SourceNote";
 import { canRead, readAloud, stopSpeaking, useVoicesReady } from "./useSpeech";
@@ -138,6 +139,8 @@ export default function SchemeDetail({ ds, result, answers, lang, district, onDi
         </ul>
       </section>
 
+      <AssistPanel ds={ds} scheme={scheme} lang={lang} />
+
       {canApply && (
         <section className="panel" aria-labelledby="docs-title">
           <h2 id="docs-title">{t("documents", lang)}</h2>
@@ -170,6 +173,7 @@ export default function SchemeDetail({ ds, result, answers, lang, district, onDi
       {canApply && (
         <section className="panel" aria-labelledby="apply-title">
           <h2 id="apply-title">{t("whereToApply", lang)}</h2>
+          {scheme.apply.length === 0 && <p className="notice">{t("applyNotPublished", lang)}</p>}
           <ul className="list">
             {scheme.apply.map((a, i) => (
               <li key={i}>
@@ -181,7 +185,7 @@ export default function SchemeDetail({ ds, result, answers, lang, district, onDi
               </li>
             ))}
           </ul>
-          {!finding && (
+          {!finding && scheme.apply.length > 0 && (
             <button type="button" className="btn btn-primary" onClick={() => setFinding(true)}>
               {t("findWhere", lang)}
             </button>

@@ -203,6 +203,21 @@ Mark a UI string as checked by adding `mlReviewed: true` to it in `strings.ts`. 
 | noData | No schemes are loaded yet. | പദ്ധതികൾ ഇതുവരെ ചേർത്തിട്ടില്ല. | NOT REVIEWED |  |
 | reviewer | Reviewer page | പരിശോധകർക്കുള്ള പേജ് | NOT REVIEWED |  |
 | offline | You are offline. Screening still works; voice and maps need internet. | ഇന്റർനെറ്റ് ഇല്ല. പരിശോധന പ്രവർത്തിക്കും; ശബ്ദത്തിനും മാപ്പിനും ഇന്റർനെറ്റ് വേണം. | NOT REVIEWED |  |
+| applyNotPublished | Where to apply is not published in the sources we hold. Confirm at a government office before you go. | എവിടെ അപേക്ഷിക്കണമെന്ന് ഞങ്ങളുടെ പക്കലുള്ള ഉറവിടങ്ങളിൽ പ്രസിദ്ധീകരിച്ചിട്ടില്ല. പോകുന്നതിന് മുമ്പ് സർക്കാർ ഓഫീസിൽ ഉറപ്പാക്കുക. | NOT REVIEWED | New string; needs native review. |
+| assistTitle | Explain this scheme in simple words | ഈ പദ്ധതി ലളിതമായി മനസ്സിലാക്കാം | NOT REVIEWED | New string; needs native review. |
+| assistHelp | Pick a question to see the official text for it. Your answers are not used here. | ഒരു ചോദ്യം തിരഞ്ഞെടുത്താൽ അതിനുള്ള ഔദ്യോഗിക വാചകം കാണാം. നിങ്ങളുടെ മറുപടികൾ ഇവിടെ ഉപയോഗിക്കുന്നില്ല. | NOT REVIEWED | New string; needs native review. |
+| assistWhat | What is it? | ഇത് എന്താണ്? | NOT REVIEWED | New string; needs native review. |
+| assistWho | Who can get it? | ആർക്കൊക്കെ ലഭിക്കാം? | NOT REVIEWED | New string; needs native review. |
+| assistDocs | Which documents? | ഏതെല്ലാം രേഖകൾ? | NOT REVIEWED | New string; needs native review. |
+| assistApply | How to apply? | എങ്ങനെ അപേക്ഷിക്കാം? | NOT REVIEWED | New string; needs native review. |
+| assistSimplify | Say it in simple words | ലളിതമായ വാക്കുകളിൽ പറയുക | NOT REVIEWED | New string; needs native review. |
+| assistSends | Only the scheme and this question are sent to an AI service. Your family's answers are not sent. | പദ്ധതിയും ഈ ചോദ്യവും മാത്രമേ AI സേവനത്തിലേക്ക് അയയ്ക്കൂ. നിങ്ങളുടെ കുടുംബത്തെക്കുറിച്ചുള്ള മറുപടികൾ അയയ്ക്കില്ല. | NOT REVIEWED | New string; needs native review. |
+| assistWorking | Writing a simple version… | ലളിതമായ രൂപം തയ്യാറാക്കുന്നു… | NOT REVIEWED | New string; needs native review. |
+| assistMachine | Machine-written summary of the official text below. It may contain mistakes and does not decide eligibility. The official text is what counts. | താഴെയുള്ള ഔദ്യോഗിക വാചകത്തിന്റെ യന്ത്രം തയ്യാറാക്കിയ ചുരുക്കം. ഇതിൽ തെറ്റുകൾ ഉണ്ടാകാം; അർഹത തീരുമാനിക്കുന്നത് ഇതല്ല. ഔദ്യോഗിക വാചകമാണ് ആധാരം. | NOT REVIEWED | New string; needs native review. |
+| assistFallback | A simple version could not be checked against the official text, so only the official text is shown. | ലളിതമായ രൂപം ഔദ്യോഗിക വാചകവുമായി ഒത്തുനോക്കാൻ കഴിഞ്ഞില്ല. അതിനാൽ ഔദ്യോഗിക വാചകം മാത്രം കാണിക്കുന്നു. | NOT REVIEWED | New string; needs native review. |
+| assistOfficial | Official text | ഔദ്യോഗിക വാചകം | NOT REVIEWED | New string; needs native review. |
+| assistNothing | The sources we hold do not cover this question for this scheme. Ask at the office. | ഈ പദ്ധതിക്ക് ഈ ചോദ്യത്തിനുള്ള വിവരം ഞങ്ങളുടെ ഉറവിടങ്ങളിൽ ഇല്ല. ഓഫീസിൽ അന്വേഷിക്കുക. | NOT REVIEWED | New string; needs native review. |
+| assistTeamWritten | Written by the team from the official sources | ഔദ്യോഗിക ഉറവിടങ്ങളിൽ നിന്ന് ടീം തയ്യാറാക്കിയത് | NOT REVIEWED | New string; needs native review. |
 
 ## Dataset strings
 

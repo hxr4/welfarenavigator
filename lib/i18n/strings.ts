@@ -247,6 +247,21 @@ export const STRINGS = {
   noData: { en: "No schemes are loaded yet.", ml: "പദ്ധതികൾ ഇതുവരെ ചേർത്തിട്ടില്ല." },
   reviewer: { en: "Reviewer page", ml: "പരിശോധകർക്കുള്ള പേജ്" },
   offline: { en: "You are offline. Screening still works; voice and maps need internet.", ml: "ഇന്റർനെറ്റ് ഇല്ല. പരിശോധന പ്രവർത്തിക്കും; ശബ്ദത്തിനും മാപ്പിനും ഇന്റർനെറ്റ് വേണം." },
+  applyNotPublished: { en: "Where to apply is not published in the sources we hold. Confirm at a government office before you go.", ml: "എവിടെ അപേക്ഷിക്കണമെന്ന് ഞങ്ങളുടെ പക്കലുള്ള ഉറവിടങ്ങളിൽ പ്രസിദ്ധീകരിച്ചിട്ടില്ല. പോകുന്നതിന് മുമ്പ് സർക്കാർ ഓഫീസിൽ ഉറപ്പാക്കുക.", mlNote: "New string; needs native review." },
+  assistTitle: { en: "Explain this scheme in simple words", ml: "ഈ പദ്ധതി ലളിതമായി മനസ്സിലാക്കാം", mlNote: "New string; needs native review." },
+  assistHelp: { en: "Pick a question to see the official text for it. Your answers are not used here.", ml: "ഒരു ചോദ്യം തിരഞ്ഞെടുത്താൽ അതിനുള്ള ഔദ്യോഗിക വാചകം കാണാം. നിങ്ങളുടെ മറുപടികൾ ഇവിടെ ഉപയോഗിക്കുന്നില്ല.", mlNote: "New string; needs native review." },
+  assistWhat: { en: "What is it?", ml: "ഇത് എന്താണ്?", mlNote: "New string; needs native review." },
+  assistWho: { en: "Who can get it?", ml: "ആർക്കൊക്കെ ലഭിക്കാം?", mlNote: "New string; needs native review." },
+  assistDocs: { en: "Which documents?", ml: "ഏതെല്ലാം രേഖകൾ?", mlNote: "New string; needs native review." },
+  assistApply: { en: "How to apply?", ml: "എങ്ങനെ അപേക്ഷിക്കാം?", mlNote: "New string; needs native review." },
+  assistSimplify: { en: "Say it in simple words", ml: "ലളിതമായ വാക്കുകളിൽ പറയുക", mlNote: "New string; needs native review." },
+  assistSends: { en: "Only the scheme and this question are sent to an AI service. Your family's answers are not sent.", ml: "പദ്ധതിയും ഈ ചോദ്യവും മാത്രമേ AI സേവനത്തിലേക്ക് അയയ്ക്കൂ. നിങ്ങളുടെ കുടുംബത്തെക്കുറിച്ചുള്ള മറുപടികൾ അയയ്ക്കില്ല.", mlNote: "New string; needs native review." },
+  assistWorking: { en: "Writing a simple version…", ml: "ലളിതമായ രൂപം തയ്യാറാക്കുന്നു…", mlNote: "New string; needs native review." },
+  assistMachine: { en: "Machine-written summary of the official text below. It may contain mistakes and does not decide eligibility. The official text is what counts.", ml: "താഴെയുള്ള ഔദ്യോഗിക വാചകത്തിന്റെ യന്ത്രം തയ്യാറാക്കിയ ചുരുക്കം. ഇതിൽ തെറ്റുകൾ ഉണ്ടാകാം; അർഹത തീരുമാനിക്കുന്നത് ഇതല്ല. ഔദ്യോഗിക വാചകമാണ് ആധാരം.", mlNote: "New string; needs native review." },
+  assistFallback: { en: "A simple version could not be checked against the official text, so only the official text is shown.", ml: "ലളിതമായ രൂപം ഔദ്യോഗിക വാചകവുമായി ഒത്തുനോക്കാൻ കഴിഞ്ഞില്ല. അതിനാൽ ഔദ്യോഗിക വാചകം മാത്രം കാണിക്കുന്നു.", mlNote: "New string; needs native review." },
+  assistOfficial: { en: "Official text", ml: "ഔദ്യോഗിക വാചകം", mlNote: "New string; needs native review." },
+  assistNothing: { en: "The sources we hold do not cover this question for this scheme. Ask at the office.", ml: "ഈ പദ്ധതിക്ക് ഈ ചോദ്യത്തിനുള്ള വിവരം ഞങ്ങളുടെ ഉറവിടങ്ങളിൽ ഇല്ല. ഓഫീസിൽ അന്വേഷിക്കുക.", mlNote: "New string; needs native review." },
+  assistTeamWritten: { en: "Written by the team from the official sources", ml: "ഔദ്യോഗിക ഉറവിടങ്ങളിൽ നിന്ന് ടീം തയ്യാറാക്കിയത്", mlNote: "New string; needs native review." },
 } satisfies Record<string, Str>;
 
 export type StringKey = keyof typeof STRINGS;
