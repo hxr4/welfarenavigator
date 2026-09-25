@@ -1,0 +1,90 @@
+name: source-watch
+
+on:
+  schedule:
+    - cron: "30 1 * * 1"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pull-requests: write
+  issues: write
+
+concurrency:
+  group: source-watch
+  cancel-in-progress: false
+
+jobs:
+  watch:
+    runs-on: ubuntu-latest
+    env:
+      GH_TOKEN: ${{ github.token }}
+      AUTOMERGE: ${{ vars.SOURCE_WATCH_AUTOMERGE }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: sudo apt-get update -qq && sudo apt-get install -y -qq poppler-utils
+      - run: pip install -q openpyxl
+      - run: npm ci
+
+      - name: Configure bot identity
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+      - name: Fetch official sources and check every tracked quote
+        run: npm run watch:sources
+
+      - name: Read outcome
+        id: out
+        run: |
+          echo "proposals=$(jq .proposals .source-watch/outcome.json)" >> "$GITHUB_OUTPUT"
+          echo "review=$(jq .needsReview .source-watch/outcome.json)" >> "$GITHUB_OUTPUT"
+          echo "date=$(date -u +%Y-%m-%d)" >> "$GITHUB_OUTPUT"
+
+      - name: Push monitoring state and scheme cautions to main
+        run: |
+          npm test --silent
+          git add data/source-watch.json data/source-flags.json docs/source-watch.md sources/snapshots
+          if ! git diff --cached --quiet; then
+            git commit -m "Source watch ${{ steps.out.outputs.date }}: ${{ steps.out.outputs.proposals }} proposed updates, ${{ steps.out.outputs.review }} need review"
+            git push origin HEAD:main
+          fi
+
+      - name: Apply safe rule updates
+        if: steps.out.outputs.proposals != '0'
+        run: |
+          if [ "$AUTOMERGE" != "true" ]; then git switch -C "source-watch/${{ steps.out.outputs.date }}"; fi
+          npm run watch:apply
+          npm run data
+          npm run typecheck
+          npm test --silent
+          npx tsx scripts/rule-audit.ts --check
+          git add -A dataset data docs
+          git commit -m "Update rules from official sources (${{ steps.out.outputs.date }})"
+          if [ "$AUTOMERGE" = "true" ]; then
+            git push origin HEAD:main
+          else
+            git push --force origin HEAD
+            gh pr view "source-watch/${{ steps.out.outputs.date }}" >/dev/null 2>&1 || gh pr create \
+              --title "Rule updates from official sources (${{ steps.out.outputs.date }})" \
+              --body-file docs/source-watch.md
+          fi
+
+      - name: Open or update the review issue
+        if: steps.out.outputs.review != '0'
+        run: |
+          n=$(gh issue list --state open --search "Source watch: quotes need review in:title" --json number --jq '.[0].number')
+          if [ -n "$n" ]; then
+            gh issue comment "$n" --body-file docs/source-watch.md
+          else
+            gh issue create --title "Source watch: quotes need review" --body-file docs/source-watch.md
+          fi

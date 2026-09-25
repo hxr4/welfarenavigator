@@ -16,7 +16,9 @@
     "i18n:review": "tsx scripts/ml-review.ts",
     "audit:rules": "tsx scripts/rule-audit.ts",
     "audit:rules:ai": "tsx scripts/rule-audit.ts --llm",
-    "tts": "node scripts/tts-elevenlabs.mjs"
+    "tts": "node scripts/tts-elevenlabs.mjs",
+    "watch:sources": "tsx scripts/watch-sources.ts",
+    "watch:apply": "tsx scripts/watch-sources.ts --apply"
   },
   "dependencies": {
     "jszip": "^3.10.2",

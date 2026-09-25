@@ -18,7 +18,7 @@ Files: `lib/assist/evidence.ts`, `lib/assist/browser.ts`, `lib/assist/model.ts`,
 | Option | Cost | Key | Data leaves the device? | How to turn on |
 |---|---|---|---|---|
 | Chrome built-in AI (Gemini Nano, Prompt API) | Free | None | No | Automatic in desktop Chrome 148+ where the device supports it; first use downloads the model |
-| Ollama on the demo laptop | Free | None | No (localhost) | `ollama pull gemma3:4b`, then run the app with `WN_ASSIST_PROVIDER=ollama` |
+| Ollama on the host machine | Free | None | No (localhost) | `ollama pull gemma3:4b`, then run the app with `WN_ASSIST_PROVIDER=ollama` |
 | Any OpenAI-compatible free tier, e.g. Google AI Studio (Gemini) | Free tier | Free key, no card | Official quotes only | `WN_ASSIST_BASE_URL=https://generativelanguage.googleapis.com/v1beta/openai`, `WN_ASSIST_MODEL=<a current Flash model>`, `WN_ASSIST_API_KEY=<key>` |
 | Anthropic | Paid | Yes | Official quotes only | `ANTHROPIC_API_KEY` |
 

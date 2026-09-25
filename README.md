@@ -1,6 +1,6 @@
 # Welfare Navigator
 
-**ANAVANDI FutureBuild 2026 · Problem Statement 07**
+[![ci](https://github.com/hxr4/welfarenavigator/actions/workflows/ci.yml/badge.svg)](https://github.com/hxr4/welfarenavigator/actions/workflows/ci.yml) [![source-watch](https://github.com/hxr4/welfarenavigator/actions/workflows/source-watch.yml/badge.svg)](https://github.com/hxr4/welfarenavigator/actions/workflows/source-watch.yml) [![License: MIT](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
 
 Welfare Navigator is a bilingual Malayalam–English service that helps fishing and plantation families in Kerala discover government welfare schemes relevant to their circumstances.
 
@@ -27,16 +27,19 @@ Welfare information is often distributed across multiple government pages, forms
 - Optional voice-assisted input
 - Keyboard, screen-reader, high-contrast, and reduced-motion support
 - Browser-based screening with no user account or persistent answer storage
+- A scheduled bot that re-reads every official source, flags schemes whose rules changed, and proposes rule updates
 
 ## System and data flow
 
 ```mermaid
 flowchart LR
   subgraph Build["Build time (team laptop)"]
-    SRC["Official sources<br/>37 PDFs, pages, Acts, GOs"] --> WB["Workbook<br/>dataset/anavandi-dataset.xlsx"]
+    SRC["Official sources<br/>37 PDFs, pages, Acts, GOs"] --> WB["Workbook<br/>dataset/welfare-dataset.xlsx"]
     WB --> BD["npm run data<br/>validate + convert"]
     BD --> DJ["data/dataset.json"]
     DJ --> AU["npm run audit:rules<br/>CI gate"]
+    BOT["source-watch bot<br/>weekly"] -. "re-reads" .-> SRC
+    BOT -. "PR or push" .-> WB
   end
   subgraph Browser["User's browser tab (works offline)"]
     UI["Questions / Easy Mode"] --> ENG["lib/engine<br/>3-valued rules"]
@@ -191,6 +194,8 @@ npm start
 | `npm test` | Run the full Vitest suite |
 | `npm run typecheck` | TypeScript check |
 | `npm run audit:rules` | Check every rule against its quote and write `docs/rule-audit.md` |
+| `npm run watch:sources` | Re-read every official source, update snapshots, flags and `docs/source-watch.md` |
+| `npm run watch:apply` | Write safe source changes (rewording, threshold changes) into the workbook |
 | `npm run audit:rules:ai` | Same, plus an advisory AI second opinion (Ollama or any configured model) |
 | `npm run data` | Validate the workbook and generate `data/dataset.json` |
 | `npm run data:examples` | Generate data including example rows |
@@ -201,7 +206,7 @@ npm start
 
 ## Data and source governance
 
-The source workbook is maintained at `dataset/anavandi-dataset.xlsx`. `npm run data` validates it before generating `data/dataset.json`. Validation checks duplicate identifiers, fact and operator types, source URLs, exact quotations, scheme conditions, document references, districts, application locations, and required Malayalam text.
+The source workbook is maintained at `dataset/welfare-dataset.xlsx`. `npm run data` validates it before generating `data/dataset.json`. Validation checks duplicate identifiers, fact and operator types, source URLs, exact quotations, scheme conditions, document references, districts, application locations, and required Malayalam text.
 
 Every verified eligibility condition is expected to include an official source, quotation, and locator. Information that cannot yet be verified is labelled as partial or informational rather than presented as a confirmed rule. Current dataset notes are available through `/review`, `docs/sources-needed.md`, and `docs/malayalam-review.md`.
 
@@ -225,7 +230,7 @@ The office type comes from each scheme first, then the district office or the of
 
 ## Audio clips
 
-`npm run audio` writes `docs/malayalam-audio-clips.csv` and `docs/english-audio-clips.csv` (one row per question, answer and number range the app can ask) and indexes the recorded files in `data/audio-manifest.json`. `npm run tts` generates missing clips with ElevenLabs (Eleven v3 for Malayalam). It reads `ELEVENLABS_API_KEY` and `ELEVENLABS_VOICE_ID_ML` / `ELEVENLABS_VOICE_ID_EN` from the shell only, and marks a clip stale if its text later changes. Listen to every clip before a demo.
+`npm run audio` writes `docs/malayalam-audio-clips.csv` and `docs/english-audio-clips.csv` (one row per question, answer and number range the app can ask) and indexes the recorded files in `data/audio-manifest.json`. `npm run tts` generates missing clips with ElevenLabs (Eleven v3 for Malayalam). It reads `ELEVENLABS_API_KEY` and `ELEVENLABS_VOICE_ID_ML` / `ELEVENLABS_VOICE_ID_EN` from the shell only, and marks a clip stale if its text later changes. Listen to every clip before a release.
 
 ## API
 
@@ -262,6 +267,7 @@ lib/i18n/             English/Malayalam strings and display helpers
 lib/a11y/             Read-aloud sequencing with per-option start/end events
 lib/easy/             Easy Mode options, selection reducer, and Standard/Easy equivalence driver
 lib/assist/           Quote retrieval, grounding guard, model client and rule audit
+lib/watch/            Source text extraction, quote tracking and change classification
 lib/checklist.ts      Consolidated document checklist
 lib/offices.ts        Office routing by type, district, and jurisdiction
 data/                 Generated runtime dataset, audio manifest, and recorded clip texts
@@ -269,7 +275,7 @@ public/audio/         Recorded Malayalam (ml/) and English (en/) clips
 dataset/              Source workbooks
 docs/                 Data, source, Malayalam, rule-audit and AI notes; screenshots
 scripts/              Dataset, audio, rule-audit and review tooling
-.github/workflows/    CI: typecheck, tests, rule audit, build
+.github/workflows/    CI (typecheck, tests, rule audit, build) and the weekly source-watch bot
 tests/                Engine, dataset, flow, location, and wording tests
 ```
 
@@ -281,32 +287,32 @@ The test suite covers rule evaluation, three-valued logic, threshold boundaries,
 npm test
 ```
 
+## Keeping the rules current
+
+Government pages and PDFs change without notice. `npm run watch:sources`, run every Monday by the `source-watch` GitHub Action, re-reads every official source and checks each quotation the dataset depends on.
+
+1. **Fetch and normalise.** HTML is reduced to its main text (scripts, menus and footers removed); PDFs go through `pdftotext`. Text is Unicode-normalised with Malayalam digits folded to ASCII, and a snapshot is kept in `sources/snapshots/`.
+2. **Track quotes.** A quotation becomes *tracked* once it is found verbatim (ignoring case, punctuation and spacing). Only tracked quotations can raise an alarm, so scanned or legacy-font PDFs never cause false positives; their changes still show up as a changed hash in the report.
+3. **Locate each tracked quote** in the new text: first an exact search, then a sliding window the length of the quote that maximises token overlap, computed incrementally in one pass.
+4. **Classify.** *unchanged*; *reworded* (≥92% overlap, same numbers); *value_change* (the only differing numbers are the condition's own threshold, all mapping to one new value); *changed* (60–92%); *missing* (<60%).
+5. **Act.** Every scheme with a changed, missing or value-changed quote gets a caution on its page straight away (`data/source-flags.json`). Reworded quotes and value changes are written into the workbook with openpyxl (keeping cell comments), marked `SOURCE_WATCH`, then the dataset is rebuilt, type-checked, tested and rule-audited. They land as a pull request, or directly on `main` if the repository variable `SOURCE_WATCH_AUTOMERGE` is `true`. Anything else opens or updates a "quotes need review" issue.
+
+The bot is the built-in `github-actions[bot]` using the workflow's own token. To let it push, go to **Settings → Actions → General → Workflow permissions** and select **Read and write permissions** and **Allow GitHub Actions to create and approve pull requests**. The latest run is summarised in `docs/source-watch.md`.
+
 ## AI assistance
 
 The eligibility engine contains no AI. AI is used only beside it, and every option is free or optional:
 
 - **Plain-language helper** (runtime). On a scheme page the user taps one of four fixed questions and sees that scheme's official quotes, offline. For *what is it*, *which documents* and *how to apply*, a model can rewrite only those quotes in simple Malayalam or English. *Who can get it* is never sent to a model. A guard discards any reply with an uncited sentence, a number not in the quotes, repetition or promise wording, and the quotes stay below every reply.
-- **Which model**: Chrome's built-in on-device AI when the browser has it (free, no key, nothing leaves the device); otherwise Ollama on the demo laptop (free, offline); otherwise any OpenAI-compatible free tier such as Google AI Studio; Anthropic is still supported. With none, the helper shows the official text only.
+- **Which model**: Chrome's built-in on-device AI when the browser has it (free, no key, nothing leaves the device); otherwise Ollama on the host machine (free, offline); otherwise any OpenAI-compatible free tier such as Google AI Studio; Anthropic is still supported. With none, the helper shows the official text only.
 - **Rule audit** (developer workflow). `npm run audit:rules` runs in CI; `npm run audit:rules:ai` adds an advisory model opinion on whether each quote supports its encoded condition. A person makes every workbook change.
 
 We tested the helper live with free 1B and 3B local models. The guard rejected three of four bad answers; the fourth read eligibility wrongly while looking plausible, which is why eligibility is excluded. Details and configuration: `docs/llm-rag.md`.
 
-### AI use declaration
+## Contributing
 
-| Tool | Used for | Checked by |
-|---|---|---|
-| Claude Opus 5.5 (Anthropic) | Coding assistance, code review, test writing, README and docs drafting | Team review; tests |
-| ChatGPT, GPT-6 Sol (OpenAI) | Coding assistance, drafting Malayalam and English interface text and scheme summaries, cross-checking source readings | Team review against the cited source |
-| ElevenLabs Eleven v3 | Generating the recorded Malayalam and English question and answer clips | Listened to by the team |
-| Runtime helper model: Chrome built-in AI (Gemini Nano), or Ollama (gemma3:4b), or a free-tier hosted model | Optional plain-language rewrite of official quotes; advisory rule-audit opinions | Grounding guard; official quotes always shown; never used for eligibility |
-| Browser speech recognition (Google in Chrome) | Optional voice input, matched only against the current question's options and always confirmed | User confirms every voice answer |
+Issues and pull requests are welcome, especially from people who know the schemes. To correct a rule, edit the row in `dataset/welfare-dataset.xlsx` with the exact source sentence and page, run `npm run data && npm test`, and open a pull request. Malayalam reviews of `docs/malayalam-review.md` are particularly useful.
 
-No AI model decides eligibility, writes rules into the dataset, or sees a household's answers. Every eligibility condition comes from a quote a team member copied from an official source.
+## License
 
-## Feedback
-
-Judge feedback and what we changed for each round are in [FEEDBACK.md](FEEDBACK.md). The 5-slide pitch deck is `docs/Welfare-Navigator-PS07.pptx`.
-
-## License and project status
-
-This repository was developed for ANAVANDI FutureBuild 2026. Confirm the project’s licensing and deployment terms with the team before redistribution or production use.
+Code and the compiled dataset are released under the [MIT License](LICENSE). Documents in `sources/` are official publications of their issuing government bodies and are included for verification only. Welfare Navigator is an independent project and is not an official Government of Kerala service.

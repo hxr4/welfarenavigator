@@ -248,6 +248,7 @@ export const STRINGS = {
   reviewer: { en: "Reviewer page", ml: "പരിശോധകർക്കുള്ള പേജ്" },
   offline: { en: "You are offline. Screening still works; voice and maps need internet.", ml: "ഇന്റർനെറ്റ് ഇല്ല. പരിശോധന പ്രവർത്തിക്കും; ശബ്ദത്തിനും മാപ്പിനും ഇന്റർനെറ്റ് വേണം." },
   applyNotPublished: { en: "Where to apply is not published in the sources we hold. Confirm at a government office before you go.", ml: "എവിടെ അപേക്ഷിക്കണമെന്ന് ഞങ്ങളുടെ പക്കലുള്ള ഉറവിടങ്ങളിൽ പ്രസിദ്ധീകരിച്ചിട്ടില്ല. പോകുന്നതിന് മുമ്പ് സർക്കാർ ഓഫീസിൽ ഉറപ്പാക്കുക.", mlNote: "New string; needs native review." },
+  sourceChanged: { en: "The official source for this scheme changed on {date}. We are re-checking it, so confirm the details at the office before you apply.", ml: "ഈ പദ്ധതിയുടെ ഔദ്യോഗിക ഉറവിടം {date}-ന് മാറി. ഞങ്ങൾ അത് വീണ്ടും പരിശോധിക്കുകയാണ്. അപേക്ഷിക്കുന്നതിന് മുമ്പ് ഓഫീസിൽ വിവരങ്ങൾ ഉറപ്പാക്കുക.", mlNote: "New string; needs native review." },
   assistTitle: { en: "Explain this scheme in simple words", ml: "ഈ പദ്ധതി ലളിതമായി മനസ്സിലാക്കാം", mlNote: "New string; needs native review." },
   assistHelp: { en: "Pick a question to see the official text for it. Your answers are not used here.", ml: "ഒരു ചോദ്യം തിരഞ്ഞെടുത്താൽ അതിനുള്ള ഔദ്യോഗിക വാചകം കാണാം. നിങ്ങളുടെ മറുപടികൾ ഇവിടെ ഉപയോഗിക്കുന്നില്ല.", mlNote: "New string; needs native review." },
   assistWhat: { en: "What is it?", ml: "ഇത് എന്താണ്?", mlNote: "New string; needs native review." },

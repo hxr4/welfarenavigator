@@ -6,6 +6,7 @@ import { answerText, conditionText, pick } from "@/lib/i18n/describe";
 import { t, type StringKey } from "@/lib/i18n/strings";
 import { statusLabel } from "@/lib/i18n/terms";
 import AssistPanel from "./AssistPanel";
+import { sourceFlag } from "@/lib/watch/flags";
 import OfficeFinder from "./OfficeFinder";
 import { SourceNote } from "./SourceNote";
 import { canRead, readAloud, stopSpeaking, useVoicesReady } from "./useSpeech";
@@ -78,6 +79,12 @@ export default function SchemeDetail({ ds, result, answers, lang, district, onDi
           </button>
         )}
       </header>
+
+      {sourceFlag(scheme.id) && (
+        <p className="notice" role="status">
+          {t("sourceChanged", lang, { date: sourceFlag(scheme.id)!.since })}
+        </p>
+      )}
 
       {result.oneStep && (
         <section className="panel onestep" aria-labelledby="onestep-title">
