@@ -2,14 +2,14 @@ import ExcelJS from "exceljs";
 import { existsSync } from "node:fs";
 import { DISCLAIMER_DRAFT, SHEETS } from "../lib/data/sheets";
 
-const out = process.argv[2] ?? "dataset/anavandi-dataset.xlsx";
+const out = process.argv[2] ?? "dataset/welfare-dataset.xlsx";
 if (existsSync(out) && !process.argv.includes("--force")) {
   console.error(`${out} already exists. Pass --force to overwrite.`);
   process.exit(1);
 }
 
 const README = [
-  "ANAVANDI PS-07 welfare dataset",
+  "Welfare Navigator dataset",
   "",
   "Rule 1. Every condition, document and office must come from an official source listed in the sources sheet.",
   "Rule 2. Tier 1 = Act, Rules, Gazette, Government Order, official scheme guideline. Tier 2 = official department or welfare board page. Tier 3 = reports: use to find schemes, never as a rule source.",
@@ -30,7 +30,7 @@ const README = [
 
 async function main() {
   const wb = new ExcelJS.Workbook();
-  wb.creator = "ANAVANDI PS-07";
+  wb.creator = "Welfare Navigator";
   const readme = wb.addWorksheet("README");
   readme.getColumn(1).width = 26;
   readme.getColumn(2).width = 22;

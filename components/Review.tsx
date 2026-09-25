@@ -76,7 +76,7 @@ export default function Review({ ds }: { ds: Dataset }) {
         <div className="masthead-inner">
           <div>
             <p className="brand">Welfare Navigator · Reviewer page</p>
-            <p className="brand-sub">ANAVANDI FutureBuild 2026 · PS-07</p>
+            <p className="brand-sub">Rule verification</p>
           </div>
           <Link href="/" className="btn btn-small" style={{ color: "#fff", borderColor: "#fff", background: "transparent" }}>
             Citizen screen

@@ -23,7 +23,7 @@ import type {
 } from "../lib/engine/types";
 
 const args = process.argv.slice(2);
-const input = args.find((a) => !a.startsWith("--")) ?? "dataset/anavandi-dataset.xlsx";
+const input = args.find((a) => !a.startsWith("--")) ?? "dataset/welfare-dataset.xlsx";
 const includeExamples = args.includes("--examples");
 const force = args.includes("--force");
 

@@ -300,7 +300,7 @@ describe("office finder", () => {
   });
 });
 
-describe("judge-facing wording", () => {
+describe("user-facing wording", () => {
   it("never promises a benefit", () => {
     const bad = Object.entries(STRINGS)
       .filter(([, v]) => /\b(approved|guaranteed?|definitely eligible|you will receive)\b/i.test(v.en))
