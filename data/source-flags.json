@@ -1,4 +1,61 @@
 {
- "generatedAt": "2026-10-05T07:17:33.935Z",
- "flags": {}
+ "generatedAt": "2026-10-12T07:35:13.924Z",
+ "flags": {
+  "FISH-03": {
+   "since": "2026-10-12",
+   "sourceIds": [
+    "SRC-FISH-001"
+   ],
+   "kinds": [
+    "missing"
+   ]
+  },
+  "FISH-04": {
+   "since": "2026-10-12",
+   "sourceIds": [
+    "SRC-FISH-001",
+    "SRC-FISH-007"
+   ],
+   "kinds": [
+    "missing"
+   ]
+  },
+  "FISH-05": {
+   "since": "2026-10-12",
+   "sourceIds": [
+    "SRC-FISH-001",
+    "SRC-FISH-004"
+   ],
+   "kinds": [
+    "missing"
+   ]
+  },
+  "FISH-08": {
+   "since": "2026-10-12",
+   "sourceIds": [
+    "SRC-FISH-001"
+   ],
+   "kinds": [
+    "missing"
+   ]
+  },
+  "FISH-09": {
+   "since": "2026-10-12",
+   "sourceIds": [
+    "SRC-FISH-001"
+   ],
+   "kinds": [
+    "missing"
+   ]
+  },
+  "FISH-02": {
+   "since": "2026-10-12",
+   "sourceIds": [
+    "SRC-FISH-002"
+   ],
+   "kinds": [
+    "missing"
+   ]
+  }
+ }
 }

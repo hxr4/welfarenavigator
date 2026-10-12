@@ -1,15 +1,15 @@
 {
- "generatedAt": "2026-10-05T07:17:33.935Z",
+ "generatedAt": "2026-10-12T07:35:13.924Z",
  "sources": {
   "SRC-FISH-001": {
    "url": "https://fisheries.kerala.gov.in/en/scheme-highlights",
    "kind": "html",
-   "http": 0,
-   "hash": "e58174ce37a7cf36c9699faf1588c71b415d5d2d5f2359d93311b316c73dd98b",
-   "checkedAt": "2026-10-05T07:17:33.935Z",
-   "changedAt": "2026-09-25T09:57:45.983Z",
-   "status": "unreachable",
-   "failures": 2,
+   "http": 200,
+   "hash": "b8f254dadbf0e3b827b2fddd1b484507216c0e0eb79c983a7cbee1715d751dab",
+   "checkedAt": "2026-10-12T07:35:13.924Z",
+   "changedAt": "2026-10-12T07:35:13.924Z",
+   "status": "changed",
+   "failures": 0,
    "tracked": [
     "FISH-03/apply:0",
     "FISH-03/c1",
@@ -25,30 +25,263 @@
     "FISH-09/g0"
    ],
    "untracked": 0,
-   "findings": []
+   "findings": [
+    {
+     "ref": "FISH-03/c1",
+     "schemeId": "FISH-03",
+     "sourceId": "SRC-FISH-001",
+     "oldQuote": "Active fishermen of BPL category is considered",
+     "score": 0.143,
+     "kind": "missing"
+    },
+    {
+     "ref": "FISH-03/c2",
+     "schemeId": "FISH-03",
+     "sourceId": "SRC-FISH-001",
+     "oldQuote": "Active fishermen of BPL category is considered",
+     "score": 0.143,
+     "kind": "missing"
+    },
+    {
+     "ref": "FISH-03/g0",
+     "schemeId": "FISH-03",
+     "sourceId": "SRC-FISH-001",
+     "oldQuote": "Active fishermen of BPL category",
+     "score": 0,
+     "kind": "missing"
+    },
+    {
+     "ref": "FISH-03/apply:0",
+     "schemeId": "FISH-03",
+     "sourceId": "SRC-FISH-001",
+     "oldQuote": "implementing through district offices",
+     "score": 0,
+     "kind": "missing"
+    },
+    {
+     "ref": "FISH-04/apply:0",
+     "schemeId": "FISH-04",
+     "sourceId": "SRC-FISH-001",
+     "oldQuote": "implementing through district offices& Matsyaboard",
+     "score": 0,
+     "kind": "missing"
+    },
+    {
+     "ref": "FISH-05/apply:0",
+     "schemeId": "FISH-05",
+     "sourceId": "SRC-FISH-001",
+     "oldQuote": "implementing through district offices & Matsyaboard",
+     "score": 0,
+     "kind": "missing"
+    },
+    {
+     "ref": "FISH-08/g0",
+     "schemeId": "FISH-08",
+     "sourceId": "SRC-FISH-001",
+     "oldQuote": "Members of cooperative societies affliated to Matysafed",
+     "score": 0.143,
+     "kind": "missing"
+    },
+    {
+     "ref": "FISH-08/c1",
+     "schemeId": "FISH-08",
+     "sourceId": "SRC-FISH-001",
+     "oldQuote": "Members of cooperative societies affliated to Matysafed",
+     "score": 0.143,
+     "kind": "missing"
+    },
+    {
+     "ref": "FISH-08/apply:0",
+     "schemeId": "FISH-08",
+     "sourceId": "SRC-FISH-001",
+     "oldQuote": "through Matysafed offices",
+     "score": 0,
+     "kind": "missing"
+    },
+    {
+     "ref": "FISH-09/g0",
+     "schemeId": "FISH-09",
+     "sourceId": "SRC-FISH-001",
+     "oldQuote": "Members of cooperative societies affliated to Matysafed",
+     "score": 0.143,
+     "kind": "missing"
+    },
+    {
+     "ref": "FISH-09/c1",
+     "schemeId": "FISH-09",
+     "sourceId": "SRC-FISH-001",
+     "oldQuote": "Members of cooperative societies affliated to Matysafed",
+     "score": 0.143,
+     "kind": "missing"
+    },
+    {
+     "ref": "FISH-09/apply:0",
+     "schemeId": "FISH-09",
+     "sourceId": "SRC-FISH-001",
+     "oldQuote": "through Matysafed offices",
+     "score": 0,
+     "kind": "missing"
+    }
+   ],
+   "added": [
+    "!",
+    "Website Temporarily Unavailable",
+    "We are currently experiencing a technical issue with this website.",
+    "Our technical team is working to resolve the issue and restore",
+    "the service as soon as possible.",
+    "Please try again later.",
+    "We apologize for the inconvenience and appreciate your patience",
+    "and understanding.",
+    "Thank you for your understanding."
+   ],
+   "removed": [
+    "Skip to main content",
+    "Scheme Highlights",
+    "SI No",
+    "Name",
+    "Service",
+    "1",
+    "Housing Scheme",
+    "To provide shelter to poor fisherfamily. Active fishermen of BPL category is considered for the programme and is implementing through district offices",
+    "2",
+    "Saving cum relief",
+    "Scheme",
+    "To promote thrift habit and to extend relief during lean period. The beneficiaries are registered fishermen of both marine and inland and the scheme is implementing through district offices.",
+    "3",
+    "Educational concession",
+    "To provide educational concession to the children of registered Non Hindu Fishermen and the scheme is implementing through district offices"
+   ]
   },
   "SRC-FISH-003": {
    "url": "https://fisheries.kerala.gov.in/en/group-insurance-scheme-fishermen",
    "kind": "html",
-   "http": 0,
-   "hash": "faf6208792ce0b355abdc5c36ff4ce4c17e46472cbae8859ffdee111ab17b200",
-   "checkedAt": "2026-10-05T07:17:33.935Z",
-   "changedAt": "2026-09-25T09:57:45.983Z",
-   "status": "unreachable",
-   "failures": 2,
+   "http": 200,
+   "hash": "b8f254dadbf0e3b827b2fddd1b484507216c0e0eb79c983a7cbee1715d751dab",
+   "checkedAt": "2026-10-12T07:35:13.924Z",
+   "changedAt": "2026-10-12T07:35:13.924Z",
+   "status": "changed",
+   "failures": 0,
    "tracked": [],
    "untracked": 0,
-   "findings": []
+   "findings": [],
+   "added": [
+    "!",
+    "Website Temporarily Unavailable",
+    "We are currently experiencing a technical issue with this website.",
+    "Our technical team is working to resolve the issue and restore",
+    "the service as soon as possible.",
+    "Please try again later.",
+    "We apologize for the inconvenience and appreciate your patience",
+    "and understanding.",
+    "Thank you for your understanding."
+   ],
+   "removed": [
+    "Skip to main content",
+    "Group Insurance Scheme for Fishermen",
+    "Active Fishermen in the State are insured by the Kerala Fishermen Welfare Fund Board (KFWFB). The Group Insurance Scheme is implemented at a premium of 50 per person and other scheme is for fishermen against accidental death, heart attach (while fishing at sea), missing, permanent and partial disability. The compensation for death/missing/total disability is Rs. 1 lakh and for partial disability is Rs. 50,000. The annual insurance premium is shared equally by the Central and State Governments.",
+    "The implementing agency is Matysaboard."
+   ]
+  },
+  "SRC-FISH-004": {
+   "url": "https://fisheries.kerala.gov.in/en/group-insurance-scheme-allied-workers-fishery-sector",
+   "kind": "html",
+   "http": 200,
+   "hash": "b8f254dadbf0e3b827b2fddd1b484507216c0e0eb79c983a7cbee1715d751dab",
+   "checkedAt": "2026-10-12T07:35:13.924Z",
+   "changedAt": "2026-10-12T07:35:13.924Z",
+   "status": "changed",
+   "failures": 0,
+   "tracked": [
+    "FISH-05/c1",
+    "FISH-05/c2"
+   ],
+   "untracked": 0,
+   "findings": [
+    {
+     "ref": "FISH-05/c1",
+     "schemeId": "FISH-05",
+     "sourceId": "SRC-FISH-004",
+     "oldQuote": "Allied fishery workers who are members of the Kerala Fishermen Welfare Fund Board",
+     "score": 0.077,
+     "kind": "missing"
+    },
+    {
+     "ref": "FISH-05/c2",
+     "schemeId": "FISH-05",
+     "sourceId": "SRC-FISH-004",
+     "oldQuote": "are members of the Kerala Fishermen Welfare Fund Board (KFWFB)",
+     "score": 0.1,
+     "kind": "missing"
+    }
+   ],
+   "added": [
+    "!",
+    "Website Temporarily Unavailable",
+    "We are currently experiencing a technical issue with this website.",
+    "Our technical team is working to resolve the issue and restore",
+    "the service as soon as possible.",
+    "Please try again later.",
+    "We apologize for the inconvenience and appreciate your patience",
+    "and understanding.",
+    "Thank you for your understanding."
+   ],
+   "removed": [
+    "Skip to main content",
+    "Group Insurance Scheme for Allied Workers in Fishery Sector",
+    "Allied fishery workers who are members of the Kerala Fishermen Welfare Fund Board (KFWFB) are insured by the Board. The annual premium is to be paid to the insurance company. There are 70,000 allied workers registered in the Board. The premium is ` 137.50 per person.",
+    "The implementing agency is Matysaboard."
+   ]
+  },
+  "SRC-FISH-005": {
+   "url": "https://fisheries.kerala.gov.in/en/forms-department-fisheries",
+   "kind": "html",
+   "http": 200,
+   "hash": "b8f254dadbf0e3b827b2fddd1b484507216c0e0eb79c983a7cbee1715d751dab",
+   "checkedAt": "2026-10-12T07:35:13.924Z",
+   "changedAt": "2026-10-12T07:35:13.924Z",
+   "status": "changed",
+   "failures": 0,
+   "tracked": [],
+   "untracked": 0,
+   "findings": [],
+   "added": [
+    "!",
+    "Website Temporarily Unavailable",
+    "We are currently experiencing a technical issue with this website.",
+    "Our technical team is working to resolve the issue and restore",
+    "the service as soon as possible.",
+    "Please try again later.",
+    "We apologize for the inconvenience and appreciate your patience",
+    "and understanding.",
+    "Thank you for your understanding."
+   ],
+   "removed": [
+    "Skip to main content",
+    "Forms of Department of fisheries",
+    "Sl.No.",
+    "Name of Forms",
+    "1",
+    "Hatchery Registration Form",
+    "2",
+    "Application for Licensing of Fish Seed Production/Sales/Exports/Imports",
+    "3",
+    "Application Form for Registration /Renewal of Fish Seed Farms",
+    "4",
+    "For for Filling the return of Fish Seed Sale",
+    "5",
+    "Application for licensing of fishing vessel",
+    "6"
+   ]
   },
   "SRC-FISH-002": {
    "url": "https://fisheries.kerala.gov.in/index.php/en/saving-cum-relief-scheme-fishermen",
    "kind": "html",
-   "http": 0,
-   "hash": "31c6080f417012cd3ce2b524f4cfc7331b036a06f0e715ff12aac3aba945acb5",
-   "checkedAt": "2026-10-05T07:17:33.935Z",
-   "changedAt": "2026-09-25T09:57:45.983Z",
-   "status": "unreachable",
-   "failures": 2,
+   "http": 200,
+   "hash": "b8f254dadbf0e3b827b2fddd1b484507216c0e0eb79c983a7cbee1715d751dab",
+   "checkedAt": "2026-10-12T07:35:13.924Z",
+   "changedAt": "2026-10-12T07:35:13.924Z",
+   "status": "changed",
+   "failures": 0,
    "tracked": [
     "FISH-02/apply:0",
     "FISH-02/c1",
@@ -56,82 +289,171 @@
     "FISH-02/g0"
    ],
    "untracked": 0,
-   "findings": []
-  },
-  "SRC-FISH-004": {
-   "url": "https://fisheries.kerala.gov.in/en/group-insurance-scheme-allied-workers-fishery-sector",
-   "kind": "html",
-   "http": 0,
-   "hash": "8edc78e67c05d3aa8783825e81eb7b7b0f81417d2d755ab72ef70ef94ab0006f",
-   "checkedAt": "2026-10-05T07:17:33.935Z",
-   "changedAt": "2026-09-25T09:57:45.983Z",
-   "status": "unreachable",
-   "failures": 2,
-   "tracked": [
-    "FISH-05/c1",
-    "FISH-05/c2"
+   "findings": [
+    {
+     "ref": "FISH-02/c1",
+     "schemeId": "FISH-02",
+     "sourceId": "SRC-FISH-002",
+     "oldQuote": "beneficiaries are registered fishermen",
+     "score": 0.25,
+     "kind": "missing"
+    },
+    {
+     "ref": "FISH-02/c2",
+     "schemeId": "FISH-02",
+     "sourceId": "SRC-FISH-002",
+     "oldQuote": "Beneficiaries should have bank account for enrolling",
+     "score": 0.143,
+     "kind": "missing"
+    },
+    {
+     "ref": "FISH-02/g0",
+     "schemeId": "FISH-02",
+     "sourceId": "SRC-FISH-002",
+     "oldQuote": "the beneficiaries are registered fishermen",
+     "score": 0.2,
+     "kind": "missing"
+    },
+    {
+     "ref": "FISH-02/apply:0",
+     "schemeId": "FISH-02",
+     "sourceId": "SRC-FISH-002",
+     "oldQuote": "The implementing agency is Department of Fisheries",
+     "score": 0.286,
+     "kind": "missing"
+    }
    ],
-   "untracked": 0,
-   "findings": []
+   "added": [
+    "!",
+    "Website Temporarily Unavailable",
+    "We are currently experiencing a technical issue with this website.",
+    "Our technical team is working to resolve the issue and restore",
+    "the service as soon as possible.",
+    "Please try again later.",
+    "We apologize for the inconvenience and appreciate your patience",
+    "and understanding.",
+    "Thank you for your understanding."
+   ],
+   "removed": [
+    "Skip to main content",
+    "Saving Cum Relief Scheme to Fishermen",
+    "The scheme is intended to provide off season relief to fishermen (Marine & Inland).An amount of Rs 600 is collected from the beneficiaries in 8/9 installments. The State Government contributes an amount of Rs 600 and The Central Government Rs 600. Thus the Government share is Rs 1200. Both BPL fishermen and APL fishermen are enrolled in the scheme. But, GOI provides central share only for BPL beneficiaries. The Government share for BPL beneficiaries is met the State Government. An amount of Rs 1800 is released to the fishermen in 3 installments during lean season which is April to June in the marine sector and June to August in inland sector. Beneficiaries should have bank account for enrolling in the scheme the relief is cored to beneficiary accounts from the Nodal Bank. The number of beneficiaries in 2012-13 is about 165,000 and the beneficiaries are registered fishermen.",
+    "The implementing agency is Department of Fisheries"
+   ]
   },
   "SRC-FISH-006": {
    "url": "https://fisheries.kerala.gov.in/en/kfwfb",
    "kind": "html",
-   "http": 0,
-   "hash": "3771464ad9a0aa693eb357d03f2edec4675f75a5a034073e345c739aefc21c7e",
-   "checkedAt": "2026-10-05T07:17:33.935Z",
-   "changedAt": "2026-09-25T09:57:45.983Z",
-   "status": "unreachable",
-   "failures": 2,
+   "http": 200,
+   "hash": "b8f254dadbf0e3b827b2fddd1b484507216c0e0eb79c983a7cbee1715d751dab",
+   "checkedAt": "2026-10-12T07:35:13.924Z",
+   "changedAt": "2026-10-12T07:35:13.924Z",
+   "status": "changed",
+   "failures": 0,
    "tracked": [],
    "untracked": 0,
-   "findings": []
-  },
-  "SRC-FISH-005": {
-   "url": "https://fisheries.kerala.gov.in/en/forms-department-fisheries",
-   "kind": "html",
-   "http": 0,
-   "hash": "e09950785433660bb1c87f3bff169b129b662153f407705132472eedba90d6c9",
-   "checkedAt": "2026-10-05T07:17:33.935Z",
-   "changedAt": "2026-09-25T09:57:45.983Z",
-   "status": "unreachable",
-   "failures": 2,
-   "tracked": [],
-   "untracked": 0,
-   "findings": []
+   "findings": [],
+   "added": [
+    "!",
+    "Website Temporarily Unavailable",
+    "We are currently experiencing a technical issue with this website.",
+    "Our technical team is working to resolve the issue and restore",
+    "the service as soon as possible.",
+    "Please try again later.",
+    "We apologize for the inconvenience and appreciate your patience",
+    "and understanding.",
+    "Thank you for your understanding."
+   ],
+   "removed": [
+    "Skip to main content",
+    "Kerala Fishermen's Welfare Fund Board,(KFWFB)",
+    "Kerala Fishermen’s Welfare Fund Board (KFWFB) works under Fund Act, 1985 providing for the constitution of welfare of Fishermen in the State.",
+    "Fishermen's welfare schemes",
+    "Fishermen's Welfare Fund Board (Fisheries Board) are carried out in accordance with the provisions and rules of the Kerala Fishermen's Welfare Fund Act , 1980 , the Kerala Fishermen's Welfare Fund Act , 1985, the Kerala Fishermen's Welfare Fund Scheme, 1986 and the Fishermen's Amendment Act, 1999. The names of the fishermen and allied workers in the list prepared by the Fisheries Officer of the Fishes Board Paid in full Those who have accepted membership For fishermen For related workers Their The benefits of the welfare schemes implemented by the board are granted to dependents.",
+    "More Information",
+    "Social Media"
+   ]
   },
   "SRC-PLNT-001": {
    "url": "https://www.indiacode.nic.in/bitstream/123456789/20377/1/17-2008-eng.pdf",
    "kind": "html",
    "http": 403,
    "hash": "",
-   "checkedAt": "2026-10-05T07:17:33.935Z",
+   "checkedAt": "2026-10-12T07:35:13.924Z",
    "changedAt": "",
    "status": "unreachable",
-   "failures": 4,
+   "failures": 5,
    "tracked": [],
    "untracked": 16,
    "findings": []
   },
-  "SRC-PLNT-003": {
-   "url": "https://lc.kerala.gov.in/index.php/en/node/232",
+  "SRC-FISH-007": {
+   "url": "https://fisheries.kerala.gov.in/en/scheme-highlights",
    "kind": "html",
    "http": 200,
-   "hash": "7cda123f3fccc6a389ec5acbbb4528b560e3d08e669e843e1a3c42f26764e0e8",
-   "checkedAt": "2026-10-05T07:17:33.935Z",
-   "changedAt": "2026-09-25T09:57:45.983Z",
-   "status": "unchanged",
+   "hash": "b8f254dadbf0e3b827b2fddd1b484507216c0e0eb79c983a7cbee1715d751dab",
+   "checkedAt": "2026-10-12T07:35:13.924Z",
+   "changedAt": "2026-10-12T07:35:13.924Z",
+   "status": "changed",
    "failures": 0,
-   "tracked": [],
+   "tracked": [
+    "FISH-04/c1",
+    "FISH-04/g0"
+   ],
    "untracked": 0,
-   "findings": []
+   "findings": [
+    {
+     "ref": "FISH-04/c1",
+     "schemeId": "FISH-04",
+     "sourceId": "SRC-FISH-007",
+     "oldQuote": "Registered traditional fishermen are the beneficiaries",
+     "score": 0.167,
+     "kind": "missing"
+    },
+    {
+     "ref": "FISH-04/g0",
+     "schemeId": "FISH-04",
+     "sourceId": "SRC-FISH-007",
+     "oldQuote": "Registered traditional fishermen",
+     "score": 0,
+     "kind": "missing"
+    }
+   ],
+   "added": [
+    "!",
+    "Website Temporarily Unavailable",
+    "We are currently experiencing a technical issue with this website.",
+    "Our technical team is working to resolve the issue and restore",
+    "the service as soon as possible.",
+    "Please try again later.",
+    "We apologize for the inconvenience and appreciate your patience",
+    "and understanding.",
+    "Thank you for your understanding."
+   ],
+   "removed": [
+    "Skip to main content",
+    "Scheme Highlights",
+    "SI No",
+    "Name",
+    "Service",
+    "1",
+    "Housing Scheme",
+    "To provide shelter to poor fisherfamily. Active fishermen of BPL category is considered for the programme and is implementing through district offices",
+    "2",
+    "Saving cum relief",
+    "Scheme",
+    "To promote thrift habit and to extend relief during lean period. The beneficiaries are registered fishermen of both marine and inland and the scheme is implementing through district offices.",
+    "3",
+    "Educational concession",
+    "To provide educational concession to the children of registered Non Hindu Fishermen and the scheme is implementing through district offices"
+   ]
   },
   "SRC-PLNT-004": {
    "url": "https://lc.kerala.gov.in/en/major-functions",
    "kind": "html",
    "http": 200,
    "hash": "052eb1f14f836af6760f7af36ab8fc6dcf16c681e68916077da292cb25c0a1b3",
-   "checkedAt": "2026-10-05T07:17:33.935Z",
+   "checkedAt": "2026-10-12T07:35:13.924Z",
    "changedAt": "2026-09-25T09:57:45.983Z",
    "status": "unchanged",
    "failures": 0,
@@ -146,7 +468,7 @@
    "kind": "pdf",
    "http": 200,
    "hash": "437399f04c1890279a2570c7dbfd0634a7e9f6ae74f22aa34b095fab1364243e",
-   "checkedAt": "2026-10-05T07:17:33.935Z",
+   "checkedAt": "2026-10-12T07:35:13.924Z",
    "changedAt": "2026-09-25T09:57:45.983Z",
    "status": "unchanged",
    "failures": 0,
@@ -159,91 +481,302 @@
    "untracked": 1,
    "findings": []
   },
+  "SRC-PLNT-003": {
+   "url": "https://lc.kerala.gov.in/index.php/en/node/232",
+   "kind": "html",
+   "http": 200,
+   "hash": "7cda123f3fccc6a389ec5acbbb4528b560e3d08e669e843e1a3c42f26764e0e8",
+   "checkedAt": "2026-10-12T07:35:13.924Z",
+   "changedAt": "2026-09-25T09:57:45.983Z",
+   "status": "unchanged",
+   "failures": 0,
+   "tracked": [],
+   "untracked": 0,
+   "findings": []
+  },
   "SRC-AKS-002": {
    "url": "https://www.akshaya.kerala.gov.in/centers",
    "kind": "html",
    "http": 0,
    "hash": "",
-   "checkedAt": "2026-10-05T07:17:33.935Z",
+   "checkedAt": "2026-10-12T07:35:13.924Z",
    "changedAt": "",
    "status": "unreachable",
-   "failures": 4,
-   "tracked": [],
-   "untracked": 0,
-   "findings": []
-  },
-  "SRC-FISH-007": {
-   "url": "https://fisheries.kerala.gov.in/en/scheme-highlights",
-   "kind": "html",
-   "http": 0,
-   "hash": "e58174ce37a7cf36c9699faf1588c71b415d5d2d5f2359d93311b316c73dd98b",
-   "checkedAt": "2026-10-05T07:17:33.935Z",
-   "changedAt": "2026-09-25T09:57:45.983Z",
-   "status": "unreachable",
-   "failures": 2,
-   "tracked": [
-    "FISH-04/c1",
-    "FISH-04/g0"
-   ],
-   "untracked": 0,
-   "findings": []
-  },
-  "SRC-FISH-008": {
-   "url": "https://fisheries.kerala.gov.in/en/node/628",
-   "kind": "html",
-   "http": 0,
-   "hash": "e186a09b8987bbd1f3ffb1f741e49d182a124774f7928405f6aacac74c426793",
-   "checkedAt": "2026-10-05T07:17:33.935Z",
-   "changedAt": "2026-09-25T09:57:45.983Z",
-   "status": "unreachable",
-   "failures": 2,
+   "failures": 5,
    "tracked": [],
    "untracked": 0,
    "findings": []
   },
   "SRC-FISH-009": {
    "url": "https://fisheries.kerala.gov.in/sites/default/files/inline-files/appforms/fisheriesdept/Application%20form%20for%20saving%20cum%20relief%20scheme(inland).pdf",
-   "kind": "pdf",
-   "http": 0,
-   "hash": "094f65f2feef59aed23a62556a3074d4e1215197d4cbacf2a9f5a0b9befff402",
-   "checkedAt": "2026-10-05T07:17:33.935Z",
-   "changedAt": "2026-09-25T09:57:45.983Z",
-   "status": "unreachable",
-   "failures": 2,
-   "tracked": [],
-   "untracked": 1,
-   "findings": []
-  },
-  "SRC-AKS-001": {
-   "url": "https://akshaya.kerala.gov.in/contact",
    "kind": "html",
    "http": 200,
-   "hash": "882b87625fb0bbd2972999d64f666ae6bb311a63993df82aff69e3bd6975338e",
-   "checkedAt": "2026-10-05T07:17:33.935Z",
-   "changedAt": "2026-10-05T07:17:33.935Z",
+   "hash": "b8f254dadbf0e3b827b2fddd1b484507216c0e0eb79c983a7cbee1715d751dab",
+   "checkedAt": "2026-10-12T07:35:13.924Z",
+   "changedAt": "2026-10-12T07:35:13.924Z",
+   "status": "changed",
+   "failures": 0,
+   "tracked": [],
+   "untracked": 1,
+   "findings": [],
+   "added": [
+    "!",
+    "Website Temporarily Unavailable",
+    "We are currently experiencing a technical issue with this website.",
+    "Our technical team is working to resolve the issue and restore",
+    "the service as soon as possible.",
+    "Please try again later.",
+    "We apologize for the inconvenience and appreciate your patience",
+    "and understanding.",
+    "Thank you for your understanding."
+   ],
+   "removed": [
+    "tIcf kÀ¡mÀ",
+    "tIcf aÕy_Ô\\ hIp¸v",
+    "aÕys¯mgnemfn k¼mZy þ kamizmk ]²Xn (DÂ\\mS³)",
+    "_____________ PnÃ",
+    "s{IUnäv ImÀUv þ 200___þ 200___",
+    "cPn. \\¼À",
+    "t]cv",
+    "taÂhnemkw",
+    "hbÊv",
+    "aÕy {Kma¯nsâ t]cv",
+    "tImUv \\¼À",
+    "amkhpw",
+    "KUp",
+    "XpIbpw",
+    "AS¨ XpIbpw amkhpw"
+   ]
+  },
+  "SRC-FISH-008": {
+   "url": "https://fisheries.kerala.gov.in/en/node/628",
+   "kind": "html",
+   "http": 200,
+   "hash": "b8f254dadbf0e3b827b2fddd1b484507216c0e0eb79c983a7cbee1715d751dab",
+   "checkedAt": "2026-10-12T07:35:13.924Z",
+   "changedAt": "2026-10-12T07:35:13.924Z",
    "status": "changed",
    "failures": 0,
    "tracked": [],
    "untracked": 0,
    "findings": [],
    "added": [
-    "Dr. M. Abdul Rahiman",
-    "Vinu A",
-    "Reju Tom lal"
+    "!",
+    "Website Temporarily Unavailable",
+    "We are currently experiencing a technical issue with this website.",
+    "Our technical team is working to resolve the issue and restore",
+    "the service as soon as possible.",
+    "Please try again later.",
+    "We apologize for the inconvenience and appreciate your patience",
+    "and understanding.",
+    "Thank you for your understanding."
    ],
    "removed": [
-    "Sandip Kumar IAS",
-    "Sudheer S S",
-    "Reju Tomlal"
+    "Skip to main content",
+    "District officers",
+    "DEPARTMENT OF FISHERIES – DISTRICT OFFICERS",
+    "Name, designation and district",
+    "Phone Number",
+    "Mobile Number",
+    "Email Id",
+    "Smt. Sheeja Mary A. P.",
+    "Deputy Director, Thiruvananthapuram",
+    "0471-2450773",
+    "9496007026",
+    "ddftvm@gmail.com",
+    "Smt.Sridivya Rani.C.S",
+    "Deputy Director, Kollam",
+    "0474-2792850"
+   ]
+  },
+  "SRC-FISH-010": {
+   "url": "https://fisheries.kerala.gov.in/sites/default/files/inline-files/appforms/fisheriesdept/Application%20form%20for%20saving%20cum%20relief%20scheme%20(Marine).pdf",
+   "kind": "html",
+   "http": 200,
+   "hash": "b8f254dadbf0e3b827b2fddd1b484507216c0e0eb79c983a7cbee1715d751dab",
+   "checkedAt": "2026-10-12T07:35:13.924Z",
+   "changedAt": "2026-10-12T07:35:13.924Z",
+   "status": "changed",
+   "failures": 0,
+   "tracked": [],
+   "untracked": 1,
+   "findings": [],
+   "added": [
+    "!",
+    "Website Temporarily Unavailable",
+    "We are currently experiencing a technical issue with this website.",
+    "Our technical team is working to resolve the issue and restore",
+    "the service as soon as possible.",
+    "Please try again later.",
+    "We apologize for the inconvenience and appreciate your patience",
+    "and understanding.",
+    "Thank you for your understanding."
+   ],
+   "removed": [
+    "{Ia \\¼À",
+    "A\\p_Ôwþ1",
+    "tIcf kÀ¡mÀ",
+    "^njdokv hIp¸v",
+    "k¼mZy kamizmk ]²Xn þ 200__ to 200__",
+    "________________ PnÃ",
+    "1. At]£Isâ t]cv",
+    "2. ]qÀ®amb taÂ hnemkw",
+    "3. hbÊv",
+    "4. hmÀjnI hcpam\\w",
+    "5. At]£I³ AwKamb aÕys¯mgnemfn",
+    "kwL¯nsâ t]cpw AwK\\¼cpw \\S¸p",
+    "hÀj t£a\\n[n hnlnXw HSp¡nbXnsâ",
+    "ckoXv \\¼cpw",
+    "6. amXrIm Is¿m¸v"
+   ]
+  },
+  "SRC-FISH-011": {
+   "url": "https://fisheries.kerala.gov.in/sites/default/files/inline-files/appforms/fisheriesdept/Application%20form%20for%20educational%20assistance(above%20matriculation)%20to%20fishermen%20children.pdf",
+   "kind": "html",
+   "http": 200,
+   "hash": "b8f254dadbf0e3b827b2fddd1b484507216c0e0eb79c983a7cbee1715d751dab",
+   "checkedAt": "2026-10-12T07:35:13.924Z",
+   "changedAt": "2026-10-12T07:35:13.924Z",
+   "status": "changed",
+   "failures": 0,
+   "tracked": [],
+   "untracked": 1,
+   "findings": [],
+   "added": [
+    "Website Temporarily Unavailable",
+    "We are currently experiencing a technical issue with this website.",
+    "Our technical team is working to resolve the issue and restore",
+    "the service as soon as possible.",
+    "Please try again later.",
+    "We apologize for the inconvenience and appreciate your patience",
+    "and understanding.",
+    "Thank you for your understanding."
+   ],
+   "removed": [
+    "6",
+    "' l t,",
+    "caog cru<daeicd",
+    "otoruJ Ord,ld",
+    "h-ocoo (nffild",
+    "4",
+    "20............20.,.,.......,rudcrvcOroad",
+    "6(oruJo<olcolercgld+rglo$",
+    "oesrtriaei",
+    "ooldlaolcafiscmlcooemolggo.romoror'ldoilr:5cre5crucm;or;e{o",
+    "odlaO;cmdr;gg <uroco,r6,u",
+    "(gfacnJd'$e,oof,",
+    "I",
+    "cad",
+    "\".r16sgg"
+   ]
+  },
+  "SRC-KFWFB-001": {
+   "url": "https://fisheries.kerala.gov.in/sites/default/files/inline-files/Scheme%20approved%202025%20KFWFB_0.pdf",
+   "kind": "html",
+   "http": 200,
+   "hash": "b8f254dadbf0e3b827b2fddd1b484507216c0e0eb79c983a7cbee1715d751dab",
+   "checkedAt": "2026-10-12T07:35:13.924Z",
+   "changedAt": "2026-10-12T07:35:13.924Z",
+   "status": "changed",
+   "failures": 0,
+   "tracked": [],
+   "untracked": 141,
+   "findings": [],
+   "added": [
+    "Website Temporarily Unavailable",
+    "We are currently experiencing a technical issue with this website.",
+    "Our technical team is working to resolve the issue and restore",
+    "the service as soon as possible.",
+    "Please try again later.",
+    "We apologize for the inconvenience and appreciate your patience",
+    "and understanding.",
+    "Thank you for your understanding."
+   ],
+   "removed": [
+    "(",
+    "✂",
+    ")",
+    "78 N N = ✂",
+    "✂ ✂",
+    ":",
+    ",",
+    "!\"# $ , %&' ,",
+    "() , പ + - 680 002",
+    "Ph: 0487-2383088,",
+    "6 78 9 :",
+    "; <= >?",
+    "6 @A BC = ,",
+    "‘ ✂> ,G.G. RA-14A , TC 82/258 , N O P✂Q R",
+    "N പ , !S TUV, പC,"
+   ]
+  },
+  "SRC-FISH-014": {
+   "url": "https://fisheries.kerala.gov.in/sites/default/files/inline-files/appforms/fisheriesdept/Application%20for%20compensation%20to%20fishermen%20losing%20%20fishing%20equipments%20due%20to%20calamities.pdf",
+   "kind": "html",
+   "http": 200,
+   "hash": "b8f254dadbf0e3b827b2fddd1b484507216c0e0eb79c983a7cbee1715d751dab",
+   "checkedAt": "2026-10-12T07:35:13.924Z",
+   "changedAt": "2026-10-12T07:35:13.924Z",
+   "status": "changed",
+   "failures": 0,
+   "tracked": [],
+   "untracked": 0,
+   "findings": [],
+   "added": [
+    "!",
+    "Website Temporarily Unavailable",
+    "We are currently experiencing a technical issue with this website.",
+    "Our technical team is working to resolve the issue and restore",
+    "the service as soon as possible.",
+    "Please try again later.",
+    "We apologize for the inconvenience and appreciate your patience",
+    "and understanding.",
+    "Thank you for your understanding."
+   ],
+   "removed": [
+    "l",
+    ",? #.?",
+    ",",
+    "ff*.",
+    "arscoaG6,gce(mD1coA",
+    "SIICnDGC)CoJe,O6rDsBgam'",
+    "(rlcrn (I)olu'so",
+    "Jo'lcrocoo erralerXcrncor'lotglg ttocota,gc",
+    "1.",
+    "(mOol.SrgOJOg)",
+    "CoJCd",
+    "2 . cB#og) ao]o",
+    "3 . cesD(rt(rt (6no0)('l (r)ml6",
+    "6nlee,\" Ga6.).]'5rB\",(6rllcfloilo@ Golo\"",
+    "4."
+   ]
+  },
+  "SRC-AKS-001": {
+   "url": "https://akshaya.kerala.gov.in/contact",
+   "kind": "html",
+   "http": 200,
+   "hash": "f29030c47a2e53ac95685c7a465683f72b90b7668546da3703a992bb5af5a37d",
+   "checkedAt": "2026-10-12T07:35:13.924Z",
+   "changedAt": "2026-10-12T07:35:13.924Z",
+   "status": "changed",
+   "failures": 0,
+   "tracked": [],
+   "untracked": 0,
+   "findings": [],
+   "added": [
+    "Ragimol M G"
+   ],
+   "removed": [
+    "Yusra Mohammed Subhan (i/c)"
    ]
   },
   "SRC-PLNT-006": {
    "url": "https://aiis.lc.kerala.gov.in/index.php/launch",
    "kind": "html",
    "http": 200,
-   "hash": "76e23f4daf3af37f51d65be70ce06f082e738b37b080ea0ac852c468e28cbe0e",
-   "checkedAt": "2026-10-05T07:17:33.935Z",
-   "changedAt": "2026-10-05T07:17:33.935Z",
+   "hash": "0a1ce0d91c97f93aa1d091fcfa064ccfdca5d3769ab8a7b2a3cbc558aac6f3bf",
+   "checkedAt": "2026-10-12T07:35:13.924Z",
+   "changedAt": "2026-10-12T07:35:13.924Z",
    "status": "changed",
    "failures": 0,
    "tracked": [
@@ -257,62 +790,23 @@
    "untracked": 0,
    "findings": [],
    "added": [
-    "51,902"
+    "51,984"
    ],
    "removed": [
-    "51,826"
+    "51,902"
    ]
   },
-  "SRC-FISH-010": {
-   "url": "https://fisheries.kerala.gov.in/sites/default/files/inline-files/appforms/fisheriesdept/Application%20form%20for%20saving%20cum%20relief%20scheme%20(Marine).pdf",
-   "kind": "pdf",
+  "SRC-PLNT-012": {
+   "url": "https://plantationworker.kerala.gov.in/index.php/benefits/medical-benefit",
+   "kind": "html",
    "http": 0,
-   "hash": "91eafc1e2bc55211583f460300a69613a9b851752550c871ba62d681f0c393a8",
-   "checkedAt": "2026-10-05T07:17:33.935Z",
-   "changedAt": "2026-09-25T09:57:45.983Z",
+   "hash": "",
+   "checkedAt": "2026-10-12T07:35:13.924Z",
+   "changedAt": "",
    "status": "unreachable",
-   "failures": 2,
+   "failures": 5,
    "tracked": [],
-   "untracked": 1,
-   "findings": []
-  },
-  "SRC-FISH-011": {
-   "url": "https://fisheries.kerala.gov.in/sites/default/files/inline-files/appforms/fisheriesdept/Application%20form%20for%20educational%20assistance(above%20matriculation)%20to%20fishermen%20children.pdf",
-   "kind": "pdf",
-   "http": 0,
-   "hash": "44e2d3af7e7b75ed502aea529bf351e2405f6086ef38713cfd707cdb0c6d9706",
-   "checkedAt": "2026-10-05T07:17:33.935Z",
-   "changedAt": "2026-09-25T09:57:45.983Z",
-   "status": "unreachable",
-   "failures": 2,
-   "tracked": [],
-   "untracked": 1,
-   "findings": []
-  },
-  "SRC-KFWFB-001": {
-   "url": "https://fisheries.kerala.gov.in/sites/default/files/inline-files/Scheme%20approved%202025%20KFWFB_0.pdf",
-   "kind": "pdf",
-   "http": 0,
-   "hash": "392c2131982a6e5f70e31a391c7db8363c314bc6d0169fd3905be7cfaea83d4e",
-   "checkedAt": "2026-10-05T07:17:33.935Z",
-   "changedAt": "2026-09-25T09:57:45.983Z",
-   "status": "unreachable",
-   "failures": 2,
-   "tracked": [],
-   "untracked": 141,
-   "findings": []
-  },
-  "SRC-FISH-014": {
-   "url": "https://fisheries.kerala.gov.in/sites/default/files/inline-files/appforms/fisheriesdept/Application%20for%20compensation%20to%20fishermen%20losing%20%20fishing%20equipments%20due%20to%20calamities.pdf",
-   "kind": "pdf",
-   "http": 0,
-   "hash": "7778a249b936e4c0fc81fb73b9dd84f1a8f8be62baecc4a0fb1e35e8a3782bef",
-   "checkedAt": "2026-10-05T07:17:33.935Z",
-   "changedAt": "2026-09-25T09:57:45.983Z",
-   "status": "unreachable",
-   "failures": 2,
-   "tracked": [],
-   "untracked": 0,
+   "untracked": 7,
    "findings": []
   },
   "SRC-PLNT-011": {
@@ -320,25 +814,12 @@
    "kind": "html",
    "http": 0,
    "hash": "",
-   "checkedAt": "2026-10-05T07:17:33.935Z",
+   "checkedAt": "2026-10-12T07:35:13.924Z",
    "changedAt": "",
    "status": "unreachable",
-   "failures": 4,
+   "failures": 5,
    "tracked": [],
    "untracked": 4,
-   "findings": []
-  },
-  "SRC-PLNT-012": {
-   "url": "https://plantationworker.kerala.gov.in/index.php/benefits/medical-benefit",
-   "kind": "html",
-   "http": 0,
-   "hash": "",
-   "checkedAt": "2026-10-05T07:17:33.935Z",
-   "changedAt": "",
-   "status": "unreachable",
-   "failures": 4,
-   "tracked": [],
-   "untracked": 7,
    "findings": []
   },
   "SRC-PLNT-013": {
@@ -346,25 +827,12 @@
    "kind": "html",
    "http": 0,
    "hash": "",
-   "checkedAt": "2026-10-05T07:17:33.935Z",
+   "checkedAt": "2026-10-12T07:35:13.924Z",
    "changedAt": "",
    "status": "unreachable",
-   "failures": 4,
+   "failures": 5,
    "tracked": [],
    "untracked": 3,
-   "findings": []
-  },
-  "SRC-PLNT-014": {
-   "url": "https://plantationworker.kerala.gov.in/index.php/benefits/pension/superannuation",
-   "kind": "html",
-   "http": 0,
-   "hash": "",
-   "checkedAt": "2026-10-05T07:17:33.935Z",
-   "changedAt": "",
-   "status": "unreachable",
-   "failures": 4,
-   "tracked": [],
-   "untracked": 2,
    "findings": []
   },
   "SRC-PLNT-015": {
@@ -372,12 +840,25 @@
    "kind": "html",
    "http": 0,
    "hash": "",
-   "checkedAt": "2026-10-05T07:17:33.935Z",
+   "checkedAt": "2026-10-12T07:35:13.924Z",
    "changedAt": "",
    "status": "unreachable",
-   "failures": 4,
+   "failures": 5,
    "tracked": [],
    "untracked": 8,
+   "findings": []
+  },
+  "SRC-PLNT-014": {
+   "url": "https://plantationworker.kerala.gov.in/index.php/benefits/pension/superannuation",
+   "kind": "html",
+   "http": 0,
+   "hash": "",
+   "checkedAt": "2026-10-12T07:35:13.924Z",
+   "changedAt": "",
+   "status": "unreachable",
+   "failures": 5,
+   "tracked": [],
+   "untracked": 2,
    "findings": []
   },
   "SRC-PLNT-016": {
@@ -385,12 +866,25 @@
    "kind": "html",
    "http": 0,
    "hash": "",
-   "checkedAt": "2026-10-05T07:17:33.935Z",
+   "checkedAt": "2026-10-12T07:35:13.924Z",
    "changedAt": "",
    "status": "unreachable",
-   "failures": 4,
+   "failures": 5,
    "tracked": [],
    "untracked": 4,
+   "findings": []
+  },
+  "SRC-PLNT-018": {
+   "url": "https://plantationworker.kerala.gov.in/index.php/benefits/educational-benefit",
+   "kind": "html",
+   "http": 0,
+   "hash": "",
+   "checkedAt": "2026-10-12T07:35:13.924Z",
+   "changedAt": "",
+   "status": "unreachable",
+   "failures": 5,
+   "tracked": [],
+   "untracked": 2,
    "findings": []
   },
   "SRC-PLNT-017": {
@@ -398,10 +892,10 @@
    "kind": "html",
    "http": 0,
    "hash": "",
-   "checkedAt": "2026-10-05T07:17:33.935Z",
+   "checkedAt": "2026-10-12T07:35:13.924Z",
    "changedAt": "",
    "status": "unreachable",
-   "failures": 4,
+   "failures": 5,
    "tracked": [],
    "untracked": 2,
    "findings": []
@@ -411,7 +905,7 @@
    "kind": "pdf",
    "http": 200,
    "hash": "5c8c4f1d0ae531cba2f0eb6dfe6a56c60187e85bbb65ffa9171e52ea6bff9605",
-   "checkedAt": "2026-10-05T07:17:33.935Z",
+   "checkedAt": "2026-10-12T07:35:13.924Z",
    "changedAt": "2026-09-25T09:57:45.983Z",
    "status": "unchanged",
    "failures": 0,
@@ -419,28 +913,15 @@
    "untracked": 0,
    "findings": []
   },
-  "SRC-PLNT-018": {
-   "url": "https://plantationworker.kerala.gov.in/index.php/benefits/educational-benefit",
-   "kind": "html",
-   "http": 0,
-   "hash": "",
-   "checkedAt": "2026-10-05T07:17:33.935Z",
-   "changedAt": "",
-   "status": "unreachable",
-   "failures": 4,
-   "tracked": [],
-   "untracked": 2,
-   "findings": []
-  },
   "SRC-PLNT-019": {
    "url": "https://plantationworker.kerala.gov.in/index.php/benefits/forms",
    "kind": "html",
    "http": 0,
    "hash": "",
-   "checkedAt": "2026-10-05T07:17:33.935Z",
+   "checkedAt": "2026-10-12T07:35:13.924Z",
    "changedAt": "",
    "status": "unreachable",
-   "failures": 4,
+   "failures": 5,
    "tracked": [],
    "untracked": 1,
    "findings": []
