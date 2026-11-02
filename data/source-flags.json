@@ -1,6 +1,25 @@
 {
- "generatedAt": "2026-10-26T06:34:33.030Z",
+ "generatedAt": "2026-11-02T07:51:45.386Z",
  "flags": {
+  "FISH-02": {
+   "since": "2026-10-12",
+   "sourceIds": [
+    "SRC-FISH-002"
+   ],
+   "kinds": [
+    "missing"
+   ]
+  },
+  "FISH-05": {
+   "since": "2026-10-12",
+   "sourceIds": [
+    "SRC-FISH-004",
+    "SRC-FISH-001"
+   ],
+   "kinds": [
+    "missing"
+   ]
+  },
   "FISH-03": {
    "since": "2026-10-12",
    "sourceIds": [
@@ -20,16 +39,6 @@
     "missing"
    ]
   },
-  "FISH-05": {
-   "since": "2026-10-12",
-   "sourceIds": [
-    "SRC-FISH-001",
-    "SRC-FISH-004"
-   ],
-   "kinds": [
-    "missing"
-   ]
-  },
   "FISH-08": {
    "since": "2026-10-12",
    "sourceIds": [
@@ -43,15 +52,6 @@
    "since": "2026-10-12",
    "sourceIds": [
     "SRC-FISH-001"
-   ],
-   "kinds": [
-    "missing"
-   ]
-  },
-  "FISH-02": {
-   "since": "2026-10-12",
-   "sourceIds": [
-    "SRC-FISH-002"
    ],
    "kinds": [
     "missing"
