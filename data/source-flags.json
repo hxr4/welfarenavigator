@@ -1,20 +1,10 @@
 {
- "generatedAt": "2026-11-02T07:51:45.386Z",
+ "generatedAt": "2026-11-09T08:15:14.701Z",
  "flags": {
   "FISH-02": {
    "since": "2026-10-12",
    "sourceIds": [
     "SRC-FISH-002"
-   ],
-   "kinds": [
-    "missing"
-   ]
-  },
-  "FISH-05": {
-   "since": "2026-10-12",
-   "sourceIds": [
-    "SRC-FISH-004",
-    "SRC-FISH-001"
    ],
    "kinds": [
     "missing"
@@ -34,6 +24,16 @@
    "sourceIds": [
     "SRC-FISH-001",
     "SRC-FISH-007"
+   ],
+   "kinds": [
+    "missing"
+   ]
+  },
+  "FISH-05": {
+   "since": "2026-10-12",
+   "sourceIds": [
+    "SRC-FISH-001",
+    "SRC-FISH-004"
    ],
    "kinds": [
     "missing"
